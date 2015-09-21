@@ -21,7 +21,8 @@
 		045612131BAEA8DE0043EA6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 045612091BAEA8DE0043EA6C /* main.m */; settings = {ASSET_TAGS = (); }; };
 		045612181BAEDFCE0043EA6C /* TFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045612171BAEDFCE0043EA6C /* TFView.m */; settings = {ASSET_TAGS = (); }; };
 		045612241BAFC07D0043EA6C /* IMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045612231BAFC07D0043EA6C /* IMessageViewController.m */; settings = {ASSET_TAGS = (); }; };
-		045612371BAFC8FD0043EA6C /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 045612361BAFC8FD0043EA6C /* TestData.plist */; settings = {ASSET_TAGS = (); }; };
+		04F3A5051BAFDE3200CA479A /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F3A5041BAFDE3200CA479A /* TestData.plist */; settings = {ASSET_TAGS = (); }; };
+		04F3A5091BAFE4CF00CA479A /* UIView+SAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F3A5081BAFE4CF00CA479A /* UIView+SAAdditions.m */; settings = {ASSET_TAGS = (); }; };
 		E7257CADE8EFFA2C6053C263 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B1B9197ABEF8ACB0586FBC /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -70,9 +71,11 @@
 		045612171BAEDFCE0043EA6C /* TFView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFView.m; sourceTree = "<group>"; };
 		045612221BAFC07D0043EA6C /* IMessageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IMessageViewController.h; sourceTree = "<group>"; };
 		045612231BAFC07D0043EA6C /* IMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMessageViewController.m; sourceTree = "<group>"; };
-		045612361BAFC8FD0043EA6C /* TestData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = TestData.plist; path = ../../../../../Desktop/TestData.plist; sourceTree = "<group>"; };
 		0456123A1BAFCB5D0043EA6C /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
 		0456123B1BAFCBD80043EA6C /* Demos-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demos-Prefix.pch"; sourceTree = "<group>"; };
+		04F3A5041BAFDE3200CA479A /* TestData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestData.plist; sourceTree = "<group>"; };
+		04F3A5071BAFE4CF00CA479A /* UIView+SAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SAAdditions.h"; sourceTree = "<group>"; };
+		04F3A5081BAFE4CF00CA479A /* UIView+SAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SAAdditions.m"; sourceTree = "<group>"; };
 		7DB134BCC26F089F999325CD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C2B1B9197ABEF8ACB0586FBC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CD230209609975A4DF59BB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -131,6 +134,7 @@
 			children = (
 				045611DE1BAE92990043EA6C /* DemoListViewController.h */,
 				045611DF1BAE92990043EA6C /* DemoListViewController.m */,
+				04F3A5061BAFE4CF00CA479A /* Utilities */,
 				045612211BAFC05E0043EA6C /* IMessages Demo */,
 				045611F61BAEA8DE0043EA6C /* Bezier Demo */,
 				045611F91BAEA8DE0043EA6C /* ComponentKit Demo */,
@@ -204,7 +208,7 @@
 				045612041BAEA8DE0043EA6C /* Assets.xcassets */,
 				045612051BAEA8DE0043EA6C /* LaunchScreen.storyboard */,
 				045612071BAEA8DE0043EA6C /* DemoListData.plist */,
-				045612361BAFC8FD0043EA6C /* TestData.plist */,
+				04F3A5041BAFDE3200CA479A /* TestData.plist */,
 				045612081BAEA8DE0043EA6C /* Info.plist */,
 				045612091BAEA8DE0043EA6C /* main.m */,
 				0456123A1BAFCB5D0043EA6C /* Defines.h */,
@@ -220,6 +224,15 @@
 				045612231BAFC07D0043EA6C /* IMessageViewController.m */,
 			);
 			path = "IMessages Demo";
+			sourceTree = "<group>";
+		};
+		04F3A5061BAFE4CF00CA479A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				04F3A5071BAFE4CF00CA479A /* UIView+SAAdditions.h */,
+				04F3A5081BAFE4CF00CA479A /* UIView+SAAdditions.m */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		7083C2EF631D281626F3CFD6 /* Frameworks */ = {
@@ -347,7 +360,7 @@
 				045612101BAEA8DE0043EA6C /* LaunchScreen.storyboard in Resources */,
 				0456120F1BAEA8DE0043EA6C /* Assets.xcassets in Resources */,
 				0456120D1BAEA8DE0043EA6C /* launchScreen.jpg in Resources */,
-				045612371BAFC8FD0043EA6C /* TestData.plist in Resources */,
+				04F3A5051BAFDE3200CA479A /* TestData.plist in Resources */,
 				045612111BAEA8DE0043EA6C /* DemoListData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +427,7 @@
 				0456120A1BAEA8DE0043EA6C /* BezierViewController.mm in Sources */,
 				045612131BAEA8DE0043EA6C /* main.m in Sources */,
 				0456120E1BAEA8DE0043EA6C /* AppDelegate.m in Sources */,
+				04F3A5091BAFE4CF00CA479A /* UIView+SAAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

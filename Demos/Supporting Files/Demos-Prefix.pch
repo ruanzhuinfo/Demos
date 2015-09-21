@@ -13,5 +13,6 @@
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 
 #import "Defines.h"
+#import "UIView+SAAdditions.h"
 
 #endif /* Demos_Prefix_pch */
