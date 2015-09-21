@@ -1,5 +1,5 @@
 # Demos
-  会不断添加各种知名 APP 中核心交互的实现源码。
+  会不断添加各种知名 APP 中核心交互的 demo。
   
 ### Demo List
   * Bezier 曲线
