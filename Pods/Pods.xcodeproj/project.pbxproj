@@ -1,0 +1,1311 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		005822BF5D664A04ED49AA0C /* CKComponentDataSourceOutputItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = C74AC53290F8B218EF3961AB /* CKComponentDataSourceOutputItem.mm */; };
+		02E7D2F8ACD8CFEA2B14CA10 /* CKWeakObjectContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 62AC76DA0A6C904D0EB660E0 /* CKWeakObjectContainer.h */; };
+		07255043AB2B63A8E9AA835E /* CKAsyncTransactionGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A8EA1471D4E63F12DA7FE31 /* CKAsyncTransactionGroup.h */; };
+		0770C4980859DCE79C948105 /* CKComponentAnnouncerBase.mm in Sources */ = {isa = PBXBuildFile; fileRef = 675C878F8444FADF20AD5E59 /* CKComponentAnnouncerBase.mm */; };
+		0821D5A26A88798113653D7F /* CKImageComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 066CD5AE5E22279E83B6F3A5 /* CKImageComponent.h */; };
+		09AEED2752FD7D9A5AC0A685 /* CKTransactionalComponentDataSourceListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 9A002ABEFAF1BC4476C16F7B /* CKTransactionalComponentDataSourceListener.h */; };
+		0C88EE3B9EDFB877F3D54D26 /* CKTextComponentLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = BECB70E536583A02AD0B1809 /* CKTextComponentLayer.h */; };
+		0D04C376F046DE870063DFCD /* CKInternalHelpers.mm in Sources */ = {isa = PBXBuildFile; fileRef = 998C047081F2DA9D9DCA9F33 /* CKInternalHelpers.mm */; };
+		0DD5EAEF11EAB811CCF106D2 /* CKNetworkImageDownloading.h in Headers */ = {isa = PBXBuildFile; fileRef = EB4E3E9FFCFFBB1488A8C76D /* CKNetworkImageDownloading.h */; };
+		0DF2F092A1AA8820B3F5D26F /* CKComponentViewAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C914E3D13A48B89A90BA84A /* CKComponentViewAttribute.h */; };
+		0E162AD4F413E290274664A6 /* CKImageComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 534939CA3755D49A4340B26D /* CKImageComponent.mm */; };
+		0EA90B3C1B59A96D7D28A146 /* CKComponentBoundsAnimation+UICollectionView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 39FEA8095CF07563BA83C677 /* CKComponentBoundsAnimation+UICollectionView.mm */; };
+		0FE91DCFFE93986BDFDAF8A3 /* CKComponentAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 75D8A55FEB81E0976CE52E40 /* CKComponentAnimation.mm */; };
+		12D8EC8901A371721F11B50F /* CKComponentScopeFrame.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1E3AA99AD7A844DC9DD344E6 /* CKComponentScopeFrame.mm */; };
+		12EC045B9E38EBF0651DD8C7 /* ComponentLayoutContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 5DE408804226B013721659FA /* ComponentLayoutContext.mm */; };
+		13E271E0B8F12045E2E70266 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DED8CA88AF50F3E4232FB6C /* Foundation.framework */; };
+		144CBBBFF44B6CA27BA34B95 /* CKComponentSize.h in Headers */ = {isa = PBXBuildFile; fileRef = 500E77CE80B8711309787DCC /* CKComponentSize.h */; };
+		146E2B2562894DA475E61016 /* CKCompositeComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 6331E3DEA14313D2A9584E18 /* CKCompositeComponent.h */; };
+		14B35C6DEA3337D585C5BD7A /* CKTransactionalComponentDataSourceChangesetModification.mm in Sources */ = {isa = PBXBuildFile; fileRef = 286CED42665D62885CB6F05F /* CKTransactionalComponentDataSourceChangesetModification.mm */; };
+		158004909FC315BB555B2A69 /* CKTextComponentView.h in Headers */ = {isa = PBXBuildFile; fileRef = 15B2F8E383E2B33FD91DB30F /* CKTextComponentView.h */; };
+		16765F8150EFF242AA224F86 /* CKCollectionViewDataSourceCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0F29B41E5E74F70CAA3A1AB2 /* CKCollectionViewDataSourceCell.m */; };
+		18870CD383DA6FD24E9C35A7 /* CKOptimisticViewMutations.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1B2D8B7948E1345B36CF2C08 /* CKOptimisticViewMutations.mm */; };
+		1A688D33234939DF41950A80 /* CKComponentScopeRoot.h in Headers */ = {isa = PBXBuildFile; fileRef = E7E1F3A478763CC86E7E3FC8 /* CKComponentScopeRoot.h */; };
+		1A727A41F611F84D666F4458 /* CKTextKitTailTruncater.h in Headers */ = {isa = PBXBuildFile; fileRef = D55A2F84E861D128B3D35AEE /* CKTextKitTailTruncater.h */; };
+		1DAE2AA79508AFC0C52E4E57 /* CKTextKitContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 7BC738BAB6089FA4ED7A258D /* CKTextKitContext.h */; };
+		1FC2D6796289ABD9C79D55D2 /* CKComponentConstantDecider.m in Sources */ = {isa = PBXBuildFile; fileRef = 76C810C52A341144BB822355 /* CKComponentConstantDecider.m */; };
+		212D66B010B169FA6B26A8AF /* CKComponentAccessibility.mm in Sources */ = {isa = PBXBuildFile; fileRef = 979A8DB706EAF39613B26E25 /* CKComponentAccessibility.mm */; };
+		21D5C918937B47A6C6E30357 /* CKOverlayLayoutComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = F1EFA76F63FA249B020659D8 /* CKOverlayLayoutComponent.h */; };
+		221BA650BEBDDA076D22D4C2 /* CKComponentViewAttribute.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0CDFB90AE9C94E9DAD442DA5 /* CKComponentViewAttribute.mm */; };
+		227A0F3FC5875C9F81C57753 /* CKDimension.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F800EE111136CBA3E4F964E /* CKDimension.h */; };
+		24CC17FE28F38AEABC89724E /* CKStackLayoutComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 71FB829C858DF6DAF83B94D0 /* CKStackLayoutComponent.mm */; };
+		2907EF1B4280F4757B4D7353 /* CKThreadLocalComponentScope.h in Headers */ = {isa = PBXBuildFile; fileRef = 413EE2D0D5EFA6EA4AFEF2DE /* CKThreadLocalComponentScope.h */; };
+		29EA1EA282C77D96700D5E70 /* CKInsetComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = E0F9E83D389B289F714BD254 /* CKInsetComponent.mm */; };
+		2B0FBC5BC162FF7516B0B9E8 /* CKArrayControllerChangeset.mm in Sources */ = {isa = PBXBuildFile; fileRef = 239F1C74A17988EC55CC625F /* CKArrayControllerChangeset.mm */; };
+		2B26F9F9EBD05ABCDA37F8F1 /* CKTransactionalComponentDataSourceItemInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = E657FBAAAFFBA3F4C2340929 /* CKTransactionalComponentDataSourceItemInternal.h */; };
+		2B89C512AEC5511D8FF31354 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0DED8CA88AF50F3E4232FB6C /* Foundation.framework */; };
+		2C9EC8BCDD1CBD32AC0FDBBE /* CKStackPositionedLayout.mm in Sources */ = {isa = PBXBuildFile; fileRef = A69E3EFA9C1AEC8358BACC49 /* CKStackPositionedLayout.mm */; };
+		2D05E1913237843821FBCBC3 /* CKAsyncTransactionContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = AEE37CA232592BCDA8F721B9 /* CKAsyncTransactionContainer.h */; };
+		2DDF8B5BE038C17CCDAC4F2C /* CKComponentAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = AA9DBABEBA1FC5B8B9907313 /* CKComponentAnimation.h */; };
+		305CFCF1705033D8C5505FBC /* CKComponentHostingView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 803540318D37E8CE4CE0E12A /* CKComponentHostingView.mm */; };
+		32D29B24ECEFDDA1E1981F8B /* CKComponentScope.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6BCED266B4E7093D4A39A3A6 /* CKComponentScope.mm */; };
+		33DC267607FA95024B67C99B /* CKLabelComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 9641B1126215E9CB22A9D272 /* CKLabelComponent.h */; };
+		342F58CAC5D7F04060203811 /* CKTransactionalComponentDataSourceConfiguration.mm in Sources */ = {isa = PBXBuildFile; fileRef = DDD73BE1DE2CFA3566CE0912 /* CKTransactionalComponentDataSourceConfiguration.mm */; };
+		35F81489880EA937ACADF90B /* CKHighlightOverlayLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7B1EC4C3DF1025FA093EAC3D /* CKHighlightOverlayLayer.mm */; };
+		37477742DE66B11FEB53136B /* CKTransactionalComponentDataSourceListenerAnnouncer.h in Headers */ = {isa = PBXBuildFile; fileRef = 6AE034988F9149B4FAD229EB /* CKTransactionalComponentDataSourceListenerAnnouncer.h */; };
+		3B1E536861FEA80082E44F4E /* ComponentViewReuseUtilities.mm in Sources */ = {isa = PBXBuildFile; fileRef = E7DE9A09B82689E00D67F25C /* ComponentViewReuseUtilities.mm */; };
+		3D0EA7D4E99A16D23F52279F /* CKComponentLifecycleManagerInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 31C07E9F32957248B73E4FE8 /* CKComponentLifecycleManagerInternal.h */; };
+		3D2F2623662A958FAEAF1169 /* CKComponentBoundsAnimation+UICollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 39D90D3F902CEF2AA2339759 /* CKComponentBoundsAnimation+UICollectionView.h */; };
+		3EE5AFAD8E685DBDEF58FBCB /* CKComponentGestureActions.h in Headers */ = {isa = PBXBuildFile; fileRef = A9DD5E39ACB9BDC18481C973 /* CKComponentGestureActions.h */; };
+		3F7FCAF5252B9AA06E2A353A /* CKComponentDataSourceOutputItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C24F604C19E369DEA868F41 /* CKComponentDataSourceOutputItem.h */; };
+		3FE3DE7129A03ECF59810615 /* CKTextKitRenderer+TextChecking.h in Headers */ = {isa = PBXBuildFile; fileRef = 9290C4CD97FF6C4EB3367479 /* CKTextKitRenderer+TextChecking.h */; };
+		4027D7277A7E8CF0E6F725D8 /* CKTextKitRenderer+Positioning.mm in Sources */ = {isa = PBXBuildFile; fileRef = 340C4C9A6AE0C260FBF0FCD1 /* CKTextKitRenderer+Positioning.mm */; };
+		40FF9DF16CD17FB42C831E50 /* CKArgumentPrecondition.h in Headers */ = {isa = PBXBuildFile; fileRef = 04F50F3DE4FE546ACE0920F2 /* CKArgumentPrecondition.h */; };
+		4295D1F7A2AFD4CA84C471CB /* CKTextComponentViewControlTracker.h in Headers */ = {isa = PBXBuildFile; fileRef = BEEF55D5F68C7EE2B1DE2CF9 /* CKTextComponentViewControlTracker.h */; };
+		45CFECB5B15B2F2CFBBE6767 /* CKTransactionalComponentDataSourceChange.h in Headers */ = {isa = PBXBuildFile; fileRef = DFC466FDC593D5C42B740DEE /* CKTransactionalComponentDataSourceChange.h */; };
+		46832A0DF11F2C7CFC9E7E90 /* CKComponentDataSourceInputItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEF0358F71D26162F5DA189C /* CKComponentDataSourceInputItem.mm */; };
+		476B0613C2C0F1083832CF6B /* CKComponentSize.mm in Sources */ = {isa = PBXBuildFile; fileRef = 40D70089BDF4B7E1F8C8EEB4 /* CKComponentSize.mm */; };
+		49614A95A5999737B8DC01FD /* CKAsyncLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF6B4B2C43A1DB1858E9F7B4 /* CKAsyncLayer.mm */; };
+		49B1EF83C53E97E4466F9FCE /* CKComponentDeciding.h in Headers */ = {isa = PBXBuildFile; fileRef = 32FEEF64726B576DD1F82565 /* CKComponentDeciding.h */; };
+		4A811A5B5D2FB23EE538807F /* CKComponentPreparationQueueListener.h in Headers */ = {isa = PBXBuildFile; fileRef = FF01C6B2CE2C7EF79476742D /* CKComponentPreparationQueueListener.h */; };
+		4B9B5A1EDA62BCAB84E9B7A9 /* CKComponentScopeHandle.mm in Sources */ = {isa = PBXBuildFile; fileRef = FCE03BC26F190C3475157CB6 /* CKComponentScopeHandle.mm */; };
+		4C1CF74FE1ABBA2A7326D629 /* CKAsyncLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = D685CFDF67CEFC02614C2FC8 /* CKAsyncLayer.h */; };
+		4C4E88873258193D1BA7EAC1 /* Pods-ComponentKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 017DE0845BD1F7F41B2B0E62 /* Pods-ComponentKit-dummy.m */; };
+		5049A16E94F279A9B8A2AF9B /* ComponentViewReuseUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = A106F2D678D0C2E206F47624 /* ComponentViewReuseUtilities.h */; };
+		510D10FC2F1E6309B1C980AB /* CKTransactionalComponentDataSourceAppliedChanges.mm in Sources */ = {isa = PBXBuildFile; fileRef = 97DD72517DADD2B804931535 /* CKTransactionalComponentDataSourceAppliedChanges.mm */; };
+		5112045EF17B522E8454A09B /* CKCenterLayoutComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = D318EC2344365983440805A0 /* CKCenterLayoutComponent.mm */; };
+		51CC8384FCF44D9DFA266C95 /* CKComponentDataSourceInputItem.h in Headers */ = {isa = PBXBuildFile; fileRef = 58EF86082DA6D6FE4DEED67E /* CKComponentDataSourceInputItem.h */; };
+		525AB35899D1DFE98F68135F /* CKTransactionalComponentDataSourceAppliedChanges.h in Headers */ = {isa = PBXBuildFile; fileRef = D5EBC52515C470C090067318 /* CKTransactionalComponentDataSourceAppliedChanges.h */; };
+		525CF61979A7B94E57BBB2CF /* CKRatioLayoutComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = A8FD6C8E7B253312C86C7128 /* CKRatioLayoutComponent.h */; };
+		561BA5C720C8BA8593A401FE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 675D2F3D414E1C39D370C0C0 /* UIKit.framework */; };
+		573E70F5DAEF3DA63F907017 /* CKComponentViewInterface.h in Headers */ = {isa = PBXBuildFile; fileRef = 6E68CDAA4CBEA1532E4C0101 /* CKComponentViewInterface.h */; };
+		5970C50BC6AC388D7B239BB3 /* CKNetworkImageComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 1841DE79C0EE6B3507BC8DDA /* CKNetworkImageComponent.h */; };
+		5A21847BB0323A35A2C5A3B6 /* CKComponentRootView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D96DC74397DB8B1FEF404BF /* CKComponentRootView.h */; };
+		5A4E43A3BB3AE86692D47CD6 /* CKSectionedArrayController.h in Headers */ = {isa = PBXBuildFile; fileRef = 355BCAC4DB7C3B002B88A4E9 /* CKSectionedArrayController.h */; };
+		5C35DC1157BA7293B5DB3000 /* CKStaticLayoutComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D98C72590E5D7C0CC63036A /* CKStaticLayoutComponent.h */; };
+		5C8E220F2662B998D1F567AC /* CKComponentPreparationQueueListenerAnnouncer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 627CF55B67350D972E178DD2 /* CKComponentPreparationQueueListenerAnnouncer.mm */; };
+		5E86E56C28C5A12BAF170D3F /* CKComponentDebugController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D8E7A060C8796CA48DC28FC /* CKComponentDebugController.h */; };
+		6020B94E18A0637CCB9A7E39 /* CKTransactionalComponentDataSourceListenerAnnouncer.mm in Sources */ = {isa = PBXBuildFile; fileRef = D57F01E8D44F0FE21BCF568E /* CKTransactionalComponentDataSourceListenerAnnouncer.mm */; };
+		61D303C6EADB3686FB392021 /* CKStackLayoutComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C111DA396136868CF1BD71C /* CKStackLayoutComponent.h */; };
+		62361C1F58206F62E99B7A59 /* CKComponentInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 73638A2DA742005C856EDE06 /* CKComponentInternal.h */; };
+		631D3562E09147B695B627B1 /* CKComponentHostingViewInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 42636C69EDA427EA312558E3 /* CKComponentHostingViewInternal.h */; };
+		661B76C4B936DE0FA7F34533 /* CKComponentHostingView.h in Headers */ = {isa = PBXBuildFile; fileRef = 00CA27F2441233307FC1B15F /* CKComponentHostingView.h */; };
+		6682C973B0A44952C9313B90 /* CKTransactionalComponentDataSourceChangeset.h in Headers */ = {isa = PBXBuildFile; fileRef = CB09634E366147CF0701F4E8 /* CKTransactionalComponentDataSourceChangeset.h */; };
+		66FEE28650B278E33DCF7078 /* CKTransactionalComponentDataSourceState.h in Headers */ = {isa = PBXBuildFile; fileRef = A6444EE4609F95F5C16210BF /* CKTransactionalComponentDataSourceState.h */; };
+		6756D1FF95D7A14982FEFF50 /* CKTextComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = D52B0BA0F0D0FD8E92A569F3 /* CKTextComponent.h */; };
+		6819EA40D2B35CC2145E6ED2 /* CKStackUnpositionedLayout.mm in Sources */ = {isa = PBXBuildFile; fileRef = E43745162F7C28392A364888 /* CKStackUnpositionedLayout.mm */; };
+		6865B279F6F0F871C4000792 /* CKBackgroundLayoutComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 67CF9AFDE955FC8EB88A6A50 /* CKBackgroundLayoutComponent.mm */; };
+		6AF39030BFA203EB702816CA /* CKFunctor.h in Headers */ = {isa = PBXBuildFile; fileRef = 4F44A225131E30107B295413 /* CKFunctor.h */; };
+		6BCF79D10ADCF3A129FA3FC5 /* CKTransactionalComponentDataSourceUpdateConfigurationModification.h in Headers */ = {isa = PBXBuildFile; fileRef = 3E8BBF0B8C1E09523C86DA24 /* CKTransactionalComponentDataSourceUpdateConfigurationModification.h */; };
+		6CE1EE8C437C38A2CA303D94 /* CKCenterLayoutComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 28C19F775FF706B551E4D021 /* CKCenterLayoutComponent.h */; };
+		6DA163376F7A2F7F921BF59F /* CKTransactionalComponentDataSourceUpdateStateModification.h in Headers */ = {isa = PBXBuildFile; fileRef = A54941B7E0B8C33F5D8538AD /* CKTransactionalComponentDataSourceUpdateStateModification.h */; };
+		6F184CC2EE0808656ACA86C9 /* CKComponentLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 107B5DB378CBADD6AA5234AA /* CKComponentLayout.h */; };
+		6FF32BD24D0E2E832996A3E4 /* CKComponentPreparationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = AF0F07D4C5323CD88D81B6DE /* CKComponentPreparationQueue.h */; };
+		722E950A14682448B7BE33FC /* CKComponentRootView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1D6CBD750AEE0A9AD38E335C /* CKComponentRootView.m */; };
+		768DE33DF55A9AAB91D94DD8 /* CKComponentScopeRootInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = A6675A30AD493A80BD8B15B6 /* CKComponentScopeRootInternal.h */; };
+		783FA13B5E89BFB7BB9B989B /* CKTransactionalComponentDataSourceItem.mm in Sources */ = {isa = PBXBuildFile; fileRef = E1A1F3FF839FB981D06FBE0F /* CKTransactionalComponentDataSourceItem.mm */; };
+		789AAC991BB5AE592FDF060C /* CKComponentDataSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = 34A5DE3CA8674DDEBE1870EB /* CKComponentDataSource.mm */; };
+		7956D0746281D5B476B790AB /* CKButtonComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8917145851828FFD1CBD94E4 /* CKButtonComponent.mm */; };
+		79D1524D842A51ECAD6ED839 /* CKComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = 01A5AFA6A4CF66D39A212D0C /* CKComponent.h */; };
+		7B8E6DE3F4C1CCD4F47658C3 /* CKBackgroundLayoutComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = F9AFEEB5400C0A6F683C9B1E /* CKBackgroundLayoutComponent.h */; };
+		7C8A2477BC95F28AE14D890E /* ComponentMountContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A4B0C372788C27C31FE59A5 /* ComponentMountContext.h */; };
+		7D2DEF9996DA521C30453330 /* CKComponentAnimationHooks.h in Headers */ = {isa = PBXBuildFile; fileRef = E040B46D1845E9C4D0FAB6F2 /* CKComponentAnimationHooks.h */; };
+		7E8F9B2D46A639EDCBBE5A3E /* CKComponentContextImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 47F134A05DE40D69F090877C /* CKComponentContextImpl.h */; };
+		7F4AB91E7AD9A397EF8C129C /* CKTextKitTailTruncater.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0EEAF539C9163450D0F34827 /* CKTextKitTailTruncater.mm */; };
+		80E8FAA1A950B14B090AB1FF /* CKComponentLifecycleManager.h in Headers */ = {isa = PBXBuildFile; fileRef = FBBE10457F3477AF1E220682 /* CKComponentLifecycleManager.h */; };
+		825C96A7C0516D1603CE7EFB /* CKComponentConstantDecider.h in Headers */ = {isa = PBXBuildFile; fileRef = 47B32F8F23F0008EBFA66F2A /* CKComponentConstantDecider.h */; };
+		82B304F4E58C3A7A6E235492 /* CKTextComponentLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 7E6DA0CE1EC35D7C5968CB9A /* CKTextComponentLayer.mm */; };
+		830D14416A4553BF90183519 /* CKComponentBoundsAnimation.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2C453D029ABA04001FBA8029 /* CKComponentBoundsAnimation.mm */; };
+		85827BFD0C9511BE9B9B1609 /* CKComponentScopeFrame.h in Headers */ = {isa = PBXBuildFile; fileRef = 6518FE37008C62B2B6753A1D /* CKComponentScopeFrame.h */; };
+		85B8A511C8E39F1C5D86F14E /* CKComponentSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = FEBEBDFBEBC9BE8DA393F1B1 /* CKComponentSubclass.h */; };
+		86B18D68E72E9651C27F125A /* CKAsyncLayerInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = AB77789E1C01D1D33C797D00 /* CKAsyncLayerInternal.h */; };
+		8915658B6E821A001FDA433E /* CKTextKitRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = 9D51080C185C86B3453CCE14 /* CKTextKitRenderer.h */; };
+		89E5B7B37DC56A5158D23E25 /* CKTransactionalComponentDataSourceUpdateStateModification.mm in Sources */ = {isa = PBXBuildFile; fileRef = E77C2C8E52DB0FB0E20A9A12 /* CKTransactionalComponentDataSourceUpdateStateModification.mm */; };
+		8B32A2B92A82B7256FFE65BC /* CKComponentController.h in Headers */ = {isa = PBXBuildFile; fileRef = 83995F3DC62821A67F063644 /* CKComponentController.h */; };
+		8C9D3C9EB6FB9CFF33C58B98 /* CKTextKitShadower.mm in Sources */ = {isa = PBXBuildFile; fileRef = 76BC2584DB2A1C7CC68A31AF /* CKTextKitShadower.mm */; };
+		8E002C2A2C32A35405A89588 /* CKComponentLayout.mm in Sources */ = {isa = PBXBuildFile; fileRef = 534D164FE33309D6368568C9 /* CKComponentLayout.mm */; };
+		92C3F2546C51BEE65DCD5846 /* CKTransactionalComponentDataSourceChangeset.m in Sources */ = {isa = PBXBuildFile; fileRef = 308957B402F197F03F797AA3 /* CKTransactionalComponentDataSourceChangeset.m */; };
+		92EFC42754746D96558A1D09 /* CKComponentSizeRangeProviding.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CD4826DDFA77D120DA6F1DE /* CKComponentSizeRangeProviding.h */; };
+		9425747E044454BC78DC4C78 /* CKComponentAction.h in Headers */ = {isa = PBXBuildFile; fileRef = 2596D915E77BE4F7953E6F83 /* CKComponentAction.h */; };
+		95B5B5D920A4E641124233B0 /* CKComponentAccessibility.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BB6ED08D862C197464FED14 /* CKComponentAccessibility.h */; };
+		967D2CBF89952EF35332E054 /* CKTextKitEntityAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = E6597741BC86A3EBFB320256 /* CKTextKitEntityAttribute.h */; };
+		975A96BDA98B33EE0050400D /* CKTransactionalComponentDataSourceReloadModification.h in Headers */ = {isa = PBXBuildFile; fileRef = C34AFB1BF7ADEF792A17C1EB /* CKTransactionalComponentDataSourceReloadModification.h */; };
+		975C8B5679C1B1CEE0450400 /* CKAsyncTransactionContainer+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 9F236E57D297A5A4FF79DD03 /* CKAsyncTransactionContainer+Private.h */; };
+		97FE1F30CEA8AABF5837AD00 /* ComponentViewManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = EA68521DE8C5B7E85EE05B69 /* ComponentViewManager.mm */; };
+		9A5585468B5F244C25F02D5B /* CKTransactionalComponentDataSourceChange.m in Sources */ = {isa = PBXBuildFile; fileRef = 5F905CAD5A30E6A2FF1898E8 /* CKTransactionalComponentDataSourceChange.m */; };
+		9B6976F15C88A3FE39BC30A2 /* CKCacheImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = FE44FA2E7C919FCEE80C620A /* CKCacheImpl.h */; };
+		9D529F8B0429389E6068FC5F /* CKAsyncTransactionContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 768E4D8D73D41138CEE8EB94 /* CKAsyncTransactionContainer.m */; };
+		9E29372B633897208DD94597 /* CKTextKitContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = C7739214D7286DC90494FDA2 /* CKTextKitContext.mm */; };
+		9EA7D90BF45B68E95AB7F6BD /* CKComponentPreparationQueueTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 3654BC75A15321DDB20DC8FA /* CKComponentPreparationQueueTypes.h */; };
+		9F3918F8568E1B093A47FD23 /* CKNetworkImageComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = CB745C1D9DC466B0F5AAF310 /* CKNetworkImageComponent.mm */; };
+		A1A586771888AA26F485FD70 /* CKDimension.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0BAE8C76DDFE90E6C78334E5 /* CKDimension.mm */; };
+		A1F6DD947E1FE1A0C02AC168 /* CKComponentAction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3CE2B4F82B282F280919D034 /* CKComponentAction.mm */; };
+		A3E7758D2631DCD8B9CFB77C /* CKTransactionalComponentDataSourceItem.h in Headers */ = {isa = PBXBuildFile; fileRef = D1FCC510C7BD26D5C86CE8AF /* CKTransactionalComponentDataSourceItem.h */; };
+		A4D3F155CBC9FA464CEBCA3C /* CKComponentDebugController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0281073C584CE01FECCAD705 /* CKComponentDebugController.mm */; };
+		A5343E8B670D061ABAF5B7BD /* CKComponentAccessibility_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = C8B628714A24BEA96972A60B /* CKComponentAccessibility_Private.h */; };
+		A70221720C78A0A670B260F7 /* CKComponentHierarchyDebugHelper.mm in Sources */ = {isa = PBXBuildFile; fileRef = C854B41A2D6D02E5A1128E6C /* CKComponentHierarchyDebugHelper.mm */; };
+		A71D19F74211D28C7B2F994E /* CKButtonComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = B0B324C4F63DF2F48D9D5988 /* CKButtonComponent.h */; };
+		A77A44348BCA445A342E13E7 /* CKTextKitShadower.h in Headers */ = {isa = PBXBuildFile; fileRef = 43424150AB884996BA53C545 /* CKTextKitShadower.h */; };
+		A8DB5FAA344CA93F51BA93BA /* CKTextKitTruncating.h in Headers */ = {isa = PBXBuildFile; fileRef = 57B8F92B8ECCC196B4A2FCFB /* CKTextKitTruncating.h */; };
+		A8F292188963D8106D34B4A0 /* CKComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = CD1239C318B1F4B1EC02365F /* CKComponent.mm */; };
+		AD80A35A73D71FEC314D882F /* CKTransactionalComponentDataSourceStateModifying.h in Headers */ = {isa = PBXBuildFile; fileRef = CABD3944178D0400BD90755F /* CKTransactionalComponentDataSourceStateModifying.h */; };
+		AE440D473B0B3BA632626C8A /* CKWeakObjectContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1E5BC590551031935049EB /* CKWeakObjectContainer.m */; };
+		AE83330B02940123726DD03E /* ComponentViewManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B2B58847264C28482029E43 /* ComponentViewManager.h */; };
+		AED039229E0D9946252CC7BA /* CKTransactionalComponentDataSourceStateInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A2DD3447A8AFB25CF864024 /* CKTransactionalComponentDataSourceStateInternal.h */; };
+		AF0FD0B056C84E1AF6AA2D8A /* CKAsyncTransaction.m in Sources */ = {isa = PBXBuildFile; fileRef = 0044F7637ED0B9A0E5DE5CB6 /* CKAsyncTransaction.m */; };
+		AF3522E19A14D750FF2F186F /* CKTextComponentViewInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 9321780C502FBDD0624B8FE6 /* CKTextComponentViewInternal.h */; };
+		AF3EFA09E25AF3F4CB8E6EDD /* CKComponentController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C81131181ADA9FB7C1602CEC /* CKComponentController.mm */; };
+		AF8762BE757E97EB2996683A /* CKComponentScopeRoot.mm in Sources */ = {isa = PBXBuildFile; fileRef = BC2F392A046AC062E52EA1A0 /* CKComponentScopeRoot.mm */; };
+		AFEBF2EDBB88246F74DCB340 /* Pods-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = AD7BF86F5A8BDD4B70041125 /* Pods-dummy.m */; };
+		B0003E1F32BFC54A57C99E72 /* CKComponentControllerInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = EEB58F10B38107C8F7A85F05 /* CKComponentControllerInternal.h */; };
+		B195F0641372B78163D947C2 /* CKTextKitRendererCache.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0272110D06B9B11AB7ED3338 /* CKTextKitRendererCache.mm */; };
+		B218F9D833AD1EA4AB1A2F1F /* CKComponentHostingViewDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = EEC2CC135AC6166DFAB29708 /* CKComponentHostingViewDelegate.h */; };
+		B265AA436B700D455C39D1D9 /* CKComponentBoundsAnimation.h in Headers */ = {isa = PBXBuildFile; fileRef = 99D674F142453B64D34BCFAF /* CKComponentBoundsAnimation.h */; };
+		B317152A8C8170E3DF1FA6E1 /* CKComponentContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 56778D5DD19DCDE003AE9C9D /* CKComponentContext.h */; };
+		B319BAD74966845ACDBA1431 /* CKOptimisticViewMutations.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A7E1CCCEEC7F313BFFE3355 /* CKOptimisticViewMutations.h */; };
+		B361275913C45D14D1D11BE5 /* CKTextKitAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F64B4083ED2898A9B13E0B0 /* CKTextKitAttributes.h */; };
+		B3E6D544602C5DE7FA39E689 /* CKTextComponentLayerHighlighter.h in Headers */ = {isa = PBXBuildFile; fileRef = 29E35F00C424D3CAEBA9373B /* CKTextComponentLayerHighlighter.h */; };
+		B428E0F7DDC27951424E84A7 /* CKTransactionalComponentDataSourceChangesetInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 974EE62A86A341FE03F098D7 /* CKTransactionalComponentDataSourceChangesetInternal.h */; };
+		B5F26645314B038BB25E3985 /* CKTextComponentView.mm in Sources */ = {isa = PBXBuildFile; fileRef = E226395F9EDCCEAB4BC40B4B /* CKTextComponentView.mm */; };
+		B68C12DA637D69BC2ED89141 /* CKTextKitRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 658F7DD18F0166BE6268D95B /* CKTextKitRenderer.mm */; };
+		B70275E6A42B952243DF7EB8 /* CKTextComponentViewControlTracker.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1DAE77D61FEBFE6049DE57B1 /* CKTextComponentViewControlTracker.mm */; };
+		B858777C74B890431863B420 /* CKComponentProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 2E66378E03E365926A487670 /* CKComponentProvider.h */; };
+		B89B03767455FC6D66238C70 /* CKRatioLayoutComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = E77FB3270E476A1B04D04CA5 /* CKRatioLayoutComponent.mm */; };
+		BDFD2EC8049E803BD1DA6F34 /* CKTextComponentLayerHighlighter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 87E2501C10906A8A7A89F9B0 /* CKTextComponentLayerHighlighter.mm */; };
+		BF24D87135060EF5F3EDFC05 /* CKTransactionalComponentDataSourceAppliedChangesInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 2443D33A6364C833179EF11C /* CKTransactionalComponentDataSourceAppliedChangesInternal.h */; };
+		C016D62734E68C5DDC3484F9 /* CKCollectionViewDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 06939BABE48A82B61922CD15 /* CKCollectionViewDataSource.h */; };
+		C06ECF84846BBB47282D3FB7 /* ComponentUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = A185673B2806D99CE87B900E /* ComponentUtilities.h */; };
+		C1AB49B17D785FFA2C2916FD /* CKStackUnpositionedLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C1A550010E33C6D06F7A09F /* CKStackUnpositionedLayout.h */; };
+		C1DAC38456B577B0F0856C6A /* CKTransactionalComponentDataSourceReloadModification.mm in Sources */ = {isa = PBXBuildFile; fileRef = E0BCEDFD4890009674B79DCB /* CKTransactionalComponentDataSourceReloadModification.mm */; };
+		C1F31F8FFD541BCE8665C06B /* CKTextComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4B624527542314752A4AF38D /* CKTextComponent.mm */; };
+		C1F4F2E2B2620E1BA2F2A38F /* CKComponentGestureActions.mm in Sources */ = {isa = PBXBuildFile; fileRef = 52A0A76772C3A11E4C4DD25F /* CKComponentGestureActions.mm */; };
+		C3B834421C0EB68598BC7C18 /* CKArrayControllerChangeType.h in Headers */ = {isa = PBXBuildFile; fileRef = 982A1916B62F5A1A865A9983 /* CKArrayControllerChangeType.h */; };
+		C6E2B8D2A2F06D1CA712BD60 /* CKTransactionalComponentDataSourceInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 14545A2AC257764013647F53 /* CKTransactionalComponentDataSourceInternal.h */; };
+		C9DAB201DFC57051FAD8B47D /* CKInternalHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 46E6C3715A727E7CBE7BA9E5 /* CKInternalHelpers.h */; };
+		CA43A1A5C670BE84CB22937B /* CKTransactionalComponentDataSourceConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 27E45FFAED8945B8EB1BB950 /* CKTransactionalComponentDataSourceConfiguration.h */; };
+		CA4CC126BBDAB437E33F5112 /* CKThreadLocalComponentScope.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6B51E7784981C1AF7543C51E /* CKThreadLocalComponentScope.mm */; };
+		CA8EC1C4FC146BBC62FFFF10 /* CKComponentViewInterface.mm in Sources */ = {isa = PBXBuildFile; fileRef = BD5C5DF71E786592CC9D6BC8 /* CKComponentViewInterface.mm */; };
+		CAF12C2D0AB702976BDF4C4A /* CKComponentScopeHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = 635B3ABA4144E7377F471D07 /* CKComponentScopeHandle.h */; };
+		CB414E3FB753AE83B201C40E /* CKComponentLifecycleManagerAsynchronousUpdateHandler.h in Headers */ = {isa = PBXBuildFile; fileRef = F2DB0B351E4224A680053E3D /* CKComponentLifecycleManagerAsynchronousUpdateHandler.h */; };
+		CB85264BE76164462793D8A9 /* CKComponentLifecycleManager.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1A3E2226B4B07817B3CF71B4 /* CKComponentLifecycleManager.mm */; };
+		CE04C9EFF5F0CACA3C7D8133 /* CKTransactionalComponentDataSourceChangesetModification.h in Headers */ = {isa = PBXBuildFile; fileRef = BE472F98E4AEB050BA175597 /* CKTransactionalComponentDataSourceChangesetModification.h */; };
+		CEC33BB740BF2A34EA80C1AD /* CKAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = E41172D0428BA079ED370B9E /* CKAssert.h */; };
+		CF688524C1A87BEDD9BA34B6 /* CKComponentHierarchyDebugHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A49A52E985439A4520345C9 /* CKComponentHierarchyDebugHelper.h */; };
+		CFAC59D6514C4129599494FE /* CKComponentPreparationQueue.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1465511C09EEE802A8E7EBF8 /* CKComponentPreparationQueue.mm */; };
+		CFDBF55D9C28ED2C7A604B17 /* CKTextKitRendererCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 6FEC881764027E6B09CAEDAA /* CKTextKitRendererCache.h */; };
+		D08942ED4C4B358A577AC162 /* CKSectionedArrayController.mm in Sources */ = {isa = PBXBuildFile; fileRef = EEFDAB98C537D34F1B47DBAB /* CKSectionedArrayController.mm */; };
+		D0F15C31F8CE5A4D5E9A04AE /* CKStackPositionedLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 482CEE7DA9658270B9EFC996 /* CKStackPositionedLayout.h */; };
+		D1B293A439D9B28973B23CE3 /* CKHighlightOverlayLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 13B3EE48B75CC40352B968C2 /* CKHighlightOverlayLayer.h */; };
+		D30D058B6EE19391A7DA4468 /* CKCollectionViewDataSourceCell.h in Headers */ = {isa = PBXBuildFile; fileRef = FEF02B328B2B62EAB7FDB978 /* CKCollectionViewDataSourceCell.h */; };
+		D3865431B2069B2177B7E77B /* CKComponentDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = 64F92CFA4EF04625D235B71D /* CKComponentDataSource.h */; };
+		D479CD20715A16F80BB5FF82 /* CKComponentLifecycleManager_Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 7C097DAE6598742F0BDC6B06 /* CKComponentLifecycleManager_Private.h */; };
+		D4F2EC0D2C77834C188CC2B0 /* CKOverlayLayoutComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = C734BCDF7178B9D49E5769A1 /* CKOverlayLayoutComponent.mm */; };
+		D54676BAE4F0A6C890E9364D /* CKTextKitRenderer+TextChecking.mm in Sources */ = {isa = PBXBuildFile; fileRef = FD665E5C5856414195FEDA8B /* CKTextKitRenderer+TextChecking.mm */; };
+		D6C614D58E565BF5BC6A8D70 /* CKInsetComponent.h in Headers */ = {isa = PBXBuildFile; fileRef = CA399D8784E8FDEABE69C6AE /* CKInsetComponent.h */; };
+		D793C1864AAE69DA257C8442 /* CKTransactionalComponentDataSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = 9D5199FAE7693FAF6DC9F7D1 /* CKTransactionalComponentDataSource.mm */; };
+		D7EA4E061A68220CB20324DF /* CKComponentViewConfiguration.h in Headers */ = {isa = PBXBuildFile; fileRef = 3A3B2085D22BCC9E6F0C85E1 /* CKComponentViewConfiguration.h */; };
+		D84F75E58EF87050B95A3EDA /* CKComponentPreparationQueueInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 882235FA308AA499242E2CEF /* CKComponentPreparationQueueInternal.h */; };
+		D9A7A9C9A38BD43B267700FC /* CKMutex.h in Headers */ = {isa = PBXBuildFile; fileRef = A067BB5FFA7BD2568C45C330 /* CKMutex.h */; };
+		DA01032E4F665719C38199B6 /* CKComponentPreparationQueueListenerAnnouncer.h in Headers */ = {isa = PBXBuildFile; fileRef = DD8D9BA80923D83779E17FE6 /* CKComponentPreparationQueueListenerAnnouncer.h */; };
+		DC88AF179EEC86BFA20961DE /* CKComponentRootViewInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = A8795BBE8FFD3350C0FCEFEA /* CKComponentRootViewInternal.h */; };
+		DDC40F72EC58AA587F3755B4 /* CKComponentGestureActionsInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = B1AC177D61F15C211FB009AC /* CKComponentGestureActionsInternal.h */; };
+		DEFA84A62A6F63BD73887832 /* CKTextKitAttributes.mm in Sources */ = {isa = PBXBuildFile; fileRef = 18EA02EC48BF54FB34C8C5CB /* CKTextKitAttributes.mm */; };
+		E0DA28C32D97B75A64793A6F /* CKStaticLayoutComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 01F4D5DB5E5EE25CB079CC98 /* CKStaticLayoutComponent.mm */; };
+		E15B1982865E7E7198D5EC17 /* CKComponentAnnouncerBase.h in Headers */ = {isa = PBXBuildFile; fileRef = CB1373BB7AB2868064C906DC /* CKComponentAnnouncerBase.h */; };
+		E38C569DB8DB0448AD8E1B56 /* CKTransactionalComponentDataSourceUpdateConfigurationModification.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4480010FF410E4333312FD60 /* CKTransactionalComponentDataSourceUpdateConfigurationModification.mm */; };
+		E3D40FE0B6BC9AE9054FF7D9 /* CKComponentFlexibleSizeRangeProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 8548569A77FEC48AB113FF05 /* CKComponentFlexibleSizeRangeProvider.h */; };
+		E470BEDD9DC9D617FA7925E2 /* CKCollectionViewDataSource.mm in Sources */ = {isa = PBXBuildFile; fileRef = 925E7B771F96EAB2F22D57C6 /* CKCollectionViewDataSource.mm */; };
+		E5E211F327DBE99CDEF7F944 /* CKAsyncTransactionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = C4886CFB8000BD052E4E9B69 /* CKAsyncTransactionGroup.m */; };
+		E651E1C42D78ED9C9FEA4412 /* CKAsyncLayerSubclass.h in Headers */ = {isa = PBXBuildFile; fileRef = 6C9BC72FDA8D973DA3648B74 /* CKAsyncLayerSubclass.h */; };
+		E73AC029A2BC41D8127D6D79 /* CKTransactionalComponentDataSourceState.m in Sources */ = {isa = PBXBuildFile; fileRef = F9B4C629C1846FFA52AA8CE8 /* CKTransactionalComponentDataSourceState.m */; };
+		E76EF6D23C2ED642681E5250 /* CKLabelComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = D0D2213301B6BF50110BCFDD /* CKLabelComponent.mm */; };
+		EA9259C1DBA8B5DFF8A48545 /* ComponentLayoutContext.h in Headers */ = {isa = PBXBuildFile; fileRef = AC7537E09FEE74F397C85AAC /* ComponentLayoutContext.h */; };
+		EB6070E9E6B7AEDE16924FEB /* CKComponentScope.h in Headers */ = {isa = PBXBuildFile; fileRef = A61A6F043FEA95CF1F67E55A /* CKComponentScope.h */; };
+		EC0DFBCE85685A253272F783 /* CKComponentFlexibleSizeRangeProvider.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6C9C81C92FE5D34AF9E02848 /* CKComponentFlexibleSizeRangeProvider.mm */; };
+		EE0F28AA4C9514FE6350482F /* CKTextKitEntityAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = B8B79437C28837409A9AA699 /* CKTextKitEntityAttribute.m */; };
+		EEE71C29E65AEC75D4829A2E /* CKTransactionalComponentDataSource.h in Headers */ = {isa = PBXBuildFile; fileRef = CF9ACF4DA6031E604EB5B33A /* CKTransactionalComponentDataSource.h */; };
+		F09F548BA545D248D2F5424B /* CKTextKitRenderer+Positioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 064A4F51DA52902FDB548083 /* CKTextKitRenderer+Positioning.h */; };
+		F2B3E18628C6F59BCDD6CE62 /* CKComponentScopeTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 3911B055511743F92CE34481 /* CKComponentScopeTypes.h */; };
+		F2C52300942C3CE6ED01B249 /* CKComponentViewConfiguration.mm in Sources */ = {isa = PBXBuildFile; fileRef = DFE321326D2CED52D332BD36 /* CKComponentViewConfiguration.mm */; };
+		F31F5CE904612068BD7622A6 /* CKAsyncTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = E14BE35FAB1B4B3CBC2239B3 /* CKAsyncTransaction.h */; };
+		F60739D093C76E486DAE70B5 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7C683608B197AE841CC977E /* CoreText.framework */; };
+		F75A17DF5E940404315066C2 /* ComponentKit.h in Headers */ = {isa = PBXBuildFile; fileRef = D39663C7BBB45598FAE14242 /* ComponentKit.h */; };
+		F98BDF3480F88E26BE37A402 /* CKStackLayoutComponentUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 7E056DCD8D754185849E0637 /* CKStackLayoutComponentUtilities.h */; };
+		F9D60079CB88F651FEBECDC6 /* CKCompositeComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = CEEE000ED8F886EF81EEC471 /* CKCompositeComponent.mm */; };
+		FC8ED6875E540489E4895925 /* CKMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = AB118596F54A90C910A43DF8 /* CKMacros.h */; };
+		FD4A3F3A6519BD6A853B7CE5 /* CKArrayControllerChangeset.h in Headers */ = {isa = PBXBuildFile; fileRef = D40580B2CA85FAF37A571DD5 /* CKArrayControllerChangeset.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D785978417E8081575C008C0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 66FFF08D1E9C6F70D62BB2E9 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CEC4DA82B969F403652C460D;
+			remoteInfo = "Pods-ComponentKit";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0044F7637ED0B9A0E5DE5CB6 /* CKAsyncTransaction.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CKAsyncTransaction.m; path = ComponentTextKit/Utility/CKAsyncTransaction.m; sourceTree = "<group>"; };
+		00CA27F2441233307FC1B15F /* CKComponentHostingView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentHostingView.h; path = ComponentKit/HostingView/CKComponentHostingView.h; sourceTree = "<group>"; };
+		017DE0845BD1F7F41B2B0E62 /* Pods-ComponentKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ComponentKit-dummy.m"; sourceTree = "<group>"; };
+		01A5AFA6A4CF66D39A212D0C /* CKComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponent.h; path = ComponentKit/Core/CKComponent.h; sourceTree = "<group>"; };
+		01F4D5DB5E5EE25CB079CC98 /* CKStaticLayoutComponent.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKStaticLayoutComponent.mm; path = ComponentKit/LayoutComponents/CKStaticLayoutComponent.mm; sourceTree = "<group>"; };
+		0272110D06B9B11AB7ED3338 /* CKTextKitRendererCache.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKTextKitRendererCache.mm; path = ComponentTextKit/TextKit/CKTextKitRendererCache.mm; sourceTree = "<group>"; };
+		0281073C584CE01FECCAD705 /* CKComponentDebugController.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponentDebugController.mm; path = ComponentKit/Debug/CKComponentDebugController.mm; sourceTree = "<group>"; };
+		04F50F3DE4FE546ACE0920F2 /* CKArgumentPrecondition.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKArgumentPrecondition.h; path = ComponentKit/Base/CKArgumentPrecondition.h; sourceTree = "<group>"; };
+		064A4F51DA52902FDB548083 /* CKTextKitRenderer+Positioning.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CKTextKitRenderer+Positioning.h"; path = "ComponentTextKit/TextKit/CKTextKitRenderer+Positioning.h"; sourceTree = "<group>"; };
+		066CD5AE5E22279E83B6F3A5 /* CKImageComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKImageComponent.h; path = ComponentKit/Components/CKImageComponent.h; sourceTree = "<group>"; };
+		06939BABE48A82B61922CD15 /* CKCollectionViewDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKCollectionViewDataSource.h; path = ComponentKit/DataSources/CKCollectionViewDataSource.h; sourceTree = "<group>"; };
+		0A0BAC5693C996C7351E3BDD /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		0BAE8C76DDFE90E6C78334E5 /* CKDimension.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKDimension.mm; path = ComponentKit/Core/CKDimension.mm; sourceTree = "<group>"; };
+		0C24F604C19E369DEA868F41 /* CKComponentDataSourceOutputItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentDataSourceOutputItem.h; path = ComponentKit/DataSources/Common/CKComponentDataSourceOutputItem.h; sourceTree = "<group>"; };
+		0CDFB90AE9C94E9DAD442DA5 /* CKComponentViewAttribute.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponentViewAttribute.mm; path = ComponentKit/Core/CKComponentViewAttribute.mm; sourceTree = "<group>"; };
+		0D8E7A060C8796CA48DC28FC /* CKComponentDebugController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentDebugController.h; path = ComponentKit/Debug/CKComponentDebugController.h; sourceTree = "<group>"; };
+		0DED8CA88AF50F3E4232FB6C /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		0EEAF539C9163450D0F34827 /* CKTextKitTailTruncater.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKTextKitTailTruncater.mm; path = ComponentTextKit/TextKit/CKTextKitTailTruncater.mm; sourceTree = "<group>"; };
+		0F29B41E5E74F70CAA3A1AB2 /* CKCollectionViewDataSourceCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CKCollectionViewDataSourceCell.m; path = ComponentKit/DataSources/CKCollectionViewDataSourceCell.m; sourceTree = "<group>"; };
+		107B5DB378CBADD6AA5234AA /* CKComponentLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentLayout.h; path = ComponentKit/Core/CKComponentLayout.h; sourceTree = "<group>"; };
+		13B3EE48B75CC40352B968C2 /* CKHighlightOverlayLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKHighlightOverlayLayer.h; path = ComponentTextKit/Utility/CKHighlightOverlayLayer.h; sourceTree = "<group>"; };
+		14545A2AC257764013647F53 /* CKTransactionalComponentDataSourceInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTransactionalComponentDataSourceInternal.h; path = ComponentKit/TransactionalDataSources/Common/CKTransactionalComponentDataSourceInternal.h; sourceTree = "<group>"; };
+		1465511C09EEE802A8E7EBF8 /* CKComponentPreparationQueue.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponentPreparationQueue.mm; path = ComponentKit/DataSources/Common/CKComponentPreparationQueue.mm; sourceTree = "<group>"; };
+		15B2F8E383E2B33FD91DB30F /* CKTextComponentView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTextComponentView.h; path = ComponentTextKit/CKTextComponentView.h; sourceTree = "<group>"; };
+		1841DE79C0EE6B3507BC8DDA /* CKNetworkImageComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKNetworkImageComponent.h; path = ComponentKit/Components/CKNetworkImageComponent.h; sourceTree = "<group>"; };
+		18EA02EC48BF54FB34C8C5CB /* CKTextKitAttributes.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKTextKitAttributes.mm; path = ComponentTextKit/TextKit/CKTextKitAttributes.mm; sourceTree = "<group>"; };
+		1A3E2226B4B07817B3CF71B4 /* CKComponentLifecycleManager.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponentLifecycleManager.mm; path = ComponentKit/Core/CKComponentLifecycleManager.mm; sourceTree = "<group>"; };
+		1A7E1CCCEEC7F313BFFE3355 /* CKOptimisticViewMutations.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKOptimisticViewMutations.h; path = ComponentKit/Utilities/CKOptimisticViewMutations.h; sourceTree = "<group>"; };
+		1B2D8B7948E1345B36CF2C08 /* CKOptimisticViewMutations.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKOptimisticViewMutations.mm; path = ComponentKit/Utilities/CKOptimisticViewMutations.mm; sourceTree = "<group>"; };
+		1BB6ED08D862C197464FED14 /* CKComponentAccessibility.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentAccessibility.h; path = ComponentKit/Accessibility/CKComponentAccessibility.h; sourceTree = "<group>"; };
+		1C914E3D13A48B89A90BA84A /* CKComponentViewAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentViewAttribute.h; path = ComponentKit/Core/CKComponentViewAttribute.h; sourceTree = "<group>"; };
+		1D6CBD750AEE0A9AD38E335C /* CKComponentRootView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CKComponentRootView.m; path = ComponentKit/HostingView/CKComponentRootView.m; sourceTree = "<group>"; };
+		1DAE77D61FEBFE6049DE57B1 /* CKTextComponentViewControlTracker.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKTextComponentViewControlTracker.mm; path = ComponentTextKit/CKTextComponentViewControlTracker.mm; sourceTree = "<group>"; };
+		1E3AA99AD7A844DC9DD344E6 /* CKComponentScopeFrame.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponentScopeFrame.mm; path = ComponentKit/Core/Scope/CKComponentScopeFrame.mm; sourceTree = "<group>"; };
+		239F1C74A17988EC55CC625F /* CKArrayControllerChangeset.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKArrayControllerChangeset.mm; path = ComponentKit/Utilities/CKArrayControllerChangeset.mm; sourceTree = "<group>"; };
+		2443D33A6364C833179EF11C /* CKTransactionalComponentDataSourceAppliedChangesInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTransactionalComponentDataSourceAppliedChangesInternal.h; path = ComponentKit/TransactionalDataSources/Common/CKTransactionalComponentDataSourceAppliedChangesInternal.h; sourceTree = "<group>"; };
+		2596D915E77BE4F7953E6F83 /* CKComponentAction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentAction.h; path = ComponentKit/Utilities/CKComponentAction.h; sourceTree = "<group>"; };
+		27E45FFAED8945B8EB1BB950 /* CKTransactionalComponentDataSourceConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTransactionalComponentDataSourceConfiguration.h; path = ComponentKit/TransactionalDataSources/Common/CKTransactionalComponentDataSourceConfiguration.h; sourceTree = "<group>"; };
+		286CED42665D62885CB6F05F /* CKTransactionalComponentDataSourceChangesetModification.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKTransactionalComponentDataSourceChangesetModification.mm; path = ComponentKit/TransactionalDataSources/Common/Internal/CKTransactionalComponentDataSourceChangesetModification.mm; sourceTree = "<group>"; };
+		28C19F775FF706B551E4D021 /* CKCenterLayoutComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKCenterLayoutComponent.h; path = ComponentKit/LayoutComponents/CKCenterLayoutComponent.h; sourceTree = "<group>"; };
+		29E35F00C424D3CAEBA9373B /* CKTextComponentLayerHighlighter.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTextComponentLayerHighlighter.h; path = ComponentTextKit/CKTextComponentLayerHighlighter.h; sourceTree = "<group>"; };
+		2C453D029ABA04001FBA8029 /* CKComponentBoundsAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponentBoundsAnimation.mm; path = ComponentKit/Core/CKComponentBoundsAnimation.mm; sourceTree = "<group>"; };
+		2E66378E03E365926A487670 /* CKComponentProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentProvider.h; path = ComponentKit/DataSources/Common/CKComponentProvider.h; sourceTree = "<group>"; };
+		2F800EE111136CBA3E4F964E /* CKDimension.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKDimension.h; path = ComponentKit/Core/CKDimension.h; sourceTree = "<group>"; };
+		308957B402F197F03F797AA3 /* CKTransactionalComponentDataSourceChangeset.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CKTransactionalComponentDataSourceChangeset.m; path = ComponentKit/TransactionalDataSources/Common/CKTransactionalComponentDataSourceChangeset.m; sourceTree = "<group>"; };
+		31C07E9F32957248B73E4FE8 /* CKComponentLifecycleManagerInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentLifecycleManagerInternal.h; path = ComponentKit/Core/CKComponentLifecycleManagerInternal.h; sourceTree = "<group>"; };
+		32FEEF64726B576DD1F82565 /* CKComponentDeciding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentDeciding.h; path = ComponentKit/DataSources/Common/CKComponentDeciding.h; sourceTree = "<group>"; };
+		340C4C9A6AE0C260FBF0FCD1 /* CKTextKitRenderer+Positioning.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = "CKTextKitRenderer+Positioning.mm"; path = "ComponentTextKit/TextKit/CKTextKitRenderer+Positioning.mm"; sourceTree = "<group>"; };
+		34A5DE3CA8674DDEBE1870EB /* CKComponentDataSource.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponentDataSource.mm; path = ComponentKit/DataSources/Common/CKComponentDataSource.mm; sourceTree = "<group>"; };
+		355BCAC4DB7C3B002B88A4E9 /* CKSectionedArrayController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKSectionedArrayController.h; path = ComponentKit/Utilities/CKSectionedArrayController.h; sourceTree = "<group>"; };
+		3654BC75A15321DDB20DC8FA /* CKComponentPreparationQueueTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentPreparationQueueTypes.h; path = ComponentKit/DataSources/Common/CKComponentPreparationQueueTypes.h; sourceTree = "<group>"; };
+		3911B055511743F92CE34481 /* CKComponentScopeTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentScopeTypes.h; path = ComponentKit/Core/Scope/CKComponentScopeTypes.h; sourceTree = "<group>"; };
+		39D90D3F902CEF2AA2339759 /* CKComponentBoundsAnimation+UICollectionView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CKComponentBoundsAnimation+UICollectionView.h"; path = "ComponentKit/DataSources/CKComponentBoundsAnimation+UICollectionView.h"; sourceTree = "<group>"; };
+		39FEA8095CF07563BA83C677 /* CKComponentBoundsAnimation+UICollectionView.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = "CKComponentBoundsAnimation+UICollectionView.mm"; path = "ComponentKit/DataSources/CKComponentBoundsAnimation+UICollectionView.mm"; sourceTree = "<group>"; };
+		3A3B2085D22BCC9E6F0C85E1 /* CKComponentViewConfiguration.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentViewConfiguration.h; path = ComponentKit/Core/CKComponentViewConfiguration.h; sourceTree = "<group>"; };
+		3A4B0C372788C27C31FE59A5 /* ComponentMountContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ComponentMountContext.h; path = ComponentKit/Core/ComponentMountContext.h; sourceTree = "<group>"; };
+		3B2B58847264C28482029E43 /* ComponentViewManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ComponentViewManager.h; path = ComponentKit/Core/ComponentViewManager.h; sourceTree = "<group>"; };
+		3CE2B4F82B282F280919D034 /* CKComponentAction.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponentAction.mm; path = ComponentKit/Utilities/CKComponentAction.mm; sourceTree = "<group>"; };
+		3E8BBF0B8C1E09523C86DA24 /* CKTransactionalComponentDataSourceUpdateConfigurationModification.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTransactionalComponentDataSourceUpdateConfigurationModification.h; path = ComponentKit/TransactionalDataSources/Common/Internal/CKTransactionalComponentDataSourceUpdateConfigurationModification.h; sourceTree = "<group>"; };
+		3F64B4083ED2898A9B13E0B0 /* CKTextKitAttributes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTextKitAttributes.h; path = ComponentTextKit/TextKit/CKTextKitAttributes.h; sourceTree = "<group>"; };
+		40D70089BDF4B7E1F8C8EEB4 /* CKComponentSize.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponentSize.mm; path = ComponentKit/Core/CKComponentSize.mm; sourceTree = "<group>"; };
+		413EE2D0D5EFA6EA4AFEF2DE /* CKThreadLocalComponentScope.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKThreadLocalComponentScope.h; path = ComponentKit/Core/Scope/CKThreadLocalComponentScope.h; sourceTree = "<group>"; };
+		42636C69EDA427EA312558E3 /* CKComponentHostingViewInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentHostingViewInternal.h; path = ComponentKit/HostingView/CKComponentHostingViewInternal.h; sourceTree = "<group>"; };
+		43424150AB884996BA53C545 /* CKTextKitShadower.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTextKitShadower.h; path = ComponentTextKit/TextKit/CKTextKitShadower.h; sourceTree = "<group>"; };
+		4480010FF410E4333312FD60 /* CKTransactionalComponentDataSourceUpdateConfigurationModification.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKTransactionalComponentDataSourceUpdateConfigurationModification.mm; path = ComponentKit/TransactionalDataSources/Common/Internal/CKTransactionalComponentDataSourceUpdateConfigurationModification.mm; sourceTree = "<group>"; };
+		46E6C3715A727E7CBE7BA9E5 /* CKInternalHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKInternalHelpers.h; path = ComponentKit/Utilities/CKInternalHelpers.h; sourceTree = "<group>"; };
+		47B32F8F23F0008EBFA66F2A /* CKComponentConstantDecider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentConstantDecider.h; path = ComponentKit/DataSources/Common/CKComponentConstantDecider.h; sourceTree = "<group>"; };
+		47F134A05DE40D69F090877C /* CKComponentContextImpl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentContextImpl.h; path = ComponentKit/Utilities/CKComponentContextImpl.h; sourceTree = "<group>"; };
+		482CEE7DA9658270B9EFC996 /* CKStackPositionedLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKStackPositionedLayout.h; path = ComponentKit/LayoutComponents/CKStackPositionedLayout.h; sourceTree = "<group>"; };
+		4B624527542314752A4AF38D /* CKTextComponent.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKTextComponent.mm; path = ComponentTextKit/CKTextComponent.mm; sourceTree = "<group>"; };
+		4F44A225131E30107B295413 /* CKFunctor.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKFunctor.h; path = ComponentTextKit/Utility/CKFunctor.h; sourceTree = "<group>"; };
+		500E77CE80B8711309787DCC /* CKComponentSize.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentSize.h; path = ComponentKit/Core/CKComponentSize.h; sourceTree = "<group>"; };
+		52A0A76772C3A11E4C4DD25F /* CKComponentGestureActions.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponentGestureActions.mm; path = ComponentKit/Utilities/CKComponentGestureActions.mm; sourceTree = "<group>"; };
+		534939CA3755D49A4340B26D /* CKImageComponent.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKImageComponent.mm; path = ComponentKit/Components/CKImageComponent.mm; sourceTree = "<group>"; };
+		534D164FE33309D6368568C9 /* CKComponentLayout.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponentLayout.mm; path = ComponentKit/Core/CKComponentLayout.mm; sourceTree = "<group>"; };
+		56778D5DD19DCDE003AE9C9D /* CKComponentContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentContext.h; path = ComponentKit/Utilities/CKComponentContext.h; sourceTree = "<group>"; };
+		57B8F92B8ECCC196B4A2FCFB /* CKTextKitTruncating.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTextKitTruncating.h; path = ComponentTextKit/TextKit/CKTextKitTruncating.h; sourceTree = "<group>"; };
+		58EF86082DA6D6FE4DEED67E /* CKComponentDataSourceInputItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentDataSourceInputItem.h; path = ComponentKit/DataSources/Common/CKComponentDataSourceInputItem.h; sourceTree = "<group>"; };
+		5B6B774B24948027BF1B4783 /* Pods-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-acknowledgements.plist"; sourceTree = "<group>"; };
+		5DE408804226B013721659FA /* ComponentLayoutContext.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ComponentLayoutContext.mm; path = ComponentKit/Core/ComponentLayoutContext.mm; sourceTree = "<group>"; };
+		5F905CAD5A30E6A2FF1898E8 /* CKTransactionalComponentDataSourceChange.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CKTransactionalComponentDataSourceChange.m; path = ComponentKit/TransactionalDataSources/Common/Internal/CKTransactionalComponentDataSourceChange.m; sourceTree = "<group>"; };
+		627CF55B67350D972E178DD2 /* CKComponentPreparationQueueListenerAnnouncer.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponentPreparationQueueListenerAnnouncer.mm; path = ComponentKit/DataSources/Common/CKComponentPreparationQueueListenerAnnouncer.mm; sourceTree = "<group>"; };
+		62AC76DA0A6C904D0EB660E0 /* CKWeakObjectContainer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKWeakObjectContainer.h; path = ComponentKit/Utilities/CKWeakObjectContainer.h; sourceTree = "<group>"; };
+		6331E3DEA14313D2A9584E18 /* CKCompositeComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKCompositeComponent.h; path = ComponentKit/Core/CKCompositeComponent.h; sourceTree = "<group>"; };
+		635B3ABA4144E7377F471D07 /* CKComponentScopeHandle.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentScopeHandle.h; path = ComponentKit/Core/Scope/CKComponentScopeHandle.h; sourceTree = "<group>"; };
+		64F92CFA4EF04625D235B71D /* CKComponentDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentDataSource.h; path = ComponentKit/DataSources/Common/CKComponentDataSource.h; sourceTree = "<group>"; };
+		6518FE37008C62B2B6753A1D /* CKComponentScopeFrame.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentScopeFrame.h; path = ComponentKit/Core/Scope/CKComponentScopeFrame.h; sourceTree = "<group>"; };
+		658F7DD18F0166BE6268D95B /* CKTextKitRenderer.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKTextKitRenderer.mm; path = ComponentTextKit/TextKit/CKTextKitRenderer.mm; sourceTree = "<group>"; };
+		675C878F8444FADF20AD5E59 /* CKComponentAnnouncerBase.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponentAnnouncerBase.mm; path = ComponentKit/DataSources/Common/CKComponentAnnouncerBase.mm; sourceTree = "<group>"; };
+		675D2F3D414E1C39D370C0C0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		67CF9AFDE955FC8EB88A6A50 /* CKBackgroundLayoutComponent.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKBackgroundLayoutComponent.mm; path = ComponentKit/LayoutComponents/CKBackgroundLayoutComponent.mm; sourceTree = "<group>"; };
+		6A49A52E985439A4520345C9 /* CKComponentHierarchyDebugHelper.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentHierarchyDebugHelper.h; path = ComponentKit/Debug/CKComponentHierarchyDebugHelper.h; sourceTree = "<group>"; };
+		6A8EA1471D4E63F12DA7FE31 /* CKAsyncTransactionGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKAsyncTransactionGroup.h; path = ComponentTextKit/Utility/CKAsyncTransactionGroup.h; sourceTree = "<group>"; };
+		6AE034988F9149B4FAD229EB /* CKTransactionalComponentDataSourceListenerAnnouncer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTransactionalComponentDataSourceListenerAnnouncer.h; path = ComponentKit/TransactionalDataSources/Common/CKTransactionalComponentDataSourceListenerAnnouncer.h; sourceTree = "<group>"; };
+		6B51E7784981C1AF7543C51E /* CKThreadLocalComponentScope.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKThreadLocalComponentScope.mm; path = ComponentKit/Core/Scope/CKThreadLocalComponentScope.mm; sourceTree = "<group>"; };
+		6BCED266B4E7093D4A39A3A6 /* CKComponentScope.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponentScope.mm; path = ComponentKit/Core/Scope/CKComponentScope.mm; sourceTree = "<group>"; };
+		6C9BC72FDA8D973DA3648B74 /* CKAsyncLayerSubclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKAsyncLayerSubclass.h; path = ComponentTextKit/Utility/CKAsyncLayerSubclass.h; sourceTree = "<group>"; };
+		6C9C81C92FE5D34AF9E02848 /* CKComponentFlexibleSizeRangeProvider.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponentFlexibleSizeRangeProvider.mm; path = ComponentKit/HostingView/CKComponentFlexibleSizeRangeProvider.mm; sourceTree = "<group>"; };
+		6E68CDAA4CBEA1532E4C0101 /* CKComponentViewInterface.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentViewInterface.h; path = ComponentKit/Core/CKComponentViewInterface.h; sourceTree = "<group>"; };
+		6FEC881764027E6B09CAEDAA /* CKTextKitRendererCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTextKitRendererCache.h; path = ComponentTextKit/TextKit/CKTextKitRendererCache.h; sourceTree = "<group>"; };
+		71FB829C858DF6DAF83B94D0 /* CKStackLayoutComponent.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKStackLayoutComponent.mm; path = ComponentKit/LayoutComponents/CKStackLayoutComponent.mm; sourceTree = "<group>"; };
+		73638A2DA742005C856EDE06 /* CKComponentInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentInternal.h; path = ComponentKit/Core/CKComponentInternal.h; sourceTree = "<group>"; };
+		75D8A55FEB81E0976CE52E40 /* CKComponentAnimation.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponentAnimation.mm; path = ComponentKit/Core/CKComponentAnimation.mm; sourceTree = "<group>"; };
+		768E4D8D73D41138CEE8EB94 /* CKAsyncTransactionContainer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CKAsyncTransactionContainer.m; path = ComponentTextKit/Utility/CKAsyncTransactionContainer.m; sourceTree = "<group>"; };
+		76BC2584DB2A1C7CC68A31AF /* CKTextKitShadower.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKTextKitShadower.mm; path = ComponentTextKit/TextKit/CKTextKitShadower.mm; sourceTree = "<group>"; };
+		76C810C52A341144BB822355 /* CKComponentConstantDecider.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CKComponentConstantDecider.m; path = ComponentKit/DataSources/Common/CKComponentConstantDecider.m; sourceTree = "<group>"; };
+		7B1EC4C3DF1025FA093EAC3D /* CKHighlightOverlayLayer.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKHighlightOverlayLayer.mm; path = ComponentTextKit/Utility/CKHighlightOverlayLayer.mm; sourceTree = "<group>"; };
+		7BC738BAB6089FA4ED7A258D /* CKTextKitContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTextKitContext.h; path = ComponentTextKit/TextKit/CKTextKitContext.h; sourceTree = "<group>"; };
+		7C097DAE6598742F0BDC6B06 /* CKComponentLifecycleManager_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentLifecycleManager_Private.h; path = ComponentKit/Core/CKComponentLifecycleManager_Private.h; sourceTree = "<group>"; };
+		7C22534AF79AC84B5C17C4DE /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.debug.xcconfig; sourceTree = "<group>"; };
+		7CD4826DDFA77D120DA6F1DE /* CKComponentSizeRangeProviding.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentSizeRangeProviding.h; path = ComponentKit/HostingView/CKComponentSizeRangeProviding.h; sourceTree = "<group>"; };
+		7E056DCD8D754185849E0637 /* CKStackLayoutComponentUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKStackLayoutComponentUtilities.h; path = ComponentKit/LayoutComponents/CKStackLayoutComponentUtilities.h; sourceTree = "<group>"; };
+		7E6DA0CE1EC35D7C5968CB9A /* CKTextComponentLayer.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKTextComponentLayer.mm; path = ComponentTextKit/CKTextComponentLayer.mm; sourceTree = "<group>"; };
+		803540318D37E8CE4CE0E12A /* CKComponentHostingView.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponentHostingView.mm; path = ComponentKit/HostingView/CKComponentHostingView.mm; sourceTree = "<group>"; };
+		83995F3DC62821A67F063644 /* CKComponentController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentController.h; path = ComponentKit/Core/CKComponentController.h; sourceTree = "<group>"; };
+		8548569A77FEC48AB113FF05 /* CKComponentFlexibleSizeRangeProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentFlexibleSizeRangeProvider.h; path = ComponentKit/HostingView/CKComponentFlexibleSizeRangeProvider.h; sourceTree = "<group>"; };
+		87E2501C10906A8A7A89F9B0 /* CKTextComponentLayerHighlighter.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKTextComponentLayerHighlighter.mm; path = ComponentTextKit/CKTextComponentLayerHighlighter.mm; sourceTree = "<group>"; };
+		882235FA308AA499242E2CEF /* CKComponentPreparationQueueInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentPreparationQueueInternal.h; path = ComponentKit/DataSources/Common/CKComponentPreparationQueueInternal.h; sourceTree = "<group>"; };
+		887B66E43F1822D341ECCFCF /* Pods-ComponentKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ComponentKit.xcconfig"; sourceTree = "<group>"; };
+		8917145851828FFD1CBD94E4 /* CKButtonComponent.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKButtonComponent.mm; path = ComponentKit/Components/CKButtonComponent.mm; sourceTree = "<group>"; };
+		8A2DD3447A8AFB25CF864024 /* CKTransactionalComponentDataSourceStateInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTransactionalComponentDataSourceStateInternal.h; path = ComponentKit/TransactionalDataSources/Common/CKTransactionalComponentDataSourceStateInternal.h; sourceTree = "<group>"; };
+		8C111DA396136868CF1BD71C /* CKStackLayoutComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKStackLayoutComponent.h; path = ComponentKit/LayoutComponents/CKStackLayoutComponent.h; sourceTree = "<group>"; };
+		8C1A550010E33C6D06F7A09F /* CKStackUnpositionedLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKStackUnpositionedLayout.h; path = ComponentKit/LayoutComponents/CKStackUnpositionedLayout.h; sourceTree = "<group>"; };
+		8D96DC74397DB8B1FEF404BF /* CKComponentRootView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentRootView.h; path = ComponentKit/HostingView/CKComponentRootView.h; sourceTree = "<group>"; };
+		8D98C72590E5D7C0CC63036A /* CKStaticLayoutComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKStaticLayoutComponent.h; path = ComponentKit/LayoutComponents/CKStaticLayoutComponent.h; sourceTree = "<group>"; };
+		925E7B771F96EAB2F22D57C6 /* CKCollectionViewDataSource.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKCollectionViewDataSource.mm; path = ComponentKit/DataSources/CKCollectionViewDataSource.mm; sourceTree = "<group>"; };
+		9290C4CD97FF6C4EB3367479 /* CKTextKitRenderer+TextChecking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CKTextKitRenderer+TextChecking.h"; path = "ComponentTextKit/TextKit/CKTextKitRenderer+TextChecking.h"; sourceTree = "<group>"; };
+		9321780C502FBDD0624B8FE6 /* CKTextComponentViewInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTextComponentViewInternal.h; path = ComponentTextKit/CKTextComponentViewInternal.h; sourceTree = "<group>"; };
+		9641B1126215E9CB22A9D272 /* CKLabelComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKLabelComponent.h; path = ComponentTextKit/CKLabelComponent.h; sourceTree = "<group>"; };
+		974EE62A86A341FE03F098D7 /* CKTransactionalComponentDataSourceChangesetInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTransactionalComponentDataSourceChangesetInternal.h; path = ComponentKit/TransactionalDataSources/Common/CKTransactionalComponentDataSourceChangesetInternal.h; sourceTree = "<group>"; };
+		979A8DB706EAF39613B26E25 /* CKComponentAccessibility.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponentAccessibility.mm; path = ComponentKit/Accessibility/CKComponentAccessibility.mm; sourceTree = "<group>"; };
+		97DD72517DADD2B804931535 /* CKTransactionalComponentDataSourceAppliedChanges.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKTransactionalComponentDataSourceAppliedChanges.mm; path = ComponentKit/TransactionalDataSources/Common/CKTransactionalComponentDataSourceAppliedChanges.mm; sourceTree = "<group>"; };
+		982A1916B62F5A1A865A9983 /* CKArrayControllerChangeType.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKArrayControllerChangeType.h; path = ComponentKit/Utilities/CKArrayControllerChangeType.h; sourceTree = "<group>"; };
+		998C047081F2DA9D9DCA9F33 /* CKInternalHelpers.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKInternalHelpers.mm; path = ComponentKit/Utilities/CKInternalHelpers.mm; sourceTree = "<group>"; };
+		99D674F142453B64D34BCFAF /* CKComponentBoundsAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentBoundsAnimation.h; path = ComponentKit/Core/CKComponentBoundsAnimation.h; sourceTree = "<group>"; };
+		9A002ABEFAF1BC4476C16F7B /* CKTransactionalComponentDataSourceListener.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTransactionalComponentDataSourceListener.h; path = ComponentKit/TransactionalDataSources/Common/CKTransactionalComponentDataSourceListener.h; sourceTree = "<group>"; };
+		9D51080C185C86B3453CCE14 /* CKTextKitRenderer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTextKitRenderer.h; path = ComponentTextKit/TextKit/CKTextKitRenderer.h; sourceTree = "<group>"; };
+		9D5199FAE7693FAF6DC9F7D1 /* CKTransactionalComponentDataSource.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKTransactionalComponentDataSource.mm; path = ComponentKit/TransactionalDataSources/Common/CKTransactionalComponentDataSource.mm; sourceTree = "<group>"; };
+		9F236E57D297A5A4FF79DD03 /* CKAsyncTransactionContainer+Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "CKAsyncTransactionContainer+Private.h"; path = "ComponentTextKit/Utility/CKAsyncTransactionContainer+Private.h"; sourceTree = "<group>"; };
+		A067BB5FFA7BD2568C45C330 /* CKMutex.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKMutex.h; path = ComponentKit/Utilities/CKMutex.h; sourceTree = "<group>"; };
+		A106F2D678D0C2E206F47624 /* ComponentViewReuseUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ComponentViewReuseUtilities.h; path = ComponentKit/Core/ComponentViewReuseUtilities.h; sourceTree = "<group>"; };
+		A185673B2806D99CE87B900E /* ComponentUtilities.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ComponentUtilities.h; path = ComponentKit/Core/ComponentUtilities.h; sourceTree = "<group>"; };
+		A54941B7E0B8C33F5D8538AD /* CKTransactionalComponentDataSourceUpdateStateModification.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTransactionalComponentDataSourceUpdateStateModification.h; path = ComponentKit/TransactionalDataSources/Common/Internal/CKTransactionalComponentDataSourceUpdateStateModification.h; sourceTree = "<group>"; };
+		A61A6F043FEA95CF1F67E55A /* CKComponentScope.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentScope.h; path = ComponentKit/Core/Scope/CKComponentScope.h; sourceTree = "<group>"; };
+		A6444EE4609F95F5C16210BF /* CKTransactionalComponentDataSourceState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTransactionalComponentDataSourceState.h; path = ComponentKit/TransactionalDataSources/Common/CKTransactionalComponentDataSourceState.h; sourceTree = "<group>"; };
+		A6675A30AD493A80BD8B15B6 /* CKComponentScopeRootInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentScopeRootInternal.h; path = ComponentKit/Core/Scope/CKComponentScopeRootInternal.h; sourceTree = "<group>"; };
+		A69E3EFA9C1AEC8358BACC49 /* CKStackPositionedLayout.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKStackPositionedLayout.mm; path = ComponentKit/LayoutComponents/CKStackPositionedLayout.mm; sourceTree = "<group>"; };
+		A8795BBE8FFD3350C0FCEFEA /* CKComponentRootViewInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentRootViewInternal.h; path = ComponentKit/HostingView/CKComponentRootViewInternal.h; sourceTree = "<group>"; };
+		A8FD6C8E7B253312C86C7128 /* CKRatioLayoutComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKRatioLayoutComponent.h; path = ComponentKit/LayoutComponents/CKRatioLayoutComponent.h; sourceTree = "<group>"; };
+		A9DD5E39ACB9BDC18481C973 /* CKComponentGestureActions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentGestureActions.h; path = ComponentKit/Utilities/CKComponentGestureActions.h; sourceTree = "<group>"; };
+		AA9DBABEBA1FC5B8B9907313 /* CKComponentAnimation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentAnimation.h; path = ComponentKit/Core/CKComponentAnimation.h; sourceTree = "<group>"; };
+		AB118596F54A90C910A43DF8 /* CKMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKMacros.h; path = ComponentKit/Base/CKMacros.h; sourceTree = "<group>"; };
+		AB77789E1C01D1D33C797D00 /* CKAsyncLayerInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKAsyncLayerInternal.h; path = ComponentTextKit/Utility/CKAsyncLayerInternal.h; sourceTree = "<group>"; };
+		AC1E5BC590551031935049EB /* CKWeakObjectContainer.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CKWeakObjectContainer.m; path = ComponentKit/Utilities/CKWeakObjectContainer.m; sourceTree = "<group>"; };
+		AC7537E09FEE74F397C85AAC /* ComponentLayoutContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ComponentLayoutContext.h; path = ComponentKit/Core/ComponentLayoutContext.h; sourceTree = "<group>"; };
+		AD7BF86F5A8BDD4B70041125 /* Pods-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-dummy.m"; sourceTree = "<group>"; };
+		AE94CFAFB5FCE15B7E41C610 /* Pods-environment.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-environment.h"; sourceTree = "<group>"; };
+		AEE37CA232592BCDA8F721B9 /* CKAsyncTransactionContainer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKAsyncTransactionContainer.h; path = ComponentTextKit/Utility/CKAsyncTransactionContainer.h; sourceTree = "<group>"; };
+		AF0F07D4C5323CD88D81B6DE /* CKComponentPreparationQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentPreparationQueue.h; path = ComponentKit/DataSources/Common/CKComponentPreparationQueue.h; sourceTree = "<group>"; };
+		B0B324C4F63DF2F48D9D5988 /* CKButtonComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKButtonComponent.h; path = ComponentKit/Components/CKButtonComponent.h; sourceTree = "<group>"; };
+		B1AC177D61F15C211FB009AC /* CKComponentGestureActionsInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentGestureActionsInternal.h; path = ComponentKit/Utilities/CKComponentGestureActionsInternal.h; sourceTree = "<group>"; };
+		B8B79437C28837409A9AA699 /* CKTextKitEntityAttribute.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CKTextKitEntityAttribute.m; path = ComponentTextKit/TextKit/CKTextKitEntityAttribute.m; sourceTree = "<group>"; };
+		BC2F392A046AC062E52EA1A0 /* CKComponentScopeRoot.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponentScopeRoot.mm; path = ComponentKit/Core/Scope/CKComponentScopeRoot.mm; sourceTree = "<group>"; };
+		BD5C5DF71E786592CC9D6BC8 /* CKComponentViewInterface.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponentViewInterface.mm; path = ComponentKit/Core/CKComponentViewInterface.mm; sourceTree = "<group>"; };
+		BE472F98E4AEB050BA175597 /* CKTransactionalComponentDataSourceChangesetModification.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTransactionalComponentDataSourceChangesetModification.h; path = ComponentKit/TransactionalDataSources/Common/Internal/CKTransactionalComponentDataSourceChangesetModification.h; sourceTree = "<group>"; };
+		BECB70E536583A02AD0B1809 /* CKTextComponentLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTextComponentLayer.h; path = ComponentTextKit/CKTextComponentLayer.h; sourceTree = "<group>"; };
+		BEDD26244F2453B616265644 /* Pods-ComponentKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ComponentKit-prefix.pch"; sourceTree = "<group>"; };
+		BEEF55D5F68C7EE2B1DE2CF9 /* CKTextComponentViewControlTracker.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTextComponentViewControlTracker.h; path = ComponentTextKit/CKTextComponentViewControlTracker.h; sourceTree = "<group>"; };
+		BF6B4B2C43A1DB1858E9F7B4 /* CKAsyncLayer.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKAsyncLayer.mm; path = ComponentTextKit/Utility/CKAsyncLayer.mm; sourceTree = "<group>"; };
+		C34AFB1BF7ADEF792A17C1EB /* CKTransactionalComponentDataSourceReloadModification.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTransactionalComponentDataSourceReloadModification.h; path = ComponentKit/TransactionalDataSources/Common/Internal/CKTransactionalComponentDataSourceReloadModification.h; sourceTree = "<group>"; };
+		C4886CFB8000BD052E4E9B69 /* CKAsyncTransactionGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CKAsyncTransactionGroup.m; path = ComponentTextKit/Utility/CKAsyncTransactionGroup.m; sourceTree = "<group>"; };
+		C734BCDF7178B9D49E5769A1 /* CKOverlayLayoutComponent.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKOverlayLayoutComponent.mm; path = ComponentKit/LayoutComponents/CKOverlayLayoutComponent.mm; sourceTree = "<group>"; };
+		C74AC53290F8B218EF3961AB /* CKComponentDataSourceOutputItem.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponentDataSourceOutputItem.mm; path = ComponentKit/DataSources/Common/CKComponentDataSourceOutputItem.mm; sourceTree = "<group>"; };
+		C7739214D7286DC90494FDA2 /* CKTextKitContext.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKTextKitContext.mm; path = ComponentTextKit/TextKit/CKTextKitContext.mm; sourceTree = "<group>"; };
+		C7C683608B197AE841CC977E /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS8.3.sdk/System/Library/Frameworks/CoreText.framework; sourceTree = DEVELOPER_DIR; };
+		C81131181ADA9FB7C1602CEC /* CKComponentController.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponentController.mm; path = ComponentKit/Core/CKComponentController.mm; sourceTree = "<group>"; };
+		C854B41A2D6D02E5A1128E6C /* CKComponentHierarchyDebugHelper.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponentHierarchyDebugHelper.mm; path = ComponentKit/Debug/CKComponentHierarchyDebugHelper.mm; sourceTree = "<group>"; };
+		C8B628714A24BEA96972A60B /* CKComponentAccessibility_Private.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentAccessibility_Private.h; path = ComponentKit/Accessibility/CKComponentAccessibility_Private.h; sourceTree = "<group>"; };
+		CA399D8784E8FDEABE69C6AE /* CKInsetComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKInsetComponent.h; path = ComponentKit/LayoutComponents/CKInsetComponent.h; sourceTree = "<group>"; };
+		CABD3944178D0400BD90755F /* CKTransactionalComponentDataSourceStateModifying.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTransactionalComponentDataSourceStateModifying.h; path = ComponentKit/TransactionalDataSources/Common/Internal/CKTransactionalComponentDataSourceStateModifying.h; sourceTree = "<group>"; };
+		CB09634E366147CF0701F4E8 /* CKTransactionalComponentDataSourceChangeset.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTransactionalComponentDataSourceChangeset.h; path = ComponentKit/TransactionalDataSources/Common/CKTransactionalComponentDataSourceChangeset.h; sourceTree = "<group>"; };
+		CB1373BB7AB2868064C906DC /* CKComponentAnnouncerBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentAnnouncerBase.h; path = ComponentKit/DataSources/Common/CKComponentAnnouncerBase.h; sourceTree = "<group>"; };
+		CB745C1D9DC466B0F5AAF310 /* CKNetworkImageComponent.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKNetworkImageComponent.mm; path = ComponentKit/Components/CKNetworkImageComponent.mm; sourceTree = "<group>"; };
+		CD1239C318B1F4B1EC02365F /* CKComponent.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponent.mm; path = ComponentKit/Core/CKComponent.mm; sourceTree = "<group>"; };
+		CE9481A9E2D0DFA3CBC5E9BB /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		CEEE000ED8F886EF81EEC471 /* CKCompositeComponent.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKCompositeComponent.mm; path = ComponentKit/Core/CKCompositeComponent.mm; sourceTree = "<group>"; };
+		CEF0358F71D26162F5DA189C /* CKComponentDataSourceInputItem.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponentDataSourceInputItem.mm; path = ComponentKit/DataSources/Common/CKComponentDataSourceInputItem.mm; sourceTree = "<group>"; };
+		CF9ACF4DA6031E604EB5B33A /* CKTransactionalComponentDataSource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTransactionalComponentDataSource.h; path = ComponentKit/TransactionalDataSources/Common/CKTransactionalComponentDataSource.h; sourceTree = "<group>"; };
+		D0D2213301B6BF50110BCFDD /* CKLabelComponent.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKLabelComponent.mm; path = ComponentTextKit/CKLabelComponent.mm; sourceTree = "<group>"; };
+		D1FCC510C7BD26D5C86CE8AF /* CKTransactionalComponentDataSourceItem.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTransactionalComponentDataSourceItem.h; path = ComponentKit/TransactionalDataSources/Common/CKTransactionalComponentDataSourceItem.h; sourceTree = "<group>"; };
+		D318EC2344365983440805A0 /* CKCenterLayoutComponent.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKCenterLayoutComponent.mm; path = ComponentKit/LayoutComponents/CKCenterLayoutComponent.mm; sourceTree = "<group>"; };
+		D39663C7BBB45598FAE14242 /* ComponentKit.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ComponentKit.h; path = ComponentKit/ComponentKit.h; sourceTree = "<group>"; };
+		D40580B2CA85FAF37A571DD5 /* CKArrayControllerChangeset.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKArrayControllerChangeset.h; path = ComponentKit/Utilities/CKArrayControllerChangeset.h; sourceTree = "<group>"; };
+		D52B0BA0F0D0FD8E92A569F3 /* CKTextComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTextComponent.h; path = ComponentTextKit/CKTextComponent.h; sourceTree = "<group>"; };
+		D55A2F84E861D128B3D35AEE /* CKTextKitTailTruncater.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTextKitTailTruncater.h; path = ComponentTextKit/TextKit/CKTextKitTailTruncater.h; sourceTree = "<group>"; };
+		D57F01E8D44F0FE21BCF568E /* CKTransactionalComponentDataSourceListenerAnnouncer.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKTransactionalComponentDataSourceListenerAnnouncer.mm; path = ComponentKit/TransactionalDataSources/Common/CKTransactionalComponentDataSourceListenerAnnouncer.mm; sourceTree = "<group>"; };
+		D5EBC52515C470C090067318 /* CKTransactionalComponentDataSourceAppliedChanges.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTransactionalComponentDataSourceAppliedChanges.h; path = ComponentKit/TransactionalDataSources/Common/CKTransactionalComponentDataSourceAppliedChanges.h; sourceTree = "<group>"; };
+		D685CFDF67CEFC02614C2FC8 /* CKAsyncLayer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKAsyncLayer.h; path = ComponentTextKit/Utility/CKAsyncLayer.h; sourceTree = "<group>"; };
+		DD8D9BA80923D83779E17FE6 /* CKComponentPreparationQueueListenerAnnouncer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentPreparationQueueListenerAnnouncer.h; path = ComponentKit/DataSources/Common/CKComponentPreparationQueueListenerAnnouncer.h; sourceTree = "<group>"; };
+		DDD73BE1DE2CFA3566CE0912 /* CKTransactionalComponentDataSourceConfiguration.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKTransactionalComponentDataSourceConfiguration.mm; path = ComponentKit/TransactionalDataSources/Common/CKTransactionalComponentDataSourceConfiguration.mm; sourceTree = "<group>"; };
+		DFC466FDC593D5C42B740DEE /* CKTransactionalComponentDataSourceChange.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTransactionalComponentDataSourceChange.h; path = ComponentKit/TransactionalDataSources/Common/Internal/CKTransactionalComponentDataSourceChange.h; sourceTree = "<group>"; };
+		DFE321326D2CED52D332BD36 /* CKComponentViewConfiguration.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponentViewConfiguration.mm; path = ComponentKit/Core/CKComponentViewConfiguration.mm; sourceTree = "<group>"; };
+		E040B46D1845E9C4D0FAB6F2 /* CKComponentAnimationHooks.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentAnimationHooks.h; path = ComponentKit/Core/CKComponentAnimationHooks.h; sourceTree = "<group>"; };
+		E0BCEDFD4890009674B79DCB /* CKTransactionalComponentDataSourceReloadModification.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKTransactionalComponentDataSourceReloadModification.mm; path = ComponentKit/TransactionalDataSources/Common/Internal/CKTransactionalComponentDataSourceReloadModification.mm; sourceTree = "<group>"; };
+		E0F9E83D389B289F714BD254 /* CKInsetComponent.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKInsetComponent.mm; path = ComponentKit/LayoutComponents/CKInsetComponent.mm; sourceTree = "<group>"; };
+		E14BE35FAB1B4B3CBC2239B3 /* CKAsyncTransaction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKAsyncTransaction.h; path = ComponentTextKit/Utility/CKAsyncTransaction.h; sourceTree = "<group>"; };
+		E1A1F3FF839FB981D06FBE0F /* CKTransactionalComponentDataSourceItem.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKTransactionalComponentDataSourceItem.mm; path = ComponentKit/TransactionalDataSources/Common/CKTransactionalComponentDataSourceItem.mm; sourceTree = "<group>"; };
+		E226395F9EDCCEAB4BC40B4B /* CKTextComponentView.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKTextComponentView.mm; path = ComponentTextKit/CKTextComponentView.mm; sourceTree = "<group>"; };
+		E27063A7DC89175DEBBE10DE /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Pods.release.xcconfig; sourceTree = "<group>"; };
+		E355CC1634DF885BDF914937 /* Pods-ComponentKit-Private.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ComponentKit-Private.xcconfig"; sourceTree = "<group>"; };
+		E41172D0428BA079ED370B9E /* CKAssert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKAssert.h; path = ComponentKit/Base/CKAssert.h; sourceTree = "<group>"; };
+		E43745162F7C28392A364888 /* CKStackUnpositionedLayout.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKStackUnpositionedLayout.mm; path = ComponentKit/LayoutComponents/CKStackUnpositionedLayout.mm; sourceTree = "<group>"; };
+		E657FBAAAFFBA3F4C2340929 /* CKTransactionalComponentDataSourceItemInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTransactionalComponentDataSourceItemInternal.h; path = ComponentKit/TransactionalDataSources/Common/CKTransactionalComponentDataSourceItemInternal.h; sourceTree = "<group>"; };
+		E6597741BC86A3EBFB320256 /* CKTextKitEntityAttribute.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKTextKitEntityAttribute.h; path = ComponentTextKit/TextKit/CKTextKitEntityAttribute.h; sourceTree = "<group>"; };
+		E77C2C8E52DB0FB0E20A9A12 /* CKTransactionalComponentDataSourceUpdateStateModification.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKTransactionalComponentDataSourceUpdateStateModification.mm; path = ComponentKit/TransactionalDataSources/Common/Internal/CKTransactionalComponentDataSourceUpdateStateModification.mm; sourceTree = "<group>"; };
+		E77FB3270E476A1B04D04CA5 /* CKRatioLayoutComponent.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKRatioLayoutComponent.mm; path = ComponentKit/LayoutComponents/CKRatioLayoutComponent.mm; sourceTree = "<group>"; };
+		E7DE9A09B82689E00D67F25C /* ComponentViewReuseUtilities.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ComponentViewReuseUtilities.mm; path = ComponentKit/Core/ComponentViewReuseUtilities.mm; sourceTree = "<group>"; };
+		E7E1F3A478763CC86E7E3FC8 /* CKComponentScopeRoot.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentScopeRoot.h; path = ComponentKit/Core/Scope/CKComponentScopeRoot.h; sourceTree = "<group>"; };
+		EA68521DE8C5B7E85EE05B69 /* ComponentViewManager.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ComponentViewManager.mm; path = ComponentKit/Core/ComponentViewManager.mm; sourceTree = "<group>"; };
+		EB49A4CB2470D85F3C09ED5F /* Pods-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EB4E3E9FFCFFBB1488A8C76D /* CKNetworkImageDownloading.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKNetworkImageDownloading.h; path = ComponentKit/Components/CKNetworkImageDownloading.h; sourceTree = "<group>"; };
+		EB90AC8D23EB2D4C3CE239ED /* libPods-ComponentKit.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ComponentKit.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EEB58F10B38107C8F7A85F05 /* CKComponentControllerInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentControllerInternal.h; path = ComponentKit/Core/CKComponentControllerInternal.h; sourceTree = "<group>"; };
+		EEC2CC135AC6166DFAB29708 /* CKComponentHostingViewDelegate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentHostingViewDelegate.h; path = ComponentKit/HostingView/CKComponentHostingViewDelegate.h; sourceTree = "<group>"; };
+		EEFDAB98C537D34F1B47DBAB /* CKSectionedArrayController.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKSectionedArrayController.mm; path = ComponentKit/Utilities/CKSectionedArrayController.mm; sourceTree = "<group>"; };
+		F1EFA76F63FA249B020659D8 /* CKOverlayLayoutComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKOverlayLayoutComponent.h; path = ComponentKit/LayoutComponents/CKOverlayLayoutComponent.h; sourceTree = "<group>"; };
+		F2DB0B351E4224A680053E3D /* CKComponentLifecycleManagerAsynchronousUpdateHandler.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentLifecycleManagerAsynchronousUpdateHandler.h; path = ComponentKit/Core/CKComponentLifecycleManagerAsynchronousUpdateHandler.h; sourceTree = "<group>"; };
+		F8A67FDE4516AB8CC9DF5C18 /* Pods-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-resources.sh"; sourceTree = "<group>"; };
+		F9AFEEB5400C0A6F683C9B1E /* CKBackgroundLayoutComponent.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKBackgroundLayoutComponent.h; path = ComponentKit/LayoutComponents/CKBackgroundLayoutComponent.h; sourceTree = "<group>"; };
+		F9B4C629C1846FFA52AA8CE8 /* CKTransactionalComponentDataSourceState.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = CKTransactionalComponentDataSourceState.m; path = ComponentKit/TransactionalDataSources/Common/CKTransactionalComponentDataSourceState.m; sourceTree = "<group>"; };
+		FBBE10457F3477AF1E220682 /* CKComponentLifecycleManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentLifecycleManager.h; path = ComponentKit/Core/CKComponentLifecycleManager.h; sourceTree = "<group>"; };
+		FCE03BC26F190C3475157CB6 /* CKComponentScopeHandle.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = CKComponentScopeHandle.mm; path = ComponentKit/Core/Scope/CKComponentScopeHandle.mm; sourceTree = "<group>"; };
+		FD665E5C5856414195FEDA8B /* CKTextKitRenderer+TextChecking.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = "CKTextKitRenderer+TextChecking.mm"; path = "ComponentTextKit/TextKit/CKTextKitRenderer+TextChecking.mm"; sourceTree = "<group>"; };
+		FE44FA2E7C919FCEE80C620A /* CKCacheImpl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKCacheImpl.h; path = ComponentTextKit/Utility/CKCacheImpl.h; sourceTree = "<group>"; };
+		FEBEBDFBEBC9BE8DA393F1B1 /* CKComponentSubclass.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentSubclass.h; path = ComponentKit/Core/CKComponentSubclass.h; sourceTree = "<group>"; };
+		FEF02B328B2B62EAB7FDB978 /* CKCollectionViewDataSourceCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKCollectionViewDataSourceCell.h; path = ComponentKit/DataSources/CKCollectionViewDataSourceCell.h; sourceTree = "<group>"; };
+		FF01C6B2CE2C7EF79476742D /* CKComponentPreparationQueueListener.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = CKComponentPreparationQueueListener.h; path = ComponentKit/DataSources/Common/CKComponentPreparationQueueListener.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		47E0FAA28B040F54F6EED1E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13E271E0B8F12045E2E70266 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8A8B5B5A2129A35DF34E0F91 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F60739D093C76E486DAE70B5 /* CoreText.framework in Frameworks */,
+				2B89C512AEC5511D8FF31354 /* Foundation.framework in Frameworks */,
+				561BA5C720C8BA8593A401FE /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		131D4414ADF552ABD8A18365 /* ComponentKit */ = {
+			isa = PBXGroup;
+			children = (
+				04F50F3DE4FE546ACE0920F2 /* CKArgumentPrecondition.h */,
+				982A1916B62F5A1A865A9983 /* CKArrayControllerChangeType.h */,
+				D40580B2CA85FAF37A571DD5 /* CKArrayControllerChangeset.h */,
+				239F1C74A17988EC55CC625F /* CKArrayControllerChangeset.mm */,
+				E41172D0428BA079ED370B9E /* CKAssert.h */,
+				D685CFDF67CEFC02614C2FC8 /* CKAsyncLayer.h */,
+				BF6B4B2C43A1DB1858E9F7B4 /* CKAsyncLayer.mm */,
+				AB77789E1C01D1D33C797D00 /* CKAsyncLayerInternal.h */,
+				6C9BC72FDA8D973DA3648B74 /* CKAsyncLayerSubclass.h */,
+				E14BE35FAB1B4B3CBC2239B3 /* CKAsyncTransaction.h */,
+				0044F7637ED0B9A0E5DE5CB6 /* CKAsyncTransaction.m */,
+				AEE37CA232592BCDA8F721B9 /* CKAsyncTransactionContainer.h */,
+				768E4D8D73D41138CEE8EB94 /* CKAsyncTransactionContainer.m */,
+				9F236E57D297A5A4FF79DD03 /* CKAsyncTransactionContainer+Private.h */,
+				6A8EA1471D4E63F12DA7FE31 /* CKAsyncTransactionGroup.h */,
+				C4886CFB8000BD052E4E9B69 /* CKAsyncTransactionGroup.m */,
+				F9AFEEB5400C0A6F683C9B1E /* CKBackgroundLayoutComponent.h */,
+				67CF9AFDE955FC8EB88A6A50 /* CKBackgroundLayoutComponent.mm */,
+				B0B324C4F63DF2F48D9D5988 /* CKButtonComponent.h */,
+				8917145851828FFD1CBD94E4 /* CKButtonComponent.mm */,
+				FE44FA2E7C919FCEE80C620A /* CKCacheImpl.h */,
+				28C19F775FF706B551E4D021 /* CKCenterLayoutComponent.h */,
+				D318EC2344365983440805A0 /* CKCenterLayoutComponent.mm */,
+				06939BABE48A82B61922CD15 /* CKCollectionViewDataSource.h */,
+				925E7B771F96EAB2F22D57C6 /* CKCollectionViewDataSource.mm */,
+				FEF02B328B2B62EAB7FDB978 /* CKCollectionViewDataSourceCell.h */,
+				0F29B41E5E74F70CAA3A1AB2 /* CKCollectionViewDataSourceCell.m */,
+				01A5AFA6A4CF66D39A212D0C /* CKComponent.h */,
+				CD1239C318B1F4B1EC02365F /* CKComponent.mm */,
+				1BB6ED08D862C197464FED14 /* CKComponentAccessibility.h */,
+				979A8DB706EAF39613B26E25 /* CKComponentAccessibility.mm */,
+				C8B628714A24BEA96972A60B /* CKComponentAccessibility_Private.h */,
+				2596D915E77BE4F7953E6F83 /* CKComponentAction.h */,
+				3CE2B4F82B282F280919D034 /* CKComponentAction.mm */,
+				AA9DBABEBA1FC5B8B9907313 /* CKComponentAnimation.h */,
+				75D8A55FEB81E0976CE52E40 /* CKComponentAnimation.mm */,
+				E040B46D1845E9C4D0FAB6F2 /* CKComponentAnimationHooks.h */,
+				CB1373BB7AB2868064C906DC /* CKComponentAnnouncerBase.h */,
+				675C878F8444FADF20AD5E59 /* CKComponentAnnouncerBase.mm */,
+				99D674F142453B64D34BCFAF /* CKComponentBoundsAnimation.h */,
+				2C453D029ABA04001FBA8029 /* CKComponentBoundsAnimation.mm */,
+				39D90D3F902CEF2AA2339759 /* CKComponentBoundsAnimation+UICollectionView.h */,
+				39FEA8095CF07563BA83C677 /* CKComponentBoundsAnimation+UICollectionView.mm */,
+				47B32F8F23F0008EBFA66F2A /* CKComponentConstantDecider.h */,
+				76C810C52A341144BB822355 /* CKComponentConstantDecider.m */,
+				56778D5DD19DCDE003AE9C9D /* CKComponentContext.h */,
+				47F134A05DE40D69F090877C /* CKComponentContextImpl.h */,
+				83995F3DC62821A67F063644 /* CKComponentController.h */,
+				C81131181ADA9FB7C1602CEC /* CKComponentController.mm */,
+				EEB58F10B38107C8F7A85F05 /* CKComponentControllerInternal.h */,
+				64F92CFA4EF04625D235B71D /* CKComponentDataSource.h */,
+				34A5DE3CA8674DDEBE1870EB /* CKComponentDataSource.mm */,
+				58EF86082DA6D6FE4DEED67E /* CKComponentDataSourceInputItem.h */,
+				CEF0358F71D26162F5DA189C /* CKComponentDataSourceInputItem.mm */,
+				0C24F604C19E369DEA868F41 /* CKComponentDataSourceOutputItem.h */,
+				C74AC53290F8B218EF3961AB /* CKComponentDataSourceOutputItem.mm */,
+				0D8E7A060C8796CA48DC28FC /* CKComponentDebugController.h */,
+				0281073C584CE01FECCAD705 /* CKComponentDebugController.mm */,
+				32FEEF64726B576DD1F82565 /* CKComponentDeciding.h */,
+				8548569A77FEC48AB113FF05 /* CKComponentFlexibleSizeRangeProvider.h */,
+				6C9C81C92FE5D34AF9E02848 /* CKComponentFlexibleSizeRangeProvider.mm */,
+				A9DD5E39ACB9BDC18481C973 /* CKComponentGestureActions.h */,
+				52A0A76772C3A11E4C4DD25F /* CKComponentGestureActions.mm */,
+				B1AC177D61F15C211FB009AC /* CKComponentGestureActionsInternal.h */,
+				6A49A52E985439A4520345C9 /* CKComponentHierarchyDebugHelper.h */,
+				C854B41A2D6D02E5A1128E6C /* CKComponentHierarchyDebugHelper.mm */,
+				00CA27F2441233307FC1B15F /* CKComponentHostingView.h */,
+				803540318D37E8CE4CE0E12A /* CKComponentHostingView.mm */,
+				EEC2CC135AC6166DFAB29708 /* CKComponentHostingViewDelegate.h */,
+				42636C69EDA427EA312558E3 /* CKComponentHostingViewInternal.h */,
+				73638A2DA742005C856EDE06 /* CKComponentInternal.h */,
+				107B5DB378CBADD6AA5234AA /* CKComponentLayout.h */,
+				534D164FE33309D6368568C9 /* CKComponentLayout.mm */,
+				FBBE10457F3477AF1E220682 /* CKComponentLifecycleManager.h */,
+				1A3E2226B4B07817B3CF71B4 /* CKComponentLifecycleManager.mm */,
+				F2DB0B351E4224A680053E3D /* CKComponentLifecycleManagerAsynchronousUpdateHandler.h */,
+				31C07E9F32957248B73E4FE8 /* CKComponentLifecycleManagerInternal.h */,
+				7C097DAE6598742F0BDC6B06 /* CKComponentLifecycleManager_Private.h */,
+				AF0F07D4C5323CD88D81B6DE /* CKComponentPreparationQueue.h */,
+				1465511C09EEE802A8E7EBF8 /* CKComponentPreparationQueue.mm */,
+				882235FA308AA499242E2CEF /* CKComponentPreparationQueueInternal.h */,
+				FF01C6B2CE2C7EF79476742D /* CKComponentPreparationQueueListener.h */,
+				DD8D9BA80923D83779E17FE6 /* CKComponentPreparationQueueListenerAnnouncer.h */,
+				627CF55B67350D972E178DD2 /* CKComponentPreparationQueueListenerAnnouncer.mm */,
+				3654BC75A15321DDB20DC8FA /* CKComponentPreparationQueueTypes.h */,
+				2E66378E03E365926A487670 /* CKComponentProvider.h */,
+				8D96DC74397DB8B1FEF404BF /* CKComponentRootView.h */,
+				1D6CBD750AEE0A9AD38E335C /* CKComponentRootView.m */,
+				A8795BBE8FFD3350C0FCEFEA /* CKComponentRootViewInternal.h */,
+				A61A6F043FEA95CF1F67E55A /* CKComponentScope.h */,
+				6BCED266B4E7093D4A39A3A6 /* CKComponentScope.mm */,
+				6518FE37008C62B2B6753A1D /* CKComponentScopeFrame.h */,
+				1E3AA99AD7A844DC9DD344E6 /* CKComponentScopeFrame.mm */,
+				635B3ABA4144E7377F471D07 /* CKComponentScopeHandle.h */,
+				FCE03BC26F190C3475157CB6 /* CKComponentScopeHandle.mm */,
+				E7E1F3A478763CC86E7E3FC8 /* CKComponentScopeRoot.h */,
+				BC2F392A046AC062E52EA1A0 /* CKComponentScopeRoot.mm */,
+				A6675A30AD493A80BD8B15B6 /* CKComponentScopeRootInternal.h */,
+				3911B055511743F92CE34481 /* CKComponentScopeTypes.h */,
+				500E77CE80B8711309787DCC /* CKComponentSize.h */,
+				40D70089BDF4B7E1F8C8EEB4 /* CKComponentSize.mm */,
+				7CD4826DDFA77D120DA6F1DE /* CKComponentSizeRangeProviding.h */,
+				FEBEBDFBEBC9BE8DA393F1B1 /* CKComponentSubclass.h */,
+				1C914E3D13A48B89A90BA84A /* CKComponentViewAttribute.h */,
+				0CDFB90AE9C94E9DAD442DA5 /* CKComponentViewAttribute.mm */,
+				3A3B2085D22BCC9E6F0C85E1 /* CKComponentViewConfiguration.h */,
+				DFE321326D2CED52D332BD36 /* CKComponentViewConfiguration.mm */,
+				6E68CDAA4CBEA1532E4C0101 /* CKComponentViewInterface.h */,
+				BD5C5DF71E786592CC9D6BC8 /* CKComponentViewInterface.mm */,
+				6331E3DEA14313D2A9584E18 /* CKCompositeComponent.h */,
+				CEEE000ED8F886EF81EEC471 /* CKCompositeComponent.mm */,
+				2F800EE111136CBA3E4F964E /* CKDimension.h */,
+				0BAE8C76DDFE90E6C78334E5 /* CKDimension.mm */,
+				4F44A225131E30107B295413 /* CKFunctor.h */,
+				13B3EE48B75CC40352B968C2 /* CKHighlightOverlayLayer.h */,
+				7B1EC4C3DF1025FA093EAC3D /* CKHighlightOverlayLayer.mm */,
+				066CD5AE5E22279E83B6F3A5 /* CKImageComponent.h */,
+				534939CA3755D49A4340B26D /* CKImageComponent.mm */,
+				CA399D8784E8FDEABE69C6AE /* CKInsetComponent.h */,
+				E0F9E83D389B289F714BD254 /* CKInsetComponent.mm */,
+				46E6C3715A727E7CBE7BA9E5 /* CKInternalHelpers.h */,
+				998C047081F2DA9D9DCA9F33 /* CKInternalHelpers.mm */,
+				9641B1126215E9CB22A9D272 /* CKLabelComponent.h */,
+				D0D2213301B6BF50110BCFDD /* CKLabelComponent.mm */,
+				AB118596F54A90C910A43DF8 /* CKMacros.h */,
+				A067BB5FFA7BD2568C45C330 /* CKMutex.h */,
+				1841DE79C0EE6B3507BC8DDA /* CKNetworkImageComponent.h */,
+				CB745C1D9DC466B0F5AAF310 /* CKNetworkImageComponent.mm */,
+				EB4E3E9FFCFFBB1488A8C76D /* CKNetworkImageDownloading.h */,
+				1A7E1CCCEEC7F313BFFE3355 /* CKOptimisticViewMutations.h */,
+				1B2D8B7948E1345B36CF2C08 /* CKOptimisticViewMutations.mm */,
+				F1EFA76F63FA249B020659D8 /* CKOverlayLayoutComponent.h */,
+				C734BCDF7178B9D49E5769A1 /* CKOverlayLayoutComponent.mm */,
+				A8FD6C8E7B253312C86C7128 /* CKRatioLayoutComponent.h */,
+				E77FB3270E476A1B04D04CA5 /* CKRatioLayoutComponent.mm */,
+				355BCAC4DB7C3B002B88A4E9 /* CKSectionedArrayController.h */,
+				EEFDAB98C537D34F1B47DBAB /* CKSectionedArrayController.mm */,
+				8C111DA396136868CF1BD71C /* CKStackLayoutComponent.h */,
+				71FB829C858DF6DAF83B94D0 /* CKStackLayoutComponent.mm */,
+				7E056DCD8D754185849E0637 /* CKStackLayoutComponentUtilities.h */,
+				482CEE7DA9658270B9EFC996 /* CKStackPositionedLayout.h */,
+				A69E3EFA9C1AEC8358BACC49 /* CKStackPositionedLayout.mm */,
+				8C1A550010E33C6D06F7A09F /* CKStackUnpositionedLayout.h */,
+				E43745162F7C28392A364888 /* CKStackUnpositionedLayout.mm */,
+				8D98C72590E5D7C0CC63036A /* CKStaticLayoutComponent.h */,
+				01F4D5DB5E5EE25CB079CC98 /* CKStaticLayoutComponent.mm */,
+				D52B0BA0F0D0FD8E92A569F3 /* CKTextComponent.h */,
+				4B624527542314752A4AF38D /* CKTextComponent.mm */,
+				BECB70E536583A02AD0B1809 /* CKTextComponentLayer.h */,
+				7E6DA0CE1EC35D7C5968CB9A /* CKTextComponentLayer.mm */,
+				29E35F00C424D3CAEBA9373B /* CKTextComponentLayerHighlighter.h */,
+				87E2501C10906A8A7A89F9B0 /* CKTextComponentLayerHighlighter.mm */,
+				15B2F8E383E2B33FD91DB30F /* CKTextComponentView.h */,
+				E226395F9EDCCEAB4BC40B4B /* CKTextComponentView.mm */,
+				BEEF55D5F68C7EE2B1DE2CF9 /* CKTextComponentViewControlTracker.h */,
+				1DAE77D61FEBFE6049DE57B1 /* CKTextComponentViewControlTracker.mm */,
+				9321780C502FBDD0624B8FE6 /* CKTextComponentViewInternal.h */,
+				3F64B4083ED2898A9B13E0B0 /* CKTextKitAttributes.h */,
+				18EA02EC48BF54FB34C8C5CB /* CKTextKitAttributes.mm */,
+				7BC738BAB6089FA4ED7A258D /* CKTextKitContext.h */,
+				C7739214D7286DC90494FDA2 /* CKTextKitContext.mm */,
+				E6597741BC86A3EBFB320256 /* CKTextKitEntityAttribute.h */,
+				B8B79437C28837409A9AA699 /* CKTextKitEntityAttribute.m */,
+				9D51080C185C86B3453CCE14 /* CKTextKitRenderer.h */,
+				658F7DD18F0166BE6268D95B /* CKTextKitRenderer.mm */,
+				064A4F51DA52902FDB548083 /* CKTextKitRenderer+Positioning.h */,
+				340C4C9A6AE0C260FBF0FCD1 /* CKTextKitRenderer+Positioning.mm */,
+				9290C4CD97FF6C4EB3367479 /* CKTextKitRenderer+TextChecking.h */,
+				FD665E5C5856414195FEDA8B /* CKTextKitRenderer+TextChecking.mm */,
+				6FEC881764027E6B09CAEDAA /* CKTextKitRendererCache.h */,
+				0272110D06B9B11AB7ED3338 /* CKTextKitRendererCache.mm */,
+				43424150AB884996BA53C545 /* CKTextKitShadower.h */,
+				76BC2584DB2A1C7CC68A31AF /* CKTextKitShadower.mm */,
+				D55A2F84E861D128B3D35AEE /* CKTextKitTailTruncater.h */,
+				0EEAF539C9163450D0F34827 /* CKTextKitTailTruncater.mm */,
+				57B8F92B8ECCC196B4A2FCFB /* CKTextKitTruncating.h */,
+				413EE2D0D5EFA6EA4AFEF2DE /* CKThreadLocalComponentScope.h */,
+				6B51E7784981C1AF7543C51E /* CKThreadLocalComponentScope.mm */,
+				CF9ACF4DA6031E604EB5B33A /* CKTransactionalComponentDataSource.h */,
+				9D5199FAE7693FAF6DC9F7D1 /* CKTransactionalComponentDataSource.mm */,
+				D5EBC52515C470C090067318 /* CKTransactionalComponentDataSourceAppliedChanges.h */,
+				97DD72517DADD2B804931535 /* CKTransactionalComponentDataSourceAppliedChanges.mm */,
+				2443D33A6364C833179EF11C /* CKTransactionalComponentDataSourceAppliedChangesInternal.h */,
+				DFC466FDC593D5C42B740DEE /* CKTransactionalComponentDataSourceChange.h */,
+				5F905CAD5A30E6A2FF1898E8 /* CKTransactionalComponentDataSourceChange.m */,
+				CB09634E366147CF0701F4E8 /* CKTransactionalComponentDataSourceChangeset.h */,
+				308957B402F197F03F797AA3 /* CKTransactionalComponentDataSourceChangeset.m */,
+				974EE62A86A341FE03F098D7 /* CKTransactionalComponentDataSourceChangesetInternal.h */,
+				BE472F98E4AEB050BA175597 /* CKTransactionalComponentDataSourceChangesetModification.h */,
+				286CED42665D62885CB6F05F /* CKTransactionalComponentDataSourceChangesetModification.mm */,
+				27E45FFAED8945B8EB1BB950 /* CKTransactionalComponentDataSourceConfiguration.h */,
+				DDD73BE1DE2CFA3566CE0912 /* CKTransactionalComponentDataSourceConfiguration.mm */,
+				14545A2AC257764013647F53 /* CKTransactionalComponentDataSourceInternal.h */,
+				D1FCC510C7BD26D5C86CE8AF /* CKTransactionalComponentDataSourceItem.h */,
+				E1A1F3FF839FB981D06FBE0F /* CKTransactionalComponentDataSourceItem.mm */,
+				E657FBAAAFFBA3F4C2340929 /* CKTransactionalComponentDataSourceItemInternal.h */,
+				9A002ABEFAF1BC4476C16F7B /* CKTransactionalComponentDataSourceListener.h */,
+				6AE034988F9149B4FAD229EB /* CKTransactionalComponentDataSourceListenerAnnouncer.h */,
+				D57F01E8D44F0FE21BCF568E /* CKTransactionalComponentDataSourceListenerAnnouncer.mm */,
+				C34AFB1BF7ADEF792A17C1EB /* CKTransactionalComponentDataSourceReloadModification.h */,
+				E0BCEDFD4890009674B79DCB /* CKTransactionalComponentDataSourceReloadModification.mm */,
+				A6444EE4609F95F5C16210BF /* CKTransactionalComponentDataSourceState.h */,
+				F9B4C629C1846FFA52AA8CE8 /* CKTransactionalComponentDataSourceState.m */,
+				8A2DD3447A8AFB25CF864024 /* CKTransactionalComponentDataSourceStateInternal.h */,
+				CABD3944178D0400BD90755F /* CKTransactionalComponentDataSourceStateModifying.h */,
+				3E8BBF0B8C1E09523C86DA24 /* CKTransactionalComponentDataSourceUpdateConfigurationModification.h */,
+				4480010FF410E4333312FD60 /* CKTransactionalComponentDataSourceUpdateConfigurationModification.mm */,
+				A54941B7E0B8C33F5D8538AD /* CKTransactionalComponentDataSourceUpdateStateModification.h */,
+				E77C2C8E52DB0FB0E20A9A12 /* CKTransactionalComponentDataSourceUpdateStateModification.mm */,
+				62AC76DA0A6C904D0EB660E0 /* CKWeakObjectContainer.h */,
+				AC1E5BC590551031935049EB /* CKWeakObjectContainer.m */,
+				D39663C7BBB45598FAE14242 /* ComponentKit.h */,
+				AC7537E09FEE74F397C85AAC /* ComponentLayoutContext.h */,
+				5DE408804226B013721659FA /* ComponentLayoutContext.mm */,
+				3A4B0C372788C27C31FE59A5 /* ComponentMountContext.h */,
+				A185673B2806D99CE87B900E /* ComponentUtilities.h */,
+				3B2B58847264C28482029E43 /* ComponentViewManager.h */,
+				EA68521DE8C5B7E85EE05B69 /* ComponentViewManager.mm */,
+				A106F2D678D0C2E206F47624 /* ComponentViewReuseUtilities.h */,
+				E7DE9A09B82689E00D67F25C /* ComponentViewReuseUtilities.mm */,
+				510564C97B5DD4F4A3433E62 /* Support Files */,
+			);
+			path = ComponentKit;
+			sourceTree = "<group>";
+		};
+		1B978A4D4F82C6CCE2455646 = {
+			isa = PBXGroup;
+			children = (
+				CE9481A9E2D0DFA3CBC5E9BB /* Podfile */,
+				A0DB534DB313BCD44BA936DC /* Frameworks */,
+				30B7DBD3D9D060D9232B280C /* Pods */,
+				51F59ED41B05AA00D01F1F40 /* Products */,
+				B84AA35658FB29E04C5BC64F /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		30B7DBD3D9D060D9232B280C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				131D4414ADF552ABD8A18365 /* ComponentKit */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		510564C97B5DD4F4A3433E62 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				887B66E43F1822D341ECCFCF /* Pods-ComponentKit.xcconfig */,
+				E355CC1634DF885BDF914937 /* Pods-ComponentKit-Private.xcconfig */,
+				017DE0845BD1F7F41B2B0E62 /* Pods-ComponentKit-dummy.m */,
+				BEDD26244F2453B616265644 /* Pods-ComponentKit-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/Pods-ComponentKit";
+			sourceTree = "<group>";
+		};
+		51F59ED41B05AA00D01F1F40 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				0A0BAC5693C996C7351E3BDD /* libPods.a */,
+				EB90AC8D23EB2D4C3CE239ED /* libPods-ComponentKit.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A07F7B0BC8B1DB2357A775FE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				C7C683608B197AE841CC977E /* CoreText.framework */,
+				0DED8CA88AF50F3E4232FB6C /* Foundation.framework */,
+				675D2F3D414E1C39D370C0C0 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		A0DB534DB313BCD44BA936DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A07F7B0BC8B1DB2357A775FE /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B84AA35658FB29E04C5BC64F /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F298ACC0B8FB6D5E786D3A37 /* Pods */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		F298ACC0B8FB6D5E786D3A37 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				EB49A4CB2470D85F3C09ED5F /* Pods-acknowledgements.markdown */,
+				5B6B774B24948027BF1B4783 /* Pods-acknowledgements.plist */,
+				AD7BF86F5A8BDD4B70041125 /* Pods-dummy.m */,
+				AE94CFAFB5FCE15B7E41C610 /* Pods-environment.h */,
+				F8A67FDE4516AB8CC9DF5C18 /* Pods-resources.sh */,
+				7C22534AF79AC84B5C17C4DE /* Pods.debug.xcconfig */,
+				E27063A7DC89175DEBBE10DE /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			path = "Target Support Files/Pods";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		DB3CDB3F03AD7AB9DE496856 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				40FF9DF16CD17FB42C831E50 /* CKArgumentPrecondition.h in Headers */,
+				C3B834421C0EB68598BC7C18 /* CKArrayControllerChangeType.h in Headers */,
+				FD4A3F3A6519BD6A853B7CE5 /* CKArrayControllerChangeset.h in Headers */,
+				CEC33BB740BF2A34EA80C1AD /* CKAssert.h in Headers */,
+				4C1CF74FE1ABBA2A7326D629 /* CKAsyncLayer.h in Headers */,
+				86B18D68E72E9651C27F125A /* CKAsyncLayerInternal.h in Headers */,
+				E651E1C42D78ED9C9FEA4412 /* CKAsyncLayerSubclass.h in Headers */,
+				F31F5CE904612068BD7622A6 /* CKAsyncTransaction.h in Headers */,
+				975C8B5679C1B1CEE0450400 /* CKAsyncTransactionContainer+Private.h in Headers */,
+				2D05E1913237843821FBCBC3 /* CKAsyncTransactionContainer.h in Headers */,
+				07255043AB2B63A8E9AA835E /* CKAsyncTransactionGroup.h in Headers */,
+				7B8E6DE3F4C1CCD4F47658C3 /* CKBackgroundLayoutComponent.h in Headers */,
+				A71D19F74211D28C7B2F994E /* CKButtonComponent.h in Headers */,
+				9B6976F15C88A3FE39BC30A2 /* CKCacheImpl.h in Headers */,
+				6CE1EE8C437C38A2CA303D94 /* CKCenterLayoutComponent.h in Headers */,
+				C016D62734E68C5DDC3484F9 /* CKCollectionViewDataSource.h in Headers */,
+				D30D058B6EE19391A7DA4468 /* CKCollectionViewDataSourceCell.h in Headers */,
+				79D1524D842A51ECAD6ED839 /* CKComponent.h in Headers */,
+				95B5B5D920A4E641124233B0 /* CKComponentAccessibility.h in Headers */,
+				A5343E8B670D061ABAF5B7BD /* CKComponentAccessibility_Private.h in Headers */,
+				9425747E044454BC78DC4C78 /* CKComponentAction.h in Headers */,
+				2DDF8B5BE038C17CCDAC4F2C /* CKComponentAnimation.h in Headers */,
+				7D2DEF9996DA521C30453330 /* CKComponentAnimationHooks.h in Headers */,
+				E15B1982865E7E7198D5EC17 /* CKComponentAnnouncerBase.h in Headers */,
+				3D2F2623662A958FAEAF1169 /* CKComponentBoundsAnimation+UICollectionView.h in Headers */,
+				B265AA436B700D455C39D1D9 /* CKComponentBoundsAnimation.h in Headers */,
+				825C96A7C0516D1603CE7EFB /* CKComponentConstantDecider.h in Headers */,
+				B317152A8C8170E3DF1FA6E1 /* CKComponentContext.h in Headers */,
+				7E8F9B2D46A639EDCBBE5A3E /* CKComponentContextImpl.h in Headers */,
+				8B32A2B92A82B7256FFE65BC /* CKComponentController.h in Headers */,
+				B0003E1F32BFC54A57C99E72 /* CKComponentControllerInternal.h in Headers */,
+				D3865431B2069B2177B7E77B /* CKComponentDataSource.h in Headers */,
+				51CC8384FCF44D9DFA266C95 /* CKComponentDataSourceInputItem.h in Headers */,
+				3F7FCAF5252B9AA06E2A353A /* CKComponentDataSourceOutputItem.h in Headers */,
+				5E86E56C28C5A12BAF170D3F /* CKComponentDebugController.h in Headers */,
+				49B1EF83C53E97E4466F9FCE /* CKComponentDeciding.h in Headers */,
+				E3D40FE0B6BC9AE9054FF7D9 /* CKComponentFlexibleSizeRangeProvider.h in Headers */,
+				3EE5AFAD8E685DBDEF58FBCB /* CKComponentGestureActions.h in Headers */,
+				DDC40F72EC58AA587F3755B4 /* CKComponentGestureActionsInternal.h in Headers */,
+				CF688524C1A87BEDD9BA34B6 /* CKComponentHierarchyDebugHelper.h in Headers */,
+				661B76C4B936DE0FA7F34533 /* CKComponentHostingView.h in Headers */,
+				B218F9D833AD1EA4AB1A2F1F /* CKComponentHostingViewDelegate.h in Headers */,
+				631D3562E09147B695B627B1 /* CKComponentHostingViewInternal.h in Headers */,
+				62361C1F58206F62E99B7A59 /* CKComponentInternal.h in Headers */,
+				6F184CC2EE0808656ACA86C9 /* CKComponentLayout.h in Headers */,
+				80E8FAA1A950B14B090AB1FF /* CKComponentLifecycleManager.h in Headers */,
+				CB414E3FB753AE83B201C40E /* CKComponentLifecycleManagerAsynchronousUpdateHandler.h in Headers */,
+				3D0EA7D4E99A16D23F52279F /* CKComponentLifecycleManagerInternal.h in Headers */,
+				D479CD20715A16F80BB5FF82 /* CKComponentLifecycleManager_Private.h in Headers */,
+				6FF32BD24D0E2E832996A3E4 /* CKComponentPreparationQueue.h in Headers */,
+				D84F75E58EF87050B95A3EDA /* CKComponentPreparationQueueInternal.h in Headers */,
+				4A811A5B5D2FB23EE538807F /* CKComponentPreparationQueueListener.h in Headers */,
+				DA01032E4F665719C38199B6 /* CKComponentPreparationQueueListenerAnnouncer.h in Headers */,
+				9EA7D90BF45B68E95AB7F6BD /* CKComponentPreparationQueueTypes.h in Headers */,
+				B858777C74B890431863B420 /* CKComponentProvider.h in Headers */,
+				5A21847BB0323A35A2C5A3B6 /* CKComponentRootView.h in Headers */,
+				DC88AF179EEC86BFA20961DE /* CKComponentRootViewInternal.h in Headers */,
+				EB6070E9E6B7AEDE16924FEB /* CKComponentScope.h in Headers */,
+				85827BFD0C9511BE9B9B1609 /* CKComponentScopeFrame.h in Headers */,
+				CAF12C2D0AB702976BDF4C4A /* CKComponentScopeHandle.h in Headers */,
+				1A688D33234939DF41950A80 /* CKComponentScopeRoot.h in Headers */,
+				768DE33DF55A9AAB91D94DD8 /* CKComponentScopeRootInternal.h in Headers */,
+				F2B3E18628C6F59BCDD6CE62 /* CKComponentScopeTypes.h in Headers */,
+				144CBBBFF44B6CA27BA34B95 /* CKComponentSize.h in Headers */,
+				92EFC42754746D96558A1D09 /* CKComponentSizeRangeProviding.h in Headers */,
+				85B8A511C8E39F1C5D86F14E /* CKComponentSubclass.h in Headers */,
+				0DF2F092A1AA8820B3F5D26F /* CKComponentViewAttribute.h in Headers */,
+				D7EA4E061A68220CB20324DF /* CKComponentViewConfiguration.h in Headers */,
+				573E70F5DAEF3DA63F907017 /* CKComponentViewInterface.h in Headers */,
+				146E2B2562894DA475E61016 /* CKCompositeComponent.h in Headers */,
+				227A0F3FC5875C9F81C57753 /* CKDimension.h in Headers */,
+				6AF39030BFA203EB702816CA /* CKFunctor.h in Headers */,
+				D1B293A439D9B28973B23CE3 /* CKHighlightOverlayLayer.h in Headers */,
+				0821D5A26A88798113653D7F /* CKImageComponent.h in Headers */,
+				D6C614D58E565BF5BC6A8D70 /* CKInsetComponent.h in Headers */,
+				C9DAB201DFC57051FAD8B47D /* CKInternalHelpers.h in Headers */,
+				33DC267607FA95024B67C99B /* CKLabelComponent.h in Headers */,
+				FC8ED6875E540489E4895925 /* CKMacros.h in Headers */,
+				D9A7A9C9A38BD43B267700FC /* CKMutex.h in Headers */,
+				5970C50BC6AC388D7B239BB3 /* CKNetworkImageComponent.h in Headers */,
+				0DD5EAEF11EAB811CCF106D2 /* CKNetworkImageDownloading.h in Headers */,
+				B319BAD74966845ACDBA1431 /* CKOptimisticViewMutations.h in Headers */,
+				21D5C918937B47A6C6E30357 /* CKOverlayLayoutComponent.h in Headers */,
+				525CF61979A7B94E57BBB2CF /* CKRatioLayoutComponent.h in Headers */,
+				5A4E43A3BB3AE86692D47CD6 /* CKSectionedArrayController.h in Headers */,
+				61D303C6EADB3686FB392021 /* CKStackLayoutComponent.h in Headers */,
+				F98BDF3480F88E26BE37A402 /* CKStackLayoutComponentUtilities.h in Headers */,
+				D0F15C31F8CE5A4D5E9A04AE /* CKStackPositionedLayout.h in Headers */,
+				C1AB49B17D785FFA2C2916FD /* CKStackUnpositionedLayout.h in Headers */,
+				5C35DC1157BA7293B5DB3000 /* CKStaticLayoutComponent.h in Headers */,
+				6756D1FF95D7A14982FEFF50 /* CKTextComponent.h in Headers */,
+				0C88EE3B9EDFB877F3D54D26 /* CKTextComponentLayer.h in Headers */,
+				B3E6D544602C5DE7FA39E689 /* CKTextComponentLayerHighlighter.h in Headers */,
+				158004909FC315BB555B2A69 /* CKTextComponentView.h in Headers */,
+				4295D1F7A2AFD4CA84C471CB /* CKTextComponentViewControlTracker.h in Headers */,
+				AF3522E19A14D750FF2F186F /* CKTextComponentViewInternal.h in Headers */,
+				B361275913C45D14D1D11BE5 /* CKTextKitAttributes.h in Headers */,
+				1DAE2AA79508AFC0C52E4E57 /* CKTextKitContext.h in Headers */,
+				967D2CBF89952EF35332E054 /* CKTextKitEntityAttribute.h in Headers */,
+				F09F548BA545D248D2F5424B /* CKTextKitRenderer+Positioning.h in Headers */,
+				3FE3DE7129A03ECF59810615 /* CKTextKitRenderer+TextChecking.h in Headers */,
+				8915658B6E821A001FDA433E /* CKTextKitRenderer.h in Headers */,
+				CFDBF55D9C28ED2C7A604B17 /* CKTextKitRendererCache.h in Headers */,
+				A77A44348BCA445A342E13E7 /* CKTextKitShadower.h in Headers */,
+				1A727A41F611F84D666F4458 /* CKTextKitTailTruncater.h in Headers */,
+				A8DB5FAA344CA93F51BA93BA /* CKTextKitTruncating.h in Headers */,
+				2907EF1B4280F4757B4D7353 /* CKThreadLocalComponentScope.h in Headers */,
+				EEE71C29E65AEC75D4829A2E /* CKTransactionalComponentDataSource.h in Headers */,
+				525AB35899D1DFE98F68135F /* CKTransactionalComponentDataSourceAppliedChanges.h in Headers */,
+				BF24D87135060EF5F3EDFC05 /* CKTransactionalComponentDataSourceAppliedChangesInternal.h in Headers */,
+				45CFECB5B15B2F2CFBBE6767 /* CKTransactionalComponentDataSourceChange.h in Headers */,
+				6682C973B0A44952C9313B90 /* CKTransactionalComponentDataSourceChangeset.h in Headers */,
+				B428E0F7DDC27951424E84A7 /* CKTransactionalComponentDataSourceChangesetInternal.h in Headers */,
+				CE04C9EFF5F0CACA3C7D8133 /* CKTransactionalComponentDataSourceChangesetModification.h in Headers */,
+				CA43A1A5C670BE84CB22937B /* CKTransactionalComponentDataSourceConfiguration.h in Headers */,
+				C6E2B8D2A2F06D1CA712BD60 /* CKTransactionalComponentDataSourceInternal.h in Headers */,
+				A3E7758D2631DCD8B9CFB77C /* CKTransactionalComponentDataSourceItem.h in Headers */,
+				2B26F9F9EBD05ABCDA37F8F1 /* CKTransactionalComponentDataSourceItemInternal.h in Headers */,
+				09AEED2752FD7D9A5AC0A685 /* CKTransactionalComponentDataSourceListener.h in Headers */,
+				37477742DE66B11FEB53136B /* CKTransactionalComponentDataSourceListenerAnnouncer.h in Headers */,
+				975A96BDA98B33EE0050400D /* CKTransactionalComponentDataSourceReloadModification.h in Headers */,
+				66FEE28650B278E33DCF7078 /* CKTransactionalComponentDataSourceState.h in Headers */,
+				AED039229E0D9946252CC7BA /* CKTransactionalComponentDataSourceStateInternal.h in Headers */,
+				AD80A35A73D71FEC314D882F /* CKTransactionalComponentDataSourceStateModifying.h in Headers */,
+				6BCF79D10ADCF3A129FA3FC5 /* CKTransactionalComponentDataSourceUpdateConfigurationModification.h in Headers */,
+				6DA163376F7A2F7F921BF59F /* CKTransactionalComponentDataSourceUpdateStateModification.h in Headers */,
+				02E7D2F8ACD8CFEA2B14CA10 /* CKWeakObjectContainer.h in Headers */,
+				F75A17DF5E940404315066C2 /* ComponentKit.h in Headers */,
+				EA9259C1DBA8B5DFF8A48545 /* ComponentLayoutContext.h in Headers */,
+				7C8A2477BC95F28AE14D890E /* ComponentMountContext.h in Headers */,
+				C06ECF84846BBB47282D3FB7 /* ComponentUtilities.h in Headers */,
+				AE83330B02940123726DD03E /* ComponentViewManager.h in Headers */,
+				5049A16E94F279A9B8A2AF9B /* ComponentViewReuseUtilities.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A4DF87A99B959AB6009E80AB /* Pods */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CE200C8391D2A83082B4BB4 /* Build configuration list for PBXNativeTarget "Pods" */;
+			buildPhases = (
+				08FAB317EA906FA2B5CEA87C /* Sources */,
+				47E0FAA28B040F54F6EED1E0 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0474A9F488F271AF4138011F /* PBXTargetDependency */,
+			);
+			name = Pods;
+			productName = Pods;
+			productReference = 0A0BAC5693C996C7351E3BDD /* libPods.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		CEC4DA82B969F403652C460D /* Pods-ComponentKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CAC543B50D47FD73FC40658C /* Build configuration list for PBXNativeTarget "Pods-ComponentKit" */;
+			buildPhases = (
+				F6E153AA7EFDA71C3E4ADE7E /* Sources */,
+				8A8B5B5A2129A35DF34E0F91 /* Frameworks */,
+				DB3CDB3F03AD7AB9DE496856 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-ComponentKit";
+			productName = "Pods-ComponentKit";
+			productReference = EB90AC8D23EB2D4C3CE239ED /* libPods-ComponentKit.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		66FFF08D1E9C6F70D62BB2E9 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+			};
+			buildConfigurationList = F09D51012E7FDFCE0DBF1304 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 1B978A4D4F82C6CCE2455646;
+			productRefGroup = 51F59ED41B05AA00D01F1F40 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A4DF87A99B959AB6009E80AB /* Pods */,
+				CEC4DA82B969F403652C460D /* Pods-ComponentKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		08FAB317EA906FA2B5CEA87C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFEBF2EDBB88246F74DCB340 /* Pods-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6E153AA7EFDA71C3E4ADE7E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2B0FBC5BC162FF7516B0B9E8 /* CKArrayControllerChangeset.mm in Sources */,
+				49614A95A5999737B8DC01FD /* CKAsyncLayer.mm in Sources */,
+				AF0FD0B056C84E1AF6AA2D8A /* CKAsyncTransaction.m in Sources */,
+				9D529F8B0429389E6068FC5F /* CKAsyncTransactionContainer.m in Sources */,
+				E5E211F327DBE99CDEF7F944 /* CKAsyncTransactionGroup.m in Sources */,
+				6865B279F6F0F871C4000792 /* CKBackgroundLayoutComponent.mm in Sources */,
+				7956D0746281D5B476B790AB /* CKButtonComponent.mm in Sources */,
+				5112045EF17B522E8454A09B /* CKCenterLayoutComponent.mm in Sources */,
+				E470BEDD9DC9D617FA7925E2 /* CKCollectionViewDataSource.mm in Sources */,
+				16765F8150EFF242AA224F86 /* CKCollectionViewDataSourceCell.m in Sources */,
+				A8F292188963D8106D34B4A0 /* CKComponent.mm in Sources */,
+				212D66B010B169FA6B26A8AF /* CKComponentAccessibility.mm in Sources */,
+				A1F6DD947E1FE1A0C02AC168 /* CKComponentAction.mm in Sources */,
+				0FE91DCFFE93986BDFDAF8A3 /* CKComponentAnimation.mm in Sources */,
+				0770C4980859DCE79C948105 /* CKComponentAnnouncerBase.mm in Sources */,
+				0EA90B3C1B59A96D7D28A146 /* CKComponentBoundsAnimation+UICollectionView.mm in Sources */,
+				830D14416A4553BF90183519 /* CKComponentBoundsAnimation.mm in Sources */,
+				1FC2D6796289ABD9C79D55D2 /* CKComponentConstantDecider.m in Sources */,
+				AF3EFA09E25AF3F4CB8E6EDD /* CKComponentController.mm in Sources */,
+				789AAC991BB5AE592FDF060C /* CKComponentDataSource.mm in Sources */,
+				46832A0DF11F2C7CFC9E7E90 /* CKComponentDataSourceInputItem.mm in Sources */,
+				005822BF5D664A04ED49AA0C /* CKComponentDataSourceOutputItem.mm in Sources */,
+				A4D3F155CBC9FA464CEBCA3C /* CKComponentDebugController.mm in Sources */,
+				EC0DFBCE85685A253272F783 /* CKComponentFlexibleSizeRangeProvider.mm in Sources */,
+				C1F4F2E2B2620E1BA2F2A38F /* CKComponentGestureActions.mm in Sources */,
+				A70221720C78A0A670B260F7 /* CKComponentHierarchyDebugHelper.mm in Sources */,
+				305CFCF1705033D8C5505FBC /* CKComponentHostingView.mm in Sources */,
+				8E002C2A2C32A35405A89588 /* CKComponentLayout.mm in Sources */,
+				CB85264BE76164462793D8A9 /* CKComponentLifecycleManager.mm in Sources */,
+				CFAC59D6514C4129599494FE /* CKComponentPreparationQueue.mm in Sources */,
+				5C8E220F2662B998D1F567AC /* CKComponentPreparationQueueListenerAnnouncer.mm in Sources */,
+				722E950A14682448B7BE33FC /* CKComponentRootView.m in Sources */,
+				32D29B24ECEFDDA1E1981F8B /* CKComponentScope.mm in Sources */,
+				12D8EC8901A371721F11B50F /* CKComponentScopeFrame.mm in Sources */,
+				4B9B5A1EDA62BCAB84E9B7A9 /* CKComponentScopeHandle.mm in Sources */,
+				AF8762BE757E97EB2996683A /* CKComponentScopeRoot.mm in Sources */,
+				476B0613C2C0F1083832CF6B /* CKComponentSize.mm in Sources */,
+				221BA650BEBDDA076D22D4C2 /* CKComponentViewAttribute.mm in Sources */,
+				F2C52300942C3CE6ED01B249 /* CKComponentViewConfiguration.mm in Sources */,
+				CA8EC1C4FC146BBC62FFFF10 /* CKComponentViewInterface.mm in Sources */,
+				F9D60079CB88F651FEBECDC6 /* CKCompositeComponent.mm in Sources */,
+				A1A586771888AA26F485FD70 /* CKDimension.mm in Sources */,
+				35F81489880EA937ACADF90B /* CKHighlightOverlayLayer.mm in Sources */,
+				0E162AD4F413E290274664A6 /* CKImageComponent.mm in Sources */,
+				29EA1EA282C77D96700D5E70 /* CKInsetComponent.mm in Sources */,
+				0D04C376F046DE870063DFCD /* CKInternalHelpers.mm in Sources */,
+				E76EF6D23C2ED642681E5250 /* CKLabelComponent.mm in Sources */,
+				9F3918F8568E1B093A47FD23 /* CKNetworkImageComponent.mm in Sources */,
+				18870CD383DA6FD24E9C35A7 /* CKOptimisticViewMutations.mm in Sources */,
+				D4F2EC0D2C77834C188CC2B0 /* CKOverlayLayoutComponent.mm in Sources */,
+				B89B03767455FC6D66238C70 /* CKRatioLayoutComponent.mm in Sources */,
+				D08942ED4C4B358A577AC162 /* CKSectionedArrayController.mm in Sources */,
+				24CC17FE28F38AEABC89724E /* CKStackLayoutComponent.mm in Sources */,
+				2C9EC8BCDD1CBD32AC0FDBBE /* CKStackPositionedLayout.mm in Sources */,
+				6819EA40D2B35CC2145E6ED2 /* CKStackUnpositionedLayout.mm in Sources */,
+				E0DA28C32D97B75A64793A6F /* CKStaticLayoutComponent.mm in Sources */,
+				C1F31F8FFD541BCE8665C06B /* CKTextComponent.mm in Sources */,
+				82B304F4E58C3A7A6E235492 /* CKTextComponentLayer.mm in Sources */,
+				BDFD2EC8049E803BD1DA6F34 /* CKTextComponentLayerHighlighter.mm in Sources */,
+				B5F26645314B038BB25E3985 /* CKTextComponentView.mm in Sources */,
+				B70275E6A42B952243DF7EB8 /* CKTextComponentViewControlTracker.mm in Sources */,
+				DEFA84A62A6F63BD73887832 /* CKTextKitAttributes.mm in Sources */,
+				9E29372B633897208DD94597 /* CKTextKitContext.mm in Sources */,
+				EE0F28AA4C9514FE6350482F /* CKTextKitEntityAttribute.m in Sources */,
+				4027D7277A7E8CF0E6F725D8 /* CKTextKitRenderer+Positioning.mm in Sources */,
+				D54676BAE4F0A6C890E9364D /* CKTextKitRenderer+TextChecking.mm in Sources */,
+				B68C12DA637D69BC2ED89141 /* CKTextKitRenderer.mm in Sources */,
+				B195F0641372B78163D947C2 /* CKTextKitRendererCache.mm in Sources */,
+				8C9D3C9EB6FB9CFF33C58B98 /* CKTextKitShadower.mm in Sources */,
+				7F4AB91E7AD9A397EF8C129C /* CKTextKitTailTruncater.mm in Sources */,
+				CA4CC126BBDAB437E33F5112 /* CKThreadLocalComponentScope.mm in Sources */,
+				D793C1864AAE69DA257C8442 /* CKTransactionalComponentDataSource.mm in Sources */,
+				510D10FC2F1E6309B1C980AB /* CKTransactionalComponentDataSourceAppliedChanges.mm in Sources */,
+				9A5585468B5F244C25F02D5B /* CKTransactionalComponentDataSourceChange.m in Sources */,
+				92C3F2546C51BEE65DCD5846 /* CKTransactionalComponentDataSourceChangeset.m in Sources */,
+				14B35C6DEA3337D585C5BD7A /* CKTransactionalComponentDataSourceChangesetModification.mm in Sources */,
+				342F58CAC5D7F04060203811 /* CKTransactionalComponentDataSourceConfiguration.mm in Sources */,
+				783FA13B5E89BFB7BB9B989B /* CKTransactionalComponentDataSourceItem.mm in Sources */,
+				6020B94E18A0637CCB9A7E39 /* CKTransactionalComponentDataSourceListenerAnnouncer.mm in Sources */,
+				C1DAC38456B577B0F0856C6A /* CKTransactionalComponentDataSourceReloadModification.mm in Sources */,
+				E73AC029A2BC41D8127D6D79 /* CKTransactionalComponentDataSourceState.m in Sources */,
+				E38C569DB8DB0448AD8E1B56 /* CKTransactionalComponentDataSourceUpdateConfigurationModification.mm in Sources */,
+				89E5B7B37DC56A5158D23E25 /* CKTransactionalComponentDataSourceUpdateStateModification.mm in Sources */,
+				AE440D473B0B3BA632626C8A /* CKWeakObjectContainer.m in Sources */,
+				12EC045B9E38EBF0651DD8C7 /* ComponentLayoutContext.mm in Sources */,
+				97FE1F30CEA8AABF5837AD00 /* ComponentViewManager.mm in Sources */,
+				3B1E536861FEA80082E44F4E /* ComponentViewReuseUtilities.mm in Sources */,
+				4C4E88873258193D1BA7EAC1 /* Pods-ComponentKit-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0474A9F488F271AF4138011F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-ComponentKit";
+			target = CEC4DA82B969F403652C460D /* Pods-ComponentKit */;
+			targetProxy = D785978417E8081575C008C0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1E530344B3194A9AD11BD30F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E355CC1634DF885BDF914937 /* Pods-ComponentKit-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-ComponentKit/Pods-ComponentKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		2148C99A56A5966333E4E47C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7C22534AF79AC84B5C17C4DE /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		2D5F8E2A8D498FD5535C5D02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E355CC1634DF885BDF914937 /* Pods-ComponentKit-Private.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/Pods-ComponentKit/Pods-ComponentKit-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		7E34113302FE1026EBCC27F8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		C013DB6220107D033A35B84C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CDA507C17A30562DD19B04BB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E27063A7DC89175DEBBE10DE /* Pods.release.xcconfig */;
+			buildSettings = {
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4CE200C8391D2A83082B4BB4 /* Build configuration list for PBXNativeTarget "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2148C99A56A5966333E4E47C /* Debug */,
+				CDA507C17A30562DD19B04BB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CAC543B50D47FD73FC40658C /* Build configuration list for PBXNativeTarget "Pods-ComponentKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2D5F8E2A8D498FD5535C5D02 /* Debug */,
+				1E530344B3194A9AD11BD30F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F09D51012E7FDFCE0DBF1304 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7E34113302FE1026EBCC27F8 /* Debug */,
+				C013DB6220107D033A35B84C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 66FFF08D1E9C6F70D62BB2E9 /* Project object */;
+}

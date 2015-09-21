@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>Bezier 曲线</key>
+		<string>BezierViewController</string>
+	</dict>
+	<dict>
+		<key>Periscope 经典动效</key>
+		<string>PeriscopeViewController</string>
+	</dict>
+	<dict>
+		<key>ComponentKit Test</key>
+		<string>ComponentViewController</string>
+	</dict>
+	<dict>
+		<key>iMessages 滚动特效</key>
+		<string>IMessageViewController</string>
+	</dict>
+</array>
+</plist>
