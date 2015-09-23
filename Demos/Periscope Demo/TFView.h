@@ -10,12 +10,14 @@
 
 @protocol TFViewDelegate <NSObject>
 
-- (id) customHistTest: (CGPoint) point;
+- (id) customViewHistTest: (CGPoint) point
+                withEvent: (UIEvent *)event
+                 withView: (UIView *)view;
 
 @end
 
 
-@interface TFView : UIView
+@interface TFView : UIImageView
 
 
 

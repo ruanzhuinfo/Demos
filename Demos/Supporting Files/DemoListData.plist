@@ -18,5 +18,9 @@
 		<key>iMessages 滚动特效</key>
 		<string>IMessageViewController</string>
 	</dict>
+	<dict>
+		<key>UIKit Dynamic</key>
+		<string>DynamicAnimationViewController</string>
+	</dict>
 </array>
 </plist>

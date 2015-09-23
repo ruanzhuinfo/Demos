@@ -14,5 +14,7 @@
 
 #import "Defines.h"
 #import "UIView+SAAdditions.h"
+#import <GPUImage/GPUImage.h>
+#import <Masonry/Masonry.h>
 
 #endif /* Demos_Prefix_pch */

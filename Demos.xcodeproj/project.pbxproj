@@ -21,8 +21,11 @@
 		045612131BAEA8DE0043EA6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 045612091BAEA8DE0043EA6C /* main.m */; settings = {ASSET_TAGS = (); }; };
 		045612181BAEDFCE0043EA6C /* TFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045612171BAEDFCE0043EA6C /* TFView.m */; settings = {ASSET_TAGS = (); }; };
 		045612241BAFC07D0043EA6C /* IMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045612231BAFC07D0043EA6C /* IMessageViewController.m */; settings = {ASSET_TAGS = (); }; };
+		0499D90C1BB14A91009345FE /* DynamicAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0499D90B1BB14A91009345FE /* DynamicAnimationViewController.m */; settings = {ASSET_TAGS = (); }; };
 		04F3A5051BAFDE3200CA479A /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F3A5041BAFDE3200CA479A /* TestData.plist */; settings = {ASSET_TAGS = (); }; };
 		04F3A5091BAFE4CF00CA479A /* UIView+SAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F3A5081BAFE4CF00CA479A /* UIView+SAAdditions.m */; settings = {ASSET_TAGS = (); }; };
+		04F3A50D1BB10ABD00CA479A /* TFScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F3A50C1BB10ABD00CA479A /* TFScrollView.m */; settings = {ASSET_TAGS = (); }; };
+		04F3A50F1BB11BD900CA479A /* IMG_1318.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04F3A50E1BB11BD900CA479A /* IMG_1318.jpg */; settings = {ASSET_TAGS = (); }; };
 		E7257CADE8EFFA2C6053C263 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B1B9197ABEF8ACB0586FBC /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -73,9 +76,14 @@
 		045612231BAFC07D0043EA6C /* IMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMessageViewController.m; sourceTree = "<group>"; };
 		0456123A1BAFCB5D0043EA6C /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
 		0456123B1BAFCBD80043EA6C /* Demos-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demos-Prefix.pch"; sourceTree = "<group>"; };
+		0499D90A1BB14A91009345FE /* DynamicAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicAnimationViewController.h; sourceTree = "<group>"; };
+		0499D90B1BB14A91009345FE /* DynamicAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicAnimationViewController.m; sourceTree = "<group>"; };
 		04F3A5041BAFDE3200CA479A /* TestData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestData.plist; sourceTree = "<group>"; };
 		04F3A5071BAFE4CF00CA479A /* UIView+SAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SAAdditions.h"; sourceTree = "<group>"; };
 		04F3A5081BAFE4CF00CA479A /* UIView+SAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SAAdditions.m"; sourceTree = "<group>"; };
+		04F3A50B1BB10ABD00CA479A /* TFScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFScrollView.h; sourceTree = "<group>"; };
+		04F3A50C1BB10ABD00CA479A /* TFScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFScrollView.m; sourceTree = "<group>"; };
+		04F3A50E1BB11BD900CA479A /* IMG_1318.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1318.jpg; sourceTree = "<group>"; };
 		7DB134BCC26F089F999325CD /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C2B1B9197ABEF8ACB0586FBC /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3CD230209609975A4DF59BB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -134,6 +142,7 @@
 			children = (
 				045611DE1BAE92990043EA6C /* DemoListViewController.h */,
 				045611DF1BAE92990043EA6C /* DemoListViewController.m */,
+				0499D9091BB14A76009345FE /* UIKit Dynamic demo */,
 				04F3A5061BAFE4CF00CA479A /* Utilities */,
 				045612211BAFC05E0043EA6C /* IMessages Demo */,
 				045611F61BAEA8DE0043EA6C /* Bezier Demo */,
@@ -188,6 +197,8 @@
 				045611FE1BAEA8DE0043EA6C /* PeriscopeViewController.m */,
 				045612161BAEDFCE0043EA6C /* TFView.h */,
 				045612171BAEDFCE0043EA6C /* TFView.m */,
+				04F3A50B1BB10ABD00CA479A /* TFScrollView.h */,
+				04F3A50C1BB10ABD00CA479A /* TFScrollView.m */,
 			);
 			path = "Periscope Demo";
 			sourceTree = "<group>";
@@ -195,6 +206,7 @@
 		045611FF1BAEA8DE0043EA6C /* Recources */ = {
 			isa = PBXGroup;
 			children = (
+				04F3A50E1BB11BD900CA479A /* IMG_1318.jpg */,
 				045612001BAEA8DE0043EA6C /* launchScreen.jpg */,
 			);
 			path = Recources;
@@ -224,6 +236,15 @@
 				045612231BAFC07D0043EA6C /* IMessageViewController.m */,
 			);
 			path = "IMessages Demo";
+			sourceTree = "<group>";
+		};
+		0499D9091BB14A76009345FE /* UIKit Dynamic demo */ = {
+			isa = PBXGroup;
+			children = (
+				0499D90A1BB14A91009345FE /* DynamicAnimationViewController.h */,
+				0499D90B1BB14A91009345FE /* DynamicAnimationViewController.m */,
+			);
+			path = "UIKit Dynamic demo";
 			sourceTree = "<group>";
 		};
 		04F3A5061BAFE4CF00CA479A /* Utilities */ = {
@@ -361,6 +382,7 @@
 				0456120F1BAEA8DE0043EA6C /* Assets.xcassets in Resources */,
 				0456120D1BAEA8DE0043EA6C /* launchScreen.jpg in Resources */,
 				04F3A5051BAFDE3200CA479A /* TestData.plist in Resources */,
+				04F3A50F1BB11BD900CA479A /* IMG_1318.jpg in Resources */,
 				045612111BAEA8DE0043EA6C /* DemoListData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -422,8 +444,10 @@
 				045612241BAFC07D0043EA6C /* IMessageViewController.m in Sources */,
 				045611E01BAE92990043EA6C /* DemoListViewController.m in Sources */,
 				0456120C1BAEA8DE0043EA6C /* PeriscopeViewController.m in Sources */,
+				04F3A50D1BB10ABD00CA479A /* TFScrollView.m in Sources */,
 				045612181BAEDFCE0043EA6C /* TFView.m in Sources */,
 				0456120B1BAEA8DE0043EA6C /* ComponentViewController.m in Sources */,
+				0499D90C1BB14A91009345FE /* DynamicAnimationViewController.m in Sources */,
 				0456120A1BAEA8DE0043EA6C /* BezierViewController.mm in Sources */,
 				045612131BAEA8DE0043EA6C /* main.m in Sources */,
 				0456120E1BAEA8DE0043EA6C /* AppDelegate.m in Sources */,

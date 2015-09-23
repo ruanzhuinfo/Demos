@@ -25,6 +25,8 @@
   [self.window setBackgroundColor:[UIColor whiteColor]];
   [self.window setRootViewController:nav];
   
+  [[UINavigationBar appearance] setTranslucent:NO];
+  
   return YES;
 }
 
