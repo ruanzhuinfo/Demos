@@ -11,6 +11,16 @@
 @implementation TFScrollView
 
 
+- (id) initWithFrame:(CGRect)frame {
+  
+  self = [super initWithFrame:frame];
+  if (self) {
+    [self.panGestureRecognizer addTarget:self action:@selector(handlPanView:)];
+  }
+  
+  return self;
+}
+
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
   
   UIView *view = [self.scrollViewDelegate customScrollViewHistTest:point withEvent:event];
@@ -21,13 +31,17 @@
   return view;
 }
 
-
-
 - (BOOL) gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer
 shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
   
   return [_scrollViewDelegate customGestureRecognizer:gestureRecognizer
    shouldRecognizeSimultaneouslyWithGestureRecognizer:otherGestureRecognizer];
 }
+
+- (void)handlPanView: (UIPanGestureRecognizer *)pan {
+  [_scrollViewDelegate customHandlPanView:pan withView:self];
+}
+
+
 
 @end

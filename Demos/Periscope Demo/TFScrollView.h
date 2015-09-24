@@ -10,9 +10,9 @@
 
 @protocol TFScrollViewDelegate <NSObject>
 
-- (id) customScrollViewHistTest: (CGPoint)point withEvent:(UIEvent *)event ;
+- (UIView *) customScrollViewHistTest: (CGPoint)point withEvent:(UIEvent *)event ;
 - (BOOL) customGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer;
-
+- (void) customHandlPanView: (UIPanGestureRecognizer *)pan withView: (UIView *)view;
 @end
 
 

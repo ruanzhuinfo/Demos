@@ -15,7 +15,6 @@
 - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event {
   
   UIView *toucheView = [super hitTest:point withEvent:event];
-  
   UIView *view = [self.viewDelegate customViewHistTest:point withEvent:event withView: toucheView];
   
   if (!view) {

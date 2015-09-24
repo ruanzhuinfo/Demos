@@ -45,6 +45,7 @@ typedef enum {
   
   tempImage = [self imageCompressWithSimple:[UIImage imageNamed:@"IMG_1318.jpg"] scaledToSize:self.view.size];
   
+  // 播放视频或图片的容器
   vedioView = [[TFView alloc] initWithFrame:self.view.bounds];
   [vedioView setImage:tempImage];
   [vedioView setBackgroundColor:[UIColor yellowColor]];
@@ -52,16 +53,20 @@ typedef enum {
   [vedioView setContentMode:UIViewContentModeScaleToFill];
   [self.view addSubview:vedioView];
   
-  UIPanGestureRecognizer *panView = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanView:)];
-  [vedioView addGestureRecognizer:panView];
-
+  // 列表 和 评论的容器
   pageScrollView = [[TFScrollView alloc] initWithFrame:self.view.bounds];
+  [pageScrollView setScrollViewDelegate:self];
   [pageScrollView setDirectionalLockEnabled:YES];
   [pageScrollView setShowsHorizontalScrollIndicator:NO];
   [pageScrollView setShowsVerticalScrollIndicator:NO];
   [pageScrollView setPagingEnabled:YES];
   [pageScrollView setContentSize:CGSizeMake(self.view.width * 2, self.view.height)];
   [self.view addSubview:pageScrollView];
+  
+//  
+//  // 手势起到关闭当前页的功能
+//  UIPanGestureRecognizer *panView = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanView:)];
+//  [pageScrollView addGestureRecognizer:panView];
   
   tableScrollView = [[TFScrollView alloc] initWithFrame:self.view.bounds];
   [tableScrollView setScrollViewDelegate:self];
@@ -114,7 +119,8 @@ typedef enum {
   [tableScrollView setContentSize:CGSizeMake(_tableView.width, _tableView.bottom + 64)];
 }
 
-- (NSInteger) tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger) tableView:(UITableView *)tableView
+  numberOfRowsInSection:(NSInteger)section {
 
   return [dataArray count];
 }
@@ -123,18 +129,23 @@ typedef enum {
   return 1;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(UITableView *)tableView
+heightForRowAtIndexPath:(NSIndexPath *)indexPath {
   return 44;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView
+         cellForRowAtIndexPath:(NSIndexPath *)indexPath {
   
-  UITableViewCell *cell = (UITableViewCell *)[tableView dequeueReusableCellWithIdentifier:@"cell2"];
+  UITableViewCell *cell = (UITableViewCell *)[tableView
+                                              dequeueReusableCellWithIdentifier:@"cell2"];
   if (!cell) {
-    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:@"cell2"];
+    cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault
+                                  reuseIdentifier:@"cell2"];
   }
   
-  cell.textLabel.text = [[dataArray objectAtIndex:indexPath.row] objectForKey:@"title"];
+  cell.textLabel.text = [[dataArray objectAtIndex:indexPath.row]
+                         objectForKey:@"title"];
   
   return cell;
 }
@@ -142,13 +153,20 @@ typedef enum {
 #pragma mark - UIScrollView delegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView {
   
+  // 动效的核心逻辑
+  
   if (tableScrollView.contentOffset.y >= lastContentOffsetY) {
+    
+    // 向上滑动时
     if (tableScrollView.contentOffset.y >= 360) {
       [tableScrollView setContentOffset:CGPointMake(0, 360)];
     } else {
       [_tableView setContentOffset:CGPointMake(0, 0)];
     }
+    
   } else {
+    
+    // 向下滑动时
     if (_tableView.contentOffset.y != 0) {
       [tableScrollView setContentOffset:CGPointMake(0, 360)];
     }
@@ -156,12 +174,15 @@ typedef enum {
 }
 
 - (void) scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+  
+  //记录滚动位置，判断滚动方向
   lastContentOffsetY = tableScrollView.contentOffset.y;
 };
 
 #pragma mark - TFView delegate
 - (id) customViewHistTest:(CGPoint)point withEvent:(UIEvent *)event withView:(UIView *)view {
 
+  // 视觉上 headerView 也是 _tableView 的一部分
   if ([headerView pointInside:point withEvent:event]) {
     return _tableView;
   }
@@ -170,63 +191,56 @@ typedef enum {
 }
 
 #pragma makk - TFScrollView Delegate
-- (id) customScrollViewHistTest:(CGPoint)point withEvent:(UIEvent *)event {
+- (UIView *) customScrollViewHistTest:(CGPoint)point withEvent:(UIEvent *)event {
 
   // 控制触发 vedioView ，是否关闭当前视图
-
+  if ([tableScrollView pointInside:point withEvent:event]) {
+    if (point.y < headerView.top) {
+      [tableScrollView setScrollEnabled:NO];
+    } else {
+      [tableScrollView setScrollEnabled:YES];
+    }
+  }
+  
   return nil;
 }
 
-
-
 - (BOOL) customGestureRecognizer:(UIGestureRecognizer *)gestureRecognizer
 shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+  
+  // return YES 是引起 scrollView 和 tableView 同时起效的必要条件
+  if (otherGestureRecognizer == pageScrollView.panGestureRecognizer ||
+      gestureRecognizer == pageScrollView.panGestureRecognizer) {
+    return NO;
+  }
+  
   return YES;
 }
 
-#pragma mark - handle pan method
-- (void) handlePanView: (UIPanGestureRecognizer *)pan {
+- (void) customHandlPanView:(UIPanGestureRecognizer *)pan withView:(UIView *)view {
   
-  CGPoint offsetPoint = [pan translationInView:vedioView];
+  // 关闭视图
+  if (view == pageScrollView) {
+    CGPoint offsetPoint = [pan translationInView:vedioView];
+    
+    NSLog(@"offsetPointY: %f", offsetPoint.y);
+    NSLog(@"offsetPointX: %f", offsetPoint.x);
   
-  NSLog(@"offsetPointY: %f",offsetPoint.y);
-  NSLog(@"offsetPointX: %f", offsetPoint.x);
-  
-
-  if (offsetPoint.y > 50) {
-    [UIView animateWithDuration:0.35 animations:^{
-      [vedioView setFrame:CGRectMake(0, self.view.height, self.view.width, self.view.height)];
-      [pageScrollView setFrame:vedioView.frame];
-    }];
+    // vedioView 拖动超过 50 点关闭视图
+    if (offsetPoint.y > 50) {
+      [UIView animateWithDuration:0.35 animations:^{
+        [vedioView setFrame:CGRectMake(0, self.view.height, self.view.width, self.view.height)];
+        [pageScrollView setFrame:vedioView.frame];
+      }];
+    }
   }
-  
 }
 
-//
-//- (UIImage *)blurryGPUImage:(UIImage *)image withBlurLevel:(NSInteger)blur {
-//
-//  CGRect mainScreenFrame = [[UIScreen mainScreen] bounds];
-//  
-//  // Yes, I know I'm a caveman for doing all this by hand
-//  GPUImageView *primaryView = [[GPUImageView alloc] initWithFrame:mainScreenFrame];
-//  primaryView.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleHeight;
-//  
-//  UISlider *filterSettingsSlider = [[UISlider alloc] initWithFrame:CGRectMake(25.0, mainScreenFrame.size.height - 50.0, mainScreenFrame.size.width - 50.0, 40.0)];
-//  filterSettingsSlider.minimumValue = 0.0;
-//  filterSettingsSlider.maximumValue = 3.0;
-//  filterSettingsSlider.value = 1.0;
-//  
-//  [primaryView addSubview:filterSettingsSlider];
-//  
-//  photoCaptureButton = [UIButton buttonWithType:UIButtonTypeRoundedRect];
-//  photoCaptureButton.frame = CGRectMake(round(mainScreenFrame.size.width / 2.0 - 150.0 / 2.0), mainScreenFrame.size.height - 90.0, 150.0, 40.0);
-//  [photoCaptureButton setTitle:@"Capture Photo" forState:UIControlStateNormal];
-//  photoCaptureButton.autoresizingMask = UIViewAutoresizingFlexibleWidth | UIViewAutoresizingFlexibleTopMargin;
-//  [photoCaptureButton addTarget:self action:@selector(takePhoto:) forControlEvents:UIControlEventTouchUpInside];
-//  [photoCaptureButton setTitleColor:[UIColor grayColor] forState:UIControlStateDisabled];
-//  
-//  [primaryView addSubview:photoCaptureButton];
-//}
+
+- (UIImage *)blurryGPUImage:(UIImage *)image withBlurLevel:(NSInteger)blur {
+
+  return nil;
+}
 
 -(UIImage*)imageCompressWithSimple:(UIImage *)image scaledToSize:(CGSize)size
 {
