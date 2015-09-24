@@ -222,9 +222,6 @@ shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherG
   // 关闭视图
   if (view == pageScrollView) {
     CGPoint offsetPoint = [pan translationInView:vedioView];
-    
-    NSLog(@"offsetPointY: %f", offsetPoint.y);
-    NSLog(@"offsetPointX: %f", offsetPoint.x);
   
     // vedioView 拖动超过 50 点关闭视图
     if (offsetPoint.y > 50) {
