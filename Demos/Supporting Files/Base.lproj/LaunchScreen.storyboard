@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launchScreen.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hT1-HF-rdY">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="IMG_2238.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="hT1-HF-rdY">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                             </imageView>
                         </subviews>
@@ -37,10 +37,10 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-80" y="-315"/>
+            <point key="canvasLocation" x="-1248" y="-692"/>
         </scene>
     </scenes>
     <resources>
-        <image name="launchScreen.jpg" width="960" height="1280"/>
+        <image name="IMG_2238.jpg" width="960" height="960"/>
     </resources>
 </document>

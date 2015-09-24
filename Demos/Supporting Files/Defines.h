@@ -11,8 +11,7 @@
 
 
 #define DATA_LIST [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"TestData" ofType:@"plist"]]
-
-
+#define IMAGE_DATA_LIST [[NSArray alloc] initWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"ImagesData" ofType:@"plist"]]
 
 #endif /* Defines_h */
 

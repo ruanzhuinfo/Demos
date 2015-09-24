@@ -11,6 +11,8 @@
 @interface DynamicAnimationViewController () <UICollisionBehaviorDelegate>
 
 @property (nonatomic, strong) UIDynamicAnimator *animator;
+@property (nonatomic, strong) UIImageView *dynmatorImageView;
+@property (nonatomic, strong) UIView *containerView;
 
 @end
 
@@ -25,26 +27,37 @@
   [self setTitle:@"Dynamic"];
   [self.view setBackgroundColor:[UIColor whiteColor]];
   
-  UIView *aView = [[UIView alloc] initWithFrame:CGRectMake(100, 50, 100, 100)];
-  [aView setBackgroundColor:[UIColor lightGrayColor]];
-  [self.view addSubview:aView];
+  self.containerView = [[UIView alloc] initWithFrame:CGRectMake(-1, -self.view.height - 63, self.view.width + 2, self.view.height * 2)];
+  [self.view addSubview:self.containerView];
   
-  aView.transform = CGAffineTransformRotate(aView.transform, 45);
+  self.dynmatorImageView = [[UIImageView alloc] initWithFrame:CGRectMake(1,0, self.view.width, self.view.height)];
+  [self.dynmatorImageView setContentMode:UIViewContentModeScaleAspectFill];
+  [self.dynmatorImageView setImage:[UIImage getRandomImage]];
+  [self.dynmatorImageView setClipsToBounds:YES];
+  [self.containerView addSubview:self.dynmatorImageView];
+}
+
+
+- (void)viewDidAppear:(BOOL)animated {
+  [super viewDidAppear:animated];
   
   // 重力
-  UIDynamicAnimator *animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.view];
-  UIGravityBehavior *gravityBeahvior = [[UIGravityBehavior alloc] initWithItems:@[aView]];
+  UIDynamicAnimator *animator = [[UIDynamicAnimator alloc] initWithReferenceView:self.containerView];
+  UIGravityBehavior *gravityBeahvior = [[UIGravityBehavior alloc] initWithItems:@[self.dynmatorImageView]];
+  [gravityBeahvior setMagnitude:7];
   [animator addBehavior:gravityBeahvior];
   
+  UIDynamicItemBehavior *itemBehavior = [[UIDynamicItemBehavior alloc] initWithItems:@[self.dynmatorImageView]];
+  [itemBehavior setElasticity:0.45];
+  [animator addBehavior:itemBehavior];
+  
   // 碰撞
-  UICollisionBehavior *collisionBeahvior = [[UICollisionBehavior alloc] initWithItems:@[aView]];
+  UICollisionBehavior *collisionBeahvior = [[UICollisionBehavior alloc] initWithItems:@[self.dynmatorImageView]];
   collisionBeahvior.translatesReferenceBoundsIntoBoundary = YES;
+  [collisionBeahvior setCollisionMode:UICollisionBehaviorModeBoundaries];
   [animator addBehavior:collisionBeahvior];
   collisionBeahvior.collisionDelegate = self;
   self.animator = animator;
-  
-  
-  
 }
 
 

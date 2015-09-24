@@ -17,7 +17,7 @@ typedef enum {
   scrollDirectionDefault
 } ScrollDirection;
 
-@interface PeriscopeViewController () <UITableViewDelegate, UITableViewDataSource, TFViewDelegate, TFScrollViewDelegate, UIGestureRecognizerDelegate> {
+@interface PeriscopeViewController () <UITableViewDelegate, UITableViewDataSource, TFViewDelegate, TFScrollViewDelegate> {
   
   UIImage *tempImage;
   UITableView *_tableView;
@@ -28,6 +28,10 @@ typedef enum {
   TFView *headerView;
   
   float lastContentOffsetY;
+  
+  // demo test
+  CGRect vedioOriginFrame;
+  CGRect pageOriginFrame;
 }
 
 @end
@@ -43,14 +47,13 @@ typedef enum {
   
   dataArray = DATA_LIST;
   
-  tempImage = [self imageCompressWithSimple:[UIImage imageNamed:@"IMG_1318.jpg"] scaledToSize:self.view.size];
+  tempImage = [UIImage getRandomImage];
   
   // 播放视频或图片的容器
   vedioView = [[TFView alloc] initWithFrame:self.view.bounds];
   [vedioView setImage:tempImage];
-  [vedioView setBackgroundColor:[UIColor yellowColor]];
   [vedioView setClipsToBounds:YES];
-  [vedioView setContentMode:UIViewContentModeScaleToFill];
+  [vedioView setContentMode:UIViewContentModeScaleAspectFill];
   [self.view addSubview:vedioView];
   
   // 列表 和 评论的容器
@@ -62,12 +65,7 @@ typedef enum {
   [pageScrollView setPagingEnabled:YES];
   [pageScrollView setContentSize:CGSizeMake(self.view.width * 2, self.view.height)];
   [self.view addSubview:pageScrollView];
-  
-//  
-//  // 手势起到关闭当前页的功能
-//  UIPanGestureRecognizer *panView = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(handlePanView:)];
-//  [pageScrollView addGestureRecognizer:panView];
-  
+
   tableScrollView = [[TFScrollView alloc] initWithFrame:self.view.bounds];
   [tableScrollView setScrollViewDelegate:self];
   [tableScrollView setDelegate:self];
@@ -117,6 +115,10 @@ typedef enum {
   
   // 重新设置 tableScrollView 的 contentSize 和 _tableView 的 height;
   [tableScrollView setContentSize:CGSizeMake(_tableView.width, _tableView.bottom + 64)];
+  
+  // demo test
+  vedioOriginFrame = vedioView.frame;
+  pageOriginFrame = pageScrollView.frame;
 }
 
 - (NSInteger) tableView:(UITableView *)tableView
@@ -225,10 +227,23 @@ shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherG
   
     // vedioView 拖动超过 50 点关闭视图
     if (offsetPoint.y > 50) {
+      
+      [pan setCancelsTouchesInView:YES];
+      
       [UIView animateWithDuration:0.35 animations:^{
         [vedioView setFrame:CGRectMake(0, self.view.height, self.view.width, self.view.height)];
         [pageScrollView setFrame:vedioView.frame];
       }];
+      
+      // demo
+      dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [UIView animateWithDuration:0.35 animations:^{
+          [UIView setAnimationCurve:UIViewAnimationCurveEaseOut];
+          vedioView.frame = vedioOriginFrame;
+          pageScrollView.frame = pageOriginFrame;
+        }];
+        
+      });
     }
   }
 }
