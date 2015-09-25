@@ -7,6 +7,7 @@
 //
 
 #import "PeriscopeViewController.h"
+#import "UIColor+Random.h"
 #import "TFScrollView.h"
 #import "TFView.h"
 
@@ -148,7 +149,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
   
   cell.textLabel.text = [[dataArray objectAtIndex:indexPath.row]
                          objectForKey:@"title"];
-  
+  [cell.contentView setBackgroundColor:[UIColor getRandomColor]];
   return cell;
 }
 

@@ -25,6 +25,8 @@
 		04892E631BB3D4D700CB0437 /* IMG_1853.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04892E621BB3D4D700CB0437 /* IMG_1853.jpg */; settings = {ASSET_TAGS = (); }; };
 		04892E651BB3D59D00CB0437 /* ImagesData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04892E641BB3D59D00CB0437 /* ImagesData.plist */; settings = {ASSET_TAGS = (); }; };
 		04892E681BB3D65C00CB0437 /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 04892E671BB3D65C00CB0437 /* UIImage+Additions.m */; settings = {ASSET_TAGS = (); }; };
+		04892E7B1BB4EF1C00CB0437 /* TFSpringCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 04892E7A1BB4EF1C00CB0437 /* TFSpringCollectionViewFlowLayout.m */; settings = {ASSET_TAGS = (); }; };
+		04892E861BB51A1A00CB0437 /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 04892E851BB51A1A00CB0437 /* UIColor+Random.m */; settings = {ASSET_TAGS = (); }; };
 		0499D90C1BB14A91009345FE /* DynamicAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0499D90B1BB14A91009345FE /* DynamicAnimationViewController.m */; settings = {ASSET_TAGS = (); }; };
 		04F3A5051BAFDE3200CA479A /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F3A5041BAFDE3200CA479A /* TestData.plist */; settings = {ASSET_TAGS = (); }; };
 		04F3A5091BAFE4CF00CA479A /* UIView+SAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F3A5081BAFE4CF00CA479A /* UIView+SAAdditions.m */; settings = {ASSET_TAGS = (); }; };
@@ -84,6 +86,10 @@
 		04892E641BB3D59D00CB0437 /* ImagesData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = ImagesData.plist; sourceTree = "<group>"; };
 		04892E661BB3D65C00CB0437 /* UIImage+Additions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Additions.h"; sourceTree = "<group>"; };
 		04892E671BB3D65C00CB0437 /* UIImage+Additions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Additions.m"; sourceTree = "<group>"; };
+		04892E791BB4EF1C00CB0437 /* TFSpringCollectionViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFSpringCollectionViewFlowLayout.h; sourceTree = "<group>"; };
+		04892E7A1BB4EF1C00CB0437 /* TFSpringCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFSpringCollectionViewFlowLayout.m; sourceTree = "<group>"; };
+		04892E841BB51A1A00CB0437 /* UIColor+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Random.h"; sourceTree = "<group>"; };
+		04892E851BB51A1A00CB0437 /* UIColor+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Random.m"; sourceTree = "<group>"; };
 		0499D90A1BB14A91009345FE /* DynamicAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicAnimationViewController.h; sourceTree = "<group>"; };
 		0499D90B1BB14A91009345FE /* DynamicAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicAnimationViewController.m; sourceTree = "<group>"; };
 		04F3A5041BAFDE3200CA479A /* TestData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestData.plist; sourceTree = "<group>"; };
@@ -241,6 +247,8 @@
 			children = (
 				045612221BAFC07D0043EA6C /* IMessageViewController.h */,
 				045612231BAFC07D0043EA6C /* IMessageViewController.m */,
+				04892E791BB4EF1C00CB0437 /* TFSpringCollectionViewFlowLayout.h */,
+				04892E7A1BB4EF1C00CB0437 /* TFSpringCollectionViewFlowLayout.m */,
 			);
 			path = "IMessages Demo";
 			sourceTree = "<group>";
@@ -271,6 +279,8 @@
 				04F3A5081BAFE4CF00CA479A /* UIView+SAAdditions.m */,
 				04892E661BB3D65C00CB0437 /* UIImage+Additions.h */,
 				04892E671BB3D65C00CB0437 /* UIImage+Additions.m */,
+				04892E841BB51A1A00CB0437 /* UIColor+Random.h */,
+				04892E851BB51A1A00CB0437 /* UIColor+Random.m */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -462,6 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04892E861BB51A1A00CB0437 /* UIColor+Random.m in Sources */,
 				045612241BAFC07D0043EA6C /* IMessageViewController.m in Sources */,
 				04892E681BB3D65C00CB0437 /* UIImage+Additions.m in Sources */,
 				045611E01BAE92990043EA6C /* DemoListViewController.m in Sources */,
@@ -470,6 +481,7 @@
 				045612181BAEDFCE0043EA6C /* TFView.m in Sources */,
 				0456120B1BAEA8DE0043EA6C /* ComponentViewController.m in Sources */,
 				0499D90C1BB14A91009345FE /* DynamicAnimationViewController.m in Sources */,
+				04892E7B1BB4EF1C00CB0437 /* TFSpringCollectionViewFlowLayout.m in Sources */,
 				0456120A1BAEA8DE0043EA6C /* BezierViewController.mm in Sources */,
 				045612131BAEA8DE0043EA6C /* main.m in Sources */,
 				0456120E1BAEA8DE0043EA6C /* AppDelegate.m in Sources */,
