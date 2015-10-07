@@ -30,7 +30,7 @@ static NSString *cellIdentifier = @"CellIdentifier";
   [self setTitle:@"IMessages Demo"];
   [self.view setBackgroundColor:[UIColor whiteColor]];
   
-  _collectionViewLayout = [[TFSpringCollectionViewFlowLayout alloc] init:CGSizeMake(44, 44)];
+  _collectionViewLayout = [[TFSpringCollectionViewFlowLayout alloc] init:CGSizeMake(self.view.width - 20, 44)];
   _collectionView = [[UICollectionView alloc] initWithFrame:self.view.bounds collectionViewLayout:_collectionViewLayout];
   [_collectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:cellIdentifier];
   [_collectionView setHeight:self.view.height - 64];
@@ -75,6 +75,8 @@ static NSString *cellIdentifier = @"CellIdentifier";
 
   UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
   cell.backgroundColor = [UIColor getRandomColor];
+  [cell.layer setCornerRadius:4.0f];
+  
   
   return cell;
 }
