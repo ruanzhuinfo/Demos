@@ -21,4 +21,6 @@
 @property (nonatomic) CGFloat left;
 @property (nonatomic) CGFloat right;
 
+- (void) setCornerRadius: (CGFloat)radius;
+
 @end

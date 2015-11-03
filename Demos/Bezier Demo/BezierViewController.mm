@@ -20,6 +20,44 @@
   
   [self setTitle:@"Bezier"];
   [self.view setBackgroundColor:[UIColor whiteColor]];
+  
+  
+  
+  
+  // No.1
+  // corner radius
+  
+  UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(50, 50, 100, 100)];
+  [imageView setClipsToBounds:YES];
+  UIImage *anotherImage = [UIImage getRandomImage];
+  UIGraphicsBeginImageContextWithOptions(imageView.bounds.size, NO, 1.0);
+  [[UIBezierPath bezierPathWithRoundedRect:imageView.bounds
+                              cornerRadius:20.0f] addClip];
+  [anotherImage drawInRect:imageView.bounds];
+  imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+  UIGraphicsEndImageContext();
+  [self.view addSubview:imageView];
+  
+  UIImageView *_imageView = [[UIImageView alloc] initWithFrame:CGRectMake(200, 50, 100, 100)];
+  [_imageView setImage:[UIImage getRandomImage]];
+  [_imageView.layer setCornerRadius:20.0f];
+  [_imageView setClipsToBounds:YES];
+  [self.view addSubview:_imageView];
+  
+  UIView *view2 = [[UIView alloc] initWithFrame:CGRectMake(50, 200, 100, 100)];
+  view2.backgroundColor = [UIColor blackColor];
+  [view2 setCornerRadius:20.0f];
+  [self.view addSubview:view2];
+
+  
+  UIView *view3 = [[UIView alloc] initWithFrame:CGRectMake(200, 200, 100, 100)];
+  [view3.layer setCornerRadius:20.0f];
+  [view3 setBackgroundColor:[UIColor blackColor]];
+  [view3 setClipsToBounds:YES];
+  [self.view addSubview:view3];
+  
+  
+  
 }
 
 - (void)didReceiveMemoryWarning {

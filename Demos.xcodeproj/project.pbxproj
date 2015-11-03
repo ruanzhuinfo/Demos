@@ -7,30 +7,31 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04341F811BD3D12300376EBA /* SpotlightManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 04341F801BD3D12300376EBA /* SpotlightManage.m */; };
 		045611C31BAE90EB0043EA6C /* DemosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 045611C21BAE90EB0043EA6C /* DemosTests.m */; };
 		045611CE1BAE90EB0043EA6C /* DemosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 045611CD1BAE90EB0043EA6C /* DemosUITests.m */; };
-		045611E01BAE92990043EA6C /* DemoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045611DF1BAE92990043EA6C /* DemoListViewController.m */; settings = {ASSET_TAGS = (); }; };
-		0456120A1BAEA8DE0043EA6C /* BezierViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 045611F81BAEA8DE0043EA6C /* BezierViewController.mm */; settings = {ASSET_TAGS = (); }; };
-		0456120B1BAEA8DE0043EA6C /* ComponentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045611FB1BAEA8DE0043EA6C /* ComponentViewController.m */; settings = {ASSET_TAGS = (); }; };
-		0456120C1BAEA8DE0043EA6C /* PeriscopeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045611FE1BAEA8DE0043EA6C /* PeriscopeViewController.m */; settings = {ASSET_TAGS = (); }; };
-		0456120E1BAEA8DE0043EA6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 045612031BAEA8DE0043EA6C /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
-		0456120F1BAEA8DE0043EA6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045612041BAEA8DE0043EA6C /* Assets.xcassets */; settings = {ASSET_TAGS = (); }; };
-		045612101BAEA8DE0043EA6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045612051BAEA8DE0043EA6C /* LaunchScreen.storyboard */; settings = {ASSET_TAGS = (); }; };
-		045612111BAEA8DE0043EA6C /* DemoListData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 045612071BAEA8DE0043EA6C /* DemoListData.plist */; settings = {ASSET_TAGS = (); }; };
-		045612131BAEA8DE0043EA6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 045612091BAEA8DE0043EA6C /* main.m */; settings = {ASSET_TAGS = (); }; };
-		045612181BAEDFCE0043EA6C /* TFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045612171BAEDFCE0043EA6C /* TFView.m */; settings = {ASSET_TAGS = (); }; };
-		045612241BAFC07D0043EA6C /* IMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045612231BAFC07D0043EA6C /* IMessageViewController.m */; settings = {ASSET_TAGS = (); }; };
-		04892E5F1BB3C7AA00CB0437 /* IMG_2237.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04892E5D1BB3C7AA00CB0437 /* IMG_2237.jpg */; settings = {ASSET_TAGS = (); }; };
-		04892E601BB3C7AA00CB0437 /* IMG_2238.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04892E5E1BB3C7AA00CB0437 /* IMG_2238.jpg */; settings = {ASSET_TAGS = (); }; };
-		04892E631BB3D4D700CB0437 /* IMG_1853.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04892E621BB3D4D700CB0437 /* IMG_1853.jpg */; settings = {ASSET_TAGS = (); }; };
-		04892E651BB3D59D00CB0437 /* ImagesData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04892E641BB3D59D00CB0437 /* ImagesData.plist */; settings = {ASSET_TAGS = (); }; };
-		04892E681BB3D65C00CB0437 /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 04892E671BB3D65C00CB0437 /* UIImage+Additions.m */; settings = {ASSET_TAGS = (); }; };
-		04892E7B1BB4EF1C00CB0437 /* TFSpringCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 04892E7A1BB4EF1C00CB0437 /* TFSpringCollectionViewFlowLayout.m */; settings = {ASSET_TAGS = (); }; };
-		04892E861BB51A1A00CB0437 /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 04892E851BB51A1A00CB0437 /* UIColor+Random.m */; settings = {ASSET_TAGS = (); }; };
-		0499D90C1BB14A91009345FE /* DynamicAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0499D90B1BB14A91009345FE /* DynamicAnimationViewController.m */; settings = {ASSET_TAGS = (); }; };
-		04F3A5051BAFDE3200CA479A /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F3A5041BAFDE3200CA479A /* TestData.plist */; settings = {ASSET_TAGS = (); }; };
-		04F3A5091BAFE4CF00CA479A /* UIView+SAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F3A5081BAFE4CF00CA479A /* UIView+SAAdditions.m */; settings = {ASSET_TAGS = (); }; };
-		04F3A50D1BB10ABD00CA479A /* TFScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F3A50C1BB10ABD00CA479A /* TFScrollView.m */; settings = {ASSET_TAGS = (); }; };
+		045611E01BAE92990043EA6C /* DemoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045611DF1BAE92990043EA6C /* DemoListViewController.m */; };
+		0456120A1BAEA8DE0043EA6C /* BezierViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 045611F81BAEA8DE0043EA6C /* BezierViewController.mm */; };
+		0456120B1BAEA8DE0043EA6C /* ComponentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045611FB1BAEA8DE0043EA6C /* ComponentViewController.m */; };
+		0456120C1BAEA8DE0043EA6C /* PeriscopeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045611FE1BAEA8DE0043EA6C /* PeriscopeViewController.m */; };
+		0456120E1BAEA8DE0043EA6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 045612031BAEA8DE0043EA6C /* AppDelegate.m */; };
+		0456120F1BAEA8DE0043EA6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045612041BAEA8DE0043EA6C /* Assets.xcassets */; };
+		045612101BAEA8DE0043EA6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 045612051BAEA8DE0043EA6C /* LaunchScreen.storyboard */; };
+		045612111BAEA8DE0043EA6C /* DemoListData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 045612071BAEA8DE0043EA6C /* DemoListData.plist */; };
+		045612131BAEA8DE0043EA6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 045612091BAEA8DE0043EA6C /* main.m */; };
+		045612181BAEDFCE0043EA6C /* TFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045612171BAEDFCE0043EA6C /* TFView.m */; };
+		045612241BAFC07D0043EA6C /* IMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045612231BAFC07D0043EA6C /* IMessageViewController.m */; };
+		04892E5F1BB3C7AA00CB0437 /* IMG_2237.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04892E5D1BB3C7AA00CB0437 /* IMG_2237.jpg */; };
+		04892E601BB3C7AA00CB0437 /* IMG_2238.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04892E5E1BB3C7AA00CB0437 /* IMG_2238.jpg */; };
+		04892E631BB3D4D700CB0437 /* IMG_1853.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04892E621BB3D4D700CB0437 /* IMG_1853.jpg */; };
+		04892E651BB3D59D00CB0437 /* ImagesData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04892E641BB3D59D00CB0437 /* ImagesData.plist */; };
+		04892E681BB3D65C00CB0437 /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 04892E671BB3D65C00CB0437 /* UIImage+Additions.m */; };
+		04892E7B1BB4EF1C00CB0437 /* TFSpringCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 04892E7A1BB4EF1C00CB0437 /* TFSpringCollectionViewFlowLayout.m */; };
+		04892E861BB51A1A00CB0437 /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 04892E851BB51A1A00CB0437 /* UIColor+Random.m */; };
+		0499D90C1BB14A91009345FE /* DynamicAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0499D90B1BB14A91009345FE /* DynamicAnimationViewController.m */; };
+		04F3A5051BAFDE3200CA479A /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F3A5041BAFDE3200CA479A /* TestData.plist */; };
+		04F3A5091BAFE4CF00CA479A /* UIView+SAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F3A5081BAFE4CF00CA479A /* UIView+SAAdditions.m */; };
+		04F3A50D1BB10ABD00CA479A /* TFScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F3A50C1BB10ABD00CA479A /* TFScrollView.m */; };
 		E7257CADE8EFFA2C6053C263 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C2B1B9197ABEF8ACB0586FBC /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -52,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04341F7F1BD3D12300376EBA /* SpotlightManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpotlightManage.h; sourceTree = "<group>"; };
+		04341F801BD3D12300376EBA /* SpotlightManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotlightManage.m; sourceTree = "<group>"; };
 		045611A51BAE90EB0043EA6C /* Demos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		045611BE1BAE90EB0043EA6C /* DemosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DemosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		045611C21BAE90EB0043EA6C /* DemosTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DemosTests.m; sourceTree = "<group>"; };
@@ -128,6 +131,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		04341F7E1BD3D12300376EBA /* Spotlight */ = {
+			isa = PBXGroup;
+			children = (
+				04341F7F1BD3D12300376EBA /* SpotlightManage.h */,
+				04341F801BD3D12300376EBA /* SpotlightManage.m */,
+			);
+			path = Spotlight;
+			sourceTree = "<group>";
+		};
 		0456119C1BAE90EB0043EA6C = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +165,7 @@
 		045611A71BAE90EB0043EA6C /* Demos */ = {
 			isa = PBXGroup;
 			children = (
+				04341F7E1BD3D12300376EBA /* Spotlight */,
 				045611DE1BAE92990043EA6C /* DemoListViewController.h */,
 				045611DF1BAE92990043EA6C /* DemoListViewController.m */,
 				0499D9091BB14A76009345FE /* UIKit Dynamic demo */,
@@ -371,6 +384,7 @@
 				TargetAttributes = {
 					045611A41BAE90EB0043EA6C = {
 						CreatedOnToolsVersion = 7.0;
+						DevelopmentTeam = U75K965B53;
 					};
 					045611BD1BAE90EB0043EA6C = {
 						CreatedOnToolsVersion = 7.0;
@@ -474,6 +488,7 @@
 			files = (
 				04892E861BB51A1A00CB0437 /* UIColor+Random.m in Sources */,
 				045612241BAFC07D0043EA6C /* IMessageViewController.m in Sources */,
+				04341F811BD3D12300376EBA /* SpotlightManage.m in Sources */,
 				04892E681BB3D65C00CB0437 /* UIImage+Additions.m in Sources */,
 				045611E01BAE92990043EA6C /* DemoListViewController.m in Sources */,
 				0456120C1BAEA8DE0043EA6C /* PeriscopeViewController.m in Sources */,
@@ -616,6 +631,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7DB134BCC26F089F999325CD /* Pods.debug.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demos/Supporting Files/Demos-Prefix.pch";
 				INFOPLIST_FILE = "Demos/Supporting Files/Info.plist";
@@ -631,6 +647,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F3CD230209609975A4DF59BB /* Pods.release.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demos/Supporting Files/Demos-Prefix.pch";
 				INFOPLIST_FILE = "Demos/Supporting Files/Info.plist";
