@@ -20,6 +20,5 @@
 @interface TFView : UIImageView
 
 
-
 @property (nonatomic, assign) id<TFViewDelegate>viewDelegate;
 @end

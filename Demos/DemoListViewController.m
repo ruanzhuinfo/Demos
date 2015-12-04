@@ -21,6 +21,9 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
+//  UIImage *i = [UIImage imageNamed:@"IMG_1853"];
+//  asdfasdf GET_IMAGE(IMG_1853);
+  
   [self setTitle:@"List"];
   [self.view setBackgroundColor:[UIColor whiteColor]];
   

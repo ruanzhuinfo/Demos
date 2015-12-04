@@ -166,7 +166,6 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     } else {
       [_tableView setContentOffset:CGPointMake(0, 0)];
     }
-    
   } else {
     
     // 向下滑动时

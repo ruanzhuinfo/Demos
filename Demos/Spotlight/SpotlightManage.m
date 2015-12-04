@@ -23,7 +23,6 @@ static SpotlightManage *spotightObj;
   if (!spotightObj) {
     spotightObj = [SpotlightManage new];
   }
-  
   return spotightObj;
 }
 
@@ -33,7 +32,7 @@ static SpotlightManage *spotightObj;
 + (BOOL) addCirclesSearchableItems: (NSArray<NSDictionary *> *)models {
 
   for (NSDictionary *dic in models) {
-    
+
   }
 
   return YES;

@@ -10,7 +10,6 @@
 
 @interface SpotlightManage : NSObject
 
-
 + (BOOL) addCirclesSearchableItems: (NSArray<NSDictionary *> *)models;
 + (BOOL) addUsersSearchableItems: (NSArray<NSDictionary *> *)models;
 + (BOOL) addArticlesSearchableItems: (NSArray<NSDictionary *> *)models;

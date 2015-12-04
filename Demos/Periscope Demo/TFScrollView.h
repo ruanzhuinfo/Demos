@@ -15,7 +15,6 @@
 - (void) customHandlPanView: (UIPanGestureRecognizer *)pan withView: (UIView *)view;
 @end
 
-
 @interface TFScrollView : UIScrollView <UIGestureRecognizerDelegate>
 
 @property (nonatomic, assign) id<TFScrollViewDelegate>scrollViewDelegate;

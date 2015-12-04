@@ -29,6 +29,7 @@
 		04892E7B1BB4EF1C00CB0437 /* TFSpringCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 04892E7A1BB4EF1C00CB0437 /* TFSpringCollectionViewFlowLayout.m */; };
 		04892E861BB51A1A00CB0437 /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 04892E851BB51A1A00CB0437 /* UIColor+Random.m */; };
 		0499D90C1BB14A91009345FE /* DynamicAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0499D90B1BB14A91009345FE /* DynamicAnimationViewController.m */; };
+		04B442921C10183100979BEB /* ProgressIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B442911C10183100979BEB /* ProgressIndicatorView.m */; };
 		04F3A5051BAFDE3200CA479A /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F3A5041BAFDE3200CA479A /* TestData.plist */; };
 		04F3A5091BAFE4CF00CA479A /* UIView+SAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F3A5081BAFE4CF00CA479A /* UIView+SAAdditions.m */; };
 		04F3A50D1BB10ABD00CA479A /* TFScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F3A50C1BB10ABD00CA479A /* TFScrollView.m */; };
@@ -95,6 +96,8 @@
 		04892E851BB51A1A00CB0437 /* UIColor+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Random.m"; sourceTree = "<group>"; };
 		0499D90A1BB14A91009345FE /* DynamicAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicAnimationViewController.h; sourceTree = "<group>"; };
 		0499D90B1BB14A91009345FE /* DynamicAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicAnimationViewController.m; sourceTree = "<group>"; };
+		04B442901C10183100979BEB /* ProgressIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressIndicatorView.h; sourceTree = "<group>"; };
+		04B442911C10183100979BEB /* ProgressIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressIndicatorView.m; sourceTree = "<group>"; };
 		04F3A5041BAFDE3200CA479A /* TestData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestData.plist; sourceTree = "<group>"; };
 		04F3A5071BAFE4CF00CA479A /* UIView+SAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SAAdditions.h"; sourceTree = "<group>"; };
 		04F3A5081BAFE4CF00CA479A /* UIView+SAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SAAdditions.m"; sourceTree = "<group>"; };
@@ -165,6 +168,7 @@
 		045611A71BAE90EB0043EA6C /* Demos */ = {
 			isa = PBXGroup;
 			children = (
+				04B4428C1C1017D800979BEB /* Progress */,
 				04341F7E1BD3D12300376EBA /* Spotlight */,
 				045611DE1BAE92990043EA6C /* DemoListViewController.h */,
 				045611DF1BAE92990043EA6C /* DemoListViewController.m */,
@@ -219,11 +223,11 @@
 		045611FC1BAEA8DE0043EA6C /* Periscope Demo */ = {
 			isa = PBXGroup;
 			children = (
-				045611FD1BAEA8DE0043EA6C /* PeriscopeViewController.h */,
 				045611FE1BAEA8DE0043EA6C /* PeriscopeViewController.m */,
+				045611FD1BAEA8DE0043EA6C /* PeriscopeViewController.h */,
 				045612161BAEDFCE0043EA6C /* TFView.h */,
-				045612171BAEDFCE0043EA6C /* TFView.m */,
 				04F3A50B1BB10ABD00CA479A /* TFScrollView.h */,
+				045612171BAEDFCE0043EA6C /* TFView.m */,
 				04F3A50C1BB10ABD00CA479A /* TFScrollView.m */,
 			);
 			path = "Periscope Demo";
@@ -283,6 +287,15 @@
 				0499D90B1BB14A91009345FE /* DynamicAnimationViewController.m */,
 			);
 			path = "UIKit Dynamic demo";
+			sourceTree = "<group>";
+		};
+		04B4428C1C1017D800979BEB /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				04B442901C10183100979BEB /* ProgressIndicatorView.h */,
+				04B442911C10183100979BEB /* ProgressIndicatorView.m */,
+			);
+			path = Progress;
 			sourceTree = "<group>";
 		};
 		04F3A5061BAFE4CF00CA479A /* Utilities */ = {
@@ -501,6 +514,7 @@
 				045612131BAEA8DE0043EA6C /* main.m in Sources */,
 				0456120E1BAEA8DE0043EA6C /* AppDelegate.m in Sources */,
 				04F3A5091BAFE4CF00CA479A /* UIView+SAAdditions.m in Sources */,
+				04B442921C10183100979BEB /* ProgressIndicatorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

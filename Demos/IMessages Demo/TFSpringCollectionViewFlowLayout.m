@@ -44,7 +44,6 @@
 //    [self.dynamicAnimator removeBehavior:obj];
 //    [self.visibleIndexPathSet removeObject:[obj items].firstObject];
 //  }];
-  
 //  NSPredicate *predicate = [NSPredicate predicateWithBlock:^BOOL(id  _Nonnull evaluatedObject, NSDictionary<NSString *,id> * _Nullable bindings) {
 //    BOOL currentlyVisible = [self.visibleIndexPathSet member:evaluatedObject.indexPath] != nil;
 //    

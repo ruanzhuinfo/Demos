@@ -8,6 +8,7 @@
 
 #import "BezierViewController.h"
 #import <ComponentKit/ComponentKit.h>
+#import "ProgressIndicatorView.h"
 
 @interface BezierViewController ()
 
@@ -22,6 +23,15 @@
   [self.view setBackgroundColor:[UIColor whiteColor]];
   
   
+  ProgressIndicatorView *progress = [[ProgressIndicatorView alloc] init];
+  [progress showProgressAddToView:self.view];
+  
+  
+  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5. * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    [progress finishedProgress:^{
+      
+    }];
+  });
   
   
   // No.1
