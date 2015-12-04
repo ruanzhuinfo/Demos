@@ -10,6 +10,7 @@
 #import "UIColor+Random.h"
 #import "TFScrollView.h"
 #import "TFView.h"
+#import "ProgressIndicatorView.h"
 
 
 typedef enum {
@@ -45,6 +46,19 @@ typedef enum {
   [self setTitle:@"Periscope"];
   [self.view setBackgroundColor:[UIColor whiteColor]];
   [self.view setClipsToBounds:YES];
+  
+  
+  ProgressIndicatorView *progress = [[ProgressIndicatorView alloc] init];
+  [progress showProgressAddToView:self.view];
+  
+  
+  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5. * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    [progress finishedProgress:YES completionProgress:^{
+      
+    }];
+  });
+  
+  
   
   dataArray = DATA_LIST;
   

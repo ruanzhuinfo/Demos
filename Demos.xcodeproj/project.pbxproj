@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0408C4AD1C119E8600AFF319 /* ProgressIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0408C4AC1C119E8600AFF319 /* ProgressIndicatorView.m */; };
 		04341F811BD3D12300376EBA /* SpotlightManage.m in Sources */ = {isa = PBXBuildFile; fileRef = 04341F801BD3D12300376EBA /* SpotlightManage.m */; };
 		045611C31BAE90EB0043EA6C /* DemosTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 045611C21BAE90EB0043EA6C /* DemosTests.m */; };
 		045611CE1BAE90EB0043EA6C /* DemosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 045611CD1BAE90EB0043EA6C /* DemosUITests.m */; };
@@ -29,7 +30,6 @@
 		04892E7B1BB4EF1C00CB0437 /* TFSpringCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 04892E7A1BB4EF1C00CB0437 /* TFSpringCollectionViewFlowLayout.m */; };
 		04892E861BB51A1A00CB0437 /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 04892E851BB51A1A00CB0437 /* UIColor+Random.m */; };
 		0499D90C1BB14A91009345FE /* DynamicAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0499D90B1BB14A91009345FE /* DynamicAnimationViewController.m */; };
-		04B442921C10183100979BEB /* ProgressIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04B442911C10183100979BEB /* ProgressIndicatorView.m */; };
 		04F3A5051BAFDE3200CA479A /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F3A5041BAFDE3200CA479A /* TestData.plist */; };
 		04F3A5091BAFE4CF00CA479A /* UIView+SAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F3A5081BAFE4CF00CA479A /* UIView+SAAdditions.m */; };
 		04F3A50D1BB10ABD00CA479A /* TFScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F3A50C1BB10ABD00CA479A /* TFScrollView.m */; };
@@ -54,6 +54,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0408C4AB1C119E8600AFF319 /* ProgressIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressIndicatorView.h; sourceTree = "<group>"; };
+		0408C4AC1C119E8600AFF319 /* ProgressIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressIndicatorView.m; sourceTree = "<group>"; };
 		04341F7F1BD3D12300376EBA /* SpotlightManage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpotlightManage.h; sourceTree = "<group>"; };
 		04341F801BD3D12300376EBA /* SpotlightManage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpotlightManage.m; sourceTree = "<group>"; };
 		045611A51BAE90EB0043EA6C /* Demos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demos.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -96,8 +98,6 @@
 		04892E851BB51A1A00CB0437 /* UIColor+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Random.m"; sourceTree = "<group>"; };
 		0499D90A1BB14A91009345FE /* DynamicAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicAnimationViewController.h; sourceTree = "<group>"; };
 		0499D90B1BB14A91009345FE /* DynamicAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicAnimationViewController.m; sourceTree = "<group>"; };
-		04B442901C10183100979BEB /* ProgressIndicatorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProgressIndicatorView.h; sourceTree = "<group>"; };
-		04B442911C10183100979BEB /* ProgressIndicatorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProgressIndicatorView.m; sourceTree = "<group>"; };
 		04F3A5041BAFDE3200CA479A /* TestData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestData.plist; sourceTree = "<group>"; };
 		04F3A5071BAFE4CF00CA479A /* UIView+SAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SAAdditions.h"; sourceTree = "<group>"; };
 		04F3A5081BAFE4CF00CA479A /* UIView+SAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SAAdditions.m"; sourceTree = "<group>"; };
@@ -134,6 +134,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0408C4AA1C119E8600AFF319 /* ProgressIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				0408C4AB1C119E8600AFF319 /* ProgressIndicatorView.h */,
+				0408C4AC1C119E8600AFF319 /* ProgressIndicatorView.m */,
+			);
+			path = ProgressIndicator;
+			sourceTree = "<group>";
+		};
 		04341F7E1BD3D12300376EBA /* Spotlight */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,7 +177,7 @@
 		045611A71BAE90EB0043EA6C /* Demos */ = {
 			isa = PBXGroup;
 			children = (
-				04B4428C1C1017D800979BEB /* Progress */,
+				0408C4AA1C119E8600AFF319 /* ProgressIndicator */,
 				04341F7E1BD3D12300376EBA /* Spotlight */,
 				045611DE1BAE92990043EA6C /* DemoListViewController.h */,
 				045611DF1BAE92990043EA6C /* DemoListViewController.m */,
@@ -287,15 +296,6 @@
 				0499D90B1BB14A91009345FE /* DynamicAnimationViewController.m */,
 			);
 			path = "UIKit Dynamic demo";
-			sourceTree = "<group>";
-		};
-		04B4428C1C1017D800979BEB /* Progress */ = {
-			isa = PBXGroup;
-			children = (
-				04B442901C10183100979BEB /* ProgressIndicatorView.h */,
-				04B442911C10183100979BEB /* ProgressIndicatorView.m */,
-			);
-			path = Progress;
 			sourceTree = "<group>";
 		};
 		04F3A5061BAFE4CF00CA479A /* Utilities */ = {
@@ -514,7 +514,7 @@
 				045612131BAEA8DE0043EA6C /* main.m in Sources */,
 				0456120E1BAEA8DE0043EA6C /* AppDelegate.m in Sources */,
 				04F3A5091BAFE4CF00CA479A /* UIView+SAAdditions.m in Sources */,
-				04B442921C10183100979BEB /* ProgressIndicatorView.m in Sources */,
+				0408C4AD1C119E8600AFF319 /* ProgressIndicatorView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
