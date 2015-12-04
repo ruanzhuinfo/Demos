@@ -47,19 +47,6 @@ typedef enum {
   [self.view setBackgroundColor:[UIColor whiteColor]];
   [self.view setClipsToBounds:YES];
   
-  
-  ProgressIndicatorView *progress = [[ProgressIndicatorView alloc] init];
-  [progress showProgressAddToView:self.view];
-  
-  
-  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5. * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-    [progress finishedProgress:YES completionProgress:^{
-      
-    }];
-  });
-  
-  
-  
   dataArray = DATA_LIST;
   
   tempImage = [UIImage getRandomImage];
@@ -117,6 +104,17 @@ typedef enum {
   [label setLineBreakMode:NSLineBreakByCharWrapping];
   [headerView addSubview:label];
   [tableScrollView addSubview:headerView];
+  
+  ProgressIndicatorView *progress = [[ProgressIndicatorView alloc] init];
+  [progress showProgressAddToView:self.view];
+  
+  
+  dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(5. * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    [progress finishedProgress:YES completionProgress:^{
+      
+    }];
+  });
+
 }
 
 - (void)didReceiveMemoryWarning {
