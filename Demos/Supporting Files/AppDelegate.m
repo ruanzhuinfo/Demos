@@ -33,13 +33,13 @@
   
   [[UINavigationBar appearance] setTranslucent:NO];
   
-  
-  if ([CSSearchableIndex isIndexingAvailable]) {
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-      [CSSearchableIndex defaultSearchableIndex].indexDelegate = self;
-      [SpotlightManage addArticlesSearchableItems:DATA_LIST];
-    });
-  }
+//  
+//  if ([CSSearchableIndex isIndexingAvailable]) {
+//    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+//      [CSSearchableIndex defaultSearchableIndex].indexDelegate = self;
+//      [SpotlightManage addArticlesSearchableItems:DATA_LIST];
+//    });
+//  }
   
   return YES;
 }

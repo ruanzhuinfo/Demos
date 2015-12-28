@@ -13,7 +13,7 @@
 		045611CE1BAE90EB0043EA6C /* DemosUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 045611CD1BAE90EB0043EA6C /* DemosUITests.m */; };
 		045611E01BAE92990043EA6C /* DemoListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045611DF1BAE92990043EA6C /* DemoListViewController.m */; };
 		0456120A1BAEA8DE0043EA6C /* BezierViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 045611F81BAEA8DE0043EA6C /* BezierViewController.mm */; };
-		0456120B1BAEA8DE0043EA6C /* ComponentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045611FB1BAEA8DE0043EA6C /* ComponentViewController.m */; };
+		0456120B1BAEA8DE0043EA6C /* ComponentViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 045611FB1BAEA8DE0043EA6C /* ComponentViewController.mm */; };
 		0456120C1BAEA8DE0043EA6C /* PeriscopeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045611FE1BAEA8DE0043EA6C /* PeriscopeViewController.m */; };
 		0456120E1BAEA8DE0043EA6C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 045612031BAEA8DE0043EA6C /* AppDelegate.m */; };
 		0456120F1BAEA8DE0043EA6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 045612041BAEA8DE0043EA6C /* Assets.xcassets */; };
@@ -22,6 +22,8 @@
 		045612131BAEA8DE0043EA6C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 045612091BAEA8DE0043EA6C /* main.m */; };
 		045612181BAEDFCE0043EA6C /* TFView.m in Sources */ = {isa = PBXBuildFile; fileRef = 045612171BAEDFCE0043EA6C /* TFView.m */; };
 		045612241BAFC07D0043EA6C /* IMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045612231BAFC07D0043EA6C /* IMessageViewController.m */; };
+		045EB1A61C300F51005CC75E /* ArticleComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 045EB1A51C300F51005CC75E /* ArticleComponent.mm */; };
+		045EB1A91C300FBD005CC75E /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 045EB1A81C300FBD005CC75E /* Article.m */; };
 		04892E5F1BB3C7AA00CB0437 /* IMG_2237.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04892E5D1BB3C7AA00CB0437 /* IMG_2237.jpg */; };
 		04892E601BB3C7AA00CB0437 /* IMG_2238.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04892E5E1BB3C7AA00CB0437 /* IMG_2238.jpg */; };
 		04892E631BB3D4D700CB0437 /* IMG_1853.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04892E621BB3D4D700CB0437 /* IMG_1853.jpg */; };
@@ -70,7 +72,7 @@
 		045611F71BAEA8DE0043EA6C /* BezierViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BezierViewController.h; sourceTree = "<group>"; };
 		045611F81BAEA8DE0043EA6C /* BezierViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = BezierViewController.mm; sourceTree = "<group>"; };
 		045611FA1BAEA8DE0043EA6C /* ComponentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComponentViewController.h; sourceTree = "<group>"; };
-		045611FB1BAEA8DE0043EA6C /* ComponentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComponentViewController.m; sourceTree = "<group>"; };
+		045611FB1BAEA8DE0043EA6C /* ComponentViewController.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ComponentViewController.mm; sourceTree = "<group>"; };
 		045611FD1BAEA8DE0043EA6C /* PeriscopeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PeriscopeViewController.h; sourceTree = "<group>"; };
 		045611FE1BAEA8DE0043EA6C /* PeriscopeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PeriscopeViewController.m; sourceTree = "<group>"; };
 		045612021BAEA8DE0043EA6C /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -86,6 +88,10 @@
 		045612231BAFC07D0043EA6C /* IMessageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IMessageViewController.m; sourceTree = "<group>"; };
 		0456123A1BAFCB5D0043EA6C /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
 		0456123B1BAFCBD80043EA6C /* Demos-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Demos-Prefix.pch"; sourceTree = "<group>"; };
+		045EB1A41C300F51005CC75E /* ArticleComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArticleComponent.h; sourceTree = "<group>"; };
+		045EB1A51C300F51005CC75E /* ArticleComponent.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ArticleComponent.mm; sourceTree = "<group>"; };
+		045EB1A71C300FBD005CC75E /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Article.h; sourceTree = "<group>"; };
+		045EB1A81C300FBD005CC75E /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Article.m; sourceTree = "<group>"; };
 		04892E5D1BB3C7AA00CB0437 /* IMG_2237.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2237.jpg; sourceTree = "<group>"; };
 		04892E5E1BB3C7AA00CB0437 /* IMG_2238.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2238.jpg; sourceTree = "<group>"; };
 		04892E621BB3D4D700CB0437 /* IMG_1853.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1853.jpg; sourceTree = "<group>"; };
@@ -224,7 +230,11 @@
 			isa = PBXGroup;
 			children = (
 				045611FA1BAEA8DE0043EA6C /* ComponentViewController.h */,
-				045611FB1BAEA8DE0043EA6C /* ComponentViewController.m */,
+				045611FB1BAEA8DE0043EA6C /* ComponentViewController.mm */,
+				045EB1A41C300F51005CC75E /* ArticleComponent.h */,
+				045EB1A51C300F51005CC75E /* ArticleComponent.mm */,
+				045EB1A71C300FBD005CC75E /* Article.h */,
+				045EB1A81C300FBD005CC75E /* Article.m */,
 			);
 			path = "ComponentKit Demo";
 			sourceTree = "<group>";
@@ -501,13 +511,15 @@
 			files = (
 				04892E861BB51A1A00CB0437 /* UIColor+Random.m in Sources */,
 				045612241BAFC07D0043EA6C /* IMessageViewController.m in Sources */,
+				045EB1A91C300FBD005CC75E /* Article.m in Sources */,
 				04341F811BD3D12300376EBA /* SpotlightManage.m in Sources */,
 				04892E681BB3D65C00CB0437 /* UIImage+Additions.m in Sources */,
 				045611E01BAE92990043EA6C /* DemoListViewController.m in Sources */,
 				0456120C1BAEA8DE0043EA6C /* PeriscopeViewController.m in Sources */,
+				045EB1A61C300F51005CC75E /* ArticleComponent.mm in Sources */,
 				04F3A50D1BB10ABD00CA479A /* TFScrollView.m in Sources */,
 				045612181BAEDFCE0043EA6C /* TFView.m in Sources */,
-				0456120B1BAEA8DE0043EA6C /* ComponentViewController.m in Sources */,
+				0456120B1BAEA8DE0043EA6C /* ComponentViewController.mm in Sources */,
 				0499D90C1BB14A91009345FE /* DynamicAnimationViewController.m in Sources */,
 				04892E7B1BB4EF1C00CB0437 /* TFSpringCollectionViewFlowLayout.m in Sources */,
 				0456120A1BAEA8DE0043EA6C /* BezierViewController.mm in Sources */,
@@ -731,7 +743,7 @@
 				045611D11BAE90EB0043EA6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 		045611D21BAE90EB0043EA6C /* Build configuration list for PBXNativeTarget "Demos" */ = {
 			isa = XCConfigurationList;
@@ -740,7 +752,7 @@
 				045611D41BAE90EB0043EA6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 		045611D51BAE90EB0043EA6C /* Build configuration list for PBXNativeTarget "DemosTests" */ = {
 			isa = XCConfigurationList;
@@ -749,7 +761,7 @@
 				045611D71BAE90EB0043EA6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 		045611D81BAE90EB0043EA6C /* Build configuration list for PBXNativeTarget "DemosUITests" */ = {
 			isa = XCConfigurationList;
@@ -758,7 +770,7 @@
 				045611DA1BAE90EB0043EA6C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Debug;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
