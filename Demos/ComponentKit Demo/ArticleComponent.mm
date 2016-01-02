@@ -68,7 +68,7 @@
                                                       [CKComponent
                                                        newWithView:{
                                                          [UIView class],
-                                                         {{@selector(setBackgroundColor:), [UIColor lightGrayColor]}}
+                                                         {{@selector(setBackgroundColor:), [UIColor lightTextColor]}}
                                                        }
                                                        size:{.height = 0.5}]
                                                     }

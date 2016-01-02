@@ -54,19 +54,22 @@
   [_imageView setClipsToBounds:YES];
   [self.view addSubview:_imageView];
   
+  UIBlurEffect * blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
+  UIVisualEffectView * effe = [[UIVisualEffectView alloc]initWithEffect:blur];
+  effe.frame = CGRectMake(10, 10, self.view.width - 20, self.view.height - 84);
+  [self.view addSubview:effe];
+  
   UIView *view2 = [[UIView alloc] initWithFrame:CGRectMake(50, 200, 100, 100)];
   view2.backgroundColor = [UIColor blackColor];
   [view2 setCornerRadius:20.0f];
   [self.view addSubview:view2];
-
+  
   
   UIView *view3 = [[UIView alloc] initWithFrame:CGRectMake(200, 200, 100, 100)];
   [view3.layer setCornerRadius:20.0f];
   [view3 setBackgroundColor:[UIColor blackColor]];
   [view3 setClipsToBounds:YES];
   [self.view addSubview:view3];
-  
-  
   
 }
 
