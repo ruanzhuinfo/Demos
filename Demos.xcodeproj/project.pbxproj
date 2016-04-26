@@ -31,7 +31,11 @@
 		04892E681BB3D65C00CB0437 /* UIImage+Additions.m in Sources */ = {isa = PBXBuildFile; fileRef = 04892E671BB3D65C00CB0437 /* UIImage+Additions.m */; };
 		04892E7B1BB4EF1C00CB0437 /* TFSpringCollectionViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 04892E7A1BB4EF1C00CB0437 /* TFSpringCollectionViewFlowLayout.m */; };
 		04892E861BB51A1A00CB0437 /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 04892E851BB51A1A00CB0437 /* UIColor+Random.m */; };
+		048985511CCDF3FC00471171 /* DDTabPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048985501CCDF3FC00471171 /* DDTabPagerViewController.m */; };
 		0499D90C1BB14A91009345FE /* DynamicAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0499D90B1BB14A91009345FE /* DynamicAnimationViewController.m */; };
+		04A2477D1CC9D9D6000DED42 /* DDItemScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A2477C1CC9D9D6000DED42 /* DDItemScrollView.m */; };
+		04E7881B1CCF973A004ED75B /* Feed_barShadow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E788191CCF973A004ED75B /* Feed_barShadow@3x.png */; };
+		04E7881C1CCF973A004ED75B /* Feed_barShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E7881A1CCF973A004ED75B /* Feed_barShadow@2x.png */; };
 		04F3A5051BAFDE3200CA479A /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F3A5041BAFDE3200CA479A /* TestData.plist */; };
 		04F3A5091BAFE4CF00CA479A /* UIView+SAAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F3A5081BAFE4CF00CA479A /* UIView+SAAdditions.m */; };
 		04F3A50D1BB10ABD00CA479A /* TFScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04F3A50C1BB10ABD00CA479A /* TFScrollView.m */; };
@@ -102,8 +106,14 @@
 		04892E7A1BB4EF1C00CB0437 /* TFSpringCollectionViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFSpringCollectionViewFlowLayout.m; sourceTree = "<group>"; };
 		04892E841BB51A1A00CB0437 /* UIColor+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Random.h"; sourceTree = "<group>"; };
 		04892E851BB51A1A00CB0437 /* UIColor+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Random.m"; sourceTree = "<group>"; };
+		0489854F1CCDF3FC00471171 /* DDTabPagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDTabPagerViewController.h; sourceTree = "<group>"; };
+		048985501CCDF3FC00471171 /* DDTabPagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTabPagerViewController.m; sourceTree = "<group>"; };
 		0499D90A1BB14A91009345FE /* DynamicAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicAnimationViewController.h; sourceTree = "<group>"; };
 		0499D90B1BB14A91009345FE /* DynamicAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicAnimationViewController.m; sourceTree = "<group>"; };
+		04A2477B1CC9D9D6000DED42 /* DDItemScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDItemScrollView.h; sourceTree = "<group>"; };
+		04A2477C1CC9D9D6000DED42 /* DDItemScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDItemScrollView.m; sourceTree = "<group>"; };
+		04E788191CCF973A004ED75B /* Feed_barShadow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Feed_barShadow@3x.png"; sourceTree = "<group>"; };
+		04E7881A1CCF973A004ED75B /* Feed_barShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Feed_barShadow@2x.png"; sourceTree = "<group>"; };
 		04F3A5041BAFDE3200CA479A /* TestData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestData.plist; sourceTree = "<group>"; };
 		04F3A5071BAFE4CF00CA479A /* UIView+SAAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+SAAdditions.h"; sourceTree = "<group>"; };
 		04F3A5081BAFE4CF00CA479A /* UIView+SAAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+SAAdditions.m"; sourceTree = "<group>"; };
@@ -183,6 +193,7 @@
 		045611A71BAE90EB0043EA6C /* Demos */ = {
 			isa = PBXGroup;
 			children = (
+				04A2477A1CC8CDFA000DED42 /* DDTableViewPager */,
 				0408C4AA1C119E8600AFF319 /* ProgressIndicator */,
 				04341F7E1BD3D12300376EBA /* Spotlight */,
 				045611DE1BAE92990043EA6C /* DemoListViewController.h */,
@@ -255,6 +266,8 @@
 		045611FF1BAEA8DE0043EA6C /* Recources */ = {
 			isa = PBXGroup;
 			children = (
+				04E788191CCF973A004ED75B /* Feed_barShadow@3x.png */,
+				04E7881A1CCF973A004ED75B /* Feed_barShadow@2x.png */,
 				04892E611BB3C7B000CB0437 /* Big image */,
 			);
 			path = Recources;
@@ -308,6 +321,17 @@
 			path = "UIKit Dynamic demo";
 			sourceTree = "<group>";
 		};
+		04A2477A1CC8CDFA000DED42 /* DDTableViewPager */ = {
+			isa = PBXGroup;
+			children = (
+				04A2477B1CC9D9D6000DED42 /* DDItemScrollView.h */,
+				04A2477C1CC9D9D6000DED42 /* DDItemScrollView.m */,
+				0489854F1CCDF3FC00471171 /* DDTabPagerViewController.h */,
+				048985501CCDF3FC00471171 /* DDTabPagerViewController.m */,
+			);
+			path = DDTableViewPager;
+			sourceTree = "<group>";
+		};
 		04F3A5061BAFE4CF00CA479A /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
@@ -350,6 +374,7 @@
 				045611A21BAE90EB0043EA6C /* Frameworks */,
 				045611A31BAE90EB0043EA6C /* Resources */,
 				B30F01617CFCBCB40D2E7BA7 /* Copy Pods Resources */,
+				24E89700361AA99B9BBDEC4C /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -446,11 +471,13 @@
 			files = (
 				04892E631BB3D4D700CB0437 /* IMG_1853.jpg in Resources */,
 				045612101BAEA8DE0043EA6C /* LaunchScreen.storyboard in Resources */,
+				04E7881C1CCF973A004ED75B /* Feed_barShadow@2x.png in Resources */,
 				0456120F1BAEA8DE0043EA6C /* Assets.xcassets in Resources */,
 				04F3A5051BAFDE3200CA479A /* TestData.plist in Resources */,
 				04892E651BB3D59D00CB0437 /* ImagesData.plist in Resources */,
 				04892E5F1BB3C7AA00CB0437 /* IMG_2237.jpg in Resources */,
 				04892E601BB3C7AA00CB0437 /* IMG_2238.jpg in Resources */,
+				04E7881B1CCF973A004ED75B /* Feed_barShadow@3x.png in Resources */,
 				045612111BAEA8DE0043EA6C /* DemoListData.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +499,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		24E89700361AA99B9BBDEC4C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		B30F01617CFCBCB40D2E7BA7 /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -521,7 +563,9 @@
 				045612181BAEDFCE0043EA6C /* TFView.m in Sources */,
 				0456120B1BAEA8DE0043EA6C /* ComponentViewController.mm in Sources */,
 				0499D90C1BB14A91009345FE /* DynamicAnimationViewController.m in Sources */,
+				04A2477D1CC9D9D6000DED42 /* DDItemScrollView.m in Sources */,
 				04892E7B1BB4EF1C00CB0437 /* TFSpringCollectionViewFlowLayout.m in Sources */,
+				048985511CCDF3FC00471171 /* DDTabPagerViewController.m in Sources */,
 				0456120A1BAEA8DE0043EA6C /* BezierViewController.mm in Sources */,
 				045612131BAEA8DE0043EA6C /* main.m in Sources */,
 				0456120E1BAEA8DE0043EA6C /* AppDelegate.m in Sources */,
@@ -658,6 +702,7 @@
 			baseConfigurationReference = 7DB134BCC26F089F999325CD /* Pods.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demos/Supporting Files/Demos-Prefix.pch";
 				INFOPLIST_FILE = "Demos/Supporting Files/Info.plist";
@@ -665,6 +710,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = www.zhihu.com.Demos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
@@ -674,6 +720,7 @@
 			baseConfigurationReference = F3CD230209609975A4DF59BB /* Pods.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Demos/Supporting Files/Demos-Prefix.pch";
 				INFOPLIST_FILE = "Demos/Supporting Files/Info.plist";
@@ -681,6 +728,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = www.zhihu.com.Demos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;

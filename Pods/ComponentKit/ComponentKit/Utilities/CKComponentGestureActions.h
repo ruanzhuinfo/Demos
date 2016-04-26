@@ -11,6 +11,7 @@
 #import <Foundation/Foundation.h>
 
 #import <ComponentKit/CKComponentAction.h>
+#import <ComponentKit/CKComponentDelegateForwarder.h>
 
 typedef void (*CKComponentGestureRecognizerSetupFunction)(UIGestureRecognizer *);
 
@@ -49,4 +50,11 @@ CKComponentViewAttributeValue CKComponentLongPressGestureAttribute(CKComponentAc
  */
 CKComponentViewAttributeValue CKComponentGestureAttribute(Class gestureRecognizerClass,
                                                           CKComponentGestureRecognizerSetupFunction setupFunction,
-                                                          CKComponentAction action);
+                                                          CKComponentAction action,
+                                                          CKComponentForwardedSelectors delegateSelectors = {});
+
+/**
+ Allows mapping a UIGestureRecognizer back to the original CKComponentAction selector,
+ since ComponentKit internally changes the selector to be able send to the component responder chain.
+ */
+CKComponentAction CKComponentGestureGetAction(UIGestureRecognizer *gesture);

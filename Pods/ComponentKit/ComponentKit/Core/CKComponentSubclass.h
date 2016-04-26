@@ -15,6 +15,7 @@
 #import <ComponentKit/CKComponentBoundsAnimation.h>
 #import <ComponentKit/CKComponentLayout.h>
 #import <ComponentKit/CKDimension.h>
+#import <ComponentKit/CKUpdateMode.h>
 
 /** A constant that indicates that the parent's size is not yet determined in a given dimension. */
 extern CGFloat const kCKComponentParentDimensionUndefined;
@@ -77,24 +78,52 @@ extern CGSize const kCKComponentParentSizeUndefined;
                       relativeToParentSize:(CGSize)parentSize;
 
 /**
- Call this to enqueue a change to the state.
+ Override this in a subclass to opt-in to layout memoization.
 
- The block takes the current state as a parameter and returns an instance of the new state.
+ Calls to -layoutThatFits:constrainedSize: will then be transparently memoized across re-layouts
+ for a given component instance, constrained size, and parent size, as long as there is a CKComponentMemoizer
+ active in the given scope (see CKComponentMemoizer.h for details).
+ */
+- (BOOL)shouldMemoizeLayout;
+
+/**
+ Enqueue a change to the state.
+
+ @param updateBlock A block that takes the current state as a parameter and returns an instance of the new state.
  The state *must* be immutable since components themselves are. A possible use might be:
 
- [self updateState:^MyState *(MyState *currentState) {
-   MyMutableState *nextState = [currentState mutableCopy];
-   [nextState setFoo:[nextState bar] * 2];
-   return [nextState copy]; // immutable! :D
- }];
+   [self updateState:^MyState *(MyState *currentState) {
+     MyMutableState *nextState = [currentState mutableCopy];
+     [nextState setFoo:[nextState bar] * 2];
+     return [nextState copy]; // immutable! :D
+   }];
+
+ @param mode @see CKUpdateMode
  */
-- (void)updateState:(id (^)(id))updateBlock;
+- (void)updateState:(id (^)(id))updateBlock mode:(CKUpdateMode)mode;
 
 /**
  Allows an action to be forwarded to another target. By default, returns the receiver if it implements action,
  and proceeds up the responder chain otherwise.
  */
 - (id)targetForAction:(SEL)action withSender:(id)sender;
+
+/**
+ When an action is triggered, a component may use this method to either capture or ignore the given action. The default
+ implementation simply uses respondsToSelector: to determine if the component can perform the given action.
+
+ In practice, this is useful only for integrations with UIMenuController whose API walks the UIResponder chain to
+ determine which menu items to display. You should not override this method for standard component actions.
+ */
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender;
+
+/**
+ Override to return a list of animations that will be applied to the component when it is first mounted.
+
+ @warning If you override this method, your component MUST declare a scope (see CKComponentScope). This is used to
+ identify equivalent components between trees.
+ */
+- (std::vector<CKComponentAnimation>)animationsOnInitialMount;
 
 /**
  Override to return a list of animations from the previous version of the same component.

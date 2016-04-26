@@ -19,4 +19,13 @@
  */
 + (CKComponentPreparationOutputItem *)prepare:(CKComponentPreparationInputItem *)item;
 
+/**
+ The concurrent queue that the preparation queue uses for its asynchronous operations.
+ You may change the target queue of this queue to any queue that is not the main queue.
+ You may dispatch_suspend this queue (but be sure to resume it later).
+ Exposed here to allow for CPU Reprioritization.
+ */
+
+@property (nonatomic, strong, readonly) dispatch_queue_t concurrentQueue;
+
 @end

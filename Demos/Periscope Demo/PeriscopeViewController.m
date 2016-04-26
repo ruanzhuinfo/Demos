@@ -78,6 +78,7 @@ typedef enum {
   _tableView = [[UITableView alloc]
                 initWithFrame:self.view.bounds
                 style:UITableViewStylePlain];
+  [_tableView setAccessibilityIdentifier:@"periscope_tableView"];
   [_tableView setDelegate:self];
   [_tableView setDataSource:self];
   [_tableView setRowHeight:44];
@@ -159,6 +160,7 @@ heightForRowAtIndexPath:(NSIndexPath *)indexPath {
                                   reuseIdentifier:@"cell2"];
   }
   
+  [cell setAccessibilityIdentifier:[NSString stringWithFormat:@"periscope_%ld", indexPath.row]];
   cell.textLabel.text = [[dataArray objectAtIndex:indexPath.row]
                          objectForKey:@"title"];
   [cell.contentView setBackgroundColor:[UIColor getRandomColor]];

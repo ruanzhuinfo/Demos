@@ -33,7 +33,6 @@
     }];
   });
   
-  
   // No.1
   // corner radius
   
@@ -70,7 +69,7 @@
   [view3 setBackgroundColor:[UIColor blackColor]];
   [view3 setClipsToBounds:YES];
   [self.view addSubview:view3];
-  
+    
 }
 
 - (void)didReceiveMemoryWarning {

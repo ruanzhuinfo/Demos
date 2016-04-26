@@ -20,6 +20,7 @@
 #import "CKComponentBoundsAnimation+UICollectionView.h"
 #import "CKComponentConstantDecider.h"
 #import "CKComponentDataSource.h"
+#import "CKComponentDataSourceDelegate.h"
 #import "CKComponentDataSourceOutputItem.h"
 #import "CKCollectionViewDataSourceCell.h"
 #import "CKComponentLifecycleManager.h"
@@ -79,10 +80,10 @@ CK_FINAL_CLASS([CKCollectionViewDataSource class]);
   [_componentDataSource enqueueChangeset:changeset constrainedSize:constrainedSize];
 }
 
-- (void)updateContextAndEnqeueReload:(id)newContext
+- (void)updateContextAndEnqueueReload:(id)newContext
 {
   CKAssertMainThread();
-  [_componentDataSource updateContextAndEnqeueReload:newContext];
+  [_componentDataSource updateContextAndEnqueueReload:newContext];
 }
 
 - (id<NSObject>)modelForItemAtIndexPath:(NSIndexPath *)indexPath
@@ -199,16 +200,15 @@ static void applyChangesetToCollectionView(const Output::Changeset &changeset, U
   NSMutableArray *itemUpdateIndexPaths = [[NSMutableArray alloc] init];
   Output::Items::Enumerator itemEnumerator =
   ^(const Output::Change &change, CKArrayControllerChangeType type, BOOL *stop) {
-    NSIndexPath *indexPath = change.indexPath.toNSIndexPath();
     switch (type) {
       case CKArrayControllerChangeTypeDelete:
-        [itemRemovalIndexPaths addObject:indexPath];
+        [itemRemovalIndexPaths addObject:change.sourceIndexPath.toNSIndexPath()];
         break;
       case CKArrayControllerChangeTypeInsert:
-        [itemInsertionIndexPaths addObject:indexPath];
+        [itemInsertionIndexPaths addObject:change.destinationIndexPath.toNSIndexPath()];
         break;
       case CKArrayControllerChangeTypeUpdate:
-        [itemUpdateIndexPaths addObject:indexPath];
+        [itemUpdateIndexPaths addObject:change.sourceIndexPath.toNSIndexPath()];
         break;
       default:
         CKCFailAssert(@"Unsupported change type for items: %d", type);

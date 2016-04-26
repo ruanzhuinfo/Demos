@@ -51,6 +51,11 @@
   NSRange visibleGlyphRange = [layoutManager glyphRangeForBoundingRect:constrainedRect
                                                        inTextContainer:textContainer];
   NSInteger lastVisibleGlyphIndex = (NSMaxRange(visibleGlyphRange) - 1);
+
+  if (lastVisibleGlyphIndex < 0) {
+    return NSNotFound;
+  }
+
   CGRect lastLineRect = [layoutManager lineFragmentRectForGlyphAtIndex:lastVisibleGlyphIndex
                                                         effectiveRange:NULL];
   CGRect lastLineUsedRect = [layoutManager lineFragmentUsedRectForGlyphAtIndex:lastVisibleGlyphIndex
@@ -67,7 +72,8 @@
   CKTextKitContext *truncationContext = [[CKTextKitContext alloc] initWithAttributedString:_truncationAttributedString
                                                                              lineBreakMode:NSLineBreakByWordWrapping
                                                                       maximumNumberOfLines:1
-                                                                           constrainedSize:constrainedRect.size];
+                                                                           constrainedSize:constrainedRect.size
+                                                                      layoutManagerFactory:nil];
 
   __block CGRect truncationUsedRect;
 
@@ -95,10 +101,12 @@
   NSUInteger firstClippedGlyphIndex = [layoutManager glyphIndexForPoint:beginningOfTruncationMessage
                                                         inTextContainer:textContainer
                                          fractionOfDistanceThroughGlyph:NULL];
+  // If it didn't intersect with any text then it should just return the last visible character index, since the
+  // truncation rect can fully fit on the line without clipping any other text.
+  if (firstClippedGlyphIndex == NSNotFound) {
+    return [layoutManager characterIndexForGlyphAtIndex:lastVisibleGlyphIndex];
+  }
   NSUInteger firstCharacterIndexToReplace = [layoutManager characterIndexForGlyphAtIndex:firstClippedGlyphIndex];
-  CKAssert(firstCharacterIndexToReplace != NSNotFound,
-           @"The beginning of the truncation message exclusion rect (%@) didn't intersect any glyphs",
-           NSStringFromCGPoint(beginningOfTruncationMessage));
 
   // Break on word boundaries
   return [self _findTruncationInsertionPointAtOrBeforeCharacterIndex:firstCharacterIndexToReplace

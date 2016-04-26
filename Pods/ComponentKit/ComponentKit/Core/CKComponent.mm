@@ -11,15 +11,14 @@
 #import "CKComponent.h"
 #import "CKComponentControllerInternal.h"
 #import "CKComponentInternal.h"
+#import "CKComponentMemoizer.h"
 #import "CKComponentSubclass.h"
 
 #import <ComponentKit/CKArgumentPrecondition.h>
 #import <ComponentKit/CKAssert.h>
 #import <ComponentKit/CKMacros.h>
 
-#import "CKInternalHelpers.h"
-#import "CKWeakObjectContainer.h"
-#import "ComponentLayoutContext.h"
+#import "CKAssert.h"
 #import "CKComponentAccessibility.h"
 #import "CKComponentAnimation.h"
 #import "CKComponentController.h"
@@ -28,7 +27,10 @@
 #import "CKComponentScopeHandle.h"
 #import "CKComponentViewConfiguration.h"
 #import "CKComponentViewInterface.h"
-#import "CKAssert.h"
+#import "CKInternalHelpers.h"
+#import "CKMountAnimationGuard.h"
+#import "CKWeakObjectContainer.h"
+#import "ComponentLayoutContext.h"
 
 CGFloat const kCKComponentParentDimensionUndefined = NAN;
 CGSize const kCKComponentParentSizeUndefined = {kCKComponentParentDimensionUndefined, kCKComponentParentDimensionUndefined};
@@ -125,6 +127,7 @@ struct CKComponentMountInfo {
 
   UIView *v = effectiveContext.viewManager->viewForConfiguration([self class], viewConfiguration);
   if (v) {
+    CKMountAnimationGuard g(v.ck_component, self, context);
     if (_mountInfo->view != v) {
       [self _relinquishMountedView]; // First release our old view
       [v.ck_component unmount];      // Then unmount old component (if any) from the new view
@@ -141,7 +144,7 @@ struct CKComponentMountInfo {
     [v setBounds:{v.bounds.origin, size}];
 
     _mountInfo->viewContext = {v, {{0,0}, v.bounds.size}};
-    return {.mountChildren = YES, .contextForChildren = effectiveContext.childContextForSubview(v)};
+    return {.mountChildren = YES, .contextForChildren = effectiveContext.childContextForSubview(v, g.didBlockAnimations)};
   } else {
     CKAssertNil(_mountInfo->view, @"Didn't expect to sometimes have a view and sometimes not have a view");
     _mountInfo->viewContext = {effectiveContext.viewManager->view, {effectiveContext.position, size}};
@@ -177,6 +180,11 @@ struct CKComponentMountInfo {
 
 #pragma mark - Animation
 
+- (std::vector<CKComponentAnimation>)animationsOnInitialMount
+{
+  return {};
+}
+
 - (std::vector<CKComponentAnimation>)animationsFromPreviousComponent:(CKComponent *)previousComponent
 {
   return {};
@@ -197,9 +205,9 @@ struct CKComponentMountInfo {
 - (CKComponentLayout)layoutThatFits:(CKSizeRange)constrainedSize parentSize:(CGSize)parentSize
 {
   CK::Component::LayoutContext context(self, constrainedSize);
-  CKComponentLayout layout = [self computeLayoutThatFits:constrainedSize
-                                        restrictedToSize:_size
-                                    relativeToParentSize:parentSize];
+
+  CKComponentLayout layout = CKMemoizeOrComputeLayout(self, constrainedSize, _size, parentSize);
+
   CKAssert(layout.component == self, @"Layout computed by %@ should return self as component, but returned %@",
            [self class], [layout.component class]);
   CKSizeRange resolvedRange = constrainedSize.intersect(_size.resolve(parentSize));
@@ -226,6 +234,13 @@ struct CKComponentMountInfo {
   return {self, constrainedSize.min};
 }
 
+- (BOOL)shouldMemoizeLayout
+{
+  return NO;
+}
+
+#pragma mark - Responder
+
 - (id)nextResponder
 {
   return _scopeHandle.controller ?: [self nextResponderAfterController];
@@ -238,7 +253,12 @@ struct CKComponentMountInfo {
 
 - (id)targetForAction:(SEL)action withSender:(id)sender
 {
-  return [self respondsToSelector:action] ? self : [[self nextResponder] targetForAction:action withSender:sender];
+  return [self canPerformAction:action withSender:sender] ? self : [[self nextResponder] targetForAction:action withSender:sender];
+}
+
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
+{
+  return [self respondsToSelector:action];
 }
 
 // Because only the root component in each mounted tree will have a non-nil rootComponentMountedView, we use Obj-C
@@ -263,21 +283,11 @@ static void *kRootComponentMountedViewKey = &kRootComponentMountedViewKey;
   return nil;
 }
 
-- (void)updateState:(id (^)(id))updateBlock
-{
-  [self _updateState:updateBlock tryAsynchronousUpdate:NO];
-}
-
-- (void)updateStateWithExpensiveReflow:(id (^)(id))updateBlock
-{
-  [self _updateState:updateBlock tryAsynchronousUpdate:YES];
-}
-
-- (void)_updateState:(id (^)(id))updateBlock tryAsynchronousUpdate:(BOOL)tryAsynchronousUpdate
+- (void)updateState:(id (^)(id))updateBlock mode:(CKUpdateMode)mode
 {
   CKAssertNotNil(_scopeHandle, @"A component without state cannot update its state.");
   CKAssertNotNil(updateBlock, @"Cannot enqueue component state modification with a nil block.");
-  [_scopeHandle updateState:updateBlock tryAsynchronousUpdate:tryAsynchronousUpdate];
+  [_scopeHandle updateState:updateBlock mode:mode];
 }
 
 - (CKComponentController *)controller

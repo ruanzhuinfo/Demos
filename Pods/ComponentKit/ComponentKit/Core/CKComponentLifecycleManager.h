@@ -25,6 +25,7 @@ struct CKComponentLifecycleManagerState {
   CKSizeRange constrainedSize;
   CKComponentLayout layout;
   CKComponentScopeRoot *root;
+  id memoizerState;
   CKComponentBoundsAnimation boundsAnimation;
 };
 
@@ -41,8 +42,6 @@ extern const CKComponentLifecycleManagerState CKComponentLifecycleManagerStateEm
 @property (nonatomic, weak) id<CKComponentLifecycleManagerDelegate> delegate;
 
 - (CKComponentLifecycleManagerState)prepareForUpdateWithModel:(id)model constrainedSize:(CKSizeRange)constrainedSize context:(id<NSObject>)context;
-
-- (CKComponentLayout)layoutForModel:(id)model constrainedSize:(CKSizeRange)constrainedSize context:(id<NSObject>)context;
 
 /**
  Updates the state to the new one without mounting the view.
@@ -92,6 +91,9 @@ extern const CKComponentLifecycleManagerState CKComponentLifecycleManagerStateEm
 
 /** The current scope frame associated with this lifecycle manager */
 - (CKComponentScopeRoot *)scopeRoot;
+
+/** The current component layout associated with this lifecycle manager */
+- (const CKComponentLayout &)componentLayout;
 
 @end
 

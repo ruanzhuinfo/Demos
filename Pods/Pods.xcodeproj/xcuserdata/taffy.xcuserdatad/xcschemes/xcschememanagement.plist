@@ -4,17 +4,17 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-ComponentKit.xcscheme</key>
+		<key>ComponentKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-GPUImage.xcscheme</key>
+		<key>GPUImage.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-Masonry.xcscheme</key>
+		<key>Masonry.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -27,22 +27,22 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>135AB3C6C5FDBA0340F5ED8A</key>
+		<key>53480ED0BE09FF49E34B1702D485CAAB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>773AB2CCC8409B3CB0103F00</key>
+		<key>6610362E50A6DE8BACCA1F2885CD9157</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A1D070DE45228C126AC192C9</key>
+		<key>84DA7965DB06F82250ECA47F98016CC9</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C036BD62852DFF423DA06F5D</key>
+		<key>AA02229C01C630EC131BEC80B276DC50</key>
 		<dict>
 			<key>primary</key>
 			<true/>

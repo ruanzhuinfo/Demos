@@ -10,6 +10,8 @@
 
 @interface DemosUITests : XCTestCase
 
+@property (nonatomic) XCUIApplication *app;
+
 @end
 
 @implementation DemosUITests
@@ -20,10 +22,12 @@
     // Put setup code here. This method is called before the invocation of each test method in the class.
     
     // In UI tests it is usually best to stop immediately when a failure occurs.
-    self.continueAfterFailure = NO;
+    self.continueAfterFailure = YES;
     // UI tests must launch the application that they test. Doing this in setup will make sure it happens for each test method.
-    [[[XCUIApplication alloc] init] launch];
-    
+
+    self.app = [XCUIApplication new];
+    [self.app launch];
+  
     // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
 }
 
@@ -35,6 +39,22 @@
 - (void)testExample {
     // Use recording to get started writing UI tests.
     // Use XCTAssert and related functions to verify your tests produce the correct results.
+  
+  [self tableViewSwipeUp];
+  [self tableViewCellTap];
 }
+
+- (void) tableViewSwipeUp {
+  [self.app.tables.element swipeUp];
+}
+
+- (void) tableViewCellTap {
+  [[self.app.tables.element.cells elementAtIndex:0] tap];
+}
+
+- (void)periscopeSwipeUp {
+  
+}
+
 
 @end

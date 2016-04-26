@@ -1,7 +1,7 @@
 PODS:
-  - ComponentKit (0.12)
+  - ComponentKit (0.13)
   - GPUImage (0.1.7)
-  - Masonry (0.6.2)
+  - Masonry (0.6.4)
 
 DEPENDENCIES:
   - ComponentKit (~> 0.12)
@@ -9,8 +9,8 @@ DEPENDENCIES:
   - Masonry (~> 0.6.2)
 
 SPEC CHECKSUMS:
-  ComponentKit: 4bf3ce82a9e28f2ec26ba112102a2120ef312aa6
+  ComponentKit: b79a11f258ef71c44e3be976e4929c6eb4144c58
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
-  Masonry: 362e8a1cc0beada4a4c4832d5e863da2a51533be
+  Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
 
-COCOAPODS: 0.37.2
+COCOAPODS: 0.39.0
