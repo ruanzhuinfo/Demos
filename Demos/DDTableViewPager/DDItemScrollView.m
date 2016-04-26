@@ -203,7 +203,7 @@
       [cell updateItemCellBorderWithStyle:ItemCellBorderNone];
     }
 		
-		[self.shadowView setOrigin:CGPointMake(0, self.height - 4)];
+		[self.shadowView setOrigin:CGPointMake(0, self.height)];
   } else {
     for (ItemCell *cell in self.itemCells) {
       [cell updateItemCellBorderWithStyle:ItemCellBorderGrey];
