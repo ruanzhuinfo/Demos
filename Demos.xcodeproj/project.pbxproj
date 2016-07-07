@@ -125,6 +125,8 @@
 		04BB11E31D2E32D1009224D8 /* Night_BackArrow_iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04BB11DA1D2E32D1009224D8 /* Night_BackArrow_iOS7@2x.png */; };
 		04BB11E61D2E335A009224D8 /* Night_Night@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04BB11E41D2E335A009224D8 /* Night_Night@2x.png */; };
 		04BB11E71D2E335A009224D8 /* Night_Night@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04BB11E51D2E335A009224D8 /* Night_Night@3x.png */; };
+		04BB11EB1D2E41DF009224D8 /* ZESwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB11EA1D2E41DF009224D8 /* ZESwitchViewController.m */; };
+		04BB11EE1D2E45FA009224D8 /* ZENavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB11ED1D2E45FA009224D8 /* ZENavigationController.m */; };
 		04BEFB851D24D06B00C78692 /* DTCoreTextFontOverrides.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04BEFB841D24D06B00C78692 /* DTCoreTextFontOverrides.plist */; };
 		04BEFB8E1D24E5F300C78692 /* ZEBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BEFB8D1D24E5F300C78692 /* ZEBaseModel.m */; };
 		04BEFB911D24E63C00C78692 /* ZEChapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BEFB901D24E63C00C78692 /* ZEChapter.m */; };
@@ -315,6 +317,10 @@
 		04BB11DA1D2E32D1009224D8 /* Night_BackArrow_iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Night_BackArrow_iOS7@2x.png"; sourceTree = "<group>"; };
 		04BB11E41D2E335A009224D8 /* Night_Night@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Night_Night@2x.png"; sourceTree = "<group>"; };
 		04BB11E51D2E335A009224D8 /* Night_Night@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Night_Night@3x.png"; sourceTree = "<group>"; };
+		04BB11E91D2E41DF009224D8 /* ZESwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZESwitchViewController.h; sourceTree = "<group>"; };
+		04BB11EA1D2E41DF009224D8 /* ZESwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZESwitchViewController.m; sourceTree = "<group>"; };
+		04BB11EC1D2E45FA009224D8 /* ZENavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZENavigationController.h; sourceTree = "<group>"; };
+		04BB11ED1D2E45FA009224D8 /* ZENavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZENavigationController.m; sourceTree = "<group>"; };
 		04BEFB841D24D06B00C78692 /* DTCoreTextFontOverrides.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DTCoreTextFontOverrides.plist; sourceTree = "<group>"; };
 		04BEFB8C1D24E5F300C78692 /* ZEBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEBaseModel.h; sourceTree = "<group>"; };
 		04BEFB8D1D24E5F300C78692 /* ZEBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEBaseModel.m; sourceTree = "<group>"; };
@@ -758,6 +764,10 @@
 		04BB11E81D2E3976009224D8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				04BB11E91D2E41DF009224D8 /* ZESwitchViewController.h */,
+				04BB11EA1D2E41DF009224D8 /* ZESwitchViewController.m */,
+				04BB11EC1D2E45FA009224D8 /* ZENavigationController.h */,
+				04BB11ED1D2E45FA009224D8 /* ZENavigationController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -1058,6 +1068,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04BB11EE1D2E45FA009224D8 /* ZENavigationController.m in Sources */,
 				04892E861BB51A1A00CB0437 /* UIColor+Random.m in Sources */,
 				045612241BAFC07D0043EA6C /* IMessageViewController.m in Sources */,
 				045EB1A91C300FBD005CC75E /* Article.m in Sources */,
@@ -1084,6 +1095,7 @@
 				042301881D222921005231B6 /* BlockInstance.m in Sources */,
 				0423019B1D22562C005231B6 /* NSData+AES128.m in Sources */,
 				04A2477D1CC9D9D6000DED42 /* DDItemScrollView.m in Sources */,
+				04BB11EB1D2E41DF009224D8 /* ZESwitchViewController.m in Sources */,
 				0427124B1D2B5003005938AE /* NSData+md5.m in Sources */,
 				04BEFBA01D2512F600C78692 /* ZEBook.m in Sources */,
 				0432BA4B1D2619E00003CB4A /* ZEReadFile.m in Sources */,

@@ -8,6 +8,8 @@
 
 #import "ZEPageViewController+Bar.h"
 #import <objc/runtime.h>
+#import "ZENavigationController.h"
+#import "ZESwitchViewController.h"
 
 
 static NSString* const kNavigationBar = @"kNavigationBarString";
@@ -40,25 +42,11 @@ static CGFloat const kButtonSize = 44;
 	return UIStatusBarAnimationSlide;
 }
 
-- (UIView *)navigationBar {
-	return objc_getAssociatedObject(self, &kNavigationBar);
-}
-
-- (UIView *)toolBar {
-	return objc_getAssociatedObject(self, &kToolBar);
-}
-
-- (UIButton *)moreButton {
-	return objc_getAssociatedObject(self, &kMoreTag);
-}
-
-- (UIButton *)markButton {
-	return objc_getAssociatedObject(self , &kMarkTag);
-}
-
-- (UIButton *)modeButton {
-	return objc_getAssociatedObject(self, &kModeTag);
-}
+- (UIView *)toolBar {return objc_getAssociatedObject(self, &kToolBar);}
+- (UIView *)navigationBar {return objc_getAssociatedObject(self, &kNavigationBar);}
+- (UIButton *)moreButton {return objc_getAssociatedObject(self, &kMoreTag);}
+- (UIButton *)markButton {return objc_getAssociatedObject(self , &kMarkTag);}
+- (UIButton *)modeButton {return objc_getAssociatedObject(self, &kModeTag);}
 
 - (void)setupNavigationBar {
 	
@@ -183,6 +171,9 @@ static CGFloat const kButtonSize = 44;
 
 - (void)didTapMoreItem {
 
+	ZENavigationController *nav = [ZENavigationController newWithParentViewController:self];
+	ZESwitchViewController *switchVC = [ZESwitchViewController new];
+	[nav pushViewController:switchVC animated:YES];
 }
 
 - (void)didTapChapterItem {

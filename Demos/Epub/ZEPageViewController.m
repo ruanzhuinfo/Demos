@@ -42,7 +42,8 @@
 - (void)viewWillAppear:(BOOL)animated {
 	[super viewWillAppear:animated];
 	
-	self.isHiddenStatusBar = YES;
+	[self.navigationController.navigationBar setHidden:YES];
+	[self setIsHiddenStatusBar:YES];
 }
 
 - (void)setupPageViewController {
@@ -193,7 +194,7 @@
 #pragma mark - UIGestureRecognizerDelegate
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
-	return YES;
+	return NO;
 }
 
 @end

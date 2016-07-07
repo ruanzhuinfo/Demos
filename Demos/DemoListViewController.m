@@ -8,6 +8,7 @@
 
 #import "DemoListViewController.h"
 #import "DDTabPagerViewController.h"
+#import "ZENavigationController.h"
 
 @interface DemoListViewController ()<UITableViewDataSource, UITableViewDelegate>
 
@@ -84,6 +85,10 @@
 	[tableView setTop:tableView.top + itemScrollView.height];
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+	[super viewDidDisappear:animated];
+}
+
 - (void)didReceiveMemoryWarning {
 	[super didReceiveMemoryWarning];
 	// Dispose of any resources that can be recreated.
@@ -122,6 +127,9 @@
 	
 	if ([vc isKindOfClass:NSClassFromString(@"ZEPageViewController").class]) {
 		[self presentViewController:vc animated:YES completion:nil];
+		
+//		ZENavigationController *nav = [ZENavigationController newWithParentViewController:self.navigationController];
+//		[nav pushViewController:vc animated:YES];
 	} else {
 		[self.navigationController pushViewController:vc animated:YES];
 	}
