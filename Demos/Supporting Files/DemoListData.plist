@@ -3,6 +3,14 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>ePub Demo</key>
+		<string>ZEPageViewController</string>
+	</dict>
+	<dict>
+		<key>Block 测试</key>
+		<string>BlockTest</string>
+	</dict>
+	<dict>
 		<key>Bezier 曲线</key>
 		<string>BezierViewController</string>
 	</dict>

@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '1BD77D72ECEAB653501FC403'
+               BlueprintIdentifier = '143EB970C7EAF7B5A01DF56E'
                BlueprintName = 'ComponentKit'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libComponentKit.a'>

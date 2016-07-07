@@ -1,16 +1,39 @@
 PODS:
   - ComponentKit (0.13)
+  - DTCoreText (1.6.17):
+    - DTFoundation/Core (~> 1.7.5)
+    - DTFoundation/DTAnimatedGIF (~> 1.7.5)
+    - DTFoundation/DTHTMLParser (~> 1.7.5)
+    - DTFoundation/UIKit (~> 1.7.5)
+  - DTFoundation/Core (1.7.10)
+  - DTFoundation/DTAnimatedGIF (1.7.10)
+  - DTFoundation/DTHTMLParser (1.7.10):
+    - DTFoundation/Core
+  - DTFoundation/UIKit (1.7.10):
+    - DTFoundation/Core
   - GPUImage (0.1.7)
   - Masonry (0.6.4)
+  - TouchXML (0.1)
+  - YYModel (1.0.4)
+  - ZipArchive (1.4.0)
 
 DEPENDENCIES:
   - ComponentKit (~> 0.12)
+  - DTCoreText (~> 1.6.17)
   - GPUImage (~> 0.1.7)
   - Masonry (~> 0.6.2)
+  - TouchXML (~> 0.1)
+  - YYModel (~> 1.0)
+  - ZipArchive (~> 1.4.0)
 
 SPEC CHECKSUMS:
   ComponentKit: b79a11f258ef71c44e3be976e4929c6eb4144c58
+  DTCoreText: 3ea8bba23dd2141ba18adb227a7dd33a822df1c4
+  DTFoundation: 3b6b1b817d2a7fb02e7eaf2596c922a68145bd43
   GPUImage: 733a5f0fab92df9de1c37ba9df520a833ccb406d
   Masonry: 281802d04d787ea2973179ee8bcb50500579ede2
+  TouchXML: 37089088da5e46f0f4a8797d320fbcfed395ab46
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+  ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
 COCOAPODS: 0.39.0
