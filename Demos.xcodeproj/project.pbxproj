@@ -70,8 +70,6 @@
 		04BB11A21D2E3238009224D8 /* Mark@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04BB11641D2E3238009224D8 /* Mark@3x.png */; };
 		04BB11A31D2E3238009224D8 /* More_Book_Normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04BB11651D2E3238009224D8 /* More_Book_Normal@2x.png */; };
 		04BB11A41D2E3238009224D8 /* More_Book_Normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04BB11661D2E3238009224D8 /* More_Book_Normal@3x.png */; };
-		04BB11A51D2E3238009224D8 /* More_CollectIcon_Normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04BB11671D2E3238009224D8 /* More_CollectIcon_Normal@2x.png */; };
-		04BB11A61D2E3238009224D8 /* More_CollectIcon_Normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04BB11681D2E3238009224D8 /* More_CollectIcon_Normal@3x.png */; };
 		04BB11A71D2E3238009224D8 /* Nigh_Read_Day@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04BB11691D2E3238009224D8 /* Nigh_Read_Day@2x.png */; };
 		04BB11A81D2E3238009224D8 /* Nigh_Read_Day@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04BB116A1D2E3238009224D8 /* Nigh_Read_Day@3x.png */; };
 		04BB11A91D2E3238009224D8 /* Night_Bookmarks_Highlight@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04BB116B1D2E3238009224D8 /* Night_Bookmarks_Highlight@2x.png */; };
@@ -127,6 +125,9 @@
 		04BB11E71D2E335A009224D8 /* Night_Night@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04BB11E51D2E335A009224D8 /* Night_Night@3x.png */; };
 		04BB11EB1D2E41DF009224D8 /* ZESwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB11EA1D2E41DF009224D8 /* ZESwitchViewController.m */; };
 		04BB11EE1D2E45FA009224D8 /* ZENavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB11ED1D2E45FA009224D8 /* ZENavigationController.m */; };
+		04BB11F11D2F4C47009224D8 /* ZEChapterListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB11F01D2F4C47009224D8 /* ZEChapterListViewController.m */; };
+		04BB11F41D2F4C5A009224D8 /* ZEMarkListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB11F31D2F4C5A009224D8 /* ZEMarkListViewController.m */; };
+		04BB11F81D2F69A8009224D8 /* ZEChapterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB11F71D2F69A8009224D8 /* ZEChapterTableViewCell.m */; };
 		04BEFB851D24D06B00C78692 /* DTCoreTextFontOverrides.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04BEFB841D24D06B00C78692 /* DTCoreTextFontOverrides.plist */; };
 		04BEFB8E1D24E5F300C78692 /* ZEBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BEFB8D1D24E5F300C78692 /* ZEBaseModel.m */; };
 		04BEFB911D24E63C00C78692 /* ZEChapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BEFB901D24E63C00C78692 /* ZEChapter.m */; };
@@ -134,6 +135,7 @@
 		04BEFB9D1D24F7A200C78692 /* ZEReadViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BEFB9C1D24F7A200C78692 /* ZEReadViewController.m */; };
 		04BEFBA01D2512F600C78692 /* ZEBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BEFB9F1D2512F600C78692 /* ZEBook.m */; };
 		04CA94FA1CFC6C14002AF2D8 /* ZLTextComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 04CA94F91CFC6C14002AF2D8 /* ZLTextComponent.mm */; };
+		04E1FB3A1D2F889F0090B058 /* ZEProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1FB391D2F889F0090B058 /* ZEProgressView.m */; };
 		04E7881B1CCF973A004ED75B /* Feed_barShadow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E788191CCF973A004ED75B /* Feed_barShadow@3x.png */; };
 		04E7881C1CCF973A004ED75B /* Feed_barShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E7881A1CCF973A004ED75B /* Feed_barShadow@2x.png */; };
 		04F3A5051BAFDE3200CA479A /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F3A5041BAFDE3200CA479A /* TestData.plist */; };
@@ -262,8 +264,6 @@
 		04BB11641D2E3238009224D8 /* Mark@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Mark@3x.png"; sourceTree = "<group>"; };
 		04BB11651D2E3238009224D8 /* More_Book_Normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "More_Book_Normal@2x.png"; sourceTree = "<group>"; };
 		04BB11661D2E3238009224D8 /* More_Book_Normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "More_Book_Normal@3x.png"; sourceTree = "<group>"; };
-		04BB11671D2E3238009224D8 /* More_CollectIcon_Normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "More_CollectIcon_Normal@2x.png"; sourceTree = "<group>"; };
-		04BB11681D2E3238009224D8 /* More_CollectIcon_Normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "More_CollectIcon_Normal@3x.png"; sourceTree = "<group>"; };
 		04BB11691D2E3238009224D8 /* Nigh_Read_Day@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nigh_Read_Day@2x.png"; sourceTree = "<group>"; };
 		04BB116A1D2E3238009224D8 /* Nigh_Read_Day@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Nigh_Read_Day@3x.png"; sourceTree = "<group>"; };
 		04BB116B1D2E3238009224D8 /* Night_Bookmarks_Highlight@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Night_Bookmarks_Highlight@2x.png"; sourceTree = "<group>"; };
@@ -321,6 +321,12 @@
 		04BB11EA1D2E41DF009224D8 /* ZESwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZESwitchViewController.m; sourceTree = "<group>"; };
 		04BB11EC1D2E45FA009224D8 /* ZENavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZENavigationController.h; sourceTree = "<group>"; };
 		04BB11ED1D2E45FA009224D8 /* ZENavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZENavigationController.m; sourceTree = "<group>"; };
+		04BB11EF1D2F4C47009224D8 /* ZEChapterListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEChapterListViewController.h; sourceTree = "<group>"; };
+		04BB11F01D2F4C47009224D8 /* ZEChapterListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEChapterListViewController.m; sourceTree = "<group>"; };
+		04BB11F21D2F4C5A009224D8 /* ZEMarkListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEMarkListViewController.h; sourceTree = "<group>"; };
+		04BB11F31D2F4C5A009224D8 /* ZEMarkListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEMarkListViewController.m; sourceTree = "<group>"; };
+		04BB11F61D2F69A8009224D8 /* ZEChapterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEChapterTableViewCell.h; sourceTree = "<group>"; };
+		04BB11F71D2F69A8009224D8 /* ZEChapterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEChapterTableViewCell.m; sourceTree = "<group>"; };
 		04BEFB841D24D06B00C78692 /* DTCoreTextFontOverrides.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DTCoreTextFontOverrides.plist; sourceTree = "<group>"; };
 		04BEFB8C1D24E5F300C78692 /* ZEBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEBaseModel.h; sourceTree = "<group>"; };
 		04BEFB8D1D24E5F300C78692 /* ZEBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEBaseModel.m; sourceTree = "<group>"; };
@@ -334,6 +340,8 @@
 		04BEFB9F1D2512F600C78692 /* ZEBook.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEBook.m; sourceTree = "<group>"; };
 		04CA94F81CFC6C14002AF2D8 /* ZLTextComponent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZLTextComponent.h; sourceTree = "<group>"; };
 		04CA94F91CFC6C14002AF2D8 /* ZLTextComponent.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZLTextComponent.mm; sourceTree = "<group>"; };
+		04E1FB381D2F889F0090B058 /* ZEProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEProgressView.h; sourceTree = "<group>"; };
+		04E1FB391D2F889F0090B058 /* ZEProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEProgressView.m; sourceTree = "<group>"; };
 		04E788191CCF973A004ED75B /* Feed_barShadow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Feed_barShadow@3x.png"; sourceTree = "<group>"; };
 		04E7881A1CCF973A004ED75B /* Feed_barShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Feed_barShadow@2x.png"; sourceTree = "<group>"; };
 		04F3A5041BAFDE3200CA479A /* TestData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestData.plist; sourceTree = "<group>"; };
@@ -501,6 +509,9 @@
 		044203101D211FF4003164CC /* View */ = {
 			isa = PBXGroup;
 			children = (
+				04BB11F51D2F698F009224D8 /* Cell */,
+				04E1FB381D2F889F0090B058 /* ZEProgressView.h */,
+				04E1FB391D2F889F0090B058 /* ZEProgressView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -695,8 +706,6 @@
 				04BB11641D2E3238009224D8 /* Mark@3x.png */,
 				04BB11651D2E3238009224D8 /* More_Book_Normal@2x.png */,
 				04BB11661D2E3238009224D8 /* More_Book_Normal@3x.png */,
-				04BB11671D2E3238009224D8 /* More_CollectIcon_Normal@2x.png */,
-				04BB11681D2E3238009224D8 /* More_CollectIcon_Normal@3x.png */,
 				04BB11691D2E3238009224D8 /* Nigh_Read_Day@2x.png */,
 				04BB116A1D2E3238009224D8 /* Nigh_Read_Day@3x.png */,
 				04BB116B1D2E3238009224D8 /* Night_Bookmarks_Highlight@2x.png */,
@@ -768,8 +777,21 @@
 				04BB11EA1D2E41DF009224D8 /* ZESwitchViewController.m */,
 				04BB11EC1D2E45FA009224D8 /* ZENavigationController.h */,
 				04BB11ED1D2E45FA009224D8 /* ZENavigationController.m */,
+				04BB11EF1D2F4C47009224D8 /* ZEChapterListViewController.h */,
+				04BB11F01D2F4C47009224D8 /* ZEChapterListViewController.m */,
+				04BB11F21D2F4C5A009224D8 /* ZEMarkListViewController.h */,
+				04BB11F31D2F4C5A009224D8 /* ZEMarkListViewController.m */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		04BB11F51D2F698F009224D8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				04BB11F61D2F69A8009224D8 /* ZEChapterTableViewCell.h */,
+				04BB11F71D2F69A8009224D8 /* ZEChapterTableViewCell.m */,
+			);
+			name = Cell;
 			sourceTree = "<group>";
 		};
 		04F3A5061BAFE4CF00CA479A /* Utilities */ = {
@@ -942,14 +964,12 @@
 				04BB11971D2E3238009224D8 /* Columnup_Highlight@2x.png in Resources */,
 				04BB11B91D2E3238009224D8 /* Night_More_CollectIcon_Normal@2x.png in Resources */,
 				04BB11A21D2E3238009224D8 /* Mark@3x.png in Resources */,
-				04BB11A61D2E3238009224D8 /* More_CollectIcon_Normal@3x.png in Resources */,
 				04BB11941D2E3238009224D8 /* Bookmarks_Highlight@3x.png in Resources */,
 				04BB11981D2E3238009224D8 /* Columnup_Highlight@3x.png in Resources */,
 				04BB11CE1D2E3238009224D8 /* Read_Return_Invalid@3x.png in Resources */,
 				04BB119E1D2E3238009224D8 /* List_Download@3x.png in Resources */,
 				04BB11DC1D2E32D1009224D8 /* Back_Highligh@3x.png in Resources */,
 				04BB119F1D2E3238009224D8 /* List_Retry@2x.png in Resources */,
-				04BB11A51D2E3238009224D8 /* More_CollectIcon_Normal@2x.png in Resources */,
 				04BB11AF1D2E3238009224D8 /* Night_Columnup_Normal@2x.png in Resources */,
 				04BB11951D2E3238009224D8 /* Bookmarks_Normal@2x.png in Resources */,
 				04892E651BB3D59D00CB0437 /* ImagesData.plist in Resources */,
@@ -1070,8 +1090,10 @@
 			files = (
 				04BB11EE1D2E45FA009224D8 /* ZENavigationController.m in Sources */,
 				04892E861BB51A1A00CB0437 /* UIColor+Random.m in Sources */,
+				04BB11F41D2F4C5A009224D8 /* ZEMarkListViewController.m in Sources */,
 				045612241BAFC07D0043EA6C /* IMessageViewController.m in Sources */,
 				045EB1A91C300FBD005CC75E /* Article.m in Sources */,
+				04BB11F11D2F4C47009224D8 /* ZEChapterListViewController.m in Sources */,
 				04341F811BD3D12300376EBA /* SpotlightManage.m in Sources */,
 				04892E681BB3D65C00CB0437 /* UIImage+Additions.m in Sources */,
 				045611E01BAE92990043EA6C /* DemoListViewController.m in Sources */,
@@ -1082,6 +1104,7 @@
 				04BEFB9A1D24F78D00C78692 /* ZEPageViewController.m in Sources */,
 				0432BA531D262D620003CB4A /* ZEChapterViewModel.m in Sources */,
 				042301891D222921005231B6 /* BlockTest.m in Sources */,
+				04E1FB3A1D2F889F0090B058 /* ZEProgressView.m in Sources */,
 				0432BA501D262D550003CB4A /* ZEBookViewModel.m in Sources */,
 				04CA94FA1CFC6C14002AF2D8 /* ZLTextComponent.mm in Sources */,
 				0432BA4D1D2619E00003CB4A /* ZEReadStyleConfig.m in Sources */,
@@ -1106,6 +1129,7 @@
 				0456120A1BAEA8DE0043EA6C /* BezierViewController.mm in Sources */,
 				0423019C1D22562C005231B6 /* RSA.m in Sources */,
 				045612131BAEA8DE0043EA6C /* main.m in Sources */,
+				04BB11F81D2F69A8009224D8 /* ZEChapterTableViewCell.m in Sources */,
 				0456120E1BAEA8DE0043EA6C /* AppDelegate.m in Sources */,
 				04F3A5091BAFE4CF00CA479A /* UIView+SAAdditions.m in Sources */,
 				0408C4AD1C119E8600AFF319 /* ProgressIndicatorView.m in Sources */,

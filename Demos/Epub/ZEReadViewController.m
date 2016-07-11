@@ -16,6 +16,7 @@
 
 @property(nonatomic)DTAttributedTextView *textView;
 @property(nonatomic)ZEChapterViewModel *viewModel;
+@property(nonatomic)UILabel *bottomInfoLabel;
 
 @end
 
@@ -26,21 +27,19 @@
 	vc.chapter = chapter;
 	[vc textViewAppearanceAtPageIndex:index];
 	
+	[vc setupTopInfo];
+	[vc setupBottomInfo];
+	
 	return vc;
 }
 
 - (void)textViewAppearanceAtPageIndex:(NSInteger)index {
+	self.textView = [self makeAttributedTextView];
+	[self.view addSubview:self.textView];
 	
-	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-		self.viewModel = [ZEChapterViewModel newWithChapterModel:self.chapter];
-		self.textView = [self makeAttributedTextView];
-		self.textView.origin = CGPointMake(0, 0);
-		self.textView.attributedString = [self.viewModel attributedStringAtPageIndex:index];
-		
-		dispatch_async(dispatch_get_main_queue(), ^{
-			[self.view addSubview:self.textView];
-		});
-	});
+	self.viewModel = [ZEChapterViewModel newWithChapterModel:self.chapter];
+	self.textView.origin = CGPointMake(0, 0);
+	self.textView.attributedString = [self.viewModel attributedStringAtPageIndex:index];
 }
 
 - (DTAttributedTextView *)makeAttributedTextView {
@@ -53,6 +52,39 @@
 	dt.scrollEnabled = NO;
 	
 	return dt;
+}
+
+- (void)setupTopInfo {
+	UILabel *title = [[UILabel alloc] init];
+	title.text = self.chapter.title;
+	title.textColor = [UIColor lightGrayColor];
+	title.font = [UIFont systemFontOfSize:13];
+	[self.view addSubview:title];
+	[title mas_makeConstraints:^(MASConstraintMaker *make) {
+		make.left.equalTo(self.view).offset(10);
+		make.top.equalTo(self.view).offset(10);
+		make.right.equalTo(self.view).offset(51);
+	}];
+}
+
+- (void)setupBottomInfo {
+	self.bottomInfoLabel = [[UILabel alloc] init];
+	self.bottomInfoLabel.textColor = [UIColor lightGrayColor];
+	self.bottomInfoLabel.font = [UIFont systemFontOfSize:13];
+	self.bottomInfoLabel.textAlignment = NSTextAlignmentRight;
+	[self.view addSubview:self.bottomInfoLabel];
+	[self.bottomInfoLabel mas_makeConstraints:^(MASConstraintMaker *make) {
+		make.bottom.equalTo(self.view).offset(-10);
+		make.right.equalTo(self.view).offset(-10);
+	}];
+}
+
+- (void)updateBottomInfoWithPageCount:(NSInteger)pageCount bookTitle:(NSString *)title {
+	if (pageCount == 0) {
+		self.bottomInfoLabel.text = [NSString stringWithFormat:@"%@ ∙ 页码更新中...", title];
+	} else {
+		self.bottomInfoLabel.text = [NSString stringWithFormat:@"%@ ∙ %ld / %ld", title, self.currentPage + 1, pageCount];
+	}
 }
 
 #pragma mark - Custom Views on Text

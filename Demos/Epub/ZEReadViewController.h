@@ -14,9 +14,12 @@
 
 @property (nonatomic, weak)ZEChapter *chapter;
 
-// 所在那一章的第几页
-@property (nonatomic) NSInteger pageIndex;
+/// 相对于整本书的第几页
+@property (nonatomic) NSInteger currentPage;
 
 + (instancetype)newWithChapterModel:(ZEChapter *)chapter pageIndex:(NSInteger)index;
+
+
+- (void)updateBottomInfoWithPageCount:(NSInteger)pageCount bookTitle:(NSString *)title;
 
 @end

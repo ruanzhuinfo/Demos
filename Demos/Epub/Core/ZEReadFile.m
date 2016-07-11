@@ -282,7 +282,9 @@
 			CXMLElement *navLabel = [navPoint elementsForName:@"navLabel"].firstObject;
 			if (navLabel) {
 				// 章节名称
-				[dic setObject:[navLabel stringValue] forKey:@"chapterTitle"];
+				NSString *title =
+				[[navLabel stringValue] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+				[dic setObject:title forKey:@"chapterTitle"];
 			}
 			
 			if ([self.encpryptions objectForKey:contentPath]) {

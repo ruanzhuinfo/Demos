@@ -7,17 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ZEBook.h"
 
-@class ZEBook, ZEChapter;
+@class ZEChapter;
 
 @interface ZEBookViewModel : NSObject
 
-@property (nonatomic) NSInteger pageCount;
-@property (nonatomic) NSInteger currentPage;
+@property(nonatomic)ZEBook *book;
+@property(nonatomic)NSInteger pageCount;
+@property(nonatomic)NSInteger currentPage;
 
 - (id)chapterAtPageIndex:(NSInteger)index completion:(id (^)(ZEChapter *, NSInteger))completion;
 
 - (NSInteger)calculateBookPageCount;
+
+- (void)saveBooKModel;
 
 
 @end

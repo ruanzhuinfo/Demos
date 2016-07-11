@@ -10,6 +10,7 @@
 #import <objc/runtime.h>
 #import "ZENavigationController.h"
 #import "ZESwitchViewController.h"
+#import "ZEProgressView.h"
 
 
 static NSString* const kNavigationBar = @"kNavigationBarString";
@@ -24,7 +25,7 @@ static CGFloat const kButtonSize = 44;
 
 @interface ZEPageViewController()
 
-@property(nonatomic)UIView *toolBar;
+@property(nonatomic)ZEProgressView *progressBar;
 @property(nonatomic)UIView *navigationBar;
 @property(nonatomic)UIButton *moreButton;
 @property(nonatomic)UIButton *markButton;
@@ -42,7 +43,7 @@ static CGFloat const kButtonSize = 44;
 	return UIStatusBarAnimationSlide;
 }
 
-- (UIView *)toolBar {return objc_getAssociatedObject(self, &kToolBar);}
+- (UIView *)progressBar {return objc_getAssociatedObject(self, &kToolBar);}
 - (UIView *)navigationBar {return objc_getAssociatedObject(self, &kNavigationBar);}
 - (UIButton *)moreButton {return objc_getAssociatedObject(self, &kMoreTag);}
 - (UIButton *)markButton {return objc_getAssociatedObject(self , &kMarkTag);}
@@ -50,9 +51,8 @@ static CGFloat const kButtonSize = 44;
 
 - (void)setupNavigationBar {
 	
-	UIView *bar = objc_getAssociatedObject(self, &kNavigationBar);
-	if (!bar) {
-		bar = [[UIView alloc] init];
+	if (!self.navigationBar) {
+		UIView *bar = [[UIView alloc] init];
 		objc_setAssociatedObject(self, &kNavigationBar, bar, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 		[bar setBackgroundColor:[UIColor whiteColor]];
 		[self.view addSubview:bar];
@@ -111,26 +111,17 @@ static CGFloat const kButtonSize = 44;
 }
 
 - (void)setupToolBar {
-	UIView *bar = objc_getAssociatedObject(self, &kToolBar);
-	if (!bar) {
-		bar = [[UIView alloc] init];
-		[bar setBackgroundColor:[UIColor whiteColor]];
+	if (!self.progressBar) {
+	
+		ZEProgressView *bar = [[ZEProgressView alloc] init];
+		bar.delegate = self;
 		[self.view addSubview:bar];
+		
 		[bar mas_makeConstraints:^(MASConstraintMaker *make) {
 			make.left.equalTo(self.view);
 			make.right.equalTo(self.view);
 			make.height.mas_equalTo(kToolBarHeight);
 			make.bottom.mas_equalTo(kToolBarHeight);
-		}];
-		
-		UIView *line = [[UIView alloc] init];
-		[line setBackgroundColor:[UIColor lightGrayColor]];
-		[bar addSubview:line];
-		[line mas_makeConstraints:^(MASConstraintMaker *make) {
-			make.left.equalTo(bar);
-			make.right.equalTo(bar);
-			make.top.equalTo(bar);
-			make.height.mas_equalTo(0.5);
 		}];
 		
 		objc_setAssociatedObject(self, &kToolBar, bar, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -143,12 +134,9 @@ static CGFloat const kButtonSize = 44;
 			make.top.equalTo(self.view);
 		}];
 		
-		[self.toolBar mas_updateConstraints:^(MASConstraintMaker *make) {
-			make.bottom.equalTo(self.view);
-		}];
-		
 		[self.navigationBar layoutIfNeeded];
-		[self.toolBar layoutIfNeeded];
+		[self.progressBar showProgressBar];
+		[self updateProgressValue];
 	}];
 }
 
@@ -158,21 +146,21 @@ static CGFloat const kButtonSize = 44;
 			make.top.mas_equalTo(-kNavigationBarHeight);
 		}];
 		
-		[self.toolBar mas_updateConstraints:^(MASConstraintMaker *make) {
-			make.bottom.mas_offset(kToolBarHeight);
-		}];
-		
-		[self.toolBar layoutIfNeeded];
 		[self.navigationBar layoutIfNeeded];
+		
+		[self.progressBar hiddenProgressBar];
 	}];
+}
+
+- (void)updateProgressValue {
+	[self.progressBar setProgress:(float)self.book.currentPage / self.book.pageCount];
 }
 
 #pragma mark - selector method
 
 - (void)didTapMoreItem {
-
 	ZENavigationController *nav = [ZENavigationController newWithParentViewController:self];
-	ZESwitchViewController *switchVC = [ZESwitchViewController new];
+	ZESwitchViewController *switchVC = [ZESwitchViewController newWithBookModel:self.book.book];
 	[nav pushViewController:switchVC animated:YES];
 }
 
@@ -188,6 +176,35 @@ static CGFloat const kButtonSize = 44;
 	
 }
 
+#pragma mark - ZEProgressView delegate
+
+- (id)didPanProgressBarWithProgress:(CGFloat)progress {
+	NSInteger pageIndex = (NSInteger)(self.book.pageCount * progress);
+	pageIndex = pageIndex > 0 ? pageIndex : 1;
+	
+	__weak typeof(self) wSelf = self;
+	[self.book chapterAtPageIndex:pageIndex - 1 completion:^id(ZEChapter *chapter, NSInteger index) {
+		
+		[wSelf.progressBar updateText:chapter.title
+						   rateString:[NSString stringWithFormat:@"%ld 页 ∙ %i%@", pageIndex, (int)(progress * 100), @"%"]];
+		return nil;
+	}];
+	
+	return @(pageIndex);
+}
+
+- (void)panProgressBarDidEndWithProgress:(CGFloat)progress {
+	
+	NSInteger pageIndex = (NSInteger)(self.book.pageCount * progress);
+	pageIndex = pageIndex > 0 ? pageIndex : 1;
+	[self showViewControllerAtIndex:pageIndex - 1 animation:YES];
+}
+
+- (void)didTapBackButtonWithProgress:(CGFloat)progress {
+	NSInteger page = [[self didPanProgressBarWithProgress:progress] integerValue];
+	[self showViewControllerAtIndex:page - 1 animation:YES];
+	[self.progressBar setProgress:progress];
+}
 
 #pragma mark - private helper method
 

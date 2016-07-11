@@ -24,24 +24,22 @@
 	if (self) {
 		
 		// size
-		self.edgeInsets = UIEdgeInsetsMake(10, 10, 10, 10);
+		self.edgeInsets = UIEdgeInsetsMake(45, 10, 45, 10);
 		self.viewSize = [UIScreen mainScreen].bounds.size;
 		self.maxImageSize = CGSizeMake(self.viewSize.width - self.edgeInsets.left - self.edgeInsets.right,
 									   self.viewSize.height - self.edgeInsets.top - self.edgeInsets.bottom);
-		self.defaultFontSize = 16;
+		self.defaultFontSize = 17;
 		self.h1FontSize = 22;
 		self.h2FontSize = 18;
 		self.h3FontSize = 16;
 		self.pFontSize = 14;
-		self.lineSpacing = 30;
+		self.lineSpacing = 28;
 		self.paragraphSpacing = 3.5;
-		
 		
 		// color
 		self.linkColor = [UIColor blueColor];
 		self.linkHighlightColor = [UIColor redColor];
-		self.textColor = [UIColor grayColor];
-		
+		self.textColor = [UIColor blackColor];
 		
 		// multipliter
 		self.textSizeMultiplier = 1.0;

@@ -20,6 +20,8 @@
 @property(nonatomic)NSString *sort;
 /// 是否需要解密
 @property(nonatomic)BOOL isEncrypt;
+/// 是否购买
+@property(nonatomic)BOOL isPurchase;
 
 
 /// 此章节的页数

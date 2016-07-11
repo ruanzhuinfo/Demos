@@ -22,6 +22,7 @@
 	self.textColor = [ZEReadStyleConfig sharedInstance].textColor;
 	self.fontDescriptor.pointSize = [ZEReadStyleConfig sharedInstance].defaultFontSize;
 	self.paragraphStyle.minimumLineHeight = [ZEReadStyleConfig sharedInstance].lineSpacing;
+	self.underlineStyle = kCTUnderlineStyleNone;
 	
 	if ([self.name isEqualToString:@"p"]) {
 		if (!self.childNodes.count) {

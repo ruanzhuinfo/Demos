@@ -11,9 +11,12 @@
 @interface ZEBook : ZEBaseModel
 
 @property(nonatomic)NSString *bookId;
-@property(nonatomic)NSString *author;
+@property(nonatomic)NSArray<NSString *> *authors;
 @property(nonatomic)NSString *format;
 @property(nonatomic)NSString *version;
+@property(nonatomic)NSString *title;
+
+@property(nonatomic)NSString *filePath;
 
 // 保存章节内容
 @property(nonatomic, copy)NSArray<ZEChapter *> *chapters;

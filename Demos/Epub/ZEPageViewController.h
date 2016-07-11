@@ -7,9 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "ZEBookViewModel.h"
+#import "ZEProgressView.h"
 
-@interface ZEPageViewController : UIViewController<UIGestureRecognizerDelegate>
+static NSString* const kPageViewControllerChangePageNotification = @"kPageViewControllerChangePageNotification";
 
+@interface ZEPageViewController : UIViewController<UIGestureRecognizerDelegate, ZEProgressViewDelegate>
+
+@property(nonatomic)ZEBookViewModel *book;
 @property(nonatomic)BOOL isHiddenStatusBar;
+
+- (void)showViewControllerAtIndex:(NSInteger)index animation:(BOOL)animation;
 
 @end

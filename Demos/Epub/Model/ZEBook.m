@@ -15,9 +15,10 @@
 	[dict addEntriesFromDictionary:@{@"chapters": @"chapters",
 									 @"encryptions": @"encryptions",
 									 @"bookId": @"id",
-									 @"author": @"name",
+									 @"authors": @"authors",
 									 @"format": @"format",
-									 @"version": @"version"}];
+									 @"version": @"version",
+									 @"title": @"title"}];
 	return dict;
 }
 

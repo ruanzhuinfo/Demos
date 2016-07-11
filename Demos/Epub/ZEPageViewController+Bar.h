@@ -15,4 +15,7 @@
 - (void)showBar;
 - (void)hiddenBar;
 
+
+- (void)updateProgressValue;
+
 @end

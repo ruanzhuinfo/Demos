@@ -8,14 +8,11 @@
 
 #import "ZEPageViewController.h"
 #import "ZEReadViewController.h"
-#import "ZEBookViewModel.h"
 #import "ZEPageViewController+Bar.h"
 
 @interface ZEPageViewController() <UIPageViewControllerDelegate, UIPageViewControllerDataSource>
 
 @property(nonatomic)UIPageViewController *pageViewController;
-
-@property(nonatomic)ZEBookViewModel *book;
 
 @property(nonatomic)UITapGestureRecognizer *tap;
 
@@ -30,13 +27,18 @@
 	
 	[self setupPageViewController];
 	
-	self.tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapView:)];
-	self.tap.delegate = self;
-	[self.view addGestureRecognizer:self.tap];
-	
 	// 要放在最上层
 	[self setupNavigationBar];
 	[self setupToolBar];
+	
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(changeCurrentPageNotifcation:)
+												 name:kPageViewControllerChangePageNotification
+											   object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(didEnterBacgroundNotification)
+												 name:UIApplicationDidEnterBackgroundNotification
+											   object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -46,16 +48,20 @@
 	[self setIsHiddenStatusBar:YES];
 }
 
+- (void)viewDidDisappear:(BOOL)animated {
+	[super viewDidDisappear:animated];
+	
+	// 数据本地化
+	[self didEnterBacgroundNotification];
+}
+
 - (void)setupPageViewController {
 	self.pageViewController =
 	[[UIPageViewController alloc] initWithTransitionStyle:UIPageViewControllerTransitionStyleScroll
 									navigationOrientation:UIPageViewControllerNavigationOrientationHorizontal
 												  options:nil];
-	
-	[self.pageViewController setViewControllers:@[[self viewControllerAtIndex:self.book.currentPage]]
-									  direction:UIPageViewControllerNavigationDirectionForward
-									   animated:YES
-									 completion:nil];
+
+	[self showViewControllerAtIndex:self.book.currentPage animation:YES];
 	
 	[self.pageViewController.view setFrame:self.view.bounds];
 	
@@ -65,13 +71,18 @@
 	[self addChildViewController:self.pageViewController];
 	[self.view addSubview:self.pageViewController.view];
 	[self.pageViewController didMoveToParentViewController:self];
+	
+	self.tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didTapView:)];
+	self.tap.delegate = self;
+	[self.pageViewController.view addGestureRecognizer:self.tap];
 }
 
 #pragma mark - pageViewcontroller dataSource
 
-- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController viewControllerBeforeViewController:(ZEReadViewController *)viewController {
+- (UIViewController *)pageViewController:(UIPageViewController *)pageViewController
+	  viewControllerBeforeViewController:(ZEReadViewController *)viewController {
 	
-	NSInteger index = viewController.pageIndex;
+	NSInteger index = viewController.currentPage;
 	
 	if (index == 0 || index == NSNotFound) {
 		return nil;
@@ -81,11 +92,12 @@
 	return [self viewControllerAtIndex:--index];
 }
 
-- (UIViewController*)pageViewController:(UIPageViewController *)pageViewController viewControllerAfterViewController:(ZEReadViewController *)viewController {
+- (UIViewController*)pageViewController:(UIPageViewController *)pageViewController
+	  viewControllerAfterViewController:(ZEReadViewController *)viewController {
 	
-	NSInteger index = viewController.pageIndex;
+	NSInteger index = viewController.currentPage;
 	
-	if (index >= self.book.pageCount || index == NSNotFound) {
+	if (index >= self.book.pageCount - 1 || index == NSNotFound) {
 		return nil;
 	}
 	
@@ -93,17 +105,21 @@
 	return [self viewControllerAtIndex:++index];
 }
 
-- (void)pageViewController:(UIPageViewController *)pageViewController willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers {
+- (void)pageViewController:(UIPageViewController *)pageViewController
+willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewControllers {
 	
 	self.isHiddenStatusBar = YES;
 }
 
-- (void)pageViewController:(UIPageViewController *)pageViewController didFinishAnimating:(BOOL)finished previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers transitionCompleted:(BOOL)completed {
+- (void)pageViewController:(UIPageViewController *)pageViewController
+		didFinishAnimating:(BOOL)finished
+   previousViewControllers:(NSArray<UIViewController *> *)previousViewControllers
+	   transitionCompleted:(BOOL)completed {
 	
 	ZEReadViewController *vc = pageViewController.viewControllers.firstObject;
 	if ([vc isKindOfClass:ZEReadViewController.class]) {
 		// 在 model 中修改页码
-		self.book.currentPage = vc.pageIndex;
+		self.book.currentPage = vc.currentPage;
 	}
 }
 
@@ -142,11 +158,27 @@
 	}];
 	
 	if (vc) {
-		vc.pageIndex = index;
+		vc.currentPage = index;
+		[vc updateBottomInfoWithPageCount:self.book.pageCount bookTitle:self.book.book.title];
 		return vc;
 	}
 	
 	return nil;
+}
+
+- (void)showViewControllerAtIndex:(NSInteger)index animation:(BOOL)animation {
+	
+	ZEReadViewController *vc = [self.pageViewController viewControllers].lastObject;
+	
+	UIPageViewControllerNavigationDirection direction =
+	index >= vc.currentPage ? UIPageViewControllerNavigationDirectionForward : UIPageViewControllerNavigationDirectionReverse;
+	
+	self.book.currentPage = index;
+	
+	[self.pageViewController setViewControllers:@[[self viewControllerAtIndex:index]]
+									  direction:direction
+									   animated:animation
+									 completion:nil];
 }
 
 #pragma mark - gesture method
@@ -161,26 +193,20 @@
 		CGPoint position = [tap locationInView:self.view];
 		ZEReadViewController *vc = [self.pageViewController viewControllers].lastObject;
 		
-		if (position.x < self.view.width * 0.3) {
-			if (vc.pageIndex == 0) {
+		if (position.x < self.view.width * 0.25) {
+			if (vc.currentPage == 0) {
 				return;
 			}
 			
-			[self.pageViewController setViewControllers:@[[self viewControllerAtIndex:--vc.pageIndex]]
-											  direction:UIPageViewControllerNavigationDirectionReverse
-											   animated:YES
-											 completion:nil];
+			[self showViewControllerAtIndex:vc.currentPage - 1 animation:YES];
 			return;
 		}
-		else if (position.x > self.view.width * 0.65) {
-			if (vc.pageIndex == self.book.pageCount - 1) {
+		else if (position.x > self.view.width * 0.75) {
+			if (vc.currentPage >= self.book.pageCount - 1) {
 				return;
 			}
 			
-			[self.pageViewController setViewControllers:@[[self viewControllerAtIndex:++vc.pageIndex]]
-											  direction:UIPageViewControllerNavigationDirectionForward
-											   animated:YES
-											 completion:nil];
+			[self showViewControllerAtIndex:vc.currentPage + 1 animation:YES];
 			return;
 		}
 		else {
@@ -194,7 +220,22 @@
 #pragma mark - UIGestureRecognizerDelegate
 
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
-	return NO;
+	return YES;
+}
+
+
+#pragma mark - Notification
+
+- (void)changeCurrentPageNotifcation:(NSNotification *)notify {
+	NSInteger index = [notify.object integerValue];
+	
+	[self showViewControllerAtIndex:index animation:YES];
+	
+	[self updateProgressValue];
+}
+
+- (void)didEnterBacgroundNotification {
+	[self.book saveBooKModel];
 }
 
 @end

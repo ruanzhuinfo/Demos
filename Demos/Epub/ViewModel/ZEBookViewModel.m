@@ -9,11 +9,8 @@
 #import "ZEBookViewModel.h"
 #import "ZEChapterViewModel.h"
 #import "ZEReadFile.h"
-#import "ZEBook.h"
 
 @interface ZEBookViewModel()
-
-@property(nonatomic)ZEBook *book;
 @property(nonatomic)ZEChapterViewModel *currentChpaterViewModel;
 
 @end
@@ -24,9 +21,20 @@
 	ZEBookViewModel *viewModel = [super new];
 	
 	NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"Hour 028-高飞龙" withExtension:@"epub"];
-	viewModel.book = [ZEBook yy_modelWithJSON:[[ZEReadFile alloc] initWithEpubPath:fileURL.path base64:@"UPIkeH3pD9JBYWlp7Ag8YQ=="].book];
-	viewModel.currentPage = 0;
-	[viewModel calculateBookPageCount];
+	
+	NSData *b = [[NSUserDefaults standardUserDefaults] objectForKey:fileURL.path];
+	if (!b) {
+		viewModel.book = [ZEBook yy_modelWithJSON:[[ZEReadFile alloc] initWithEpubPath:fileURL.path base64:@"UPIkeH3pD9JBYWlp7Ag8YQ=="].book];
+		
+		viewModel.book.title = @"Hour 028-高飞龙";
+		viewModel.book.authors = @[@"高飞龙"];
+		viewModel.book.filePath = fileURL.path;
+		[viewModel calculateBookPageCount];
+	} else {
+		viewModel.book = [ZEBook yy_modelWithJSON:b];
+	}
+	
+	viewModel.currentPage = viewModel.book.pageIndex;
 	
 	return viewModel;
 }
@@ -45,6 +53,15 @@
 
 - (NSInteger)pageCount {
 	return self.book.pageCount;
+}
+
+- (ZEBook *)bookModel {
+	return self.book;
+}
+
+- (void)saveBooKModel{
+	NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
+	[userDefaults setObject:[self.book yy_modelToJSONData] forKey:self.book.filePath];
 }
 
 - (NSInteger)calculateBookPageCount {
@@ -66,14 +83,15 @@
 			return completion(c, 0);
 		}
 		
-		if (c.pageIndex > index) {
-			ZEChapter *pc = [self.book.chapters objectAtIndex:[self.book.chapters indexOfObject:c] - 1];
-			return completion(pc, index - pc.pageIndex);
+		if (c.pageIndex + c.pageCount > index) {
+			return completion(c, index - c.pageIndex);
 		}
 	}
 	
 	return nil;
 }
+
+
 
 #pragma mark - private core method
 

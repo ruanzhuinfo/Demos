@@ -1,8 +1,8 @@
 //
-//  ZESwitchViewController.h
+//  ZEChapterListViewController.h
 //  Demos
 //
-//  Created by taffy on 16/7/7.
+//  Created by taffy on 16/7/8.
 //  Copyright © 2016年 taffy. All rights reserved.
 //
 
@@ -10,8 +10,7 @@
 
 @class ZEBook;
 
-@interface ZESwitchViewController : UIViewController
-
+@interface ZEChapterListViewController : UIViewController
 
 + (instancetype)newWithBookModel:(ZEBook *)book;
 
