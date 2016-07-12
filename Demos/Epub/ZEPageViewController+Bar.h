@@ -8,14 +8,15 @@
 
 #import "ZEPageViewController.h"
 
-@interface ZEPageViewController (Bar)
+@interface ZEPageViewController (Bar)<ZEProgressViewDelegate>
 
 - (void)setupNavigationBar;
 - (void)setupToolBar;
 - (void)showBar;
 - (void)hiddenBar;
 
-
 - (void)updateProgressValue;
+- (void)updateNavigationBarMarkButton;
+
 
 @end

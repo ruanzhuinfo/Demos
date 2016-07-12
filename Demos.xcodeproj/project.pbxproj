@@ -12,12 +12,9 @@
 		042301891D222921005231B6 /* BlockTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 042301871D222921005231B6 /* BlockTest.m */; };
 		0423019B1D22562C005231B6 /* NSData+AES128.m in Sources */ = {isa = PBXBuildFile; fileRef = 042301981D22562C005231B6 /* NSData+AES128.m */; };
 		0423019C1D22562C005231B6 /* RSA.m in Sources */ = {isa = PBXBuildFile; fileRef = 0423019A1D22562C005231B6 /* RSA.m */; };
-		042301B81D24BCA8005231B6 /* 赵思家.epub in Resources */ = {isa = PBXBuildFile; fileRef = 042301B71D24BC8D005231B6 /* 赵思家.epub */; };
 		042712471D2A866F005938AE /* AES.c in Sources */ = {isa = PBXBuildFile; fileRef = 042712441D2A866F005938AE /* AES.c */; };
 		042712481D2A866F005938AE /* AESCipher.m in Sources */ = {isa = PBXBuildFile; fileRef = 042712461D2A866F005938AE /* AESCipher.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		0427124B1D2B5003005938AE /* NSData+md5.m in Sources */ = {isa = PBXBuildFile; fileRef = 0427124A1D2B5003005938AE /* NSData+md5.m */; };
-		0427124D1D2B86A2005938AE /* 048-RED 韵-9.1-1600.epub in Resources */ = {isa = PBXBuildFile; fileRef = 0427124C1D2B8673005938AE /* 048-RED 韵-9.1-1600.epub */; };
-		0427124F1D2BA07A005938AE /* encrypted.epub in Resources */ = {isa = PBXBuildFile; fileRef = 0427124E1D2BA07A005938AE /* encrypted.epub */; };
 		0432BA4B1D2619E00003CB4A /* ZEReadFile.m in Sources */ = {isa = PBXBuildFile; fileRef = 0432BA461D2619E00003CB4A /* ZEReadFile.m */; };
 		0432BA4C1D2619E00003CB4A /* ZEReadParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 0432BA481D2619E00003CB4A /* ZEReadParser.m */; };
 		0432BA4D1D2619E00003CB4A /* ZEReadStyleConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 0432BA4A1D2619E00003CB4A /* ZEReadStyleConfig.m */; };
@@ -39,7 +36,6 @@
 		045612241BAFC07D0043EA6C /* IMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 045612231BAFC07D0043EA6C /* IMessageViewController.m */; };
 		045EB1A61C300F51005CC75E /* ArticleComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 045EB1A51C300F51005CC75E /* ArticleComponent.mm */; };
 		045EB1A91C300FBD005CC75E /* Article.m in Sources */ = {isa = PBXBuildFile; fileRef = 045EB1A81C300FBD005CC75E /* Article.m */; };
-		046E72871D27AAFB00D1ECB8 /* Hour 028-高飞龙.epub in Resources */ = {isa = PBXBuildFile; fileRef = 046E72861D27AAFB00D1ECB8 /* Hour 028-高飞龙.epub */; };
 		04892E5F1BB3C7AA00CB0437 /* IMG_2237.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04892E5D1BB3C7AA00CB0437 /* IMG_2237.jpg */; };
 		04892E601BB3C7AA00CB0437 /* IMG_2238.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04892E5E1BB3C7AA00CB0437 /* IMG_2238.jpg */; };
 		04892E631BB3D4D700CB0437 /* IMG_1853.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 04892E621BB3D4D700CB0437 /* IMG_1853.jpg */; };
@@ -128,7 +124,6 @@
 		04BB11F11D2F4C47009224D8 /* ZEChapterListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB11F01D2F4C47009224D8 /* ZEChapterListViewController.m */; };
 		04BB11F41D2F4C5A009224D8 /* ZEMarkListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB11F31D2F4C5A009224D8 /* ZEMarkListViewController.m */; };
 		04BB11F81D2F69A8009224D8 /* ZEChapterTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB11F71D2F69A8009224D8 /* ZEChapterTableViewCell.m */; };
-		04BEFB851D24D06B00C78692 /* DTCoreTextFontOverrides.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04BEFB841D24D06B00C78692 /* DTCoreTextFontOverrides.plist */; };
 		04BEFB8E1D24E5F300C78692 /* ZEBaseModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BEFB8D1D24E5F300C78692 /* ZEBaseModel.m */; };
 		04BEFB911D24E63C00C78692 /* ZEChapter.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BEFB901D24E63C00C78692 /* ZEChapter.m */; };
 		04BEFB9A1D24F78D00C78692 /* ZEPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BEFB991D24F78D00C78692 /* ZEPageViewController.m */; };
@@ -136,6 +131,14 @@
 		04BEFBA01D2512F600C78692 /* ZEBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BEFB9F1D2512F600C78692 /* ZEBook.m */; };
 		04CA94FA1CFC6C14002AF2D8 /* ZLTextComponent.mm in Sources */ = {isa = PBXBuildFile; fileRef = 04CA94F91CFC6C14002AF2D8 /* ZLTextComponent.mm */; };
 		04E1FB3A1D2F889F0090B058 /* ZEProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1FB391D2F889F0090B058 /* ZEProgressView.m */; };
+		04E1FB3D1D348D7A0090B058 /* ZEMark.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1FB3C1D348D7A0090B058 /* ZEMark.m */; };
+		04E1FB401D34A0240090B058 /* encrypted.epub in Resources */ = {isa = PBXBuildFile; fileRef = 04E1FB3E1D34A0240090B058 /* encrypted.epub */; };
+		04E1FB411D34A0240090B058 /* 053-傅渥成-10.16（修改版）.epub in Resources */ = {isa = PBXBuildFile; fileRef = 04E1FB3F1D34A0240090B058 /* 053-傅渥成-10.16（修改版）.epub */; };
+		04E1FB441D34F8F00090B058 /* ZEMarkTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1FB431D34F8F00090B058 /* ZEMarkTableViewCell.m */; };
+		04E1FB491D3500700090B058 /* Night_Read_Bookmarks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E1FB451D3500700090B058 /* Night_Read_Bookmarks@2x.png */; };
+		04E1FB4A1D3500700090B058 /* Night_Read_Bookmarks@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E1FB461D3500700090B058 /* Night_Read_Bookmarks@3x.png */; };
+		04E1FB4B1D3500700090B058 /* Read_Bookmarks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E1FB471D3500700090B058 /* Read_Bookmarks@2x.png */; };
+		04E1FB4C1D3500700090B058 /* Read_Bookmarks@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E1FB481D3500700090B058 /* Read_Bookmarks@3x.png */; };
 		04E7881B1CCF973A004ED75B /* Feed_barShadow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E788191CCF973A004ED75B /* Feed_barShadow@3x.png */; };
 		04E7881C1CCF973A004ED75B /* Feed_barShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E7881A1CCF973A004ED75B /* Feed_barShadow@2x.png */; };
 		04F3A5051BAFDE3200CA479A /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F3A5041BAFDE3200CA479A /* TestData.plist */; };
@@ -173,14 +176,11 @@
 		042301991D22562C005231B6 /* RSA.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSA.h; sourceTree = "<group>"; };
 		0423019A1D22562C005231B6 /* RSA.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSA.m; sourceTree = "<group>"; };
 		0423019D1D225694005231B6 /* RSAES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RSAES.h; sourceTree = "<group>"; };
-		042301B71D24BC8D005231B6 /* 赵思家.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "赵思家.epub"; sourceTree = "<group>"; };
 		042712441D2A866F005938AE /* AES.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = AES.c; sourceTree = "<group>"; };
 		042712451D2A866F005938AE /* AESCipher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AESCipher.h; sourceTree = "<group>"; };
 		042712461D2A866F005938AE /* AESCipher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AESCipher.m; sourceTree = "<group>"; };
 		042712491D2B5003005938AE /* NSData+md5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+md5.h"; sourceTree = "<group>"; };
 		0427124A1D2B5003005938AE /* NSData+md5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+md5.m"; sourceTree = "<group>"; };
-		0427124C1D2B8673005938AE /* 048-RED 韵-9.1-1600.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "048-RED 韵-9.1-1600.epub"; sourceTree = "<group>"; };
-		0427124E1D2BA07A005938AE /* encrypted.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = encrypted.epub; sourceTree = "<group>"; };
 		0432BA451D2619E00003CB4A /* ZEReadFile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEReadFile.h; sourceTree = "<group>"; };
 		0432BA461D2619E00003CB4A /* ZEReadFile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEReadFile.m; sourceTree = "<group>"; };
 		0432BA471D2619E00003CB4A /* ZEReadParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEReadParser.h; sourceTree = "<group>"; };
@@ -225,7 +225,6 @@
 		045EB1A51C300F51005CC75E /* ArticleComponent.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ArticleComponent.mm; sourceTree = "<group>"; };
 		045EB1A71C300FBD005CC75E /* Article.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Article.h; sourceTree = "<group>"; };
 		045EB1A81C300FBD005CC75E /* Article.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Article.m; sourceTree = "<group>"; };
-		046E72861D27AAFB00D1ECB8 /* Hour 028-高飞龙.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Hour 028-高飞龙.epub"; sourceTree = "<group>"; };
 		04892E5D1BB3C7AA00CB0437 /* IMG_2237.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2237.jpg; sourceTree = "<group>"; };
 		04892E5E1BB3C7AA00CB0437 /* IMG_2238.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_2238.jpg; sourceTree = "<group>"; };
 		04892E621BB3D4D700CB0437 /* IMG_1853.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1853.jpg; sourceTree = "<group>"; };
@@ -327,7 +326,6 @@
 		04BB11F31D2F4C5A009224D8 /* ZEMarkListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEMarkListViewController.m; sourceTree = "<group>"; };
 		04BB11F61D2F69A8009224D8 /* ZEChapterTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEChapterTableViewCell.h; sourceTree = "<group>"; };
 		04BB11F71D2F69A8009224D8 /* ZEChapterTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEChapterTableViewCell.m; sourceTree = "<group>"; };
-		04BEFB841D24D06B00C78692 /* DTCoreTextFontOverrides.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = DTCoreTextFontOverrides.plist; sourceTree = "<group>"; };
 		04BEFB8C1D24E5F300C78692 /* ZEBaseModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEBaseModel.h; sourceTree = "<group>"; };
 		04BEFB8D1D24E5F300C78692 /* ZEBaseModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEBaseModel.m; sourceTree = "<group>"; };
 		04BEFB8F1D24E63C00C78692 /* ZEChapter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEChapter.h; sourceTree = "<group>"; };
@@ -342,6 +340,16 @@
 		04CA94F91CFC6C14002AF2D8 /* ZLTextComponent.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZLTextComponent.mm; sourceTree = "<group>"; };
 		04E1FB381D2F889F0090B058 /* ZEProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEProgressView.h; sourceTree = "<group>"; };
 		04E1FB391D2F889F0090B058 /* ZEProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEProgressView.m; sourceTree = "<group>"; };
+		04E1FB3B1D348D7A0090B058 /* ZEMark.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEMark.h; sourceTree = "<group>"; };
+		04E1FB3C1D348D7A0090B058 /* ZEMark.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEMark.m; sourceTree = "<group>"; };
+		04E1FB3E1D34A0240090B058 /* encrypted.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = encrypted.epub; sourceTree = "<group>"; };
+		04E1FB3F1D34A0240090B058 /* 053-傅渥成-10.16（修改版）.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "053-傅渥成-10.16（修改版）.epub"; sourceTree = "<group>"; };
+		04E1FB421D34F8F00090B058 /* ZEMarkTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEMarkTableViewCell.h; sourceTree = "<group>"; };
+		04E1FB431D34F8F00090B058 /* ZEMarkTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEMarkTableViewCell.m; sourceTree = "<group>"; };
+		04E1FB451D3500700090B058 /* Night_Read_Bookmarks@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Night_Read_Bookmarks@2x.png"; sourceTree = "<group>"; };
+		04E1FB461D3500700090B058 /* Night_Read_Bookmarks@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Night_Read_Bookmarks@3x.png"; sourceTree = "<group>"; };
+		04E1FB471D3500700090B058 /* Read_Bookmarks@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Read_Bookmarks@2x.png"; sourceTree = "<group>"; };
+		04E1FB481D3500700090B058 /* Read_Bookmarks@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Read_Bookmarks@3x.png"; sourceTree = "<group>"; };
 		04E788191CCF973A004ED75B /* Feed_barShadow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Feed_barShadow@3x.png"; sourceTree = "<group>"; };
 		04E7881A1CCF973A004ED75B /* Feed_barShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Feed_barShadow@2x.png"; sourceTree = "<group>"; };
 		04F3A5041BAFDE3200CA479A /* TestData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestData.plist; sourceTree = "<group>"; };
@@ -489,6 +497,8 @@
 				04BEFB901D24E63C00C78692 /* ZEChapter.m */,
 				04BEFB9E1D2512F600C78692 /* ZEBook.h */,
 				04BEFB9F1D2512F600C78692 /* ZEBook.m */,
+				04E1FB3B1D348D7A0090B058 /* ZEMark.h */,
+				04E1FB3C1D348D7A0090B058 /* ZEMark.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -496,12 +506,9 @@
 		0442030F1D211FF4003164CC /* Reource */ = {
 			isa = PBXGroup;
 			children = (
+				04E1FB3E1D34A0240090B058 /* encrypted.epub */,
+				04E1FB3F1D34A0240090B058 /* 053-傅渥成-10.16（修改版）.epub */,
 				04BB11391D2DF86E009224D8 /* Images */,
-				0427124C1D2B8673005938AE /* 048-RED 韵-9.1-1600.epub */,
-				046E72861D27AAFB00D1ECB8 /* Hour 028-高飞龙.epub */,
-				04BEFB841D24D06B00C78692 /* DTCoreTextFontOverrides.plist */,
-				042301B71D24BC8D005231B6 /* 赵思家.epub */,
-				0427124E1D2BA07A005938AE /* encrypted.epub */,
 			);
 			path = Reource;
 			sourceTree = "<group>";
@@ -688,6 +695,10 @@
 			isa = PBXGroup;
 			children = (
 				04BB11D11D2E32BF009224D8 /* in zhihu app */,
+				04E1FB451D3500700090B058 /* Night_Read_Bookmarks@2x.png */,
+				04E1FB461D3500700090B058 /* Night_Read_Bookmarks@3x.png */,
+				04E1FB471D3500700090B058 /* Read_Bookmarks@2x.png */,
+				04E1FB481D3500700090B058 /* Read_Bookmarks@3x.png */,
 				04BB11551D2E3238009224D8 /* Bookmarks_Highlight@2x.png */,
 				04BB11561D2E3238009224D8 /* Bookmarks_Highlight@3x.png */,
 				04BB11571D2E3238009224D8 /* Bookmarks_Normal@2x.png */,
@@ -790,6 +801,8 @@
 			children = (
 				04BB11F61D2F69A8009224D8 /* ZEChapterTableViewCell.h */,
 				04BB11F71D2F69A8009224D8 /* ZEChapterTableViewCell.m */,
+				04E1FB421D34F8F00090B058 /* ZEMarkTableViewCell.h */,
+				04E1FB431D34F8F00090B058 /* ZEMarkTableViewCell.m */,
 			);
 			name = Cell;
 			sourceTree = "<group>";
@@ -933,7 +946,6 @@
 				04BB11D01D2E3238009224D8 /* Read_Return@3x.png in Resources */,
 				04BB11C01D2E3238009224D8 /* Night_Read_Bar_Catalog_Normal@3x.png in Resources */,
 				04892E631BB3D4D700CB0437 /* IMG_1853.jpg in Resources */,
-				0427124D1D2B86A2005938AE /* 048-RED 韵-9.1-1600.epub in Resources */,
 				045612101BAEA8DE0043EA6C /* LaunchScreen.storyboard in Resources */,
 				04BB11A41D2E3238009224D8 /* More_Book_Normal@3x.png in Resources */,
 				04BB11E21D2E32D1009224D8 /* Night_Back_Normal@3x.png in Resources */,
@@ -943,7 +955,9 @@
 				04E7881C1CCF973A004ED75B /* Feed_barShadow@2x.png in Resources */,
 				04BB119A1D2E3238009224D8 /* Columnup_Normal@3x.png in Resources */,
 				04BB119B1D2E3238009224D8 /* Comment_Normal@2x.png in Resources */,
+				04E1FB4B1D3500700090B058 /* Read_Bookmarks@2x.png in Resources */,
 				04BB11AE1D2E3238009224D8 /* Night_Columnup_Highlight@3x.png in Resources */,
+				04E1FB491D3500700090B058 /* Night_Read_Bookmarks@2x.png in Resources */,
 				04BB11A81D2E3238009224D8 /* Nigh_Read_Day@3x.png in Resources */,
 				04BB11CC1D2E3238009224D8 /* Read_Return_Back@3x.png in Resources */,
 				0456120F1BAEA8DE0043EA6C /* Assets.xcassets in Resources */,
@@ -953,11 +967,12 @@
 				04BB11CB1D2E3238009224D8 /* Read_Return_Back@2x.png in Resources */,
 				04F3A5051BAFDE3200CA479A /* TestData.plist in Resources */,
 				04BB11AD1D2E3238009224D8 /* Night_Columnup_Highlight@2x.png in Resources */,
+				04E1FB4C1D3500700090B058 /* Read_Bookmarks@3x.png in Resources */,
 				04BB11B51D2E3238009224D8 /* Night_List_Retry@2x.png in Resources */,
 				04BB11BE1D2E3238009224D8 /* Night_Read_Bar_Bookmarks_Normal@3x.png in Resources */,
 				04BB11AC1D2E3238009224D8 /* Night_Bookmarks_Normal@3x.png in Resources */,
 				04BB11BA1D2E3238009224D8 /* Night_More_CollectIcon_Normal@3x.png in Resources */,
-				04BEFB851D24D06B00C78692 /* DTCoreTextFontOverrides.plist in Resources */,
+				04E1FB401D34A0240090B058 /* encrypted.epub in Resources */,
 				04BB11E11D2E32D1009224D8 /* Night_Back_Normal@2x.png in Resources */,
 				04BB11AB1D2E3238009224D8 /* Night_Bookmarks_Normal@2x.png in Resources */,
 				04BB11931D2E3238009224D8 /* Bookmarks_Highlight@2x.png in Resources */,
@@ -975,13 +990,12 @@
 				04892E651BB3D59D00CB0437 /* ImagesData.plist in Resources */,
 				04892E5F1BB3C7AA00CB0437 /* IMG_2237.jpg in Resources */,
 				04BB11BC1D2E3238009224D8 /* Night_Read_Bar_Bookmarks_Highlight@3x.png in Resources */,
+				04E1FB411D34A0240090B058 /* 053-傅渥成-10.16（修改版）.epub in Resources */,
 				04BB11CD1D2E3238009224D8 /* Read_Return_Invalid@2x.png in Resources */,
 				04BB11C91D2E3238009224D8 /* Read_Note@2x.png in Resources */,
 				04BB11AA1D2E3238009224D8 /* Night_Bookmarks_Highlight@3x.png in Resources */,
-				046E72871D27AAFB00D1ECB8 /* Hour 028-高飞龙.epub in Resources */,
 				04BB11C31D2E3238009224D8 /* Read_Bar_Bookmarks_Highlight@2x.png in Resources */,
 				04BB119D1D2E3238009224D8 /* List_Download@2x.png in Resources */,
-				0427124F1D2BA07A005938AE /* encrypted.epub in Resources */,
 				04892E601BB3C7AA00CB0437 /* IMG_2238.jpg in Resources */,
 				04BB11A71D2E3238009224D8 /* Nigh_Read_Day@2x.png in Resources */,
 				04BB11B31D2E3238009224D8 /* Night_List_Download@2x.png in Resources */,
@@ -989,6 +1003,7 @@
 				04BB11C21D2E3238009224D8 /* Night_Read_Note@3x.png in Resources */,
 				04BB11C11D2E3238009224D8 /* Night_Read_Note@2x.png in Resources */,
 				04BB11B71D2E3238009224D8 /* Night_More_Book_Normal@2x.png in Resources */,
+				04E1FB4A1D3500700090B058 /* Night_Read_Bookmarks@3x.png in Resources */,
 				04BB11BD1D2E3238009224D8 /* Night_Read_Bar_Bookmarks_Normal@2x.png in Resources */,
 				04BB11C81D2E3238009224D8 /* Read_Bar_Catalog_Normal@3x.png in Resources */,
 				04BB11A91D2E3238009224D8 /* Night_Bookmarks_Highlight@2x.png in Resources */,
@@ -1008,7 +1023,6 @@
 				04BB11C61D2E3238009224D8 /* Read_Bar_Bookmarks_Normal@3x.png in Resources */,
 				04BB11DD1D2E32D1009224D8 /* Back_Normal@2x.png in Resources */,
 				04BB11C71D2E3238009224D8 /* Read_Bar_Catalog_Normal@2x.png in Resources */,
-				042301B81D24BCA8005231B6 /* 赵思家.epub in Resources */,
 				04BB11E61D2E335A009224D8 /* Night_Night@2x.png in Resources */,
 				04BB11BF1D2E3238009224D8 /* Night_Read_Bar_Catalog_Normal@2x.png in Resources */,
 				04BB11B01D2E3238009224D8 /* Night_Columnup_Normal@3x.png in Resources */,
@@ -1108,6 +1122,7 @@
 				0432BA501D262D550003CB4A /* ZEBookViewModel.m in Sources */,
 				04CA94FA1CFC6C14002AF2D8 /* ZLTextComponent.mm in Sources */,
 				0432BA4D1D2619E00003CB4A /* ZEReadStyleConfig.m in Sources */,
+				04E1FB3D1D348D7A0090B058 /* ZEMark.m in Sources */,
 				04BEFB8E1D24E5F300C78692 /* ZEBaseModel.m in Sources */,
 				045612181BAEDFCE0043EA6C /* TFView.m in Sources */,
 				0456120B1BAEA8DE0043EA6C /* ComponentViewController.mm in Sources */,
@@ -1132,6 +1147,7 @@
 				04BB11F81D2F69A8009224D8 /* ZEChapterTableViewCell.m in Sources */,
 				0456120E1BAEA8DE0043EA6C /* AppDelegate.m in Sources */,
 				04F3A5091BAFE4CF00CA479A /* UIView+SAAdditions.m in Sources */,
+				04E1FB441D34F8F00090B058 /* ZEMarkTableViewCell.m in Sources */,
 				0408C4AD1C119E8600AFF319 /* ProgressIndicatorView.m in Sources */,
 				042712481D2A866F005938AE /* AESCipher.m in Sources */,
 			);

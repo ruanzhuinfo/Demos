@@ -12,11 +12,14 @@
 #import "ZEChapterViewModel.h"
 #import "ZEReadStyleConfig.h"
 
-@interface ZEReadViewController()<DTAttributedTextContentViewDelegate, DTLazyImageViewDelegate>
+@interface ZEReadViewController()<DTAttributedTextContentViewDelegate, DTLazyImageViewDelegate, UIScrollViewDelegate>
 
+@property(nonatomic)UIScrollView *containerScrollView;
 @property(nonatomic)DTAttributedTextView *textView;
 @property(nonatomic)ZEChapterViewModel *viewModel;
 @property(nonatomic)UILabel *bottomInfoLabel;
+@property(nonatomic)UILabel *topInfoLabel;
+@property(nonatomic)UIButton *markButton;
 
 @end
 
@@ -25,17 +28,51 @@
 + (instancetype)newWithChapterModel:(ZEChapter *)chapter pageIndex:(NSInteger)index {
 	ZEReadViewController *vc = [[ZEReadViewController alloc] init];
 	vc.chapter = chapter;
+	vc.pageIndexAtChapter = index;
+	
+	[vc containerScrollViewAppearance];
 	[vc textViewAppearanceAtPageIndex:index];
 	
 	[vc setupTopInfo];
 	[vc setupBottomInfo];
-	
 	return vc;
+}
+
+- (void)viewDidLoad {
+	[super viewDidLoad];
+	
+	[self.view bringSubviewToFront:self.bottomInfoLabel];
+	[self.view bringSubviewToFront:self.topInfoLabel];
+	[self.view bringSubviewToFront:self.markButton];
+}
+
+- (void)updateBottomInfoWithPageCount:(NSInteger)pageCount bookTitle:(NSString *)title {
+	if (pageCount == 0) {
+		self.bottomInfoLabel.text = [NSString stringWithFormat:@"%@ ∙ 页码更新中...", title];
+	} else {
+		self.bottomInfoLabel.text = [NSString stringWithFormat:@"%@ ∙ %ld / %ld", title, self.currentPage + 1, pageCount];
+	}
+}
+
+#pragma mark - subView appearance
+
+- (void)containerScrollViewAppearance {
+	self.containerScrollView = [[UIScrollView alloc] init];
+	[self.containerScrollView setBackgroundColor:[UIColor grayColor]];
+	[self.containerScrollView setDelegate:self];
+	[self.containerScrollView setShowsVerticalScrollIndicator:NO];
+	[self.containerScrollView setShowsHorizontalScrollIndicator:NO];
+	[self.containerScrollView setAlwaysBounceVertical:YES];
+	[self.view addSubview:self.containerScrollView];
+	[self.containerScrollView mas_makeConstraints:^(MASConstraintMaker *make) {
+		make.edges.equalTo(self.view);
+	}];
 }
 
 - (void)textViewAppearanceAtPageIndex:(NSInteger)index {
 	self.textView = [self makeAttributedTextView];
-	[self.view addSubview:self.textView];
+	[self.containerScrollView addSubview:self.textView];
+	[self.containerScrollView setContentSize:CGSizeMake(self.textView.width, self.textView.height + 0.5)];
 	
 	self.viewModel = [ZEChapterViewModel newWithChapterModel:self.chapter];
 	self.textView.origin = CGPointMake(0, 0);
@@ -59,11 +96,12 @@
 	title.text = self.chapter.title;
 	title.textColor = [UIColor lightGrayColor];
 	title.font = [UIFont systemFontOfSize:13];
-	[self.view addSubview:title];
+	self.topInfoLabel = title;
+	[self.containerScrollView addSubview:title];
 	[title mas_makeConstraints:^(MASConstraintMaker *make) {
-		make.left.equalTo(self.view).offset(10);
-		make.top.equalTo(self.view).offset(10);
-		make.right.equalTo(self.view).offset(51);
+		make.left.equalTo(@10);
+		make.top.equalTo(@10);
+		make.right.equalTo(self.containerScrollView).offset(-51);
 	}];
 }
 
@@ -72,18 +110,71 @@
 	self.bottomInfoLabel.textColor = [UIColor lightGrayColor];
 	self.bottomInfoLabel.font = [UIFont systemFontOfSize:13];
 	self.bottomInfoLabel.textAlignment = NSTextAlignmentRight;
-	[self.view addSubview:self.bottomInfoLabel];
-	[self.bottomInfoLabel mas_makeConstraints:^(MASConstraintMaker *make) {
-		make.bottom.equalTo(self.view).offset(-10);
-		make.right.equalTo(self.view).offset(-10);
-	}];
+	[self.containerScrollView addSubview:self.bottomInfoLabel];
+	[self.bottomInfoLabel setFrame:CGRectMake(10, self.view.height - 25, self.view.width - 20, 15)];
 }
 
-- (void)updateBottomInfoWithPageCount:(NSInteger)pageCount bookTitle:(NSString *)title {
-	if (pageCount == 0) {
-		self.bottomInfoLabel.text = [NSString stringWithFormat:@"%@ ∙ 页码更新中...", title];
+- (void)setupMarkButton {
+	self.markButton = [[UIButton alloc] init];
+	[self.markButton setAlpha:0.0];
+	[self.markButton setImage:[UIImage imageNamed:@"Bookmarks_Highlight"]
+					 forState:UIControlStateNormal];
+	[self.markButton addTarget:self
+						action:@selector(didTapMarkButton)
+			  forControlEvents:UIControlEventTouchUpInside];
+	[self.view addSubview:self.markButton];
+	
+	[self.markButton setFrame:CGRectMake(self.view.width - 46, 0, 26, 26)];
+}
+
+- (void)setIsMark:(BOOL)isMark {
+	_isMark = isMark;
+
+	if (isMark) {
+		if (!self.markButton) {
+			[self setupMarkButton];
+			[UIView animateWithDuration:0.25 animations:^{
+				[self.markButton setAlpha:1.0];
+			}];
+		}
 	} else {
-		self.bottomInfoLabel.text = [NSString stringWithFormat:@"%@ ∙ %ld / %ld", title, self.currentPage + 1, pageCount];
+		if (self.markButton) {
+			[UIView animateWithDuration:0.25 animations:^{
+				[self.markButton setAlpha:0.0];
+			} completion:^(BOOL finished) {
+				[self.markButton removeFromSuperview];
+				self.markButton = nil;
+			}];
+		}
+	}
+}
+
+
+#pragma mark - markButton Selector
+
+- (void)didTapMarkButton {
+	if ([self.delegate respondsToSelector:@selector(didTapMarkButton:)]) {
+		[self.delegate didTapMarkButton:self];
+	}
+}
+
+#pragma mark - UIScrollViewDelegate
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate {
+	CGFloat offsetY = [scrollView.panGestureRecognizer translationInView:self.containerScrollView].y;
+	
+	if (offsetY >= 55) {
+		if ([self.delegate respondsToSelector:@selector(didEndDragScrollViewFinished:)]) {
+			[self.delegate didEndDragScrollViewFinished:self];
+		}
+	}
+}
+
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+	CGFloat velocitY = [scrollView.panGestureRecognizer velocityInView:self.containerScrollView].y;
+	CGFloat positionY = [scrollView.panGestureRecognizer translationInView:self.containerScrollView].y;
+	if ((velocitY < 0 && positionY <= 0) || positionY < 0) {
+		[scrollView setContentOffset:CGPointZero];
 	}
 }
 

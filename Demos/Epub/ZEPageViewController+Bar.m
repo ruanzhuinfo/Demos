@@ -23,7 +23,7 @@ static CGFloat const kNavigationBarHeight = 64.0;
 static CGFloat const kToolBarHeight = 49.0;
 static CGFloat const kButtonSize = 44;
 
-@interface ZEPageViewController()
+@interface ZEPageViewController(Property)
 
 @property(nonatomic)ZEProgressView *progressBar;
 @property(nonatomic)UIView *navigationBar;
@@ -138,6 +138,8 @@ static CGFloat const kButtonSize = 44;
 		[self.progressBar showProgressBar];
 		[self updateProgressValue];
 	}];
+	
+	[self updateNavigationBarMarkButton];
 }
 
 - (void)hiddenBar {
@@ -156,6 +158,15 @@ static CGFloat const kButtonSize = 44;
 	[self.progressBar setProgress:(float)self.book.currentPage / self.book.pageCount];
 }
 
+- (void)updateNavigationBarMarkButton {
+	BOOL mark = ((ZEReadViewController *)self.pageViewController.viewControllers.lastObject).isMark;
+	if (mark) {
+		[self.markButton setImage:[UIImage imageNamed:@"Read_Bar_Bookmarks_Highlight"] forState:UIControlStateNormal];
+	} else {
+		[self.markButton setImage:[UIImage imageNamed:@"Read_Bar_Bookmarks_Normal"] forState:UIControlStateNormal];
+	}
+}
+
 #pragma mark - selector method
 
 - (void)didTapMoreItem {
@@ -165,7 +176,18 @@ static CGFloat const kButtonSize = 44;
 }
 
 - (void)didTapChapterItem {
-
+	
+	ZEReadViewController *vc = [self.pageViewController.viewControllers lastObject];
+	
+	vc.isMark = !vc.isMark;
+	
+	if (vc.isMark) {
+		[self.book appendMarkWithCurrentPage:vc.currentPage];
+	} else {
+		[self.book removeMarkWithCurrentPage:vc.currentPage];
+	}
+	
+	[self updateNavigationBarMarkButton];
 }
 
 - (void)didTapReadModeItem {
@@ -173,10 +195,10 @@ static CGFloat const kButtonSize = 44;
 }
 
 - (void)didTapBackItem {
-	
+	[self dismissViewControllerAnimated:YES completion:nil];
 }
 
-#pragma mark - ZEProgressView delegate
+#pragma mark - ZEProgressViewDelegate
 
 - (id)didPanProgressBarWithProgress:(CGFloat)progress {
 	NSInteger pageIndex = (NSInteger)(self.book.pageCount * progress);
@@ -198,6 +220,8 @@ static CGFloat const kButtonSize = 44;
 	NSInteger pageIndex = (NSInteger)(self.book.pageCount * progress);
 	pageIndex = pageIndex > 0 ? pageIndex : 1;
 	[self showViewControllerAtIndex:pageIndex - 1 animation:YES];
+	
+	[self updateNavigationBarMarkButton];
 }
 
 - (void)didTapBackButtonWithProgress:(CGFloat)progress {
@@ -205,6 +229,7 @@ static CGFloat const kButtonSize = 44;
 	[self showViewControllerAtIndex:page - 1 animation:YES];
 	[self.progressBar setProgress:progress];
 }
+
 
 #pragma mark - private helper method
 

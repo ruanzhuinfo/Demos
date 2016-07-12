@@ -18,10 +18,15 @@
 @property(nonatomic)NSInteger currentPage;
 
 - (id)chapterAtPageIndex:(NSInteger)index completion:(id (^)(ZEChapter *, NSInteger))completion;
+- (NSInteger)pageIndexAtMarkModel:(ZEMark *)mark;
 
 - (NSInteger)calculateBookPageCount;
 
 - (void)saveBooKModel;
+
+- (void)appendMarkWithCurrentPage:(NSInteger)currentPage;
+- (void)removeMarkWithCurrentPage:(NSInteger)currentPage;
+- (BOOL)isMarkWithCurrentPage:(NSInteger)currentPage;
 
 
 @end

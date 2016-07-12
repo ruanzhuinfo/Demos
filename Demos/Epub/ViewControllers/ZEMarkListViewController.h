@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class ZEBook;
+
 @interface ZEMarkListViewController : UIViewController
+
++ (instancetype)newWithBookModel:(ZEBook *)book;
 
 @end

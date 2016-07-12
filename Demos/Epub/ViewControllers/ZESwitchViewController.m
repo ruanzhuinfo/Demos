@@ -72,9 +72,8 @@
 	[self.chpaterListVC didMoveToParentViewController:self];
 	self.currentVC = self.chpaterListVC;
 	
-	self.markListVC = [ZEMarkListViewController new];
+	self.markListVC = [ZEMarkListViewController newWithBookModel:self.book];
 	[self addChildViewController:self.markListVC];
-	
 }
 
 

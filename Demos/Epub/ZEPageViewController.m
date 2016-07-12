@@ -7,12 +7,11 @@
 //
 
 #import "ZEPageViewController.h"
-#import "ZEReadViewController.h"
 #import "ZEPageViewController+Bar.h"
 
-@interface ZEPageViewController() <UIPageViewControllerDelegate, UIPageViewControllerDataSource>
+@interface ZEPageViewController() <UIPageViewControllerDelegate, UIPageViewControllerDataSource, ZEReadViewControllerDelegate>
 
-@property(nonatomic)UIPageViewController *pageViewController;
+
 
 @property(nonatomic)UITapGestureRecognizer *tap;
 
@@ -39,6 +38,10 @@
 											 selector:@selector(didEnterBacgroundNotification)
 												 name:UIApplicationDidEnterBackgroundNotification
 											   object:nil];
+	[[NSNotificationCenter defaultCenter] addObserver:self
+											 selector:@selector(scrollMarkedPageNotification:)
+												 name:kPageViewControllerScrollMarkedPageNotification
+											   object:nil];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -53,6 +56,10 @@
 	
 	// 数据本地化
 	[self didEnterBacgroundNotification];
+}
+
+- (void)dealloc {
+	[[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)setupPageViewController {
@@ -159,6 +166,8 @@ willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewContro
 	
 	if (vc) {
 		vc.currentPage = index;
+		vc.delegate = self;
+		vc.isMark = [self.book isMarkWithCurrentPage:vc.currentPage];
 		[vc updateBottomInfoWithPageCount:self.book.pageCount bookTitle:self.book.book.title];
 		return vc;
 	}
@@ -223,6 +232,25 @@ willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewContro
 	return YES;
 }
 
+#pragma mark - ZEReadViewControllerDelegate
+
+- (void)didTapMarkButton:(ZEReadViewController *)viewController {
+	viewController.isMark = NO;
+	[self.book removeMarkWithCurrentPage:viewController.currentPage];
+}
+
+- (void)didEndDragScrollViewFinished:(ZEReadViewController *)viewController {
+	viewController.isMark = !viewController.isMark;
+	
+	if (viewController.isMark) {
+		[self.book appendMarkWithCurrentPage:viewController.currentPage];
+	} else {
+		[self.book removeMarkWithCurrentPage:viewController.currentPage];
+	}
+	
+	[self updateNavigationBarMarkButton];
+}
+
 
 #pragma mark - Notification
 
@@ -231,10 +259,39 @@ willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewContro
 	
 	[self showViewControllerAtIndex:index animation:YES];
 	
+	//  更新进度条 UI
 	[self updateProgressValue];
+	
+	// 导航栏上的标签状态
+	[self updateNavigationBarMarkButton];
+}
+
+- (void)scrollMarkedPageNotification:(NSNotification *)notify {
+	ZEMark *mark = notify.object;
+	if (![mark isKindOfClass:ZEMark.class]) {
+		NSLog(@"不是 ZEMark 类型");
+		return;
+	}
+	
+	NSInteger pageIndex = [self.book pageIndexAtMarkModel:mark];
+	
+	if (pageIndex == NSNotFound) {
+		NSLog(@"pageIndex 获取错误！");
+		return;
+	}
+	
+	[self showViewControllerAtIndex:pageIndex animation:YES];
+	
+	//  更新进度条 UI
+	[self updateProgressValue];
+	
+	// 导航栏上的标签状态
+	[self updateNavigationBarMarkButton];
 }
 
 - (void)didEnterBacgroundNotification {
+	
+	// 数据本地化
 	[self.book saveBooKModel];
 }
 

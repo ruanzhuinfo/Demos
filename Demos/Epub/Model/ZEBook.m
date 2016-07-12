@@ -13,6 +13,7 @@
 + (NSDictionary *)modelCustomPropertyMapper {
 	NSMutableDictionary *dict = [[super modelCustomPropertyMapper] mutableCopy];
 	[dict addEntriesFromDictionary:@{@"chapters": @"chapters",
+									 @"marks": @"marks",
 									 @"encryptions": @"encryptions",
 									 @"bookId": @"id",
 									 @"authors": @"authors",
@@ -24,10 +25,9 @@
 
 + (NSDictionary *)modelContainerPropertyGenericClass {
 	NSMutableDictionary *dic = [[super modelContainerPropertyGenericClass] mutableCopy];
-	[dic addEntriesFromDictionary:@{@"chapters": [ZEChapter class]}];
+	[dic addEntriesFromDictionary:@{@"chapters": [ZEChapter class],
+									@"marks": [ZEMark class]}];
 	return dic;
 }
-
-
 
 @end

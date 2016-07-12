@@ -7,6 +7,7 @@
 //
 
 #import "ZEChapter.h"
+#import "ZEMark.h"
 
 @interface ZEBook : ZEBaseModel
 
@@ -16,16 +17,27 @@
 @property(nonatomic)NSString *version;
 @property(nonatomic)NSString *title;
 
-@property(nonatomic)NSString *filePath;
-
 // 保存章节内容
 @property(nonatomic, copy)NSArray<ZEChapter *> *chapters;
+
+// 保存书签
+@property(nonatomic, copy)NSArray<ZEMark *> *marks;
+
+// 本地存储路径
+@property(nonatomic)NSString *filePath;
 
 // 总页数
 @property(nonatomic)NSInteger pageCount;
 
 // 当前页码
 @property(nonatomic)NSInteger pageIndex;
+
+// 当前章节本地路径
+@property(nonatomic)NSString *currentChapterPath;
+
+// 当前页的前 20 个字符， 用于进度校验
+@property(nonatomic)NSString *currentChapterCheckText;
+
 
 
 @end
