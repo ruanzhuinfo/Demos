@@ -20,13 +20,7 @@
 @property(nonatomic)UIEdgeInsets edgeInsets;
 @property(nonatomic)CGSize viewSize;
 @property(nonatomic)CGSize maxImageSize;
-@property(nonatomic)CGFloat lineSpacing;
-@property(nonatomic)CGFloat paragraphSpacing;
 @property(nonatomic)CGFloat defaultFontSize;
-@property(nonatomic)CGFloat pFontSize;
-@property(nonatomic)CGFloat h1FontSize;
-@property(nonatomic)CGFloat h2FontSize;
-@property(nonatomic)CGFloat h3FontSize;
 
 // color
 @property(nonatomic)UIColor *textColor;

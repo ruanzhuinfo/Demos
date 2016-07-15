@@ -8,14 +8,15 @@
 
 #import "ZEChapterViewModel.h"
 #import "ZEReadStyleConfig.h"
-#import "NSData+AES128.h"
 #import "DTHTMLElement+style.h"
+#import "ZECryptogramManager.h"
 
 @interface ZEChapterViewModel()
 
 @property(nonatomic)ZEReadStyleConfig *styleConfig;
-@property(nonatomic)NSMutableAttributedString *contentAttributedString;
 
+/// 整个章节的 AttributedString
+@property(nonatomic)NSMutableAttributedString *contentAttributedString;
 @end
 
 @implementation ZEChapterViewModel
@@ -46,14 +47,7 @@
 	return [self.contentAttributedString attributedSubstringFromRange:range];
 }
 
-
-#pragma mark - private core method
-
-/// 生成一个 NSAttributedString
-- (NSAttributedString *)contentAttributedString {
-	if (_contentAttributedString) {
-		return _contentAttributedString;
-	}
+- (NSAttributedString *)attributedStringWithHTMLData:(NSData *)data documentPath:(NSURL *)filePath {
 	
 	void (^customTextAttachmentBlock)(DTHTMLElement *) = ^(DTHTMLElement *element) {
 		
@@ -63,21 +57,38 @@
 		}];
 	};
 	
-	NSDictionary *options =
-	@{
+	NSMutableDictionary *options =
+	[@{
+	  DTDefaultFontSize: @(_styleConfig.defaultFontSize),
 	  DTMaxImageSize: [NSValue valueWithCGSize:_styleConfig.maxImageSize],
 	  NSTextSizeMultiplierDocumentOption: @(_styleConfig.textSizeMultiplier),
 	  DTDefaultLineHeightMultiplier: [NSNumber numberWithFloat:_styleConfig.LineHeightMultiplier],
 	  DTWillFlushBlockCallBack: [customTextAttachmentBlock copy],
-	  NSBaseURLDocumentOption: [NSURL fileURLWithPath:self.chapter.contentPath],
-	  };
+	  DTDefaultTextColor:_styleConfig.textColor
+	  } mutableCopy];
+	
+	if (filePath) {
+		[options addEntriesFromDictionary:@{NSBaseURLDocumentOption: filePath}];
+	}
+	
+	NSAttributedString *att = [[NSAttributedString alloc] initWithHTMLData:data
+																   options:options
+														documentAttributes:nil];
+	return att;
+}
+
+- (NSAttributedString *)contentAttributedString {
+	if (_contentAttributedString) {
+		return _contentAttributedString;
+	}
 	
 	_contentAttributedString =
-	[[NSMutableAttributedString alloc] initWithHTMLData:[self getChapterData]
-												options:options
-									 documentAttributes:nil];
+	[[self attributedStringWithHTMLData:[self getChapterData]
+						  documentPath:[NSURL fileURLWithPath:self.chapter.contentPath]] mutableCopy];
 	return _contentAttributedString;
 }
+
+#pragma mark - private core method
 
 /**
  *  遍历出每个节点
@@ -85,14 +96,15 @@
  *  @param element   跟节点
  *  @param nodeBlock 每个节点的回调
  */
-- (void)parserHTMLElemet:(DTHTMLElement *)element nodeBlock:(void(^)(DTHTMLElement *))nodeBlock {
+- (void)parserHTMLElemet:(DTHTMLElement *)element
+			   nodeBlock:(void(^)(DTHTMLElement *))nodeBlock {
+	
 	nodeBlock(element);
 	
 	if (element.childNodes.count > 0) {
 		
 		[element.childNodes enumerateObjectsUsingBlock:
 		 ^(DTHTMLElement*  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-			 
 			[self parserHTMLElemet:obj nodeBlock:nodeBlock];
 		}];
 	}
@@ -127,7 +139,6 @@
 			NSRange lastRange = NSRangeFromString(array.lastObject);
 			if (range.location == lastRange.location) {
 				samePlaceRepeatCount ++;
-				continue;
 			}
 		}
 		
@@ -139,6 +150,10 @@
 		[array addObject:NSStringFromRange(range)];
 	}
 	
+	if (array.count == 0) {
+		[array addObject:NSStringFromRange(NSMakeRange(0, layouter.attributedString.string.length))];
+	}
+	
 	return array;
 }
 
@@ -148,15 +163,14 @@
 		NSData *data = [NSData dataWithContentsOfFile:self.chapter.contentPath];
 		
 		if (self.chapter.isEncrypt) {
-			data  = [data AES128CFBDecryptWithBase64:@"UPIkeH3pD9JBYWlp7Ag8YQ=="];
+			data = [[ZECryptogramManager sharedInstance] decryptWithData:data];
 		}
 		
 		NSString *html = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
 		
-		//  去掉不可控的 <br> 标签，用 paragraphStyle 代替
-		html = [html stringByReplacingOccurrencesOfString:@"<br />" withString:@""];
-		
-//		NSLog(@"%@", html);
+		// 把注解的 sup 标签替换成 span 标签，便于识别；
+		html = [html stringByReplacingOccurrencesOfString:@"<sup>" withString:@"<span>nf"];
+		html = [html stringByReplacingOccurrencesOfString:@"</sup>" withString:@"</span>"];
 		
 		self.chapter.contentData = [html dataUsingEncoding:NSUTF8StringEncoding];
 	}

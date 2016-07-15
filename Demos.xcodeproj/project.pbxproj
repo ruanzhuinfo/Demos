@@ -139,6 +139,16 @@
 		04E1FB4A1D3500700090B058 /* Night_Read_Bookmarks@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E1FB461D3500700090B058 /* Night_Read_Bookmarks@3x.png */; };
 		04E1FB4B1D3500700090B058 /* Read_Bookmarks@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E1FB471D3500700090B058 /* Read_Bookmarks@2x.png */; };
 		04E1FB4C1D3500700090B058 /* Read_Bookmarks@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E1FB481D3500700090B058 /* Read_Bookmarks@3x.png */; };
+		04E1FB4E1D35E5870090B058 /* 知乎电子书样本_7.8.epub in Resources */ = {isa = PBXBuildFile; fileRef = 04E1FB4D1D35E5870090B058 /* 知乎电子书样本_7.8.epub */; };
+		04E1FB541D3601470090B058 /* DTBreakHTMLElement+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1FB531D3601470090B058 /* DTBreakHTMLElement+Style.m */; };
+		04E1FB5B1D3605880090B058 /* DTTextAttachmentHTMLElement+Style.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1FB5A1D3605880090B058 /* DTTextAttachmentHTMLElement+Style.m */; };
+		04E1FB621D360D510090B058 /* MethodSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1FB611D360D510090B058 /* MethodSwizzle.m */; };
+		04E1FB651D3630B30090B058 /* ZEFootNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1FB641D3630B30090B058 /* ZEFootNoteViewController.m */; };
+		04E1FB681D3736FE0090B058 /* ZEReadViewController+Draw.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1FB671D3736FE0090B058 /* ZEReadViewController+Draw.m */; };
+		04E1FB701D3770A60090B058 /* TFHpple.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1FB6B1D3770A60090B058 /* TFHpple.m */; };
+		04E1FB711D3770A60090B058 /* TFHppleElement.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1FB6D1D3770A60090B058 /* TFHppleElement.m */; };
+		04E1FB721D3770A60090B058 /* XPathQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1FB6F1D3770A60090B058 /* XPathQuery.m */; };
+		04E1FB751D3779E90090B058 /* ZECryptogramManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E1FB741D3779E90090B058 /* ZECryptogramManager.m */; };
 		04E7881B1CCF973A004ED75B /* Feed_barShadow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E788191CCF973A004ED75B /* Feed_barShadow@3x.png */; };
 		04E7881C1CCF973A004ED75B /* Feed_barShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E7881A1CCF973A004ED75B /* Feed_barShadow@2x.png */; };
 		04F3A5051BAFDE3200CA479A /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F3A5041BAFDE3200CA479A /* TestData.plist */; };
@@ -350,6 +360,25 @@
 		04E1FB461D3500700090B058 /* Night_Read_Bookmarks@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Night_Read_Bookmarks@3x.png"; sourceTree = "<group>"; };
 		04E1FB471D3500700090B058 /* Read_Bookmarks@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Read_Bookmarks@2x.png"; sourceTree = "<group>"; };
 		04E1FB481D3500700090B058 /* Read_Bookmarks@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Read_Bookmarks@3x.png"; sourceTree = "<group>"; };
+		04E1FB4D1D35E5870090B058 /* 知乎电子书样本_7.8.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "知乎电子书样本_7.8.epub"; sourceTree = "<group>"; };
+		04E1FB521D3601470090B058 /* DTBreakHTMLElement+Style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DTBreakHTMLElement+Style.h"; sourceTree = "<group>"; };
+		04E1FB531D3601470090B058 /* DTBreakHTMLElement+Style.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DTBreakHTMLElement+Style.m"; sourceTree = "<group>"; };
+		04E1FB591D3605880090B058 /* DTTextAttachmentHTMLElement+Style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DTTextAttachmentHTMLElement+Style.h"; sourceTree = "<group>"; };
+		04E1FB5A1D3605880090B058 /* DTTextAttachmentHTMLElement+Style.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "DTTextAttachmentHTMLElement+Style.m"; sourceTree = "<group>"; };
+		04E1FB601D360D510090B058 /* MethodSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MethodSwizzle.h; sourceTree = "<group>"; };
+		04E1FB611D360D510090B058 /* MethodSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MethodSwizzle.m; sourceTree = "<group>"; };
+		04E1FB631D3630B30090B058 /* ZEFootNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZEFootNoteViewController.h; sourceTree = "<group>"; };
+		04E1FB641D3630B30090B058 /* ZEFootNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZEFootNoteViewController.m; sourceTree = "<group>"; };
+		04E1FB661D3736FE0090B058 /* ZEReadViewController+Draw.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "ZEReadViewController+Draw.h"; sourceTree = "<group>"; };
+		04E1FB671D3736FE0090B058 /* ZEReadViewController+Draw.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "ZEReadViewController+Draw.m"; sourceTree = "<group>"; };
+		04E1FB6A1D3770A60090B058 /* TFHpple.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHpple.h; sourceTree = "<group>"; };
+		04E1FB6B1D3770A60090B058 /* TFHpple.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHpple.m; sourceTree = "<group>"; };
+		04E1FB6C1D3770A60090B058 /* TFHppleElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TFHppleElement.h; sourceTree = "<group>"; };
+		04E1FB6D1D3770A60090B058 /* TFHppleElement.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TFHppleElement.m; sourceTree = "<group>"; };
+		04E1FB6E1D3770A60090B058 /* XPathQuery.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPathQuery.h; sourceTree = "<group>"; };
+		04E1FB6F1D3770A60090B058 /* XPathQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPathQuery.m; sourceTree = "<group>"; };
+		04E1FB731D3779E90090B058 /* ZECryptogramManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZECryptogramManager.h; sourceTree = "<group>"; };
+		04E1FB741D3779E90090B058 /* ZECryptogramManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZECryptogramManager.m; sourceTree = "<group>"; };
 		04E788191CCF973A004ED75B /* Feed_barShadow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Feed_barShadow@3x.png"; sourceTree = "<group>"; };
 		04E7881A1CCF973A004ED75B /* Feed_barShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Feed_barShadow@2x.png"; sourceTree = "<group>"; };
 		04F3A5041BAFDE3200CA479A /* TestData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestData.plist; sourceTree = "<group>"; };
@@ -411,6 +440,8 @@
 		0423018D1D223C65005231B6 /* Third */ = {
 			isa = PBXGroup;
 			children = (
+				04E1FB691D3770A60090B058 /* TFHapple */,
+				04E1FB5F1D360D510090B058 /* MethodSwizzle */,
 				042301961D22562C005231B6 /* RSA+AES */,
 			);
 			path = Third;
@@ -447,14 +478,15 @@
 		0432BA441D2619E00003CB4A /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				04BB11361D2CDA7A009224D8 /* DTHTMLElement+style.h */,
-				04BB11371D2CDA7A009224D8 /* DTHTMLElement+style.m */,
+				04E1FB551D36019B0090B058 /* DTCoreText */,
 				0432BA451D2619E00003CB4A /* ZEReadFile.h */,
 				0432BA461D2619E00003CB4A /* ZEReadFile.m */,
 				0432BA471D2619E00003CB4A /* ZEReadParser.h */,
 				0432BA481D2619E00003CB4A /* ZEReadParser.m */,
 				0432BA491D2619E00003CB4A /* ZEReadStyleConfig.h */,
 				0432BA4A1D2619E00003CB4A /* ZEReadStyleConfig.m */,
+				04E1FB731D3779E90090B058 /* ZECryptogramManager.h */,
+				04E1FB741D3779E90090B058 /* ZECryptogramManager.m */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -484,6 +516,8 @@
 				04BEFB9C1D24F7A200C78692 /* ZEReadViewController.m */,
 				04BB114A1D2DFD9D009224D8 /* ZEPageViewController+Bar.h */,
 				04BB114B1D2DFD9D009224D8 /* ZEPageViewController+Bar.m */,
+				04E1FB661D3736FE0090B058 /* ZEReadViewController+Draw.h */,
+				04E1FB671D3736FE0090B058 /* ZEReadViewController+Draw.m */,
 			);
 			path = Epub;
 			sourceTree = "<group>";
@@ -506,6 +540,7 @@
 		0442030F1D211FF4003164CC /* Reource */ = {
 			isa = PBXGroup;
 			children = (
+				04E1FB4D1D35E5870090B058 /* 知乎电子书样本_7.8.epub */,
 				04E1FB3E1D34A0240090B058 /* encrypted.epub */,
 				04E1FB3F1D34A0240090B058 /* 053-傅渥成-10.16（修改版）.epub */,
 				04BB11391D2DF86E009224D8 /* Images */,
@@ -792,6 +827,8 @@
 				04BB11F01D2F4C47009224D8 /* ZEChapterListViewController.m */,
 				04BB11F21D2F4C5A009224D8 /* ZEMarkListViewController.h */,
 				04BB11F31D2F4C5A009224D8 /* ZEMarkListViewController.m */,
+				04E1FB631D3630B30090B058 /* ZEFootNoteViewController.h */,
+				04E1FB641D3630B30090B058 /* ZEFootNoteViewController.m */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -805,6 +842,41 @@
 				04E1FB431D34F8F00090B058 /* ZEMarkTableViewCell.m */,
 			);
 			name = Cell;
+			sourceTree = "<group>";
+		};
+		04E1FB551D36019B0090B058 /* DTCoreText */ = {
+			isa = PBXGroup;
+			children = (
+				04BB11361D2CDA7A009224D8 /* DTHTMLElement+style.h */,
+				04BB11371D2CDA7A009224D8 /* DTHTMLElement+style.m */,
+				04E1FB521D3601470090B058 /* DTBreakHTMLElement+Style.h */,
+				04E1FB531D3601470090B058 /* DTBreakHTMLElement+Style.m */,
+				04E1FB591D3605880090B058 /* DTTextAttachmentHTMLElement+Style.h */,
+				04E1FB5A1D3605880090B058 /* DTTextAttachmentHTMLElement+Style.m */,
+			);
+			name = DTCoreText;
+			sourceTree = "<group>";
+		};
+		04E1FB5F1D360D510090B058 /* MethodSwizzle */ = {
+			isa = PBXGroup;
+			children = (
+				04E1FB601D360D510090B058 /* MethodSwizzle.h */,
+				04E1FB611D360D510090B058 /* MethodSwizzle.m */,
+			);
+			path = MethodSwizzle;
+			sourceTree = "<group>";
+		};
+		04E1FB691D3770A60090B058 /* TFHapple */ = {
+			isa = PBXGroup;
+			children = (
+				04E1FB6A1D3770A60090B058 /* TFHpple.h */,
+				04E1FB6B1D3770A60090B058 /* TFHpple.m */,
+				04E1FB6C1D3770A60090B058 /* TFHppleElement.h */,
+				04E1FB6D1D3770A60090B058 /* TFHppleElement.m */,
+				04E1FB6E1D3770A60090B058 /* XPathQuery.h */,
+				04E1FB6F1D3770A60090B058 /* XPathQuery.m */,
+			);
+			path = TFHapple;
 			sourceTree = "<group>";
 		};
 		04F3A5061BAFE4CF00CA479A /* Utilities */ = {
@@ -966,6 +1038,7 @@
 				04BB11B41D2E3238009224D8 /* Night_List_Download@3x.png in Resources */,
 				04BB11CB1D2E3238009224D8 /* Read_Return_Back@2x.png in Resources */,
 				04F3A5051BAFDE3200CA479A /* TestData.plist in Resources */,
+				04E1FB4E1D35E5870090B058 /* 知乎电子书样本_7.8.epub in Resources */,
 				04BB11AD1D2E3238009224D8 /* Night_Columnup_Highlight@2x.png in Resources */,
 				04E1FB4C1D3500700090B058 /* Read_Bookmarks@3x.png in Resources */,
 				04BB11B51D2E3238009224D8 /* Night_List_Retry@2x.png in Resources */,
@@ -1117,10 +1190,13 @@
 				04F3A50D1BB10ABD00CA479A /* TFScrollView.m in Sources */,
 				04BEFB9A1D24F78D00C78692 /* ZEPageViewController.m in Sources */,
 				0432BA531D262D620003CB4A /* ZEChapterViewModel.m in Sources */,
+				04E1FB5B1D3605880090B058 /* DTTextAttachmentHTMLElement+Style.m in Sources */,
 				042301891D222921005231B6 /* BlockTest.m in Sources */,
 				04E1FB3A1D2F889F0090B058 /* ZEProgressView.m in Sources */,
 				0432BA501D262D550003CB4A /* ZEBookViewModel.m in Sources */,
 				04CA94FA1CFC6C14002AF2D8 /* ZLTextComponent.mm in Sources */,
+				04E1FB681D3736FE0090B058 /* ZEReadViewController+Draw.m in Sources */,
+				04E1FB751D3779E90090B058 /* ZECryptogramManager.m in Sources */,
 				0432BA4D1D2619E00003CB4A /* ZEReadStyleConfig.m in Sources */,
 				04E1FB3D1D348D7A0090B058 /* ZEMark.m in Sources */,
 				04BEFB8E1D24E5F300C78692 /* ZEBaseModel.m in Sources */,
@@ -1136,7 +1212,9 @@
 				04BB11EB1D2E41DF009224D8 /* ZESwitchViewController.m in Sources */,
 				0427124B1D2B5003005938AE /* NSData+md5.m in Sources */,
 				04BEFBA01D2512F600C78692 /* ZEBook.m in Sources */,
+				04E1FB541D3601470090B058 /* DTBreakHTMLElement+Style.m in Sources */,
 				0432BA4B1D2619E00003CB4A /* ZEReadFile.m in Sources */,
+				04E1FB651D3630B30090B058 /* ZEFootNoteViewController.m in Sources */,
 				042712471D2A866F005938AE /* AES.c in Sources */,
 				04892E7B1BB4EF1C00CB0437 /* TFSpringCollectionViewFlowLayout.m in Sources */,
 				04BB114C1D2DFD9D009224D8 /* ZEPageViewController+Bar.m in Sources */,
@@ -1145,11 +1223,15 @@
 				0423019C1D22562C005231B6 /* RSA.m in Sources */,
 				045612131BAEA8DE0043EA6C /* main.m in Sources */,
 				04BB11F81D2F69A8009224D8 /* ZEChapterTableViewCell.m in Sources */,
+				04E1FB621D360D510090B058 /* MethodSwizzle.m in Sources */,
 				0456120E1BAEA8DE0043EA6C /* AppDelegate.m in Sources */,
+				04E1FB701D3770A60090B058 /* TFHpple.m in Sources */,
+				04E1FB721D3770A60090B058 /* XPathQuery.m in Sources */,
 				04F3A5091BAFE4CF00CA479A /* UIView+SAAdditions.m in Sources */,
 				04E1FB441D34F8F00090B058 /* ZEMarkTableViewCell.m in Sources */,
 				0408C4AD1C119E8600AFF319 /* ProgressIndicatorView.m in Sources */,
 				042712481D2A866F005938AE /* AESCipher.m in Sources */,
+				04E1FB711D3770A60090B058 /* TFHppleElement.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1290,7 +1372,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = www.zhihu.com.Demos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1308,7 +1390,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = www.zhihu.com.Demos;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

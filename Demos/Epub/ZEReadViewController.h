@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@class ZEChapter, ZEReadViewController;
+@class ZEBook, ZEChapter, ZEReadViewController, DTAttributedTextView;
 
 @protocol ZEReadViewControllerDelegate <NSObject>
 
@@ -19,9 +19,13 @@
 
 @interface ZEReadViewController : UIViewController
 
+@property(nonatomic)DTAttributedTextView *textView;
+
 @property(nonatomic, weak)id<ZEReadViewControllerDelegate>delegate;
 
-@property (nonatomic, weak)ZEChapter *chapter;
+@property(nonatomic, weak)ZEChapter *chapter;
+
+@property(nonatomic, weak)ZEBook *book;
 
 // 是否添加了标签
 @property(nonatomic)BOOL isMark;

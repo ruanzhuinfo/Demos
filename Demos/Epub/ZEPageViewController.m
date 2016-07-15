@@ -168,6 +168,7 @@ willTransitionToViewControllers:(NSArray<UIViewController *> *)pendingViewContro
 		vc.currentPage = index;
 		vc.delegate = self;
 		vc.isMark = [self.book isMarkWithCurrentPage:vc.currentPage];
+		vc.book = self.book.book;
 		[vc updateBottomInfoWithPageCount:self.book.pageCount bookTitle:self.book.book.title];
 		return vc;
 	}

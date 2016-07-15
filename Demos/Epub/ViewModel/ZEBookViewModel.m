@@ -20,11 +20,11 @@
 + (instancetype)new {
 	ZEBookViewModel *viewModel = [super new];
 	
-	NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"encrypted" withExtension:@"epub"];
+	NSURL *fileURL = [[NSBundle mainBundle] URLForResource:@"知乎电子书样本_7.8" withExtension:@"epub"];
 	NSData *b = [[NSUserDefaults standardUserDefaults] objectForKey:fileURL.path];
 	
 	if (!b) {
-		viewModel.book = [ZEBook yy_modelWithJSON:[[ZEReadFile alloc] initWithEpubPath:fileURL.path base64:@"UPIkeH3pD9JBYWlp7Ag8YQ=="].book];
+		viewModel.book = [ZEBook yy_modelWithJSON:[[ZEReadFile alloc] initWithEpubPath:fileURL.path].book];
 		
 		viewModel.book.title = @"053-傅渥成-10.16（修改版）";
 		viewModel.book.authors = @[@"傅渥成"];
@@ -38,6 +38,10 @@
 	// v1 需求没有改变字体大小，行间距的功能，所以这样做定位到当前页是没问题的，
 	// v2 有了字体或行间距修改的功能后，就要用 self.book.currentChapterCheckText 和 self.book.currentChapterPath 来配合了
 	viewModel.currentPage = viewModel.book.pageIndex;
+	
+	if (!viewModel.book) {
+		return nil;
+	}
 	
 	return viewModel;
 }

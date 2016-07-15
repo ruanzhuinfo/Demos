@@ -9,13 +9,12 @@
 #import "ZEReadFile.h"
 #import "ZipArchive.h"
 #import "TouchXML.h"
-#import "NSData+AES128.h"
+#import "ZECryptogramManager.h"
 
 #define stringFormat(s...) [NSString stringWithFormat:s]
 
 @interface ZEReadFile()
 @property(nonatomic)NSString *epubPath;
-@property(nonatomic)NSString *base64;
 @property(nonatomic)NSDictionary<NSString*, id> *encpryptions;
 
 
@@ -23,12 +22,11 @@
 
 @implementation ZEReadFile
 
-- (instancetype)initWithEpubPath:(NSString *)ePubPath base64:(NSString *)code {
+- (instancetype)initWithEpubPath:(NSString *)ePubPath {
 	
 	self = [super init];
 	if (self) {
 		self.epubPath = ePubPath;
-		self.base64 = code;
 		
 		__weak typeof(self) weakSelf = self;
 		[self parseMetaInfo:self.epubPath completion:^(NSDictionary<NSString *,id> *book, NSString *error) {
@@ -44,11 +42,10 @@
 	return self;
 }
 
-- (instancetype)initWithEpubPath:(NSString *)ePubPath base64:(NSString *)code completion:(BookParserCompletion)completion {
+- (instancetype)initWithEpubPath:(NSString *)ePubPath completion:(BookParserCompletion)completion {
 	self = [super init];
 	if (self) {
 		self.epubPath = ePubPath;
-		self.base64 = code;
 		
 		BookParserCompletion callback = [completion copy];
 		__weak typeof(self) weakSelf = self;
@@ -107,7 +104,7 @@
 	NSData *data = [NSData dataWithContentsOfFile:containerPath];
 	
 	if ([self needDecryptAtFilePath:containerPath]) {
-		data = [data AES128CFBDecryptWithBase64:self.base64];
+		data = [[ZECryptogramManager sharedInstance] decryptWithData:data];
 	}
 	
 	CXMLDocument *document = [[CXMLDocument alloc] initWithData:data options:0 error:nil];
@@ -154,6 +151,11 @@
 		NSMutableDictionary *book = [NSMutableDictionary dictionary];
 		
 		[book setObject:chapters forKey:@"chapters"];
+	
+		NSString *footNotePath = [[chapters lastObject] objectForKey:@"content"];
+		
+		[book setObject:footNotePath forKey:@"footNotePath"];
+	
 		completionBlock(book, nil);
 		return;
 	}];
@@ -187,8 +189,6 @@
 	return encryptions;
 }
 
-
-
 /**
  *  解析 OPF 文件，获取目录信息
  *
@@ -199,7 +199,7 @@
 	NSData *data = [NSData dataWithContentsOfFile:opfPath];
 	
 	if ([self needDecryptAtFilePath:opfPath]) {
-		data = [data AES128CFBDecryptWithBase64:self.base64];
+		data = [[ZECryptogramManager sharedInstance] decryptWithData:data];
 	}
 	
 	// step1: 拿到 opf 文件中 <item> 标签中的内容
@@ -247,7 +247,7 @@
 	NSData *data = [NSData dataWithContentsOfFile:ncxPath];
 	
 	if ([self needDecryptAtFilePath:ncxPath]) {
-		data = [data AES128CFBDecryptWithBase64:self.base64];
+		data = [[ZECryptogramManager sharedInstance] decryptWithData:data];
 	}
 	
 	// <navPoint id="chapter101" playOrder="5">
@@ -295,10 +295,9 @@
 			[chapters addObject:dic];
 		}
 	}
-	
+
 	completion([chapters copy], nil);
 }
-
 
 #pragma mark - private helper method
 

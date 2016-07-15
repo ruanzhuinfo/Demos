@@ -155,7 +155,7 @@ static CGFloat const kButtonSize = 44;
 }
 
 - (void)updateProgressValue {
-	[self.progressBar setProgress:(float)self.book.currentPage / self.book.pageCount];
+	[self.progressBar setProgress:(float)(self.book.currentPage + 1) / self.book.pageCount];
 }
 
 - (void)updateNavigationBarMarkButton {

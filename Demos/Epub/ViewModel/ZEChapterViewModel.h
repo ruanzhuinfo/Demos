@@ -16,8 +16,16 @@
 
 + (instancetype)newWithChapterModel:(ZEChapter *)chapter;
 
+- (NSAttributedString *)attributedStringWithHTMLData:(NSData *)data documentPath:(NSURL *)filePath;
+
+/// 计算当前章节的页数
 - (NSInteger)estimatePageCount;
 
+/**
+ *  获取一个章节中的一页的 AttributedString
+ *
+ *  @param index 第几页
+ */
 - (NSAttributedString *)attributedStringAtPageIndex:(NSInteger)index;
 
 @end

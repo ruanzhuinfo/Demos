@@ -19,8 +19,8 @@ typedef void (^ChapterParserCompletion)(NSArray<NSDictionary *> *chapters, NSStr
 /// 电子书数据结构
 @property (nonatomic) NSDictionary<NSString*, id> *book;
 
-- (instancetype)initWithEpubPath:(NSString *)ePubPath base64:(NSString *)code;
-- (instancetype)initWithEpubPath:(NSString *)ePubPath base64:(NSString *)code completion:(BookParserCompletion)completion;
+- (instancetype)initWithEpubPath:(NSString *)ePubPath;
+- (instancetype)initWithEpubPath:(NSString *)ePubPath completion:(BookParserCompletion)completion;
 
 
 @end

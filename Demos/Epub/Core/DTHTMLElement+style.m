@@ -6,34 +6,67 @@
 //  Copyright © 2016年 taffy. All rights reserved.
 //
 
+#import <objc/runtime.h>
+#import "MethodSwizzle.h"
+
 #import "DTHTMLElement+style.h"
 #import "ZEReadStyleConfig.h"
+#import "DTHTMLParserNode.h"
 
 @implementation DTHTMLElement (style)
 
++ (void)load {
+	static dispatch_once_t onceToken;
+	dispatch_once(&onceToken, ^{
+		MethodSwizzle(self,
+					  @selector(initWithName:attributes:options:),
+					  @selector(ze_initWithName:attributes:options:));
+	});
+}
+
+
+- (instancetype)ze_initWithName:(NSString *)name
+					 attributes:(NSDictionary *)attributes options:(NSDictionary *)options {
+	
+	//  会强制做一些对 html 标签属性的修改或判断
+	
+	return [self ze_initWithName:name attributes:attributes options:options];
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#pragma mark - custom method
 
 - (void)customElementStyle {
 	
 	// 图片
-	if ([self isKindOfClass:DTTextAttachmentHTMLElement.class]) {
-		[self reviseTextAttachmentSize];
-	}
+//	if ([self isKindOfClass:DTTextAttachmentHTMLElement.class]) {
+//		[self reviseTextAttachmentSize];
+//	}
 	
-	self.textColor = [ZEReadStyleConfig sharedInstance].textColor;
-	self.fontDescriptor.pointSize = [ZEReadStyleConfig sharedInstance].defaultFontSize;
-	self.paragraphStyle.minimumLineHeight = [ZEReadStyleConfig sharedInstance].lineSpacing;
+//	self.textColor = [ZEReadStyleConfig sharedInstance].textColor;
+//	self.fontDescriptor.pointSize = [ZEReadStyleConfig sharedInstance].defaultFontSize;
+//	self.paragraphStyle.minimumLineHeight = [ZEReadStyleConfig sharedInstance].lineSpacing;
 	self.underlineStyle = kCTUnderlineStyleNone;
-	
-	if ([self.name isEqualToString:@"p"]) {
-		if (!self.childNodes.count) {
-			
-		}
-	}
-	
-	
-	
-	
-	
+//
+
 }
 
 

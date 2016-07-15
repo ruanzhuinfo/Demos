@@ -15,6 +15,7 @@
 	[dict addEntriesFromDictionary:@{@"chapters": @"chapters",
 									 @"marks": @"marks",
 									 @"encryptions": @"encryptions",
+									 @"footNotePath": @"footNotePath",
 									 @"bookId": @"id",
 									 @"authors": @"authors",
 									 @"format": @"format",
