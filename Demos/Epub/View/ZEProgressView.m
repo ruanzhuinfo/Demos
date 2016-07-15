@@ -96,7 +96,9 @@
 		}];
 		
 		self.backButton = [[UIButton alloc] init];
-		[self.backButton setImage:[UIImage imageNamed:@"Read_Return_Invalid"] forState:UIControlStateNormal];
+		zh_updateThemeWithBlock(self, ^{
+			[self.backButton setImage:imageWithSelector(@selector(theme_Read_Return_Invalid)) forState:UIControlStateNormal];
+		}, self.backButton);
 		[self.backButton addTarget:self action:@selector(didTapBackButton) forControlEvents:UIControlEventTouchUpInside];
 		[self.backButton setEnabled:NO];
 		[self.tipView addSubview:self.backButton];
@@ -255,7 +257,6 @@
 			
 			self.activate = NO;
 			
-			
 			// 隐藏 tipView
 			
 			__weak typeof(self) weakSelf = self;
@@ -308,10 +309,16 @@
 
 - (void)setBackButtonEnable:(BOOL)enable {
 	if(enable) {
-		[self.backButton setImage:[UIImage imageNamed:@"Read_Return"] forState:UIControlStateNormal];
+		zh_updateThemeWithBlock(self, ^{
+			[self.backButton setImage:imageWithSelector(@selector(theme_Read_Return))
+							 forState:UIControlStateNormal];
+		}, self.backButton);
 		[self.backButton setEnabled:YES];
 	} else {
-		[self.backButton setImage:[UIImage imageNamed:@"Read_Return_Invalid"] forState:UIControlStateNormal];
+		zh_updateThemeWithBlock(self, ^{
+			[self.backButton setImage:imageWithSelector(@selector(theme_Read_Return_Invalid))
+							 forState:UIControlStateNormal];
+		}, self.backButton);
 		[self.backButton setEnabled:NO];
 		self.backButtonRotate = 0.f;
 	}

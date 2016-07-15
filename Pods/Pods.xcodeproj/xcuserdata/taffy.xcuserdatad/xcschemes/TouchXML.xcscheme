@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '5B16B79EF74BCA12FD5053E7'
+               BlueprintIdentifier = '2882D47A4F7A41C7EB3A901E'
                BlueprintName = 'TouchXML'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'libTouchXML.a'>

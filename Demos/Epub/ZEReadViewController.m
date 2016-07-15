@@ -115,15 +115,17 @@
 
 - (void)setupMarkButton {
 	self.markButton = [[UIButton alloc] init];
+	[self.markButton setFrame:CGRectMake(self.view.width - 46, 0, 26, 26)];
 	[self.markButton setAlpha:0.0];
-	[self.markButton setImage:[UIImage imageNamed:@"Bookmarks_Highlight"]
-					 forState:UIControlStateNormal];
+	zh_addThemeWithBlock(self, ^{
+		[self.markButton setImage:imageWithSelector(@selector(theme_Bookmarks_Highlight))
+						 forState:UIControlStateNormal];
+	});
+	
 	[self.markButton addTarget:self
 						action:@selector(didTapMarkButton)
 			  forControlEvents:UIControlEventTouchUpInside];
 	[self.view addSubview:self.markButton];
-	
-	[self.markButton setFrame:CGRectMake(self.view.width - 46, 0, 26, 26)];
 }
 
 - (void)setIsMark:(BOOL)isMark {
@@ -177,6 +179,8 @@
 	}
 }
 
-- (void)dealloc {}
+- (void)dealloc {
+	NSLog(@"ZEReadViewController dealloc!!");
+}
 
 @end

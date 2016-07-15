@@ -73,7 +73,11 @@ static CGFloat const kButtonSize = 44;
 			make.height.mas_equalTo(0.5);
 		}];
 		
-		UIButton *more = [self createButton:[UIImage imageNamed:@"Read_Bar_Catalog_Normal"] action:@selector(didTapMoreItem)];
+		UIButton *more = [[UIButton alloc] init];
+		zh_addThemeWithBlock(more, ^{
+			[more setImage:imageWithSelector(@selector(theme_Read_Bar_Catalog_Normal)) forState:UIControlStateNormal];
+		});
+		[more addTarget:self action:@selector(didTapMoreItem) forControlEvents:UIControlEventTouchUpInside];
 		objc_setAssociatedObject(self, &kMoreTag, more, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 		[bar addSubview:more];
 		[more mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -82,7 +86,11 @@ static CGFloat const kButtonSize = 44;
 			make.bottom.mas_equalTo(bar);
 		}];
 		
-		UIButton *mark = [self createButton:[UIImage imageNamed:@"Read_Bar_Bookmarks_Normal"] action:@selector(didTapChapterItem)];
+		UIButton *mark = [[UIButton alloc] init];
+		zh_addThemeWithBlock(mark, ^{
+			[mark setImage:imageWithSelector(@selector(theme_Read_Bar_Bookmarks_Normal)) forState:UIControlStateNormal];
+		});
+		[mark addTarget:self action:@selector(didTapChapterItem) forControlEvents:UIControlEventTouchUpInside];
 		objc_setAssociatedObject(self, &kMarkTag, mark, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 		[bar addSubview:mark];
 		[mark mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -91,7 +99,11 @@ static CGFloat const kButtonSize = 44;
 			make.bottom.equalTo(more);
 		}];
 		
-		UIButton *mode = [self createButton:[UIImage imageNamed:@"Night_Night"] action:@selector(didTapReadModeItem)];
+		UIButton *mode = [[UIButton alloc] init];
+		zh_addThemeWithBlock(mode, ^{
+			[mode setImage:imageWithSelector(@selector(theme_Night_Night)) forState:UIControlStateNormal];
+		});
+		[mode addTarget:self action:@selector(didTapReadModeItem) forControlEvents:UIControlEventTouchUpInside];
 		objc_setAssociatedObject(self, &kModeTag, mode, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 		[bar addSubview:mode];
 		[mode mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -100,7 +112,11 @@ static CGFloat const kButtonSize = 44;
 			make.bottom.equalTo(mark);
 		}];
 		
-		UIButton *back = [self createButton:[UIImage imageNamed:@"Back_Normal"] action:@selector(didTapBackItem)];
+		UIButton *back = [[UIButton alloc] init];
+		zh_addThemeWithBlock(back, ^{
+			[back setImage:imageWithSelector(@selector(theme_Back_Normal)) forState:UIControlStateNormal];
+		});
+		[back addTarget:self action:@selector(didTapBackItem) forControlEvents:UIControlEventTouchUpInside];
 		[bar addSubview:back];
 		[back mas_makeConstraints:^(MASConstraintMaker *make) {
 			make.left.equalTo(bar).offset(8);
@@ -160,11 +176,15 @@ static CGFloat const kButtonSize = 44;
 
 - (void)updateNavigationBarMarkButton {
 	BOOL mark = ((ZEReadViewController *)self.pageViewController.viewControllers.lastObject).isMark;
-	if (mark) {
-		[self.markButton setImage:[UIImage imageNamed:@"Read_Bar_Bookmarks_Highlight"] forState:UIControlStateNormal];
-	} else {
-		[self.markButton setImage:[UIImage imageNamed:@"Read_Bar_Bookmarks_Normal"] forState:UIControlStateNormal];
-	}
+	zh_updateThemeWithBlock(self, ^{
+		if (mark) {
+			[self.markButton setImage:imageWithSelector(@selector(theme_Read_Bar_Bookmarks_Highlight))
+							 forState:UIControlStateNormal];
+		} else {
+			[self.markButton setImage:imageWithSelector(@selector(theme_Read_Bar_Bookmarks_Normal))
+							 forState:UIControlStateNormal];
+		}
+	}, self.markButton);
 }
 
 #pragma mark - selector method
@@ -229,16 +249,5 @@ static CGFloat const kButtonSize = 44;
 	[self showViewControllerAtIndex:page - 1 animation:YES];
 	[self.progressBar setProgress:progress];
 }
-
-
-#pragma mark - private helper method
-
-- (UIButton *)createButton:(UIImage *)image action:(SEL)action {
-	UIButton *button = [[UIButton alloc] init];
-	[button setImage:image forState:UIControlStateNormal];
-	[button addTarget:self action:action forControlEvents:UIControlEventTouchUpInside];
-	return button;
-}
-
 
 @end

@@ -18,6 +18,8 @@
 #import <GPUImage/GPUImage.h>
 #import <Masonry/Masonry.h>
 #import "UIImage+Additions.h"
+#import "ZHThemeManager.h"
+#import "UIImage+Theme.h"
 
 #endif
 

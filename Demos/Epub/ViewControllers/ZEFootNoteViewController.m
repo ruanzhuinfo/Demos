@@ -176,7 +176,6 @@ static CGFloat const kTextViewPadding = 15;
 	NSURL *URL = [attributes objectForKey:DTLinkAttribute];
 	NSString *identifier = [attributes objectForKey:DTGUIDAttribute];
 	
-	
 	DTLinkButton *button = [[DTLinkButton alloc] initWithFrame:frame];
 	button.URL = URL;
 	button.minimumHitSize = CGSizeMake(25, 25); // adjusts it's bounds so that button is always large enough
@@ -192,10 +191,6 @@ static CGFloat const kTextViewPadding = 15;
 	
 	// use normal push action for opening URL
 	[button addTarget:self action:@selector(linkPushed:) forControlEvents:UIControlEventTouchUpInside];
-	
-	// demonstrate combination with long press
-	UILongPressGestureRecognizer *longPress = [[UILongPressGestureRecognizer alloc] initWithTarget:self action:@selector(linkLongPressed:)];
-	[button addGestureRecognizer:longPress];
 	
 	return button;
 }
@@ -228,14 +223,6 @@ static CGFloat const kTextViewPadding = 15;
 		[[UIApplication sharedApplication] openURL:[URL absoluteURL]];
 	}
 }
-
-- (void)linkLongPressed:(UILongPressGestureRecognizer *)gesture {
-	if (gesture.state == UIGestureRecognizerStateBegan) {
-		DTLinkButton *button = (id)[gesture view];
-		button.highlighted = NO;
-	}
-}
-
 
 
 

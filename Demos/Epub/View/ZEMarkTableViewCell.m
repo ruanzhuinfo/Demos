@@ -24,7 +24,9 @@
 	
 	if (self) {
 		self.iconImageView = [[UIImageView alloc] init];
-		[self.iconImageView setImage:[UIImage imageNamed:@"Read_Bookmarks"]];
+		zh_addThemeWithBlock(self, ^{
+			[self.iconImageView setImage:imageWithSelector(@selector(theme_Read_Bookmarks))];
+		});
 		[self.contentView addSubview:self.iconImageView];
 		[self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
 			make.left.equalTo(self.contentView).offset(10);

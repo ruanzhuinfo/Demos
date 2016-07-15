@@ -28,7 +28,9 @@
 	
 	// 注解按钮
 	if ([self isFootNoteFile:URL]) {
-		[button setImage:[UIImage imageNamed:@"Read_Note"] forState:UIControlStateNormal];
+		zh_updateThemeWithBlock(button, ^{
+			[button setImage:imageWithSelector(@selector(theme_Read_Note)) forState:UIControlStateNormal];
+		}, button);
 		[button addTarget:self action:@selector(didTapNoteButton:) forControlEvents:UIControlEventTouchUpInside];
 		return button;
 	}
