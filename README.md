@@ -9,4 +9,4 @@
   * UIKit Dynamic
   * Spotlight
   * ProgressBar
-  * Spotlight
+  * 类似于新闻分类的 Tab
