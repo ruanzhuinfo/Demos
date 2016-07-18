@@ -1,0 +1,153 @@
+背景颜色
+
+颜色名	日间值	夜间值	备注
+BG01	#ffffff	#1e1e29	通常界面
+BG02	#efeff4	#252634	卡片界面与回答页问题标题抽屉底色
+BG03	#0b0c0d	-	分享界面背景颜色
+BG04	#000000	-	夜间模式图片遮罩颜色
+
+线条颜色
+
+颜色名	日间值	夜间值	备注
+LINE01	#e7e7e7	#262728	Feed分隔线色
+LINE02	#d3d3d3	#282c3a	条目区域分割线
+LINE03	#eeeeee	#20232d	用于分隔文字描述区域
+LIEN04  #D8D8D8 #0E1119 IMAGE_FEED的条目分隔线
+顶栏颜色
+
+颜色名	日间值	夜间值	备注
+TOP01	#ffffff	#1e1e29	顶栏颜色
+文字颜色
+
+颜色名	日间值	夜间值	备注
+W01	#4c566c	#858d9d	标题文字色，覆盖一切问题标题
+W02	#646464	#77777f	卡片与条目正文摘要文字&正文页未赞时的赞数颜色
+W03	#999999	#606476	条目说明文字色，如关注了该问题
+W04	#9596ab	#707684	Feed用户名、话题名称
+W05	#444444	#808394	回答与文章页正文文字色
+W06	#9b9b9b	#4b4e5c	回答与文章页底部 创建与编辑时间文字颜色
+W07 #282828	#A7ADCD	最近浏览 (阅读历史) 页面标题色
+B01	#ffffff	#ededed	Feed条目赞同数色
+C01	#4e5257	#b9c2cf	功能条目文字 如：顶栏的发现、消息、个人
+C02	#828282	-	滑动功能文字非选中色 如：推荐、收藏、月榜、日榜
+C03	#4e5257	#d5d6e1	滑动功能文字选中色 如：推荐、收藏、月榜、日榜
+T01	#4c566c	#8e99b2	正文页用户名色
+T02	#999999	#8a8a8a	正文页一句话介绍色
+L01	#3d9bf5	#4380c3	正文页面链接颜色
+T03	#adadbc	#7b8094	底栏Icon功能描述文字色
+Q01	#808080	#808384	问题页的问题描述文字与专栏页和收藏页的描述文字
+Q02	#a1a1ad	#74747f	专栏条目信息及一些相关信息字体
+Q03	#6a7480	-	列表页 xxx人关注 xxx人评论 字体
+Q04	#88a6bf	#71819f	问题页 话题标签 字体
+G01	#636363	#a0a9bb	个人页、设置页条目文字
+I01	#ffffff	#ffffff	绿色关注按钮文字
+I02	#999999	#5b5f6d	灰色取消关注按钮文字
+I03 #57A0F2 #2666BF 蓝色关注按钮文字
+S01	#808080	-	分享页面文字颜色
+R01	#a3c7ff	#373752	当未填充内容无法发布或跳转至下一步时，发布按钮或下一步按钮的颜色
+R02	#d8d8d8	#808394	提问、回答、评论页面用户操作提示文字
+SX01	#c9fffb	#c9fffb	私信蓝色对话框链接颜色
+DL01	#9b9bb2	#626271	文字按钮颜色,非选中状态
+DL02	#878787	#858599	文字按钮颜色,选中状态
+TL01	#adb2bb	#38414c	首页时间标记等
+AUTHOR  #282828 #70809E 评论的作者
+COMMENT #464646 #8E99B2 评论正文
+HL01    #7EBAFE #282C3A 评论meta中的高亮「赞」
+IMTITLE #282828 #6E82A0
+IMSUMMARY #464646 #8c96b4
+IMMETA  #8c8c8c #3c404c ImageFeed的操作区，TODO：夜间模式
+DisableText #e7e7e7 #797980 文字 disable 颜色
+GrayButton #737373 #707684
+
+区域颜色
+
+颜色名	日间值	夜间值	备注
+BOX01	#efeff4	#252634	正文页问题标题抽屉未点选底色
+BOX02	#d0d0d8	#262835	正文页问题标题抽屉点选底色
+BLUE	#0084ff	#3a76d0	功能状态条(此为应用中唯一使用的标示当前功能状态的蓝色）
+GRAY	#ececec	#1b1b26	条目点选高亮区域底色
+VOTE	#64b3f1	#468bbb	赞同显示区域底色
+RED	#fe6270	#c94f5e	不再显示与提醒通知原点
+FH     #e8f0fe #242430 feed条目选中区域高亮底色
+FEED_TITLE_H #3a4251 #9ca5b5 标题文字色，覆盖一切问题标题高亮色
+FEED_TEXT_H #494949 #8d8d96 卡片与条目正文摘要文字&正文页未赞时的赞数颜色高亮色
+FEED_META_H	#808191	#868d9b	Feed用户名、话题名称高亮色
+S	#e7e7e7	#242431	feed搜索框底色
+GREEN_N	#29CC96	#29CC96	所有关注按钮的关注状态
+BLUE_N  #5DA8FF #245FB3 关注按钮未关注时外框色
+GREEN_H	#3fb26e	#1a995f	所有关注按钮点按高亮状态
+GRAY_N	#e1e1e1	#2b2d3a	所有已关注按钮的关注状态
+GRAY_H	#c8c8c8	#22242d	所有已关注按钮的高亮状态
+HT	#e8f0fe	#2a2a38	问题页话题标签底色
+TZ	#f0fbff	#2a2a42	未读消息条目高亮色
+Y_BLUE	#2ea2ff	#0e7bca	个人页底栏的蓝点提示和个人页条目与收藏夹卡片上的数字提示底色
+P01	#edf1f7	#181824	图片未显示前的底色
+P02	#ebf6ff	#23283c	回答建议修改提示文案区域的底色
+SH01	#aaaaaa	#aaaaaa	分享页面分页器 当前页圆点颜色
+SH02	#bababa	#747477	分享页面分页器 非当前页圆点颜色
+LJ01	#ebf6ff	#24283e	链接点按高亮底色
+ZHGray_01	#BABAD6	#626271 segmentControl底色
+IMG_HOLDER #F5F5F7 #191925 图片PlaceHolder的颜色，目前在Feed中会用到
+
+直播项目颜色
+
+颜色名	日间值	夜间值	备注
+Green_WeChat	#00C800	#00C800	微信支付按钮底色
+BG05	#FBFBFB	#41474A	顶部通知栏背景底色 - 常规通知
+L02	#0069EE	#0069EE	气泡播放中背景底色、L01/Blue 的辅助状态
+Green_Light	#53D769	#53D769	 Live - 录音按钮底色
+WaveColor	#000000	#FFFFFF	 Live - 录音波形颜色
+
+BubbleBlue	#1185FE	#1C478C	蓝色气泡底色
+BubbleWhite	#E6E6EB	#2B2D3A	白色气泡底色
+BubbleSeparate	#FFFFFF	#1E1E29	气泡中分割线
+BubbleBlueBaseline	#FFFFFF	#C2C7CC	蓝色气泡基线 & 蓝色气泡上的文字颜色
+BubbleWhiteBaseline	#FFFFFF	#494C5C	白色气泡基线
+BubbleTime	#1185FE	#262833	语音气泡时长数字颜色
+BubbleBlueHightLighted	#0361D9	#173A73	蓝色气泡进度条 & 选中色
+BubbleWhiteHightLighted	#CECED9	#242633	白色气泡进度条 & 选中色
+R03	#BFBFBF	#4A4A54	Placeholder（提示文案）的颜色
+
+ORANGE  #FFB84F  #E5A546 二级通知文字颜色
+
+FEED_BG #F0F0F0 #13161e 首页卡片式的背景，临时使用，需要设计师提供新色值
+
+Gold #FFCC33 #CFAC43
+BlueLight #54C7FC #49A5D2
+
+直播(Live chat)项目颜色
+
+GRAY_TIME #9d9fa6   #9d9fa6 声音播放组件中「时间指示器上时间」的颜色
+GRAY_BG #E6E6EB #E6E6EB 声音播放组件背景色
+LiveCardFill	#FAFAFC	#252635
+LiveCardBorder	#F2F2F2	#1E1E29
+
+BlueTextPressed #02447F #1C3A67 蓝色button点击时文本的颜色
+
+CardBg  #FFFFFF #22222E feed live 卡片背景色
+NavyBlue #003C68 #1A527C 梯度定价第三档使用色
+
+AliPay        #0090D9 #007FBF
+WePay         #00BF20 #009919
+AliPayPressed #85CEF2 #004466
+WePayPressed  #7EE68F #004D0D
+
+HintBG	#F7F7FA	#22222E
+
+GrayToolbar #9197A3 #3F4455
+
+ProfileBlueButton #5DA8FF #245FB3
+ProfileGreenButton #29CC96 #008C69
+ProfileBlueText #57A0F2 #2666BF
+
+InputBg	#FCFCFC	#1C1C26
+
+BB01 #E7E7E7 #232634
+BW01 #959595 #5F657A
+BB02 #45CB7F #008C69
+BW02 #FFFFFF #C2C7CC
+
+电子书新添加
+
+BG06	#FFFFFF	#2A2A42 电子书新添加
+BG07	#EFEFF4	#1E1E29 电子书新添加

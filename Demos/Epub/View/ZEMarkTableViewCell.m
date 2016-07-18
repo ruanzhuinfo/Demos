@@ -24,9 +24,6 @@
 	
 	if (self) {
 		self.iconImageView = [[UIImageView alloc] init];
-		zh_addThemeWithBlock(self, ^{
-			[self.iconImageView setImage:imageWithSelector(@selector(theme_Read_Bookmarks))];
-		});
 		[self.contentView addSubview:self.iconImageView];
 		[self.iconImageView mas_makeConstraints:^(MASConstraintMaker *make) {
 			make.left.equalTo(self.contentView).offset(10);
@@ -55,8 +52,11 @@
 			make.bottom.equalTo(self.contentView).offset(-15);
 		}];
 		
-		[self.contentLabel setTextColor:[UIColor lightGrayColor]];
-		[self.titleLabel setTextColor:[UIColor blackColor]];
+		zh_addThemeWithBlock(self, ^{
+			[self.contentLabel setTextColor:colorWithSelector(@selector(color_W01))];
+			[self.titleLabel setTextColor:colorWithSelector(@selector(color_R02))];
+			[self.iconImageView setImage:imageWithSelector(@selector(image_Read_Bookmarks))];
+		});
 	}
 	
 	return self;

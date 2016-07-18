@@ -39,7 +39,7 @@
 
 - (NSAttributedString *)attributedStringAtPageIndex:(NSInteger)index {
 	if (index >= self.chapter.pageCount || index < 0) {
-		NSLog(@"pageIndex 出错了！ index:%ld---count:%ld", index, self.chapter.pageCount);
+		NSLog(@"pageIndex 出错了！ index:%ld---count:%ld", (long)index, self.chapter.pageCount);
 		return nil;
 	}
 	

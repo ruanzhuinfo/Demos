@@ -43,7 +43,7 @@ static CGFloat const kTextViewPadding = 15;
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 	
-	[self.view setBackgroundColor:[UIColor whiteColor]];
+	[self.view setBackgroundColor:colorWithSelector(@selector(color_BG06))];
 	
 	[self setContentSize:CGSizeMake([UIScreen mainScreen].bounds.size.width - 20, kMaxContentHeight)];
 	
@@ -95,6 +95,7 @@ static CGFloat const kTextViewPadding = 15;
 	dt.shouldDrawLinks = NO;
 	dt.textDelegate = self;
 	dt.scrollEnabled = YES;
+	[dt setBackgroundColor:colorWithSelector(@selector(color_BG06))];
 	return dt;
 }
 

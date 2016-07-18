@@ -49,7 +49,7 @@
 	if (pageCount == 0) {
 		self.bottomInfoLabel.text = [NSString stringWithFormat:@"%@ ∙ 页码更新中...", title];
 	} else {
-		self.bottomInfoLabel.text = [NSString stringWithFormat:@"%@ ∙ %ld / %ld", title, self.currentPage + 1, pageCount];
+		self.bottomInfoLabel.text = [NSString stringWithFormat:@"%@ ∙ %ld / %ld", title, self.currentPage + 1, (long)pageCount];
 	}
 }
 
@@ -57,7 +57,9 @@
 
 - (void)containerScrollViewAppearance {
 	self.containerScrollView = [[UIScrollView alloc] init];
-	[self.containerScrollView setBackgroundColor:[UIColor grayColor]];
+	zh_addThemeWithBlock(self, ^{
+		[self.containerScrollView setBackgroundColor:colorWithSelector(@selector(color_LINE02))];
+	});
 	[self.containerScrollView setDelegate:self];
 	[self.containerScrollView setShowsVerticalScrollIndicator:NO];
 	[self.containerScrollView setShowsHorizontalScrollIndicator:NO];
@@ -86,6 +88,9 @@
 	dt.shouldDrawLinks = NO;
 	dt.textDelegate = self;
 	dt.scrollEnabled = NO;
+	zh_updateThemeWithBlock(dt, ^{
+		[dt setBackgroundColor:colorWithSelector(@selector(color_BG07))];
+	}, dt);
 	
 	return dt;
 }
@@ -93,7 +98,9 @@
 - (void)setupTopInfo {
 	UILabel *title = [[UILabel alloc] init];
 	title.text = self.chapter.title;
-	title.textColor = [UIColor lightGrayColor];
+	zh_addThemeWithBlock(title, ^{
+		title.textColor = colorWithSelector(@selector(color_W04));
+	});
 	title.font = [UIFont systemFontOfSize:13];
 	self.topInfoLabel = title;
 	[self.containerScrollView addSubview:title];
@@ -106,7 +113,9 @@
 
 - (void)setupBottomInfo {
 	self.bottomInfoLabel = [[UILabel alloc] init];
-	self.bottomInfoLabel.textColor = [UIColor lightGrayColor];
+	zh_addThemeWithBlock(self, ^{
+		self.bottomInfoLabel.textColor = colorWithSelector(@selector(color_W04));
+	});
 	self.bottomInfoLabel.font = [UIFont systemFontOfSize:13];
 	self.bottomInfoLabel.textAlignment = NSTextAlignmentRight;
 	[self.containerScrollView addSubview:self.bottomInfoLabel];
@@ -118,7 +127,7 @@
 	[self.markButton setFrame:CGRectMake(self.view.width - 46, 0, 26, 26)];
 	[self.markButton setAlpha:0.0];
 	zh_addThemeWithBlock(self, ^{
-		[self.markButton setImage:imageWithSelector(@selector(theme_Bookmarks_Highlight))
+		[self.markButton setImage:imageWithSelector(@selector(image_Bookmarks_Highlight))
 						 forState:UIControlStateNormal];
 	});
 	

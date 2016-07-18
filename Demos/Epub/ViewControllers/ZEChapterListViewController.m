@@ -36,7 +36,9 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 
-	self.view.backgroundColor = [UIColor whiteColor];
+	zh_addThemeWithBlock(self, ^{
+		[self.view setBackgroundColor:colorWithSelector(@selector(color_BG06))];
+	});
 	
 	self.currentChapterIndex = [self getCurrentPageIndex];
 	
@@ -52,10 +54,12 @@
 	
 	[self.chapterTableView registerClass:ZEChapterTableViewCell.class
 				  forCellReuseIdentifier:NSStringFromSelector(@selector(setupTableView))];
-	
 	[self setupTableViewHeaderView];
-	
 	[self.view addSubview:self.chapterTableView];
+	
+	zh_addThemeWithBlock(self, ^{
+		[self.chapterTableView setSeparatorColor:colorWithSelector(@selector(color_R02))];
+	});
 }
 
 - (void)setupTableViewHeaderView {
@@ -63,7 +67,9 @@
 	
 	UILabel *title = [[UILabel alloc] init];
 	[title setText:self.book.title];
-	
+	zh_updateThemeWithBlock(title, ^{
+		[title setTextColor:colorWithSelector(@selector(color_W01))];
+	}, title);
 	[title setFont:[UIFont boldSystemFontOfSize:19]];
 	[headerView addSubview:title];
 	[title mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -73,6 +79,9 @@
 	}];
 	
 	UILabel *author = [[UILabel alloc] init];
+	zh_updateThemeWithBlock(author, ^{
+		[author setTextColor:colorWithSelector(@selector(color_W04))];
+	}, author);
 	[author setText:[NSString stringWithFormat:@"作者：%@ 等", self.book.authors.firstObject]];
 	[author setFont:[UIFont systemFontOfSize:16]];
 	[headerView addSubview:author];
@@ -86,9 +95,6 @@
 	CGSize size = [headerView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
 	[headerView setSize:size];
 	self.chapterTableView.tableHeaderView = headerView;
-	
-	[title setTextColor:[UIColor blackColor]];
-	[author setTextColor:[UIColor grayColor]];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {

@@ -12,9 +12,6 @@
 static NSString* const themeChange = @"THEME_CHANGE";
 static NSString* const nightModeKey = @"NIGHT_MODE_KEY";
 
-static NSString* const imageNightSuffix = @"_night";
-static NSString* const colorNightSuffix = @"_NightColor";
-
 #pragma mark - 快捷方法
 
 UIStatusBarStyle ZHStausBarStyle() {
@@ -66,7 +63,7 @@ UIColor *colorWithSelector(SEL sel) {
   NSString *colorName = NSStringFromSelector(selector);
   
   if ([ZHThemeManager isNightMode]) {
-    colorName = [colorName stringByReplacingCharactersInRange:[colorName rangeOfString:@"Color"] withString:@"NightColor"];
+    colorName = [colorName stringByAppendingString:@"_Night"];
   }
   
   return [UIColor performSelector:NSSelectorFromString(colorName)];
@@ -135,7 +132,10 @@ UIColor *colorWithSelector(SEL sel) {
   // 当前线程若在主线程，就直接通过 imageWithName：方法拿资源
   if ([NSThread isMainThread]) {
     if ([ZHThemeManager isNightMode]) {
-      UIImage *image = [[ZHThemeManager shareInstance] getImageWithName:[imageName stringByAppendingString:imageNightSuffix]];
+      UIImage *image = [[ZHThemeManager shareInstance]
+						getImageWithName:[imageName
+										  stringByReplacingOccurrencesOfString:@"theme_"
+										  withString:@"theme_Night_"]];
       if (image) return image;
     }
     return [[ZHThemeManager shareInstance] getImageWithName:imageName];
@@ -144,7 +144,10 @@ UIColor *colorWithSelector(SEL sel) {
   // 程序走到这里说明当前线程是子线程，所以要通过以下方式获取图片资源
   @synchronized(self) {
     if ([ZHThemeManager isNightMode]) {
-      UIImage *image = [[ZHThemeManager shareInstance] imageFromMainThread:[imageName stringByAppendingString:imageNightSuffix]];
+      UIImage *image = [[ZHThemeManager shareInstance]
+						imageFromMainThread:[imageName
+										  stringByReplacingOccurrencesOfString:@"theme_"
+										  withString:@"theme_Night_"]];
       if (image) return image;
     }
     return [[ZHThemeManager shareInstance] imageFromMainThread:imageName];

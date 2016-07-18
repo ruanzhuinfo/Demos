@@ -20,6 +20,7 @@
 #import "UIImage+Additions.h"
 #import "ZHThemeManager.h"
 #import "UIImage+Theme.h"
+#import "UIColor+Theme.h"
 
 #endif
 

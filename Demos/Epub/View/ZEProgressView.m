@@ -52,7 +52,6 @@
 	if (!self.tipView) {
 		CGFloat tipViewHeight = 47.0;
 		self.tipView = [[UIView alloc] init];
-		[self.tipView setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.9]];
 		[self.tipView.layer setCornerRadius:tipViewHeight/2];
 		[self.tipView setHidden:YES];
 		[self.tipView setAlpha:0.0];
@@ -65,7 +64,6 @@
 		}];
 		
 		UIView *vLine = [[UIView alloc] init];
-		[vLine setBackgroundColor:[UIColor whiteColor]];
 		[self.tipView addSubview:vLine];
 		[vLine mas_makeConstraints:^(MASConstraintMaker *make) {
 			make.width.equalTo(@0.5);
@@ -74,7 +72,6 @@
 		}];
 		
 		self.titleLabel = [[UILabel alloc] init];
-		[self.titleLabel setTextColor:[UIColor whiteColor]];
 		[self.titleLabel setFont:[UIFont systemFontOfSize:14]];
 		[self.titleLabel setLineBreakMode:NSLineBreakByTruncatingTail];
 		[self.tipView addSubview:self.titleLabel];
@@ -85,7 +82,6 @@
 		}];
 		
 		self.rateLabel = [[UILabel alloc] init];
-		[self.rateLabel setTextColor:[UIColor grayColor]];
 		[self.rateLabel setFont:[UIFont systemFontOfSize:13]];
 		[self.tipView addSubview:self.rateLabel];
 		[self.rateLabel mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -96,9 +92,6 @@
 		}];
 		
 		self.backButton = [[UIButton alloc] init];
-		zh_updateThemeWithBlock(self, ^{
-			[self.backButton setImage:imageWithSelector(@selector(theme_Read_Return_Invalid)) forState:UIControlStateNormal];
-		}, self.backButton);
 		[self.backButton addTarget:self action:@selector(didTapBackButton) forControlEvents:UIControlEventTouchUpInside];
 		[self.backButton setEnabled:NO];
 		[self.tipView addSubview:self.backButton];
@@ -109,6 +102,16 @@
 			make.right.equalTo(self.tipView);
 			make.bottom.equalTo(self.tipView);
 		}];
+		
+		
+		zh_updateThemeWithBlock(self, ^{
+			[self.tipView setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.9]];
+			[self.titleLabel setTextColor:colorWithSelector(@selector(color_BG06))];
+			[self.rateLabel setTextColor:[UIColor colorWithWhite:1 alpha:0.7]];
+			[self.backButton setImage:imageWithSelector(@selector(image_Read_Return_Invalid)) forState:UIControlStateNormal];
+			
+			[vLine setBackgroundColor:colorWithSelector(@selector(color_LINE02))];
+		}, self.tipView);
 	}
 	
 	[self.progressView setProgress:progress];
@@ -153,12 +156,9 @@
 
 - (void)setupProgress {
 	
-	[self setBackgroundColor:[UIColor whiteColor]];
-	
 	UILabel *title = [[UILabel alloc] init];
 	[title setText:@"进度"];
 	[title setFont:[UIFont systemFontOfSize:14]];
-	[title setTextColor:[UIColor grayColor]];
 	[self addSubview:title];
 	[title mas_makeConstraints:^(MASConstraintMaker *make) {
 		make.centerY.equalTo(self);
@@ -168,8 +168,6 @@
 	UIProgressView *pv = [[UIProgressView alloc] init];
 	[pv.layer setCornerRadius:2.5];
 	[pv.layer setMasksToBounds:YES];
-	[pv setTintColor:[UIColor blueColor]];
-	[pv setTrackTintColor:[UIColor grayColor]];
 	[pv setProgressViewStyle:UIProgressViewStyleDefault];
 	[self addSubview:pv];
 	self.progressView = pv;
@@ -183,13 +181,10 @@
 	
 	CGFloat barSize = 15.0;
 	UIView *pvBar = [[UIView alloc] init];
-	[pvBar setBackgroundColor:[UIColor whiteColor]];
 	[pvBar.layer setCornerRadius:barSize/2];
-	
 	CALayer *l = [[CALayer alloc] init];
 	[l setFrame:CGRectMake(0.5, 0.5, barSize - 1, barSize - 1)];
 	[l setCornerRadius:(barSize - 1)/2];
-	[l setBackgroundColor:[UIColor orangeColor].CGColor];
 	[pvBar.layer addSublayer:l];
 	
 	[self addSubview:pvBar];
@@ -200,7 +195,6 @@
 	}];
 	
 	UIView *line = [[UIView alloc] init];
-	[line setBackgroundColor:[UIColor lightGrayColor]];
 	[self addSubview:line];
 	[line mas_makeConstraints:^(MASConstraintMaker *make) {
 		make.left.equalTo(self);
@@ -208,6 +202,16 @@
 		make.top.equalTo(self);
 		make.height.equalTo(@0.5);
 	}];
+	
+	zh_addThemeWithBlock(self, ^{
+		[self setBackgroundColor:colorWithSelector(@selector(color_BG06))];
+		[title setTextColor:colorWithSelector(@selector(color_W04))];
+		[pv setTintColor:colorWithSelector(@selector(color_VOTE))];
+		[pv setTrackTintColor:colorWithSelector(@selector(color_R02))];
+		[pvBar setBackgroundColor:colorWithSelector(@selector(color_BG06))];
+		[l setBackgroundColor:colorWithSelector(@selector(color_BLUE)).CGColor];
+		[line setBackgroundColor:colorWithSelector(@selector(color_R02))];
+	});
 }
 
 
@@ -310,13 +314,13 @@
 - (void)setBackButtonEnable:(BOOL)enable {
 	if(enable) {
 		zh_updateThemeWithBlock(self, ^{
-			[self.backButton setImage:imageWithSelector(@selector(theme_Read_Return))
+			[self.backButton setImage:imageWithSelector(@selector(image_Read_Return))
 							 forState:UIControlStateNormal];
 		}, self.backButton);
 		[self.backButton setEnabled:YES];
 	} else {
 		zh_updateThemeWithBlock(self, ^{
-			[self.backButton setImage:imageWithSelector(@selector(theme_Read_Return_Invalid))
+			[self.backButton setImage:imageWithSelector(@selector(image_Read_Return_Invalid))
 							 forState:UIControlStateNormal];
 		}, self.backButton);
 		[self.backButton setEnabled:NO];

@@ -33,7 +33,7 @@
 		// color
 		self.linkColor = [UIColor blueColor];
 		self.linkHighlightColor = [UIColor redColor];
-		self.textColor = [UIColor grayColor];
+		self.textColor = colorWithSelector(@selector(color_W05));
 		
 		// multipliter
 		self.textSizeMultiplier = 1.0;

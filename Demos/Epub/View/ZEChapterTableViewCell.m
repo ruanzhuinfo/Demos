@@ -48,15 +48,15 @@
 
 - (void)setupDataWithChapterModel:(ZEChapter *)chapter {
 	if (self.isCurrentPage) {
-		[self changeTextColor:[UIColor blueColor]];
+		[self changeTextColor:colorWithSelector(@selector(color_L01))];
 	} else {
 		switch(self.chapterStyle) {
 			case ZEChapterStyleNormal:
-				[self changeTextColor:[UIColor blackColor]];
+				[self changeTextColor:colorWithSelector(@selector(color_W01))];
 				break;
 				
 			case ZEchapterStyleNoPurchase:
-				[self changeTextColor:[UIColor grayColor]];
+				[self changeTextColor:colorWithSelector(@selector(color_R02))];
 				break;
 		}
 	}

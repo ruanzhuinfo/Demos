@@ -45,6 +45,7 @@
 		04892E861BB51A1A00CB0437 /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 04892E851BB51A1A00CB0437 /* UIColor+Random.m */; };
 		048985511CCDF3FC00471171 /* DDTabPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048985501CCDF3FC00471171 /* DDTabPagerViewController.m */; };
 		0499D90C1BB14A91009345FE /* DynamicAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0499D90B1BB14A91009345FE /* DynamicAnimationViewController.m */; };
+		04A1C8BE1D3B693A00C90067 /* color_to_class.py in Resources */ = {isa = PBXBuildFile; fileRef = 04A1C8BD1D3B693A00C90067 /* color_to_class.py */; };
 		04A2477D1CC9D9D6000DED42 /* DDItemScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A2477C1CC9D9D6000DED42 /* DDItemScrollView.m */; };
 		04BB11381D2CDA7A009224D8 /* DTHTMLElement+style.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB11371D2CDA7A009224D8 /* DTHTMLElement+style.m */; };
 		04BB114C1D2DFD9D009224D8 /* ZEPageViewController+Bar.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB114B1D2DFD9D009224D8 /* ZEPageViewController+Bar.m */; };
@@ -155,6 +156,9 @@
 		04E208301D38952B009AE5C4 /* ZHThemeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2082C1D38952B009AE5C4 /* ZHThemeManager.m */; };
 		04E208351D38A0FC009AE5C4 /* image_to_class.py in Resources */ = {isa = PBXBuildFile; fileRef = 04E208341D38A0FC009AE5C4 /* image_to_class.py */; };
 		04E2083B1D38A311009AE5C4 /* UIImage+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2083A1D38A311009AE5C4 /* UIImage+Theme.m */; };
+		04E2083D1D3B4EEC009AE5C4 /* theme.txt in Resources */ = {isa = PBXBuildFile; fileRef = 04E2083C1D3B4EEC009AE5C4 /* theme.txt */; };
+		04E208401D3B4F0E009AE5C4 /* UIColor+Theme.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E2083F1D3B4F0E009AE5C4 /* UIColor+Theme.m */; };
+		04E208461D3B57F3009AE5C4 /* UIColor+HEX.m in Sources */ = {isa = PBXBuildFile; fileRef = 04E208451D3B57F3009AE5C4 /* UIColor+HEX.m */; };
 		04E7881B1CCF973A004ED75B /* Feed_barShadow@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E788191CCF973A004ED75B /* Feed_barShadow@3x.png */; };
 		04E7881C1CCF973A004ED75B /* Feed_barShadow@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04E7881A1CCF973A004ED75B /* Feed_barShadow@2x.png */; };
 		04F3A5051BAFDE3200CA479A /* TestData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 04F3A5041BAFDE3200CA479A /* TestData.plist */; };
@@ -255,6 +259,7 @@
 		048985501CCDF3FC00471171 /* DDTabPagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDTabPagerViewController.m; sourceTree = "<group>"; };
 		0499D90A1BB14A91009345FE /* DynamicAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicAnimationViewController.h; sourceTree = "<group>"; };
 		0499D90B1BB14A91009345FE /* DynamicAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicAnimationViewController.m; sourceTree = "<group>"; };
+		04A1C8BD1D3B693A00C90067 /* color_to_class.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = color_to_class.py; sourceTree = "<group>"; };
 		04A2477B1CC9D9D6000DED42 /* DDItemScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDItemScrollView.h; sourceTree = "<group>"; };
 		04A2477C1CC9D9D6000DED42 /* DDItemScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDItemScrollView.m; sourceTree = "<group>"; };
 		04BB11361D2CDA7A009224D8 /* DTHTMLElement+style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DTHTMLElement+style.h"; sourceTree = "<group>"; };
@@ -396,6 +401,11 @@
 		04E208341D38A0FC009AE5C4 /* image_to_class.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = image_to_class.py; sourceTree = "<group>"; };
 		04E208391D38A311009AE5C4 /* UIImage+Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Theme.h"; sourceTree = "<group>"; };
 		04E2083A1D38A311009AE5C4 /* UIImage+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Theme.m"; sourceTree = "<group>"; };
+		04E2083C1D3B4EEC009AE5C4 /* theme.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = theme.txt; sourceTree = "<group>"; };
+		04E2083E1D3B4F0E009AE5C4 /* UIColor+Theme.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Theme.h"; sourceTree = "<group>"; };
+		04E2083F1D3B4F0E009AE5C4 /* UIColor+Theme.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Theme.m"; sourceTree = "<group>"; };
+		04E208441D3B57F3009AE5C4 /* UIColor+HEX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+HEX.h"; sourceTree = "<group>"; };
+		04E208451D3B57F3009AE5C4 /* UIColor+HEX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HEX.m"; sourceTree = "<group>"; };
 		04E788191CCF973A004ED75B /* Feed_barShadow@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Feed_barShadow@3x.png"; sourceTree = "<group>"; };
 		04E7881A1CCF973A004ED75B /* Feed_barShadow@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Feed_barShadow@2x.png"; sourceTree = "<group>"; };
 		04F3A5041BAFDE3200CA479A /* TestData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestData.plist; sourceTree = "<group>"; };
@@ -558,6 +568,7 @@
 		0442030F1D211FF4003164CC /* Reource */ = {
 			isa = PBXGroup;
 			children = (
+				04E2083C1D3B4EEC009AE5C4 /* theme.txt */,
 				04E1FB4D1D35E5870090B058 /* 知乎电子书样本_7.8.epub */,
 				04E1FB3E1D34A0240090B058 /* encrypted.epub */,
 				04E1FB3F1D34A0240090B058 /* 053-傅渥成-10.16（修改版）.epub */,
@@ -910,6 +921,8 @@
 		04E208241D38952B009AE5C4 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				04E208441D3B57F3009AE5C4 /* UIColor+HEX.h */,
+				04E208451D3B57F3009AE5C4 /* UIColor+HEX.m */,
 				04E208251D38952B009AE5C4 /* NSObject+DeallocBlock.h */,
 				04E208261D38952B009AE5C4 /* NSObject+DeallocBlock.m */,
 				04E208271D38952B009AE5C4 /* NSObject+Theme.h */,
@@ -925,6 +938,7 @@
 		04E208311D389FBB009AE5C4 /* Script */ = {
 			isa = PBXGroup;
 			children = (
+				04A1C8BD1D3B693A00C90067 /* color_to_class.py */,
 				04E208341D38A0FC009AE5C4 /* image_to_class.py */,
 			);
 			path = Script;
@@ -943,6 +957,8 @@
 			children = (
 				04E208391D38A311009AE5C4 /* UIImage+Theme.h */,
 				04E2083A1D38A311009AE5C4 /* UIImage+Theme.m */,
+				04E2083E1D3B4F0E009AE5C4 /* UIColor+Theme.h */,
+				04E2083F1D3B4F0E009AE5C4 /* UIColor+Theme.m */,
 			);
 			path = Theme;
 			sourceTree = "<group>";
@@ -1109,6 +1125,7 @@
 				04E1FB4E1D35E5870090B058 /* 知乎电子书样本_7.8.epub in Resources */,
 				04BB11AD1D2E3238009224D8 /* Night_Columnup_Highlight@2x.png in Resources */,
 				04E1FB4C1D3500700090B058 /* Read_Bookmarks@3x.png in Resources */,
+				04E2083D1D3B4EEC009AE5C4 /* theme.txt in Resources */,
 				04BB11B51D2E3238009224D8 /* Night_List_Retry@2x.png in Resources */,
 				04BB11BE1D2E3238009224D8 /* Night_Read_Bar_Bookmarks_Normal@3x.png in Resources */,
 				04BB11AC1D2E3238009224D8 /* Night_Bookmarks_Normal@3x.png in Resources */,
@@ -1172,6 +1189,7 @@
 				04BB11A11D2E3238009224D8 /* Mark@2x.png in Resources */,
 				04BB11DF1D2E32D1009224D8 /* Night_Back_Highligh@2x.png in Resources */,
 				04BB11C41D2E3238009224D8 /* Read_Bar_Bookmarks_Highlight@3x.png in Resources */,
+				04A1C8BE1D3B693A00C90067 /* color_to_class.py in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1265,6 +1283,7 @@
 				042301891D222921005231B6 /* BlockTest.m in Sources */,
 				04E1FB3A1D2F889F0090B058 /* ZEProgressView.m in Sources */,
 				0432BA501D262D550003CB4A /* ZEBookViewModel.m in Sources */,
+				04E208461D3B57F3009AE5C4 /* UIColor+HEX.m in Sources */,
 				04CA94FA1CFC6C14002AF2D8 /* ZLTextComponent.mm in Sources */,
 				04E1FB681D3736FE0090B058 /* ZEReadViewController+Draw.m in Sources */,
 				04E1FB751D3779E90090B058 /* ZECryptogramManager.m in Sources */,
@@ -1294,6 +1313,7 @@
 				04E2083B1D38A311009AE5C4 /* UIImage+Theme.m in Sources */,
 				0456120A1BAEA8DE0043EA6C /* BezierViewController.mm in Sources */,
 				0423019C1D22562C005231B6 /* RSA.m in Sources */,
+				04E208401D3B4F0E009AE5C4 /* UIColor+Theme.m in Sources */,
 				045612131BAEA8DE0043EA6C /* main.m in Sources */,
 				04BB11F81D2F69A8009224D8 /* ZEChapterTableViewCell.m in Sources */,
 				04E2082E1D38952B009AE5C4 /* NSObject+Theme.m in Sources */,

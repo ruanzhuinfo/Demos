@@ -43,10 +43,10 @@ def filter_filename(name):
 
 
 def write_to_class_interface(filename):
-    file_h.write('+ (UIImage *)theme_' + filename + ';\n')
+    file_h.write('+ (UIImage *)image_' + filename + ';\n')
 
 def write_to_class_implemention(filename):
-    file_m.write('+ (UIImage *)theme_' + filename + ' {\n' + '    return [UIImage imageNamed:@"' + filename + '"];\n}\n\n')
+    file_m.write('+ (UIImage *)image_' + filename + ' {\n' + '    return [UIImage imageNamed:@"' + filename + '"];\n}\n\n')
 
 
 def walk_dir(dir, file_h, topdown = True):

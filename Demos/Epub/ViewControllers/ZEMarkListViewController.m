@@ -31,7 +31,9 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
-	self.view.backgroundColor = [UIColor whiteColor];
+	zh_addThemeWithBlock(self, ^{
+		[self.view setBackgroundColor:colorWithSelector(@selector(color_BG06))];
+	});
 	
 	[self setupTableView];
 }
@@ -52,6 +54,10 @@
 	[self.markTableView setRowHeight:UITableViewAutomaticDimension];
 	
 	[self.view addSubview:self.markTableView];
+	
+	zh_addThemeWithBlock(self, ^{
+		[self.markTableView setSeparatorColor:colorWithSelector(@selector(color_R02))];
+	});
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
