@@ -37,7 +37,7 @@
 	[super viewDidLoad];
 
 	zh_addThemeWithBlock(self, ^{
-		[self.view setBackgroundColor:colorWithSelector(@selector(color_BG06))];
+		[self.view setBackgroundColor:zh_color(color_BG06)];
 	});
 	
 	self.currentChapterIndex = [self getCurrentPageIndex];
@@ -51,14 +51,15 @@
 	self.chapterTableView = [[UITableView alloc] initWithFrame:rect style:UITableViewStylePlain];
 	self.chapterTableView.delegate = self;
 	self.chapterTableView.dataSource = self;
-	
 	[self.chapterTableView registerClass:ZEChapterTableViewCell.class
 				  forCellReuseIdentifier:NSStringFromSelector(@selector(setupTableView))];
 	[self setupTableViewHeaderView];
+	[self.chapterTableView setTableFooterView:[UIView new]];
 	[self.view addSubview:self.chapterTableView];
 	
 	zh_addThemeWithBlock(self, ^{
-		[self.chapterTableView setSeparatorColor:colorWithSelector(@selector(color_R02))];
+		[self.chapterTableView setSeparatorColor:zh_color(color_LINE02)];
+		[self.chapterTableView setBackgroundColor:zh_color(color_BG06)];
 	});
 }
 
@@ -68,7 +69,7 @@
 	UILabel *title = [[UILabel alloc] init];
 	[title setText:self.book.title];
 	zh_updateThemeWithBlock(title, ^{
-		[title setTextColor:colorWithSelector(@selector(color_W01))];
+		[title setTextColor:zh_color(color_W01)];
 	}, title);
 	[title setFont:[UIFont boldSystemFontOfSize:19]];
 	[headerView addSubview:title];
@@ -80,7 +81,7 @@
 	
 	UILabel *author = [[UILabel alloc] init];
 	zh_updateThemeWithBlock(author, ^{
-		[author setTextColor:colorWithSelector(@selector(color_W04))];
+		[author setTextColor:zh_color(color_W04)];
 	}, author);
 	[author setText:[NSString stringWithFormat:@"作者：%@ 等", self.book.authors.firstObject]];
 	[author setFont:[UIFont systemFontOfSize:16]];

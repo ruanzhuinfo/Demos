@@ -102,10 +102,6 @@
     return [UIImage imageNamed:@"Night_More_CollectIcon_Normal"];
 }
 
-+ (UIImage *)image_Night_Night {
-    return [UIImage imageNamed:@"Night_Night"];
-}
-
 + (UIImage *)image_Night_Read_Bar_Bookmarks_Highlight {
     return [UIImage imageNamed:@"Night_Read_Bar_Bookmarks_Highlight"];
 }
@@ -120,6 +116,10 @@
 
 + (UIImage *)image_Night_Read_Bookmarks {
     return [UIImage imageNamed:@"Night_Read_Bookmarks"];
+}
+
++ (UIImage *)image_Night_Read_Mode {
+    return [UIImage imageNamed:@"Night_Read_Mode"];
 }
 
 + (UIImage *)image_Night_Read_Note {
@@ -140,6 +140,10 @@
 
 + (UIImage *)image_Read_Bookmarks {
     return [UIImage imageNamed:@"Read_Bookmarks"];
+}
+
++ (UIImage *)image_Read_Mode {
+    return [UIImage imageNamed:@"Read_Mode"];
 }
 
 + (UIImage *)image_Read_Note {

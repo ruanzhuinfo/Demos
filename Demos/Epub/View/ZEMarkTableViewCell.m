@@ -53,9 +53,11 @@
 		}];
 		
 		zh_addThemeWithBlock(self, ^{
-			[self.contentLabel setTextColor:colorWithSelector(@selector(color_W01))];
-			[self.titleLabel setTextColor:colorWithSelector(@selector(color_R02))];
-			[self.iconImageView setImage:imageWithSelector(@selector(image_Read_Bookmarks))];
+			[self.contentView setBackgroundColor:zh_color(color_BG06)];
+			[self setBackgroundColor:zh_color(color_BG06)];
+			[self.contentLabel setTextColor:zh_color(color_R02)];
+			[self.titleLabel setTextColor:zh_color(color_W01)];
+			[self.iconImageView setImage:zh_image(image_Read_Bookmarks)];
 		});
 	}
 	

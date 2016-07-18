@@ -30,7 +30,9 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
 	
-	[self.view setBackgroundColor:[UIColor whiteColor]];
+	zh_addThemeWithBlock(self, ^{
+		[self.view setBackgroundColor:zh_color(color_BG06)];
+	});
 	
 	[self setupSegmentedControl];
 	

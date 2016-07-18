@@ -32,7 +32,7 @@
 	[super viewDidLoad];
 	
 	zh_addThemeWithBlock(self, ^{
-		[self.view setBackgroundColor:colorWithSelector(@selector(color_BG06))];
+		[self.view setBackgroundColor:zh_color(color_BG06)];
 	});
 	
 	[self setupTableView];
@@ -56,7 +56,8 @@
 	[self.view addSubview:self.markTableView];
 	
 	zh_addThemeWithBlock(self, ^{
-		[self.markTableView setSeparatorColor:colorWithSelector(@selector(color_R02))];
+		[self.markTableView setSeparatorColor:zh_color(color_LINE02)];
+		[self.markTableView setBackgroundColor:zh_color(color_BG06)];
 	});
 }
 

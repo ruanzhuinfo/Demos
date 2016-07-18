@@ -46,6 +46,10 @@
 		048985511CCDF3FC00471171 /* DDTabPagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 048985501CCDF3FC00471171 /* DDTabPagerViewController.m */; };
 		0499D90C1BB14A91009345FE /* DynamicAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0499D90B1BB14A91009345FE /* DynamicAnimationViewController.m */; };
 		04A1C8BE1D3B693A00C90067 /* color_to_class.py in Resources */ = {isa = PBXBuildFile; fileRef = 04A1C8BD1D3B693A00C90067 /* color_to_class.py */; };
+		04A1C8C31D3C9C4E00C90067 /* Night_Read_Mode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A1C8BF1D3C9C4E00C90067 /* Night_Read_Mode@2x.png */; };
+		04A1C8C41D3C9C4E00C90067 /* Night_Read_Mode@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A1C8C01D3C9C4E00C90067 /* Night_Read_Mode@3x.png */; };
+		04A1C8C51D3C9C4E00C90067 /* Read_Mode@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A1C8C11D3C9C4E00C90067 /* Read_Mode@2x.png */; };
+		04A1C8C61D3C9C4E00C90067 /* Read_Mode@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04A1C8C21D3C9C4E00C90067 /* Read_Mode@3x.png */; };
 		04A2477D1CC9D9D6000DED42 /* DDItemScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 04A2477C1CC9D9D6000DED42 /* DDItemScrollView.m */; };
 		04BB11381D2CDA7A009224D8 /* DTHTMLElement+style.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB11371D2CDA7A009224D8 /* DTHTMLElement+style.m */; };
 		04BB114C1D2DFD9D009224D8 /* ZEPageViewController+Bar.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB114B1D2DFD9D009224D8 /* ZEPageViewController+Bar.m */; };
@@ -118,8 +122,6 @@
 		04BB11E11D2E32D1009224D8 /* Night_Back_Normal@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04BB11D81D2E32D1009224D8 /* Night_Back_Normal@2x.png */; };
 		04BB11E21D2E32D1009224D8 /* Night_Back_Normal@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04BB11D91D2E32D1009224D8 /* Night_Back_Normal@3x.png */; };
 		04BB11E31D2E32D1009224D8 /* Night_BackArrow_iOS7@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04BB11DA1D2E32D1009224D8 /* Night_BackArrow_iOS7@2x.png */; };
-		04BB11E61D2E335A009224D8 /* Night_Night@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04BB11E41D2E335A009224D8 /* Night_Night@2x.png */; };
-		04BB11E71D2E335A009224D8 /* Night_Night@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 04BB11E51D2E335A009224D8 /* Night_Night@3x.png */; };
 		04BB11EB1D2E41DF009224D8 /* ZESwitchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB11EA1D2E41DF009224D8 /* ZESwitchViewController.m */; };
 		04BB11EE1D2E45FA009224D8 /* ZENavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB11ED1D2E45FA009224D8 /* ZENavigationController.m */; };
 		04BB11F11D2F4C47009224D8 /* ZEChapterListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04BB11F01D2F4C47009224D8 /* ZEChapterListViewController.m */; };
@@ -260,6 +262,10 @@
 		0499D90A1BB14A91009345FE /* DynamicAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DynamicAnimationViewController.h; sourceTree = "<group>"; };
 		0499D90B1BB14A91009345FE /* DynamicAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DynamicAnimationViewController.m; sourceTree = "<group>"; };
 		04A1C8BD1D3B693A00C90067 /* color_to_class.py */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.python; path = color_to_class.py; sourceTree = "<group>"; };
+		04A1C8BF1D3C9C4E00C90067 /* Night_Read_Mode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Night_Read_Mode@2x.png"; sourceTree = "<group>"; };
+		04A1C8C01D3C9C4E00C90067 /* Night_Read_Mode@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Night_Read_Mode@3x.png"; sourceTree = "<group>"; };
+		04A1C8C11D3C9C4E00C90067 /* Read_Mode@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Read_Mode@2x.png"; sourceTree = "<group>"; };
+		04A1C8C21D3C9C4E00C90067 /* Read_Mode@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Read_Mode@3x.png"; sourceTree = "<group>"; };
 		04A2477B1CC9D9D6000DED42 /* DDItemScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDItemScrollView.h; sourceTree = "<group>"; };
 		04A2477C1CC9D9D6000DED42 /* DDItemScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDItemScrollView.m; sourceTree = "<group>"; };
 		04BB11361D2CDA7A009224D8 /* DTHTMLElement+style.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DTHTMLElement+style.h"; sourceTree = "<group>"; };
@@ -335,8 +341,6 @@
 		04BB11D81D2E32D1009224D8 /* Night_Back_Normal@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Night_Back_Normal@2x.png"; sourceTree = "<group>"; };
 		04BB11D91D2E32D1009224D8 /* Night_Back_Normal@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Night_Back_Normal@3x.png"; sourceTree = "<group>"; };
 		04BB11DA1D2E32D1009224D8 /* Night_BackArrow_iOS7@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Night_BackArrow_iOS7@2x.png"; sourceTree = "<group>"; };
-		04BB11E41D2E335A009224D8 /* Night_Night@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Night_Night@2x.png"; sourceTree = "<group>"; };
-		04BB11E51D2E335A009224D8 /* Night_Night@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Night_Night@3x.png"; sourceTree = "<group>"; };
 		04BB11E91D2E41DF009224D8 /* ZESwitchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZESwitchViewController.h; sourceTree = "<group>"; };
 		04BB11EA1D2E41DF009224D8 /* ZESwitchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZESwitchViewController.m; sourceTree = "<group>"; };
 		04BB11EC1D2E45FA009224D8 /* ZENavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZENavigationController.h; sourceTree = "<group>"; };
@@ -759,7 +763,19 @@
 		04BB11391D2DF86E009224D8 /* Images */ = {
 			isa = PBXGroup;
 			children = (
-				04BB11D11D2E32BF009224D8 /* in zhihu app */,
+				04BB11D21D2E32D1009224D8 /* Back_Highligh@2x.png */,
+				04BB11D31D2E32D1009224D8 /* Back_Highligh@3x.png */,
+				04BB11D41D2E32D1009224D8 /* Back_Normal@2x.png */,
+				04BB11D51D2E32D1009224D8 /* Back_Normal@3x.png */,
+				04BB11D61D2E32D1009224D8 /* Night_Back_Highligh@2x.png */,
+				04BB11D71D2E32D1009224D8 /* Night_Back_Highligh@3x.png */,
+				04BB11D81D2E32D1009224D8 /* Night_Back_Normal@2x.png */,
+				04BB11D91D2E32D1009224D8 /* Night_Back_Normal@3x.png */,
+				04BB11DA1D2E32D1009224D8 /* Night_BackArrow_iOS7@2x.png */,
+				04A1C8BF1D3C9C4E00C90067 /* Night_Read_Mode@2x.png */,
+				04A1C8C01D3C9C4E00C90067 /* Night_Read_Mode@3x.png */,
+				04A1C8C11D3C9C4E00C90067 /* Read_Mode@2x.png */,
+				04A1C8C21D3C9C4E00C90067 /* Read_Mode@3x.png */,
 				04E1FB451D3500700090B058 /* Night_Read_Bookmarks@2x.png */,
 				04E1FB461D3500700090B058 /* Night_Read_Bookmarks@3x.png */,
 				04E1FB471D3500700090B058 /* Read_Bookmarks@2x.png */,
@@ -826,24 +842,6 @@
 				04BB11921D2E3238009224D8 /* Read_Return@3x.png */,
 			);
 			path = Images;
-			sourceTree = "<group>";
-		};
-		04BB11D11D2E32BF009224D8 /* in zhihu app */ = {
-			isa = PBXGroup;
-			children = (
-				04BB11E41D2E335A009224D8 /* Night_Night@2x.png */,
-				04BB11E51D2E335A009224D8 /* Night_Night@3x.png */,
-				04BB11D21D2E32D1009224D8 /* Back_Highligh@2x.png */,
-				04BB11D31D2E32D1009224D8 /* Back_Highligh@3x.png */,
-				04BB11D41D2E32D1009224D8 /* Back_Normal@2x.png */,
-				04BB11D51D2E32D1009224D8 /* Back_Normal@3x.png */,
-				04BB11D61D2E32D1009224D8 /* Night_Back_Highligh@2x.png */,
-				04BB11D71D2E32D1009224D8 /* Night_Back_Highligh@3x.png */,
-				04BB11D81D2E32D1009224D8 /* Night_Back_Normal@2x.png */,
-				04BB11D91D2E32D1009224D8 /* Night_Back_Normal@3x.png */,
-				04BB11DA1D2E32D1009224D8 /* Night_BackArrow_iOS7@2x.png */,
-			);
-			name = "in zhihu app";
 			sourceTree = "<group>";
 		};
 		04BB11E81D2E3976009224D8 /* ViewControllers */ = {
@@ -1123,6 +1121,7 @@
 				04BB11CB1D2E3238009224D8 /* Read_Return_Back@2x.png in Resources */,
 				04F3A5051BAFDE3200CA479A /* TestData.plist in Resources */,
 				04E1FB4E1D35E5870090B058 /* 知乎电子书样本_7.8.epub in Resources */,
+				04A1C8C31D3C9C4E00C90067 /* Night_Read_Mode@2x.png in Resources */,
 				04BB11AD1D2E3238009224D8 /* Night_Columnup_Highlight@2x.png in Resources */,
 				04E1FB4C1D3500700090B058 /* Read_Bookmarks@3x.png in Resources */,
 				04E2083D1D3B4EEC009AE5C4 /* theme.txt in Resources */,
@@ -1143,6 +1142,7 @@
 				04BB119E1D2E3238009224D8 /* List_Download@3x.png in Resources */,
 				04BB11DC1D2E32D1009224D8 /* Back_Highligh@3x.png in Resources */,
 				04BB119F1D2E3238009224D8 /* List_Retry@2x.png in Resources */,
+				04A1C8C61D3C9C4E00C90067 /* Read_Mode@3x.png in Resources */,
 				04E208351D38A0FC009AE5C4 /* image_to_class.py in Resources */,
 				04BB11AF1D2E3238009224D8 /* Night_Columnup_Normal@2x.png in Resources */,
 				04BB11951D2E3238009224D8 /* Bookmarks_Normal@2x.png in Resources */,
@@ -1164,12 +1164,12 @@
 				04BB11B71D2E3238009224D8 /* Night_More_Book_Normal@2x.png in Resources */,
 				04E1FB4A1D3500700090B058 /* Night_Read_Bookmarks@3x.png in Resources */,
 				04BB11BD1D2E3238009224D8 /* Night_Read_Bar_Bookmarks_Normal@2x.png in Resources */,
+				04A1C8C41D3C9C4E00C90067 /* Night_Read_Mode@3x.png in Resources */,
 				04BB11C81D2E3238009224D8 /* Read_Bar_Catalog_Normal@3x.png in Resources */,
 				04BB11A91D2E3238009224D8 /* Night_Bookmarks_Highlight@2x.png in Resources */,
 				04BB11CF1D2E3238009224D8 /* Read_Return@2x.png in Resources */,
 				04BB11A31D2E3238009224D8 /* More_Book_Normal@2x.png in Resources */,
 				04BB11E31D2E32D1009224D8 /* Night_BackArrow_iOS7@2x.png in Resources */,
-				04BB11E71D2E335A009224D8 /* Night_Night@3x.png in Resources */,
 				04BB11DB1D2E32D1009224D8 /* Back_Highligh@2x.png in Resources */,
 				04BB11B11D2E3238009224D8 /* Night_Comment_normal@2x.png in Resources */,
 				04BB11A01D2E3238009224D8 /* List_Retry@3x.png in Resources */,
@@ -1178,11 +1178,11 @@
 				04BB11CA1D2E3238009224D8 /* Read_Note@3x.png in Resources */,
 				045612111BAEA8DE0043EA6C /* DemoListData.plist in Resources */,
 				04BB11B81D2E3238009224D8 /* Night_More_Book_Normal@3x.png in Resources */,
+				04A1C8C51D3C9C4E00C90067 /* Read_Mode@2x.png in Resources */,
 				04BB11B21D2E3238009224D8 /* Night_Comment_normal@3x.png in Resources */,
 				04BB11C61D2E3238009224D8 /* Read_Bar_Bookmarks_Normal@3x.png in Resources */,
 				04BB11DD1D2E32D1009224D8 /* Back_Normal@2x.png in Resources */,
 				04BB11C71D2E3238009224D8 /* Read_Bar_Catalog_Normal@2x.png in Resources */,
-				04BB11E61D2E335A009224D8 /* Night_Night@2x.png in Resources */,
 				04BB11BF1D2E3238009224D8 /* Night_Read_Bar_Catalog_Normal@2x.png in Resources */,
 				04BB11B01D2E3238009224D8 /* Night_Columnup_Normal@3x.png in Resources */,
 				04BB11BB1D2E3238009224D8 /* Night_Read_Bar_Bookmarks_Highlight@2x.png in Resources */,

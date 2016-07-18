@@ -52,7 +52,7 @@ static NSTimeInterval const kThemeChangingAnimationDuration = 0.3;
 	codePickerBlock();
 	
 	const void *ptr = (__bridge const void *)(view);
-	[self.codePickersDictionary setObject:[codePickerBlock copy] forKey:[NSNumber numberWithLongLong:ptr]];
+	[self.codePickersDictionary setObject:[codePickerBlock copy] forKey:[NSNumber numberWithLongLong:(long)ptr]];
 }
 
 

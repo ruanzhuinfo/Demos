@@ -55,7 +55,7 @@ static CGFloat const kButtonSize = 44;
 		UIView *bar = [[UIView alloc] init];
 		objc_setAssociatedObject(self, &kNavigationBar, bar, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 		zh_addThemeWithBlock(bar, ^{
-			[bar setBackgroundColor:colorWithSelector(@selector(color_TOP01))];
+			[bar setBackgroundColor:zh_color(color_TOP01)];
 		});
 		[self.view addSubview:bar];
 		[bar mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -67,7 +67,7 @@ static CGFloat const kButtonSize = 44;
 		
 		UIView *line = [[UIView alloc] init];
 		zh_addThemeWithBlock(line, ^{
-			[line setBackgroundColor:colorWithSelector(@selector(color_R02))];
+			[line setBackgroundColor:zh_color(color_R02)];
 		});
 		[bar addSubview:line];
 		[line mas_makeConstraints:^(MASConstraintMaker *make) {
@@ -79,7 +79,7 @@ static CGFloat const kButtonSize = 44;
 		
 		UIButton *more = [[UIButton alloc] init];
 		zh_addThemeWithBlock(more, ^{
-			[more setImage:imageWithSelector(@selector(image_Read_Bar_Catalog_Normal))
+			[more setImage:zh_image(image_Read_Bar_Catalog_Normal)
 				  forState:UIControlStateNormal];
 		});
 		[more addTarget:self action:@selector(didTapMoreItem) forControlEvents:UIControlEventTouchUpInside];
@@ -93,7 +93,7 @@ static CGFloat const kButtonSize = 44;
 		
 		UIButton *mark = [[UIButton alloc] init];
 		zh_addThemeWithBlock(mark, ^{
-			[mark setImage:imageWithSelector(@selector(image_Read_Bar_Bookmarks_Normal))
+			[mark setImage:zh_image(image_Read_Bar_Bookmarks_Normal)
 				  forState:UIControlStateNormal];
 		});
 		[mark addTarget:self action:@selector(didTapChapterItem) forControlEvents:UIControlEventTouchUpInside];
@@ -107,8 +107,11 @@ static CGFloat const kButtonSize = 44;
 		
 		UIButton *mode = [[UIButton alloc] init];
 		zh_addThemeWithBlock(mode, ^{
-			[mode setImage:imageWithSelector(@selector(image_Night_Night))
-				  forState:UIControlStateNormal];
+			if ([ZHThemeManager isNightMode]) {
+				[mode setImage:zh_image(image_Night_Read_Mode) forState:UIControlStateNormal];
+			} else {
+				[mode setImage:zh_image(image_Read_Mode) forState:UIControlStateNormal];
+			}
 		});
 		[mode addTarget:self action:@selector(didTapReadModeItem) forControlEvents:UIControlEventTouchUpInside];
 		objc_setAssociatedObject(self, &kModeTag, mode, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
@@ -121,7 +124,7 @@ static CGFloat const kButtonSize = 44;
 		
 		UIButton *back = [[UIButton alloc] init];
 		zh_addThemeWithBlock(back, ^{
-			[back setImage:imageWithSelector(@selector(image_Back_Normal))
+			[back setImage:zh_image(image_Back_Normal)
 				  forState:UIControlStateNormal];
 		});
 		[back addTarget:self action:@selector(didTapBackItem) forControlEvents:UIControlEventTouchUpInside];
@@ -186,10 +189,10 @@ static CGFloat const kButtonSize = 44;
 	BOOL mark = ((ZEReadViewController *)self.pageViewController.viewControllers.lastObject).isMark;
 	zh_updateThemeWithBlock(self, ^{
 		if (mark) {
-			[self.markButton setImage:imageWithSelector(@selector(image_Read_Bar_Bookmarks_Highlight))
+			[self.markButton setImage:zh_image(image_Read_Bar_Bookmarks_Highlight)
 							 forState:UIControlStateNormal];
 		} else {
-			[self.markButton setImage:imageWithSelector(@selector(image_Read_Bar_Bookmarks_Normal))
+			[self.markButton setImage:zh_image(image_Read_Bar_Bookmarks_Normal)
 							 forState:UIControlStateNormal];
 		}
 	}, self.markButton);
@@ -220,6 +223,15 @@ static CGFloat const kButtonSize = 44;
 
 - (void)didTapReadModeItem {
 	
+	[ZHThemeManager setNightMode:![ZHThemeManager isNightMode]];
+	
+	zh_updateThemeWithBlock(self, ^{
+		if ([ZHThemeManager isNightMode]) {
+			[self.modeButton setImage:zh_image(image_Night_Read_Mode) forState:UIControlStateNormal];
+		} else {
+			[self.modeButton setImage:zh_image(image_Read_Mode) forState:UIControlStateNormal];
+		}
+	}, self.modeButton);
 }
 
 - (void)didTapBackItem {
@@ -236,7 +248,7 @@ static CGFloat const kButtonSize = 44;
 	[self.book chapterAtPageIndex:pageIndex - 1 completion:^id(ZEChapter *chapter, NSInteger index) {
 		
 		[wSelf.progressBar updateText:chapter.title
-						   rateString:[NSString stringWithFormat:@"%ld 页 ∙ %i%@", pageIndex, (int)(progress * 100), @"%"]];
+						   rateString:[NSString stringWithFormat:@"%ld 页 ∙ %i%@", (long)pageIndex, (int)(progress * 100), @"%"]];
 		return nil;
 	}];
 	

@@ -106,11 +106,11 @@
 		
 		zh_updateThemeWithBlock(self, ^{
 			[self.tipView setBackgroundColor:[UIColor colorWithWhite:0 alpha:0.9]];
-			[self.titleLabel setTextColor:colorWithSelector(@selector(color_BG06))];
+			[self.titleLabel setTextColor:zh_color(color_BG06)];
 			[self.rateLabel setTextColor:[UIColor colorWithWhite:1 alpha:0.7]];
-			[self.backButton setImage:imageWithSelector(@selector(image_Read_Return_Invalid)) forState:UIControlStateNormal];
+			[self.backButton setImage:zh_image(image_Read_Return_Invalid) forState:UIControlStateNormal];
 			
-			[vLine setBackgroundColor:colorWithSelector(@selector(color_LINE02))];
+			[vLine setBackgroundColor:zh_color(color_LINE02)];
 		}, self.tipView);
 	}
 	
@@ -204,13 +204,13 @@
 	}];
 	
 	zh_addThemeWithBlock(self, ^{
-		[self setBackgroundColor:colorWithSelector(@selector(color_BG06))];
-		[title setTextColor:colorWithSelector(@selector(color_W04))];
-		[pv setTintColor:colorWithSelector(@selector(color_VOTE))];
-		[pv setTrackTintColor:colorWithSelector(@selector(color_R02))];
-		[pvBar setBackgroundColor:colorWithSelector(@selector(color_BG06))];
-		[l setBackgroundColor:colorWithSelector(@selector(color_BLUE)).CGColor];
-		[line setBackgroundColor:colorWithSelector(@selector(color_R02))];
+		[self setBackgroundColor:zh_color(color_BG06)];
+		[title setTextColor:zh_color(color_W04)];
+		[pv setTintColor:zh_color(color_VOTE)];
+		[pv setTrackTintColor:zh_color(color_R02)];
+		[pvBar setBackgroundColor:zh_color(color_BG06)];
+		[l setBackgroundColor:zh_color(color_BLUE).CGColor];
+		[line setBackgroundColor:zh_color(color_R02)];
 	});
 }
 
@@ -314,13 +314,13 @@
 - (void)setBackButtonEnable:(BOOL)enable {
 	if(enable) {
 		zh_updateThemeWithBlock(self, ^{
-			[self.backButton setImage:imageWithSelector(@selector(image_Read_Return))
+			[self.backButton setImage:zh_image(image_Read_Return)
 							 forState:UIControlStateNormal];
 		}, self.backButton);
 		[self.backButton setEnabled:YES];
 	} else {
 		zh_updateThemeWithBlock(self, ^{
-			[self.backButton setImage:imageWithSelector(@selector(image_Read_Return_Invalid))
+			[self.backButton setImage:zh_image(image_Read_Return_Invalid)
 							 forState:UIControlStateNormal];
 		}, self.backButton);
 		[self.backButton setEnabled:NO];

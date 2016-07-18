@@ -23,6 +23,11 @@
 	
 	if (self) {
 		
+		zh_addThemeWithBlock(self, ^{
+			[self setBackgroundColor:zh_color(color_BG06)];
+			[self.contentView setBackgroundColor:zh_color(color_BG06)];
+		});
+		
 		self.chapterLabel = [[UILabel alloc] init];
 		[self.chapterLabel setFont:[UIFont systemFontOfSize:15]];
 		[self.contentView addSubview:self.chapterLabel];
@@ -48,21 +53,21 @@
 
 - (void)setupDataWithChapterModel:(ZEChapter *)chapter {
 	if (self.isCurrentPage) {
-		[self changeTextColor:colorWithSelector(@selector(color_L01))];
+		[self changeTextColor:zh_color(color_L01)];
 	} else {
 		switch(self.chapterStyle) {
 			case ZEChapterStyleNormal:
-				[self changeTextColor:colorWithSelector(@selector(color_W01))];
+				[self changeTextColor:zh_color(color_W01)];
 				break;
 				
 			case ZEchapterStyleNoPurchase:
-				[self changeTextColor:colorWithSelector(@selector(color_R02))];
+				[self changeTextColor:zh_color(color_R02)];
 				break;
 		}
 	}
 	
 	self.chapterLabel.text = chapter.title;
-	self.pageIndexLabel.text = [NSString stringWithFormat:@"%ld", chapter.pageIndex + 1];
+	self.pageIndexLabel.text = [NSString stringWithFormat:@"%ld", (long)chapter.pageIndex + 1];
 }
 
 

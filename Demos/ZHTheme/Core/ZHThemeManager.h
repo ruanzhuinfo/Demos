@@ -9,6 +9,9 @@
 
 #import "NSObject+Theme.h"
 
+#define zh_image(image) [ZHThemeManager imageWithSelector:@selector(image)]
+#define zh_color(color) [ZHThemeManager colorWithSelector:@selector(color)]
+
 UIImage *imageWithSelector(SEL sel);
 UIColor *colorWithSelector(SEL sel);
 

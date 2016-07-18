@@ -9,21 +9,20 @@
 #import "ZHThemeManager.h"
 #import <objc/runtime.h>
 
-static NSString* const themeChange = @"THEME_CHANGE";
 static NSString* const nightModeKey = @"NIGHT_MODE_KEY";
 
 #pragma mark - 快捷方法
 
 UIStatusBarStyle ZHStausBarStyle() {
-  return [ZHThemeManager stausBarStyle];
+	return [ZHThemeManager stausBarStyle];
 }
 
 UIKeyboardAppearance ZHKeyboardAppearance() {
-  return [ZHThemeManager keyboardAppearance];
+	return [ZHThemeManager keyboardAppearance];
 }
 
 UIActivityIndicatorViewStyle ZHActivityIndicatorViewStyle() {
-  return [ZHThemeManager activityIndicatorViewStyle];
+	return [ZHThemeManager activityIndicatorViewStyle];
 }
 
 UIImage *imageWithSelector(SEL sel) {
@@ -60,51 +59,49 @@ UIColor *colorWithSelector(SEL sel) {
 #pragma mark - public method
 
 + (UIColor *)colorWithSelector:(SEL)selector {
-  NSString *colorName = NSStringFromSelector(selector);
-  
-  if ([ZHThemeManager isNightMode]) {
-    colorName = [colorName stringByAppendingString:@"_Night"];
-  }
-  
-  return [UIColor performSelector:NSSelectorFromString(colorName)];
+	NSString *colorName = NSStringFromSelector(selector);
+	
+	if ([ZHThemeManager isNightMode]) {
+		colorName = [colorName stringByAppendingString:@"_Night"];
+	}
+	
+	return [UIColor performSelector:NSSelectorFromString(colorName)];
 }
 
 + (UIImage *)imageWithSelector:(SEL)selector {
-  return [ZHThemeManager imageNamed:NSStringFromSelector(selector)];
+	return [ZHThemeManager imageNamed:NSStringFromSelector(selector)];
 }
 
 + (UIStatusBarStyle) stausBarStyle {
-  if ([ZHThemeManager isNightMode]) {
-    return UIStatusBarStyleLightContent;
-  }
-  return UIStatusBarStyleDefault;
+	if ([ZHThemeManager isNightMode]) {
+		return UIStatusBarStyleLightContent;
+	}
+	return UIStatusBarStyleDefault;
 }
 
 + (UIKeyboardAppearance) keyboardAppearance {
-  if ([ZHThemeManager isNightMode]) {
-    return UIKeyboardAppearanceDark;
-  } else {
-    return UIKeyboardAppearanceLight;
-  }
+	if ([ZHThemeManager isNightMode]) {
+		return UIKeyboardAppearanceDark;
+	} else {
+		return UIKeyboardAppearanceLight;
+	}
 }
 
 + (UIActivityIndicatorViewStyle) activityIndicatorViewStyle {
-  if ([ZHThemeManager isNightMode]) {
-    return UIActivityIndicatorViewStyleGray;
-  } else {
-    return UIActivityIndicatorViewStyleWhite;
-  }
+	if ([ZHThemeManager isNightMode]) {
+		return UIActivityIndicatorViewStyleGray;
+	} else {
+		return UIActivityIndicatorViewStyleWhite;
+	}
 }
 
 + (void)setNightMode:(BOOL)night {
-	
-	[self.class setNightMode:YES];
-  [[NSUserDefaults standardUserDefaults] setBool:night forKey:nightModeKey];
-  [[NSNotificationCenter defaultCenter] postNotificationName:themeChange object:nil userInfo:nil];
+	[[NSUserDefaults standardUserDefaults] setBool:night forKey:nightModeKey];
+	[[NSNotificationCenter defaultCenter] postNotificationName:kNSObjectUpdateThemeNotification object:nil];
 }
 
 + (BOOL)isNightMode {
-  return [[NSUserDefaults standardUserDefaults] boolForKey:nightModeKey];
+	return [[NSUserDefaults standardUserDefaults] boolForKey:nightModeKey];
 }
 
 + (void) setupNightShadeInView: (UIView *)inView {
@@ -128,30 +125,30 @@ UIColor *colorWithSelector(SEL sel) {
 #pragma mark - private methond
 
 + (UIImage *)imageNamed:(NSString *)imageName {
-  
-  // 当前线程若在主线程，就直接通过 imageWithName：方法拿资源
-  if ([NSThread isMainThread]) {
-    if ([ZHThemeManager isNightMode]) {
-      UIImage *image = [[ZHThemeManager shareInstance]
-						getImageWithName:[imageName
+	
+	// 当前线程若在主线程，就直接通过 imageWithName：方法拿资源
+	if ([NSThread isMainThread]) {
+		if ([ZHThemeManager isNightMode]) {
+			UIImage *image = [[ZHThemeManager shareInstance]
+							  getImageWithName:[imageName
 										  stringByReplacingOccurrencesOfString:@"theme_"
 										  withString:@"theme_Night_"]];
-      if (image) return image;
-    }
-    return [[ZHThemeManager shareInstance] getImageWithName:imageName];
-  }
-  
-  // 程序走到这里说明当前线程是子线程，所以要通过以下方式获取图片资源
-  @synchronized(self) {
-    if ([ZHThemeManager isNightMode]) {
-      UIImage *image = [[ZHThemeManager shareInstance]
-						imageFromMainThread:[imageName
-										  stringByReplacingOccurrencesOfString:@"theme_"
-										  withString:@"theme_Night_"]];
-      if (image) return image;
-    }
-    return [[ZHThemeManager shareInstance] imageFromMainThread:imageName];
-  }
+			if (image) return image;
+		}
+		return [[ZHThemeManager shareInstance] getImageWithName:imageName];
+	}
+	
+	// 程序走到这里说明当前线程是子线程，所以要通过以下方式获取图片资源
+	@synchronized(self) {
+		if ([ZHThemeManager isNightMode]) {
+			UIImage *image = [[ZHThemeManager shareInstance]
+							  imageFromMainThread:[imageName
+												   stringByReplacingOccurrencesOfString:@"theme_"
+												   withString:@"theme_Night_"]];
+			if (image) return image;
+		}
+		return [[ZHThemeManager shareInstance] imageFromMainThread:imageName];
+	}
 }
 
 
@@ -164,8 +161,8 @@ UIColor *colorWithSelector(SEL sel) {
 }
 
 - (UIImage *) imageFromMainThread: (NSString *)name {
-  [self performSelectorOnMainThread:@selector(setImageWithName:) withObject:name waitUntilDone:YES];
-  return self.tempImage;
+	[self performSelectorOnMainThread:@selector(setImageWithName:) withObject:name waitUntilDone:YES];
+	return self.tempImage;
 }
 
 /**
@@ -174,7 +171,7 @@ UIColor *colorWithSelector(SEL sel) {
  *  @param name 图片名称
  */
 - (void) setImageWithName: (NSString *)name {
-  self.tempImage = [self getImageWithName:name];
+	self.tempImage = [self getImageWithName:name];
 }
 
 

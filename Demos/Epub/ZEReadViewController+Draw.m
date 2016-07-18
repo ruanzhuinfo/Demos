@@ -29,7 +29,7 @@
 	// 注解按钮
 	if ([self isFootNoteFile:URL]) {
 		zh_updateThemeWithBlock(button, ^{
-			[button setImage:imageWithSelector(@selector(image_Read_Note)) forState:UIControlStateNormal];
+			[button setImage:zh_image(image_Read_Note) forState:UIControlStateNormal];
 		}, button);
 		[button addTarget:self action:@selector(didTapNoteButton:) forControlEvents:UIControlEventTouchUpInside];
 		return button;
@@ -81,7 +81,7 @@
 	vc.popoverPresentationController.sourceRect = button.bounds;
 	vc.popoverPresentationController.permittedArrowDirections = UIPopoverArrowDirectionUp | UIPopoverArrowDirectionDown;
 	zh_addThemeWithBlock(vc, ^{
-		[vc.popoverPresentationController setBackgroundColor:colorWithSelector(@selector(color_BG06))];
+		[vc.popoverPresentationController setBackgroundColor:zh_color(color_BG06)];
 	});
 	vc.popoverPresentationController.delegate = self;
 	[self presentViewController:vc animated:YES completion:nil];

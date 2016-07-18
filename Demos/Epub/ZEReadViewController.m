@@ -49,7 +49,7 @@
 	if (pageCount == 0) {
 		self.bottomInfoLabel.text = [NSString stringWithFormat:@"%@ ∙ 页码更新中...", title];
 	} else {
-		self.bottomInfoLabel.text = [NSString stringWithFormat:@"%@ ∙ %ld / %ld", title, self.currentPage + 1, (long)pageCount];
+		self.bottomInfoLabel.text = [NSString stringWithFormat:@"%@ ∙ %ld / %ld", title, (long)self.currentPage + 1, (long)pageCount];
 	}
 }
 
@@ -58,7 +58,7 @@
 - (void)containerScrollViewAppearance {
 	self.containerScrollView = [[UIScrollView alloc] init];
 	zh_addThemeWithBlock(self, ^{
-		[self.containerScrollView setBackgroundColor:colorWithSelector(@selector(color_LINE02))];
+		[self.containerScrollView setBackgroundColor:zh_color(color_LINE02)];
 	});
 	[self.containerScrollView setDelegate:self];
 	[self.containerScrollView setShowsVerticalScrollIndicator:NO];
@@ -89,7 +89,7 @@
 	dt.textDelegate = self;
 	dt.scrollEnabled = NO;
 	zh_updateThemeWithBlock(dt, ^{
-		[dt setBackgroundColor:colorWithSelector(@selector(color_BG07))];
+		[dt setBackgroundColor:zh_color(color_BG07)];
 	}, dt);
 	
 	return dt;
@@ -99,7 +99,7 @@
 	UILabel *title = [[UILabel alloc] init];
 	title.text = self.chapter.title;
 	zh_addThemeWithBlock(title, ^{
-		title.textColor = colorWithSelector(@selector(color_W04));
+		title.textColor = zh_color(color_W04);
 	});
 	title.font = [UIFont systemFontOfSize:13];
 	self.topInfoLabel = title;
@@ -114,7 +114,7 @@
 - (void)setupBottomInfo {
 	self.bottomInfoLabel = [[UILabel alloc] init];
 	zh_addThemeWithBlock(self, ^{
-		self.bottomInfoLabel.textColor = colorWithSelector(@selector(color_W04));
+		self.bottomInfoLabel.textColor = zh_color(color_W04);
 	});
 	self.bottomInfoLabel.font = [UIFont systemFontOfSize:13];
 	self.bottomInfoLabel.textAlignment = NSTextAlignmentRight;
@@ -127,7 +127,7 @@
 	[self.markButton setFrame:CGRectMake(self.view.width - 46, 0, 26, 26)];
 	[self.markButton setAlpha:0.0];
 	zh_addThemeWithBlock(self, ^{
-		[self.markButton setImage:imageWithSelector(@selector(image_Bookmarks_Highlight))
+		[self.markButton setImage:zh_image(image_Bookmarks_Highlight)
 						 forState:UIControlStateNormal];
 	});
 	
